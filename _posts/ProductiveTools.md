@@ -1,10 +1,11 @@
 
 # 寫作與出版
 
-## Markdown editor
+## Markdown
 
- - 離線：ghostwriter、Haroopad
- - 線上：HackHD、
+ - 離線編輯器：ghostwriter、Haroopad。
+ - 線上編輯器：HackHD。
+ - 其他：Babelmark 2（比較各家 markdown 的實作）。
 
 ## 出版平台
 
