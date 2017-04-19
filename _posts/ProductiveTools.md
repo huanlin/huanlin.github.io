@@ -28,6 +28,16 @@
 
 # 筆記與理解
 
+## 筆記、蒐集點子
+
+### Google 雲端硬碟 
+
+### Evernote
+
+### StickyNotes
+
+StickyNotes 是 Windows 內建的便利貼。用這個工具來紀錄一些零碎的小事、蒐集點子，挺方便。
+
 ## 心智圖、概念圖
 
 ### CmapTools
@@ -40,7 +50,5 @@
 
 [Coggle](https://coggle.it) 是以網頁為使用介面，可製作色彩豐富、好看的心智圖。有免費與付費的版本。
 
-### Mindomo
- 
-[Mindomo](https://www.mindomo.com/) 是以網頁為使用介面的應用程式。有免費與付費的版本。
+
 
