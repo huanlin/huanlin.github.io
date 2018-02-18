@@ -1,4 +1,4 @@
-* 使用 VSTS 來自動建置 GitHub repo
+# 使用 VSTS 來自動建置 GitHub repo
 
 按照這份微軟的逐步教學文件：Define a continuous integration (CI) build process for your GitHub repository，我把我在 GitHub 上面的一個 repo 設定成由 VSTS（Visual Studio Team Service） 來進行自動建置，設定的過程相當順利。
 
@@ -11,7 +11,7 @@
 
 我順手抓了圖，附在本文後面（圖很多）。這裡先說一下我用來設定 CI 的 GitHub repo。
 
-** 我的 GitHub repo
+## 我的 GitHub repo
 
 我用來設定 CI 的 GitHub repo 名稱是 [EasyBrailleEdit](https://github.com/huanlin/EasyBrailleEdit)。這個專案是從 2008 年開始，開發人員只有一名（就是我）。它是個 Windows desktop 應用程式，主要是供視覺障礙輔具相關機構或中小學的老師利用這個工具來製作給視障學生使用的點字書或雙視書（即紙上同時印有明眼字和點字）。
 
