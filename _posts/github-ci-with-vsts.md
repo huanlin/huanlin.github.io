@@ -27,13 +27,13 @@
 
 進入 VSTS 專案之後，可以從 Code 頁面看到右邊有個［Set up build］按鈕，如下圖：
 
-![](images/github-ci-with-vsts-acaa78aa.png)
+![](images/github-ci-with-vsts-01.png)
 
 點一下這個按鈕，會切換到 Build and Release 頁面，讓你開始設定一個新的 Build。
 
 接著按下圖的指示操作：
 
-![](images/github-ci-with-vsts-a2b6b6c5.png)
+![](images/github-ci-with-vsts-02.png)
 
 然後會跳出 GitHub 的授權頁面，以便確認要授權 VSTS 存取你的 GitHub repo：
 
@@ -147,6 +147,6 @@
 
 等到 VSTS 的建置工作完成，確認建置無誤，便可放心合併分支了：
 
-![](images/github-ci-with-vsts-b6e929d3.png)
+![](images/github-ci-with-vsts-3a0a2eea.png)
 
 呼～大功告成！
