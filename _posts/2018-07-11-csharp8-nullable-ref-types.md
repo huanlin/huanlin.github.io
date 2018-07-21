@@ -200,7 +200,7 @@ static int Length(string? s)
 
 而官方 github 的這份文件：The C# Nullable Reference Types Preview 裡面有提到 [string.IsNullOrEmpty](https://github.com/dotnet/csharplang/wiki/Nullable-Reference-Types-Preview#inferring-null-state-from-stringisnullorempty) 的問題，上面的回答是：
 
-We are investigating allowing annotations on methods that describe simple relationships between parameters and return value with respect to null values. The compiler could use those annotations when analyzing the calling code.
+> We are investigating allowing annotations on methods that describe simple relationships between parameters and return value with respect to null values. The compiler could use those annotations when analyzing the calling code.
 
 看來只能等等看後續發展了。
 
@@ -220,7 +220,7 @@ We are investigating allowing annotations on methods that describe simple relati
 
 如果要實驗 C# 8 的 Nullable Reference Types，必須在左邊窗格上方的下拉選單裡面挑選對應的編譯器版本，如下圖所示：
 
-![](images/csharp8-nullable-ref-types-sharplab-io.png)
+![]({{site.url}}/_posts/images/csharp8-nullable-ref-types-sharplab-io.png)
 
 然後就可以敲入程式碼來觀察程式的執行結果、編譯器顯示的警告或錯誤訊息、以及反組譯之後的程式碼。
 
