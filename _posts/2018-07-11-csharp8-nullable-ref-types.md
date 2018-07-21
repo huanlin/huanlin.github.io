@@ -220,7 +220,7 @@ static int Length(string? s)
 
 如果要實驗 C# 8 的 Nullable Reference Types，必須在左邊窗格上方的下拉選單裡面挑選對應的編譯器版本，如下圖所示：
 
-![]({{site.url}}/_posts/images/csharp8-nullable-ref-types-sharplab-io.png)
+![]({{site.url}}/assets/images/csharp8-nullable-ref-types-sharplab-io.png)
 
 然後就可以敲入程式碼來觀察程式的執行結果、編譯器顯示的警告或錯誤訊息、以及反組譯之後的程式碼。
 
