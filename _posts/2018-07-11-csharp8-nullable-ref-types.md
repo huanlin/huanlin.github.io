@@ -1,6 +1,16 @@
+---
+layout: article
+title: 初探 C# 8 的 Nullable Reference Types
+tags: C# .NET
+category: blog
+date: 2018-07-11 06:00:00 +08:00
+---
+
 # 初探 C# 8 的 Nullable Reference Types
 
 溫馨提醒：本文提及的 C# 8 新功能雖已通過提案，但不代表將來 C# 8 正式發布時一定會納入。這表示我這篇筆記有可能白寫了，也表示您不必急著瞭解這項新功能的所有細節，可能只要瞄一下底下的「概要」說明就夠了。
+
+<!--more-->
 
 ## 概要
 
