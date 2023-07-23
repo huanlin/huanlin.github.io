@@ -2,6 +2,7 @@
 title: "Hugo + Docsy + GitHub Pages"
 date: "2023-07-23"
 slug: hugo-docsy-github-pages
+summary: 使用 Hugo + Docsy them 來建立靜態網站、部署至 GitHub Pages，並且使用自訂網域名稱。
 ---
 
 **摘要**：使用 Hugo + Docsy them 來建立靜態網站、部署至 GitHub Pages，並且使用自訂網域名稱。
@@ -32,7 +33,9 @@ Hugo 官方文件：[Host on GitHub Pages](https://gohugo.io/hosting-and-deploym
 - 一筆指向 GitHub 網站的 CNAME 記錄。
 - 用來避免駭客偽造 huanlin.cc 寄件者身分寄送 email 的三筆記錄：一筆是 SPF，另外三筆是 MX 記錄。值得一提的是，這四筆記錄是我在 Cloudflare 儀錶板上瀏覽各項功能的時候，網頁上自動跳出來建議我要加入這四筆記錄。只要點一個按鈕就自動幫我加好了，實在方便。
 
-> 如欲了解什麼是 SPF，可參考 Cloudflare 部落格文章：[應對電子郵件欺騙和網路釣魚](https://blog.cloudflare.com/zh-tw/tackling-email-spoofing-zh-tw/)。
+{{% note %}}
+如欲了解什麼是 SPF，可參考 Cloudflare 部落格文章：[應對電子郵件欺騙和網路釣魚](https://blog.cloudflare.com/zh-tw/tackling-email-spoofing-zh-tw/)。
+{{% /note %}}
 
 結果如下圖，擷取自我的 Cloudflare 儀錶板頁面：
 
