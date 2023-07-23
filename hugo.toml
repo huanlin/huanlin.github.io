@@ -174,7 +174,7 @@ no = '很抱歉這篇文章沒有幫上忙，請<a href="https://github.com/huan
 # If you want this feature, but occasionally need to remove the Reading time from a single page,
 # add "hide_readingtime: true" to the page's front matter
 [params.ui.readingtime]
-enable = false
+enable = true
 
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
