@@ -1,7 +1,7 @@
 ---
-title: "Hugo + Docsy + GitHub Pages"
+title: "Hugo + Docsy + GitHub Pages with Custom Domain"
 date: "2023-07-23"
-slug: hugo-docsy-github-pages
+slug: hugo-docsy-github-pages-custom-domain
 summary: 使用 Hugo + Docsy them 來建立靜態網站、部署至 GitHub Pages，並且使用自訂網域名稱。
 ---
 
