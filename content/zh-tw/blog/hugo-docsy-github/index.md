@@ -34,8 +34,16 @@ Hugo 官方文件：[Host on GitHub Pages](https://gohugo.io/hosting-and-deploym
 
 其中有一筆記錄是剛剛沒有提到的，名稱以「_github-page-challenge-」開頭，那是 [GitHub Pages 驗證自訂網域名稱](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages)的時候用到的。
 
-## 其他參考資料
+## 參考資料
 
-- [Troubleshooting custom domains and GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/troubleshooting-custom-domains-and-github-pages)
-
+- Hugo 官方文件：[Host on GitHub Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+- GitHub 官方文件：[Quickstart for GitHub Pages](https://docs.github.com/en/pages/quickstart)
+- GitHub 官方文件：[Custom domains in GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
 - Google 提供的 DNS 工具: [Dig](https://toolbox.googleapps.com/apps/dig/)
+
+### 如果選擇 GitLab Pages
+
+如果因為某些原因而選擇將網站部署至 GitLab，可以參考以下文章：
+
+- Hugo 官方文件：[Host on GitLab Pages](https://gohugo.io/hosting-and-deployment/hosting-on-gitlab/)
+- [Start a blog with Hugo + GitLab Pages](https://ayaco.gitlab.io/zerogravity/en/docs/)
