@@ -1,7 +1,5 @@
 ---
 title: DevOps 小學堂
-linkTitle: DevOps 小學堂
-menu: {main: {weight: 1}}
 weight: 1
 ---
 

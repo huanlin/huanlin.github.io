@@ -1,5 +1,7 @@
 ---
 title: 文章
+menu: {main: {weight: 1}}
+weight: 1
 ---
 
 {{% blocks/section color="light" type="row" %}}
