@@ -69,7 +69,7 @@ id = "UA-00000000-0"
       description = "Learning notes about DevOps"
 
   [languages.zh-tw]
-    languageName ="繁體中文"
+    languageName ="Chinese"
     weight = 1
     contentDir = "content/zh-tw"
     [languages.zh-tw.params]
