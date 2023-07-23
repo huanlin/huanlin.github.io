@@ -8,8 +8,6 @@ isCJKLanguage: true
 
 **摘要**：使用 Hugo + Docsy them 來建立靜態網站、部署至 GitHub Pages，並且使用自訂網域名稱。
 
-<!--more-->
-
 ---
 
 參考以下兩份官方文件：
