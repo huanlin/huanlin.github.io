@@ -7,15 +7,16 @@ summary: 使用 Hugo + Docsy them 來建立靜態網站、部署至 GitHub Pages
 
 **摘要**：使用 Hugo + Docsy them 來建立靜態網站、部署至 GitHub Pages，並且使用自訂網域名稱。
 
-GitHub 官方文件：[Quickstart for GitHub Pages](https://docs.github.com/en/pages/quickstart)
+參考以下兩份官方文件：
 
-Hugo 官方文件：[Host on GitHub Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+- GitHub 官方文件：[Quickstart for GitHub Pages](https://docs.github.com/en/pages/quickstart)
+- Hugo 官方文件：[Host on GitHub Pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 
-寫的很清楚，只要照著文件中的指示進行設定，應能順利完成。不過由於我還使用了 Docsy theme，所以如果只參考上面的 Hugo 官方文件來設定，GitHub Action 會出現 SASS 的相關錯誤，因為還得安裝 PostCSS。下圖是我當時碰到的狀況，擷取自 GitHub 的 Workflow 紀錄：
+基本上，只要按照文件中的指示來設定，應該就能順利完成，或完成 80% 左右的設定。由於我還使用了 Docsy theme，所以如果只參考上面的 Hugo 官方文件來設定，GitHub Action 會出現 SASS 的相關錯誤，如下圖，擷取自我的 GitHub 儲存庫的 Workflow 執行紀錄：
 
 ![](images/github-action-error-postcss.png)
 
-詳細說明可參考 Docsy 官方文件：[Get Started](https://www.docsy.dev/docs/get-started/)。
+由錯誤訊息得知還需要安裝 PostCSS。詳細步驟可參考 Docsy 官方文件：[Get Started](https://www.docsy.dev/docs/get-started/)。
 
 ## 自訂網域
 
