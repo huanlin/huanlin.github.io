@@ -19,12 +19,12 @@ title: Huan-Lin 學習筆記
 
 {{% blocks/section color="dark" type="row" %}}
 
-{{% blocks/feature icon="fa-brands fa-blogger" title="" %}}
-[到我的部落格逛逛](https://www.huanlintalk.com/)
+{{% blocks/feature icon="fa-brands fa-facebook" title="" %}}
+[我的臉書專頁](https://www.facebook.com/huanlin.notes)
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-brands fa-facebook" title="" %}}
-[追蹤我的臉書專頁](https://www.facebook.com/huanlin.notes)
+{{% blocks/feature icon="fa-brands fa-blogger" title="" %}}
+[我的 Youtube 頻道](https://www.youtube.com/@michael-tsai)
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-solid fa-book" title="" %}}
