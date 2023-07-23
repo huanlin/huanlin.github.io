@@ -1,10 +1,8 @@
-# 歡迎來到 DevOps 小學堂
+# 歡迎來到 Huanlin 學習筆記
 
-這裡的文章是我學習 DevOps 相關技術的筆記，內容深度與廣度大概比較接近幼幼班至小學的程度吧，故命名為「小學堂」。
+這是我的第二個筆記網站，可以說是新版本的「Huanlin 學習筆記」。我的期望是打造一個更有條理、更好閱讀與方便學習的技術文章網站。
 
-無論如何，歡迎對 DevOps 技術感興趣的同學一起來學習。
-
-👉 [網站入口](https://huanlin.github.io/devops-notes/)
+如欲查看舊版的筆記網站，請至 [Blogger 平台的 Huanlin 學習筆記](https://huanlintalk.com)。
 
 ---
 
