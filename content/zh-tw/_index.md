@@ -10,8 +10,8 @@ title: Huan-Lin 學習筆記
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
   閱讀文章 <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
-<a class="btn btn-lg btn-secondary me-3 mb-4" href="https://github.com/huanlin/devops-notes/">
-  查看原始碼 <i class="fab fa-github ms-2 "></i>
+<a class="btn btn-lg btn-secondary me-3 mb-4" href="/blog/">
+  閱讀網誌 <i class="fa-brands fa-blogger ms-2 "></i>
 </a>
 <p class="lead mt-5">轉載請註明出處，並提供連結至此網站的首頁。</p>
 {{< blocks/link-down color="info" >}}
