@@ -1,6 +1,6 @@
 ---
-title: 使用 Hugo 與 Docsy 建立網站並部署至 GitHub
-date: 2023-7-23
+title: "Hugo + Docsy + GitHub Pages"
+date: "2023-07-23"
 ---
 
 GitHub 官方文件：[Quickstart for GitHub Pages](https://docs.github.com/en/pages/quickstart)
