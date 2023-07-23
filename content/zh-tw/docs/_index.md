@@ -1,36 +1,33 @@
 ---
-title: 文章
-menu: {main: {weight: 1}}
-weight: 1
+title: DevOps 小學堂
 ---
 
-# 歡迎來到 DevOps 小學堂
+{{< blocks/cover title="歡迎來到 DevOps 小學堂！" image_anchor="top" height="full" >}}
+<p class="lead mt-1">這裡有我學習 DevOps 相關技術的筆記，程度大概是幼幼班至小學吧，故稱為「小學堂」。</p>
+<p class="lead mt-1">無論如何，歡迎對 DevOps 技術感興趣的同學一起來學習。</p>
+<br/> 
+<a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
+  閱讀文章 <i class="fas fa-arrow-alt-circle-right ms-2"></i>
+</a>
+<a class="btn btn-lg btn-secondary me-3 mb-4" href="https://github.com/huanlin/devops-notes/">
+  查看原始碼 <i class="fab fa-github ms-2 "></i>
+</a>
+<p class="lead mt-5">轉載請註明出處，並提供連結至此網站的首頁。</p>
+{{< blocks/link-down color="info" >}}
+{{< /blocks/cover >}}
 
-這裡的文章是我學習 DevOps 相關技術的筆記，內容深度與廣度大概比較接近幼幼班至小學的程度吧，故命名為「小學堂」。
+{{% blocks/section color="dark" type="row" %}}
 
-無論如何，歡迎對 DevOps 技術感興趣的同學一起來學習。
+{{% blocks/feature icon="fa-brands fa-blogger" title="" %}}
+[到我的部落格逛逛](https://www.huanlintalk.com/)
+{{% /blocks/feature %}}
 
-## 使用方法
+{{% blocks/feature icon="fa-brands fa-facebook" title="" %}}
+[追蹤我的臉書專頁](https://www.facebook.com/huanlin.notes)
+{{% /blocks/feature %}}
 
-網站左邊選單所列的主題，大部分是以基礎到進階的順序來安排，方便依序學習。當然也可以隨意挑選自己感興趣的主題來學習。
+{{% blocks/feature icon="fa-solid fa-book" title="" %}}
+[我寫的書](https://play.google.com/store/books/author?id=%E8%94%A1%E7%85%A5%E9%BA%9F)
+{{% /blocks/feature %}}
 
-比學習順序更重要的，是一定要盡量動手試試看。
-
-有些主題點進去並沒有實際內容，有的是因為我覺得那是 DevOps 必須學習的，但我沒有時間寫、或沒有必要急著寫，例如 Git、Python（網路上可以找到一堆學習材料）。有的則是我先替自己挖坑，提醒自己將來必須填上。不過，有些主題的範圍實在太龐大（例如 AWS），我也不確定是否真能寫完。
-
-!!! info
-    你可以從文章末尾的分隔線下方看到 `Last update: [日期]`，那就是該文最近一次的更新日期（自動抓取最近一次 commit 至 git 儲存庫的日期）。
-
-## 轉載方式
-
-由於文章內容可能持續更新，如欲轉載，請註明出處，並提供連結至[此網站的首頁](https://huanlin.github.io/devops-notes/)。
-
-## 支持與建議
-
-如果喜歡這裡的文章，可以考慮到 GitHub 網站上[給這個專案點個星星](https://github.com/huanlin/devops-notes/)（此頁面的右上角也有入口）。若有任何指正或建議，都歡迎在頁面下方的 Comments 區塊留言。
-
-```
-Keep learning!
-
-Huan-Lin (Michael) Tsai (2023)
-```
+{{% /blocks/section %}}

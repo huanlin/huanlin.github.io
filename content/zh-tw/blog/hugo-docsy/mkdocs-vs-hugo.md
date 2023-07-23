@@ -1,5 +1,7 @@
-# MkDocs vs. Hugo
-
+---
+title: MkDocs vs. Hugo
+date: 2023-7-23
+---
 
 ## 檔案結構
 

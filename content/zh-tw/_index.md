@@ -1,10 +1,11 @@
 ---
-title: DevOps 小學堂
+title: Huan-Lin 學習筆記
 ---
 
-{{< blocks/cover title="歡迎來到 DevOps 小學堂！" image_anchor="top" height="full" >}}
-<p class="lead mt-1">這裡有我學習 DevOps 相關技術的筆記，程度大概是幼幼班至小學吧，故稱為「小學堂」。</p>
-<p class="lead mt-1">無論如何，歡迎對 DevOps 技術感興趣的同學一起來學習。</p>
+{{< blocks/cover title="歡迎參觀！" image_anchor="top" height="full" >}}
+<p class="lead mt-1">這是我的第二個筆記網站，可以說是新版本的「Huanlin 學習筆記」。</p>
+我的期望是把這個網站打造成更有條理、更好閱讀與容易學習的技術文章網站。</p>
+<p class="lead mt-1">如欲查看舊版的筆記網站，請至 <a href="https://huanlintalk.com">Blogger 平台的 Huanlin 學習筆記</a>。</p>
 <br/> 
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
   閱讀文章 <i class="fas fa-arrow-alt-circle-right ms-2"></i>
