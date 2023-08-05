@@ -1,14 +1,28 @@
-# GitOps 簡介
+---
+title: "GitOps 簡介"
+linkTitle: "GitOps 簡介"
+weight: 1
+description: >
+  介紹 GitOps 的基礎觀念，以了解其內涵（如 IaC、合併請求），以及為什麼要使用它。
+---
 
-**摘要：**介紹 GitOps 的基礎觀念，以了解其內涵（如 IaC、合併請求），以及為什麼要使用它。
-
-先備知識：熟悉 Git 版本控制，且知道何謂 CI/CD 管線（pipeline）。
+**背景知識：** Git 版本控制、CI/CD 管線（pipeline）。
 
 ## What
 
-GitOps 是什麼？簡單來說，就是以 ==正確的方式== 來實現 IaC（Infrastructure as Code；基礎設施即代碼），即以程式碼（組態檔、指令腳本等等）來定義基礎設施。
+GitOps 是什麼？簡單來說，就是以**正確的方式**來實現 IaC（Infrastructure as Code；基礎設施即代碼），即以程式碼（組態檔、指令腳本等等）來定義基礎設施。
 
 這裡的基礎設施，指的是運行應用程式或日常操作所需要的作業環境，包括作業系統、資料庫、網路、容器、CD/CD 工具……等等，都可能是基礎設施涵蓋的範圍。
+
+![](images/test.png)
+
+> This is anote
+{.note}
+
+
+{{< admonition type=tip title="This is a tip" open=true >}}
+A **tip** banner
+{{< /admonition >}}
 
 ## Why
 
