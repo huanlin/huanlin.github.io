@@ -60,7 +60,8 @@ id = "UA-00000000-0"
 
 [languages]
   [languages.en]
-    languageName ="English"
+    languageName = "English"
+    Title = "Huanlin's Notes"
     # Weight used for sorting.
     weight = 2
     contentDir = "content/en"
@@ -69,7 +70,8 @@ id = "UA-00000000-0"
       description = "Learning notes about DevOps"
 
   [languages.zh-tw]
-    languageName ="Chinese"
+    languageName = "Chinese"
+    Title = "Huanlin 學習筆記"
     weight = 1
     contentDir = "content/zh-tw"
     [languages.zh-tw.params]
