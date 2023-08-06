@@ -230,11 +230,11 @@ To understand how `_variables_project.scss` and `_styles_project.scss` work, rea
 
 ## Conclusion
 
-In the figure below, the first admnnition block is rendered with Material for MkDocs. The second one is the result of work described in this article.
+In the figure below, the first admonition block is rendered with Material for MkDocs. The second one is the result of work described in this article.
 
 ![](images/result-comparision.png)
 
-As you can see, the admonition from DoIt theme is customized and integrated to my website. I would say the look and feel is pretty similar to Material for MkDocs, job done. 
+As you can see, the admonition from DoIt theme is customized and integrated to my website, and I would say the look and feel is pretty similar to Material for MkDocs, job done. 
 
 > P.S. I didn't bother to modify the icon, but it should be a simple task.
  
