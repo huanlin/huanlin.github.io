@@ -13,6 +13,9 @@ enableRobotsTXT = true
 # Will give values to .Lastmod etc.
 enableGitInfo = true
 
+# Disqus comment system.
+disqusShortname = "huanlin-cc"
+
 # Comment out to enable taxonomies in Docsy
 # disableKinds = ["taxonomy", "taxonomyTerm"]
 
@@ -179,7 +182,7 @@ sidebar_search_disable = false
 enable = true
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
 yes = "Glad you liked it! (很高興您喜歡這篇文章！)"
-no = "Sorry this didn't help. Feel free to <a href='mailto: huanlin.tsai@gmail.com'>let me know how to improve it.</a>, Thanks!"
+no = "Sorry to hear that. Feel free to <a href='mailto: huanlin.tsai@gmail.com'>tell me how I can improve</a>."
 
 # Adds a reading time to the top of each doc.
 # If you want this feature, but occasionally need to remove the Reading time from a single page,
