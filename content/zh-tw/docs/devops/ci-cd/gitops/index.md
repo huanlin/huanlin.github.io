@@ -14,26 +14,15 @@ GitOps 是什麼？簡單來說，就是以**正確的方式**來實現 IaC（In
 
 這裡的基礎設施，指的是運行應用程式或日常操作所需要的作業環境，包括作業系統、資料庫、網路、容器、CD/CD 工具……等等，都可能是基礎設施涵蓋的範圍。
 
-![](images/test.png)
-
-> It's not who you are underneath, it's what you do that defines you.
-
-{{% alert title="Note" color="primary" %}}
-It's not who you are underneath, it's what you do that defines you.
-{{% /alert %}}
-
-{{< admonition type=note title="This is a note" open=true >}}
-It's not who you are underneath, it's what you do that defines you.
-{{< /admonition >}}
-
 ## Why
 
 相較於傳統的人工操作方式來建立基礎設施，IaC 強調以宣告的方式來達成相同目的。所謂宣告的方式，即是以 JSON 或 YAML 這類純文字檔案來描述目標作業環境的基礎設施——只需描述我們想要達成什麼狀態和結果，而實際的布建與設定等相關工作則全部由工具代勞，其最大優點是可以重複執行、重複使用，而且容易自動化。故 IaC 概念逐漸普及，演變成幾乎任何與電腦設備相關的東西都可以用程式碼來定義，例如網路組態、安全政策、系統組態等等，對象已經不僅只是 infrastructure 了，而是 Everything as Code，故後來也有 X as Code 的說法。
 
-!!! note
-    各家雲端廠商有各自的 IaC 工具來協助部署應用程式到雲端平台或管理雲端上面的伺服器，例如 Amazon CloudFormation，它能夠讓我們以宣告的方式來布建（provision）整個 AWS 應用程式架構。又如微軟的 Azure Resource Manager 和 Google 的 Cloud Deployment Manager，也都是同類型的工具。
+{{% admonition type=note title="Note" open=true %}}
+各家雲端廠商有各自的 IaC 工具來協助部署應用程式到雲端平台或管理雲端上面的伺服器，例如 Amazon CloudFormation，它能夠讓我們以宣告的方式來布建（provision）整個 AWS 應用程式架構。又如微軟的 Azure Resource Manager 和 Google 的 Cloud Deployment Manager，也都是同類型的工具。
     
-    雖然各家雲端平台都有提供類似工具讓我們以宣告的方式來定義和管理伺服器，但各家工具只能用在自家平台上。比如說，Amazon 的工具並沒有辦法用來管理 Azure 平台上的伺服器，反之亦然。如果有一種工具能夠支援各家雲端平台，自然提供了更多方便與彈性，這也是 Terraform 與 Ansible 等工具受到普遍歡迎的原因之一。
+雖然各家雲端平台都有提供類似工具讓我們以宣告的方式來定義和管理伺服器，但各家工具只能用在自家平台上。比如說，Amazon 的工具並沒有辦法用來管理 Azure 平台上的伺服器，反之亦然。如果有一種工具能夠支援各家雲端平台，自然提供了更多方便與彈性，這也是 Terraform 與 Ansible 等工具受到普遍歡迎的原因之一。
+{{% /admonition %}}
 
 舉例來說，原本以手動方式在 AWS 平台上建立伺服器、設定網路，以及建立 Kubernetes 叢集，現在改成編寫 Terraform 組態檔、Ansible 腳本、Kubernetes manifest 檔案，以及其他用來描述系統環境設定的 YAML 檔案。換言之，原先的人工作業幾乎都可以用文字檔來定義，然後交給工具執行。
 
