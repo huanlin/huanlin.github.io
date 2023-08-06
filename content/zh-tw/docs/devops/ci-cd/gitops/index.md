@@ -20,8 +20,10 @@ GitOps 是什麼？簡單來說，就是以**正確的方式**來實現 IaC（In
 {.note}
 
 
-{{< admonition type=tip title="This is a tip" open=true >}}
-A **tip** banner
+{{< admonition type=note title="This is a note" open=true >}}
+各家雲端廠商有各自的 IaC 工具來協助部署應用程式到雲端平台或管理雲端上面的伺服器，例如 Amazon CloudFormation，它能夠讓我們以宣告的方式來布建（provision）整個 AWS 應用程式架構。又如微軟的 Azure Resource Manager 和 Google 的 Cloud Deployment Manager，也都是同類型的工具。
+
+雖然各家雲端平台都有提供類似工具讓我們以宣告的方式來定義和管理伺服器，但各家工具只能用在自家平台上。比如說，Amazon 的工具並沒有辦法用來管理 Azure 平台上的伺服器，反之亦然。如果有一種工具能夠支援各家雲端平台，自然提供了更多方便與彈性，這也是 Terraform 與 Ansible 等工具受到普遍歡迎的原因之一。
 {{< /admonition >}}
 
 ## Why
