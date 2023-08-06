@@ -13,9 +13,6 @@ enableRobotsTXT = true
 # Will give values to .Lastmod etc.
 enableGitInfo = true
 
-# Disqus comment system.
-disqusShortname = "huanlin-cc"
-
 # Comment out to enable taxonomies in Docsy
 # disableKinds = ["taxonomy", "taxonomyTerm"]
 
