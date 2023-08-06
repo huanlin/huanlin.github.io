@@ -13,9 +13,10 @@
 {{- $iconMap  = dict "example" "fas fa-list-ol fa-fw" | merge $iconMap -}}
 {{- $iconMap  = dict "quote" "fas fa-quote-right fa-fw" | merge $iconMap -}}
 {{- $iconDetails := "fas fa-angle-right fa-fw" -}}
-<!-- 
-  Modified by Michael Tsai (2023-8-6). 
+<!--  
   Source: https://github.com/HEIGE-PCloud/DoIt/blob/main/layouts/shortcodes/admonition.html 
+  Modified by Michael Tsai (2023-8-6):
+    - Removed Open/Close icon, so it's always displayed as open.
 
   All related files: 
     /assets/scss/_variables_project.scss
@@ -38,7 +39,7 @@
     {{- $type := .Get 0 | default "note" -}}
     <div class="td-max-width-on-larger-screens details admonition {{ $type }}{{ if .Get 2 | ne false }} open{{ end }}">
         <div class="details-summary admonition-title">
-            <i class="icon {{ index $iconMap $type | default (index $iconMap "note") }}"></i>{{ .Get 1 | default (T $type) }}<i class="details-icon {{ $iconDetails }}"></i>
+            <i class="icon {{ index $iconMap $type | default (index $iconMap "note") }}"></i>{{ .Get 1 | default (T $type) }}
         </div>
         <div class="details-content">
             <div class="admonition-content">
