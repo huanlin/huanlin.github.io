@@ -63,7 +63,7 @@ Rendered:
 
 ![](images/rendered-3.png)
 
-It's prettier than the others in my opinion. When I need to add a callout box in my article, I would definitely use it in spite of the syntax is a bit complex comparing to the [admonition syntax of Material for MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage). 
+It's prettier than the others in my opinion. When I need to add a callout box in my article, I would definitely use it in spite of the syntax is a bit more complex comparing to the [admonition syntax of Material for MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage). 
 
 With Material for MkDocs, I can achieve the goal with the following extended Markdown:
 
