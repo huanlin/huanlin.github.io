@@ -40,10 +40,3 @@ $admonition-background-color-map: (
   'example': rgba(101, 31, 255, 0.1),
   'quote': rgba(159, 159, 159, 0.1),
 ) !default;
-
-// Copied from MkDocs Material (by Michael Tsai)
-:root > * {
-  --md-shadow-z1: 0 0.2rem 0.5rem #0000000d,0 0 0.05rem #0000001a;
-  --md-shadow-z2: 0 0.2rem 0.5rem #0000001a,0 0 0.05rem #00000040;
-  --md-shadow-z3: 0 0.2rem 0.5rem #0003,0 0 0.05rem #00000059;
-}

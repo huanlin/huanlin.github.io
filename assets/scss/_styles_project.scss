@@ -1,0 +1,20 @@
+// This is a custom SCSS file for Hugo Docsy theme.
+// See: https://www.docsy.dev/docs/adding-content/lookandfeel/#project-style-files
+
+/*
+  For MediumZoom.js to force the zoomed image to be displayed on top of everything.
+  Without these settings, the zoomed image will display under some elements on the page.
+
+  Ref: https://github.com/francoischalifour/medium-zoom#debugging
+*/
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
+
+// For admonitions. Copied from MkDocs Material (by Michael Tsai 2023-8-6).
+:root > * {
+    --md-shadow-z1: 0 0.2rem 0.5rem #0000000d,0 0 0.05rem #0000001a;
+    --md-shadow-z2: 0 0.2rem 0.5rem #0000001a,0 0 0.05rem #00000040;
+    --md-shadow-z3: 0 0.2rem 0.5rem #0003,0 0 0.05rem #00000059;
+  }
