@@ -1,6 +1,6 @@
 /*
   Source: https://github.com/HEIGE-PCloud/DoIt/blob/main/assets/css/_partial/_single/_admonition.scss
-  Modified by Michael Tsai (2023-8-6)
+  Modified by Michael Tsai (2023-8-6), to make it similar to MkDocs Material's admonitions.
 
   All related files: 
     /assets/scss/_admonition_variables.scss
@@ -9,11 +9,23 @@
 */
 .admonition {
   position: relative;
-  margin: 1rem 0;
-  padding: 0 .75rem;
+//  margin: 1rem 0;
+//  padding: 0 .75rem;
+//  background-color: map-get($admonition-background-color-map, 'note');
+//  border-left: .25rem solid map-get($admonition-color-map, 'note');
+//  overflow: auto;
+
   background-color: map-get($admonition-background-color-map, 'note');
-  border-left: .25rem solid map-get($admonition-color-map, 'note');
-  overflow: auto;
+  border: 0.05rem solid #448aff;
+  border-radius: 0.2rem;
+  box-shadow: var(--md-shadow-z2);
+//  color: var(--md-admonition-fg-color);
+  display: flow-root;
+  font-size: .87rem;
+  margin: 1.5625em 0;
+  padding: 0 0.8rem;
+  page-break-inside: avoid;
+
 
   .admonition-title {
     font-weight: bold;
@@ -28,7 +40,7 @@
   }
 
   .admonition-content {
-    padding: .5rem 0;
+    padding: .9rem 0 0.1rem;
   }
 
   i.icon {
