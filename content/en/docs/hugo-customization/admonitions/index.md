@@ -65,7 +65,7 @@ Rendered:
 
 It's prettier than the others in my opinion. When I need to add a callout box in my article, I would definitely use it in spite of the syntax is a bit more complex comparing to the [admonition syntax of Material for MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage). 
 
-With Material for MkDocs, I can achieve the goal with the following extended Markdown:
+With Material for MkDocs, I can achieve the same goal with extended Markdown syntax as below:
 
 ```markdown
 !!! note "This is a note"
@@ -74,9 +74,7 @@ With Material for MkDocs, I can achieve the goal with the following extended Mar
 
 Neat, isn't it?
 
-Anyway, in the 
-
-Now the question is, with a website using the Docsy theme, can I use shortcodes from another theme?
+Now the question is, in a website created with Docsy theme, can I use shortcodes from another theme?
 
 ## A Possible Solution
 
@@ -86,13 +84,13 @@ It seems possible with theme composition and inheritance according to the offici
 theme = ['my-shortcodes', 'base-theme', 'hyde']
 ```
 
-To be honest, I'm not sure if it will work, or if there are any potential side effects, e.g. conflicted names in CSS/SCSS, JavaScript, or even shortcodes. I just didn't try it yet.
+To be honest, I'm not sure if it will work for any combinations of themes, or if there are any potential side effects, e.g. conflicted names in CSS/SCSS, JavaScript, or even shortcodes. I just didn't try it yet.
 
-The first thing I tried is cherry-picking what I need from DoIt theme and integrate it with Docsy, and it was succssful. I'll describe how I do it in the next section.
+The first thing I tried is cherry-picking what I need from DoIt theme and integrate it with Docsy, and I'm happy with the result. 
 
 ## Adding Admonitions to Docsy Theme
 
-To add admonition shortcodes from DoIt theme to an existing Hugo website with Docsy theme, follow steps below.
+In this section, I'll describe how I extract admonition shortcodes from DoIt theme, do some tweaks, then integrate them to an existing Hugo website with Docsy theme.
 
 {{% admonition type=note title="Note" open=true %}}
 If you're using another theme other than Docsy, the steps might be a little bit different. 
