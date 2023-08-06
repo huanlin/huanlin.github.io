@@ -119,7 +119,7 @@ version = "0.0"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://example.com"
+url_latest_version = "https://huanlin.cc"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = ""
@@ -134,13 +134,15 @@ github_project_repo = ""
 github_branch= "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "d72aa9b2712488cc3"
+# GCS ID for huanlin.cc
+gcs_engine_id = "652a2136426a44a0b"
 
 # Enable Algolia DocSearch
 algolia_docsearch = false
 
 # Enable Lunr.js offline search
-offlineSearch = true
+# Note by Michael Tsai (2023-8-6): When Lunr.js is enabled, Chrome DevTools will show JavaScript errors!
+offlineSearch = false
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false
@@ -167,8 +169,8 @@ sidebar_search_disable = false
 [params.ui.feedback]
 enable = true
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-yes = '很高興您喜歡這篇文章！歡迎隨時<a href="https://github.com/huanlin/huanlin.github.io/issues/new">提供您的建議</a>。'
-no = '很抱歉這篇文章沒有幫上忙，請<a href="https://github.com/huanlin/huanlin.github.io/issues/new">告訴我如何改進</a>，謝謝！'
+yes = '很高興您喜歡這篇文章！'
+no = '抱歉沒有幫上忙！若對文章內容有任何建議，歡迎<a href="mailto: huanlin.tsai@gmail.com">來信告訴我如何改進</a>，謝謝！'
 
 # Adds a reading time to the top of each doc.
 # If you want this feature, but occasionally need to remove the Reading time from a single page,
