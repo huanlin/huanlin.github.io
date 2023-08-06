@@ -132,7 +132,7 @@ Replace them with:
 
 Most of the above CSS are copied from Material for MkDocs, with a little tweaks just for my needs.
 
-Note that I commented the line with `color` property simply because the font color looks good and no need to change it here. You can uncomment it if you want to change the text color in admonition blocks.
+Note that I commented the line with `color` property simply because the font color looks good and no need to change it here. You can uncomment it if you want to change the text color of admonition blocks.
 
 ### Step 2: _variables.scss
 
@@ -212,8 +212,6 @@ Add the following lines to the file `/assets/scss/_variables_project.scss` of yo
 @import "_admonition_variables";
 @import "_admonition";
 ```
-
-To understand how `_variables_project.scss` works, read the section [Project style files](https://www.docsy.dev/docs/adding-content/lookandfeel/#project-style-files) of Docsy document. 
 
 ### Step 5: _styles_project.scss
 
