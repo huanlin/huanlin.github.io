@@ -134,7 +134,7 @@ github_project_repo = ""
 github_branch= "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-# GCS ID for huanlin.cc
+# GCS ID for *.huanlin.cc domain.
 gcs_engine_id = "652a2136426a44a0b"
 
 # Enable Algolia DocSearch
