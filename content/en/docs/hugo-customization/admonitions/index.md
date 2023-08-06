@@ -130,7 +130,7 @@ Replace them with:
   page-break-inside: avoid;
 ```
 
-Most of the above CSS are copied from Material for MkDocs, with a little tweak just for my needs.
+Most of the above CSS are copied from Material for MkDocs, with a little tweaks just for my needs.
 
 Note that I commented the line with `color` property simply because the font color looks good and no need to change it here. You can uncomment it if you want to change the text color in admonition blocks.
 
