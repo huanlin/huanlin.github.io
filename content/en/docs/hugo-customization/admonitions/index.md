@@ -88,7 +88,7 @@ To be honest, I'm not sure if it will work for any combinations of themes, or if
 
 The first thing I tried is cherry-picking what I need from DoIt theme and integrate it with Docsy, and I'm happy with the result. 
 
-## Adding Admonitions to Docsy Theme
+## How I Do It
 
 In this section, I'll describe how I extract admonition shortcodes from DoIt theme, do some tweaks, then integrate them to an existing Hugo website with Docsy theme.
 
