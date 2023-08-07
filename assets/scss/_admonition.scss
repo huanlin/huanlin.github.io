@@ -43,6 +43,13 @@
     padding: .9rem 0 0.1rem;
   }
 
+  // 當 callout 方塊裡面有分段落時，必須調整段落的上下邊界，否則最後一行底下的留白區域會太多。
+  .admonition-content p {
+    margin-top: 0.2rem;
+    margin-bottom: 0rem;
+  }
+
+
   i.icon {
     font-size: 0.85rem;
     color: map-get($admonition-color-map, 'note');
