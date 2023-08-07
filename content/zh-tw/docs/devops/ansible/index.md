@@ -1,9 +1,9 @@
 ---
 title: Ansible 簡介
 weight: 20
+description: >
+  簡單介紹 Ansible 的用途、主要構成元件，以及工作腳本（Playbook）的寫法。
 ---
-
-**摘要**：簡單介紹 Ansible 的用途、主要構成元件，以及工作腳本（Playbook）的寫法。
 
 ## Ansible 是什麼？
 
@@ -22,15 +22,17 @@ Ansible 是用來自動化 IT 日常工作的工具。
 3. 寫好的 Ansible 腳本可以重複使用，也可以用於不同的環境，例如開發環境、預備環境、正式環境。
 4. 更加可靠，亦可減少因為人工失誤所造成的損失。
 
-!!! note
-    同類型工具如 Puppet 和 Chef 是採用 Ruby 語言來撰寫腳本，而 Ansible 採用簡單易學的 YAML 便有相對優勢。
+{{% admonition type=note title="Note" %}}
+同類型工具如 Puppet 和 Chef 是採用 Ruby 語言來撰寫腳本，而 Ansible 採用簡單易學的 YAML 便有相對優勢。
+{{% /admonition %}}
 
 此外，Ansible 支援所有常見的作業系統和許多雲端平台，故大部分與 IT 維運有關的工作都可以透過 Ansilbe 來執行。
 
 跟一些同類工具（例如 Pupper 和 Chef）相比，Ansible 還有一個優點：只需要在一台主控電腦上面安裝 Ansilbe，便可自動操作多台機器。也就是說，其他被操控的機器上面並不需要預先安裝任何 Ansible 的元件或服務，將來自然也不會有逐台機器升級 Ansilbe 元件的成本。
 
-!!! info
-    剛才說的主控電腦（有安裝 Ansible），在官方文件中叫做控制節點（control node）；而被操控的機器（不用安裝 Ansible）則稱為受管理節點（managed nodes）或 hosts。
+{{% admonition type=note title="Note" %}}
+剛才說的主控電腦（有安裝 Ansible），在官方文件中叫做控制節點（control node）；而被操控的機器（不用安裝 Ansible）則稱為受管理節點（managed nodes）或 hosts。
+{{% /admonition %}}
 
 現在我們已經知道 Ansible 是個協助 IT 人員的自動化工具，也了解它有哪些優點，接著來看看它是如何運作的。
 
@@ -120,8 +122,9 @@ tasks:
 
 在此範例中，`tasks` 是一份工作清單，它包含了三項工作，每一項工作都以 `name` 屬性來簡單描述其工作內容。這三個工作都是使用 `postgresql_table` 模組，而且各自設定了必要的參數，例如 `table`、`rename`、`owner` 等等。
 
-!!! note
-    Ansible 2.1 版之後，官方建議盡量寫模組的全名，以免模組名稱重複而產生問題。此範例的 `postgresql_table` 模組的全名是 `community.postgresql.postgresql_table`。
+{{% admonition type=note title="Note" %}}
+Ansible 2.1 版之後，官方建議盡量寫模組的全名，以免模組名稱重複而產生問題。此範例的 `postgresql_table` 模組的全名是 `community.postgresql.postgresql_table`。
+{{% /admonition %}}
 
 可是，要在哪些機器上執行這些工作、以及用什麼身分來執行那些工作呢？顯然上面的範例還缺少了一些東西。
 
@@ -205,8 +208,9 @@ Playbook 檔案中也可以使用 `vars` 來定義變數，以免重覆撰寫相
 
 如此一來，萬一日後需要修改資料表名稱，就只要改變數區塊中的定義就行了。
 
-!!! info
-    有關 Ansible vs. Terraform 的議題，可參考 [Terraform 簡介](../terraform/terraform-overview.md)。
+{{% admonition type=info title="Info" %}}
+有關 Ansible vs. Terraform 的議題，可參考 [Terraform 簡介](../terraform/terraform-overview.md)。
+{{% /admonition %}}
 
 ## 參考資料
 
