@@ -1,8 +1,10 @@
 ---
 title: "Admonitions"
 hide_feedback: true
+date: "2023-08-07"
 description: >
   How I add admonitions (callouts) to my Hugo website. 
+tags: ["hugo", "docsy"]
 ---
 
 **Background knowledge**: Hugo, Docsy
