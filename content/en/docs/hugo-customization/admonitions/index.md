@@ -142,7 +142,7 @@ Download [_variables.scss]( https://github.com/HEIGE-PCloud/DoIt/blob/main/asset
 
 Admonition colors are defined in this file, for example:
 
-```
+```css
 // Color map of the admonition
 $admonition-color-map: (
   'note': #448aff,

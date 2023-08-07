@@ -1,7 +1,10 @@
-# GitLab CI/CD 入門
-
-**摘要**：介紹 GitLab CI/CD 的工作原理，以及實際演練的範例。
-
+---
+title: "GitLab CI/CD 入門"
+linkTitle: "GitLab CI/CD 入門"
+weight: 1
+description: >
+  介紹 GitLab CI/CD 的工作原理，以及實際演練的範例。
+tags: ["CI/CD"]  
 ---
 
 ## 工作原理

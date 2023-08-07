@@ -1,7 +1,7 @@
 ---
 title: "GitOps 簡介"
 linkTitle: "GitOps 簡介"
-weight: 1
+weight: 2
 description: >
   介紹 GitOps 的基礎觀念，以了解其內涵（如 IaC、合併請求），以及為什麼要使用它。
 ---
