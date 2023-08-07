@@ -232,7 +232,7 @@ To understand how `_variables_project.scss` and `_styles_project.scss` work, rea
 
 ### Step 6: Add Snippet in VS Code
 
-The shortcode syntax is cumbersome, so I've added a snippet in Visual Studio Code, as below:
+The shortcode syntax is cumbersome, so I've added a snippet in Visual Studio Code. To do this, select `Configure User Snippets` under `File` > `Preferences`, then select `markdown.json`. Add the following code to `markdown.json`:
 
 ```json
 {
