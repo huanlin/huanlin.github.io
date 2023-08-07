@@ -1,5 +1,6 @@
 ---
 title: Kubernetes 簡介
+linkTitle: 簡介
 weight: 1
 ---
 
