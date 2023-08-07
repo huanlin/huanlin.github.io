@@ -28,8 +28,9 @@ GitOps 是什麼？簡單來說，就是以**正確的方式**來實現 IaC（In
 
 於是，我們可能會在自己的電腦（或者某一台開發專用的主機）上面編寫與測試這些組態檔與腳本，並且將這些檔案保存至一個 Git 儲存庫中，以便多人共同開發與管理版本。然而，這個多人共同開發的流程有可能不夠嚴謹，例如沒有 Pull Request 或 Merge Request（合併請求）機制，也沒有 review 程序，於是任何人修改檔案之後，只要 commit 然後 push，就可以直接把程式碼送進主分支；又或者沒有自動測試機制，故每當程式碼有改動，有時遺漏了測試工作，導致部署到正式作業環境之後出現一堆狀況。
 
-!!! note "PR 與 MR"
-    PR（Pull Request）和 MR（Merge Request）指的是同一件事：合併請求。GitHub 平台稱之為 PR，而 GitLab 稱為 MR。基本的做法是，開發人員在自己的 git 分支修改程式，等到修改完成，並不是直接合併到主分支，而是提出一個合併請求，藉此通知其他團隊成員：「我這邊有程式碼可以準備合併到主分支了，大家可以幫我 review 一下嗎？」等大家看過之後沒問題，才由某人核准這次的合併請求，然後程式碼才會合併到主分支。
+{{% admonition type=note title="PR 與 MR" %}}
+PR（Pull Request）和 MR（Merge Request）指的是同一件事：合併請求。GitHub 平台稱之為 PR，而 GitLab 稱為 MR。基本的做法是，開發人員在自己的 git 分支修改程式，等到修改完成，並不是直接合併到主分支，而是提出一個合併請求，藉此通知其他團隊成員：「我這邊有程式碼可以準備合併到主分支了，大家可以幫我 review 一下嗎？」等大家看過之後沒問題，才由某人核准這次的合併請求，然後程式碼才會合併到主分支。
+{{% /admonition %}}
 
 除了上述問題，各人在自己的開發機器上執行腳本來變更遠端伺服器，即表示每個有權限部署的人都可以直接存取並修改遠端伺服器的作業環境。萬一出狀況，可能不容易追查是誰造成的，以及當時做了哪些變動。底下是手動部署的示意圖：
 
@@ -63,12 +64,12 @@ GitOps 是什麼？簡單來說，就是以**正確的方式**來實現 IaC（In
 
 大致了解 GitOpt 的 what、why、與 how 之後，這裡做個簡單總結：理想情況是所有基礎設施和應用程式都能透過各種工具的組態檔與腳本來定義（即 IaC），而這些檔案則全部集中放在 Git 儲存庫，成為**單一資訊來源**（single source of truth），然後搭配合併請求（PR 或 MR）、code review 等實務做法以及 CD/CD 工具來實現自動部署。剛才這一長串的文字描述可濃縮成一個好記的公式（摘自免費電子書 [A Beginner's Guide to GitOps](https://page.gitlab.com/resources-ebook-beginner-guide-gitops.html)）：
 
-==**GitOps = IaC + MRs + CI/CD**==
+`**GitOps = IaC + MRs + CI/CD**`
 
 ## 參考資料
 
 - [A Beginner's Guide to GitOps](https://page.gitlab.com/resources-ebook-beginner-guide-gitops.html) （由 GitLab 提供免費下載）
-- [What is GitOps, How GitOps works and Why it's so useful](https://www.youtube.com/watch?v=f5EpcWp0THw)
+- [What is GitOps, How GitOps Works and Why it's so useful](https://www.youtube.com/watch?v=f5EpcWp0THw)
 
 ## 下一步
 
