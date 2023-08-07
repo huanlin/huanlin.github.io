@@ -2,10 +2,8 @@
 title: SSH (Secured Shell)
 weight: 9
 tags: ["linux"]
----
-
-**摘要**：SSH 簡介，並說明如何以 SSH 密鑰的方式來登入遠端主機（以 DigitalOcean 雲端平台為例）。
-
+description: >
+  SSH 簡介，並說明如何以 SSH 密鑰的方式來登入遠端主機（以 DigitalOcean 雲端平台為例）。
 ---
 
 ## 簡介
@@ -131,8 +129,9 @@ sudo vim .ssh/authorized_keys
 ssh michael@128.199.168.168
 ```
 
-!!! note
-    曾經連線過的主機 IP 位址會保存於 `~/.ssh/know_hosts` 檔案。
+{{% admonition type=note title="Note" %}}
+曾經連線過的主機 IP 位址會保存於 `~/.ssh/know_hosts` 檔案。
+{{% /admonition %}}
 
 ## 建立多組 SSH Keys
 
