@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-After I created the website with Hugo and Docsy theme, I spent some time searching the Internet just to find out how I can add admonitions (callouts) in my articles. In my experience with MkDocs and Material theme, it was easy, and I'm pretty happy with the result -- the synax is simple and the rendered blocks are colorful and beautiful. However, there is no equivalent in Hugo and Docsy theme.
+After I created the website with Hugo and Docsy theme, I spent some time searching the Internet just to find out how I can add admonitions (callouts) in my articles. In my experience with MkDocs and Material theme, it was easy, and I'm pretty happy with the result -- the syntax is simple and the rendered blocks are colorful and beautiful. However, there is no equivalent in Hugo and Docsy theme.
 
 Take a look at the following figure and ask yourself which one is better:
 
@@ -25,11 +25,11 @@ As shown earlier, the first one is generated with the basic Markdown syntax call
 > It's not who you are underneath, it's what you do that defines you.
 ```
 
-It rendered like this:
+It is rendered like this:
 
 ![](images/rendered-1.png)
 
-I can live with that, because it is easy to write. Just type one `>` character at the beginning of line and I get a simple quotation block. 
+I can live with that because it is easy to write. Just type one `>` character at the beginning of a line and I get a simple quotation block. 
 
 The second one is generated with the shortcode syntax called [alert](https://www.docsy.dev/docs/adding-content/shortcodes/#alert) provided by Docsy theme:
 
@@ -43,13 +43,13 @@ Rendered:
 
 ![](images/rendered-2.png)
 
-Both the sytax and rendered result is not quite satisfying, wouldn't you say?
+Both the syntax and rendered result are not quite satisfying, wouldn't you say?
 
 Let's see the last one, which is the goal of this article.
 
 ### The Goal
 
-The last one is also generated with a shorcode `admonition` that is found in another open sourced Hugo theme called [DoIt](https://github.com/HEIGE-PCloud/DoIt).
+The last one is also generated with a shortcode `admonition` that is found in another open-sourced Hugo theme called [DoIt](https://github.com/HEIGE-PCloud/DoIt).
 
 The Markdown:
 
@@ -63,7 +63,7 @@ Rendered:
 
 ![](images/rendered-3.png)
 
-It's prettier than the others in my opinion. When I need to add a callout box in my article, I would definitely use it in spite of the syntax is a bit more complex comparing to the [admonition syntax of Material for MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage). 
+It's prettier than the others in my opinion. When I need to add a callout box in my article, I would use it despite the syntax being a bit more complex compared to the [admonition syntax of Material for MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage). 
 
 With Material for MkDocs, I can achieve the same goal with extended Markdown syntax as below:
 
@@ -86,11 +86,11 @@ theme = ['my-shortcodes', 'base-theme', 'hyde']
 
 To be honest, I'm not sure if it will work for any combinations of themes, or if there are any potential side effects, e.g. conflicted names in CSS/SCSS, JavaScript, or even shortcodes. I just didn't try it yet.
 
-The first thing I tried is cherry-picking what I need from DoIt theme and integrate it with Docsy, and I'm happy with the result. 
+The first thing I tried is cherry-picking what I need from DoIt theme and integrating it with Docsy, and I'm happy with the result. 
 
 ## How I Do It
 
-In this section, I'll describe how I extract admonition shortcodes from DoIt theme, do some tweaks, then integrate them to an existing Hugo website with Docsy theme.
+In this section, I'll describe how I extract admonition shortcodes from DoIt theme, do some tweaks, then integrate them into an existing Hugo website with Docsy theme.
 
 {{% admonition type=note title="Note" open=true %}}
 If you're using another theme other than Docsy, the steps might be a little bit different. 
@@ -130,7 +130,7 @@ Replace them with:
   page-break-inside: avoid;
 ```
 
-Most of the above CSS are copied from Material for MkDocs, with a little tweaks just for my needs.
+Most of these CSS are copied from Material for MkDocs, with a bit tweaks just for my needs.
 
 Note that I commented the line with `color` property simply because the font color looks good and no need to change it here. You can uncomment it if you want to change the text color of admonition blocks.
 
@@ -138,7 +138,7 @@ Note that I commented the line with `color` property simply because the font col
 
 Download [_variables.scss]( https://github.com/HEIGE-PCloud/DoIt/blob/main/assets/css/_variables.scss) from DoIt theme, put this file in the `/assets/scss` folder of your website and change the file name to `_admonition_variables.scss`.
 
-Adminition colors are defined in this file, for example:
+Admonition colors are defined in this file, for example:
 
 ```
 // Color map of the admonition
@@ -202,7 +202,7 @@ Replace them with:
 
 As you can see, I removed the open/close icon. In DoIt theme, the icon works as a button to expand/collapse the admonition block. You can see them in action on the [DoIt theme website](https://hugodoit.pages.dev/theme-documentation-extended-shortcodes/#admonition).
 
-Also note that I didn't show the code of `{{- else -}}` block because the modification is similar.
+Note that I didn't show the code of `{{- else -}}` block because the modification is similar.
 
 ### Step 4: _variables_project.scss
 
@@ -234,7 +234,7 @@ In the figure below, the first admonition block is rendered with Material for Mk
 
 ![](images/result-comparision.png)
 
-As you can see, the admonition from DoIt theme is customized and integrated to my website, and I would say the look and feel is pretty similar to Material for MkDocs, job done. 
+As you can see, the admonition from DoIt theme is customized and integrated into my website, and I would say the look and feel are pretty similar to Material for MkDocs, job done. 
 
 > P.S. I didn't bother to modify the icon, but it should be a simple task.
  
