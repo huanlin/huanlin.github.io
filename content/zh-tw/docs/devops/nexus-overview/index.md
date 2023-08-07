@@ -1,6 +1,8 @@
-# Nexus 簡介
-
-**摘要**：說明 artifact repository manager 所要解決的問題，介紹 Nexus 有哪些主要功能，以及它在 CI/CD 流程中扮演的角色。
+---
+title: Nexus 簡介
+description: >
+  說明 artifact repository manager 所要解決的問題，介紹 Nexus 有哪些主要功能，以及它在 CI/CD 流程中扮演的角色。
+---
 
 ## Artifact Repository
 
