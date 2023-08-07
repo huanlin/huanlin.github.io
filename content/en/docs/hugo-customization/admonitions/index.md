@@ -56,7 +56,7 @@ The last one is also generated with a shortcode `admonition` that is found in an
 The Markdown:
 
 ```text
-{{%/* admonition type=note title="This is a note" open=true */%}}
+{{%/* admonition type=note title="This is a note" */%}}
 It's not who you are underneath, it's what you do that defines you.
 {{%/* /admonition */%}}
 ```
@@ -94,7 +94,7 @@ The first thing I tried is cherry-picking what I need from DoIt theme and integr
 
 In this section, I'll describe how I extract admonition shortcodes from DoIt theme, do some tweaks, then integrate them into an existing Hugo website with Docsy theme.
 
-{{% admonition type=note title="Note" open=true %}}
+{{% admonition type=note title="Note" %}}
 If you're using another theme other than Docsy, the steps might be a little bit different. 
 {{% /admonition %}}
 
@@ -230,9 +230,26 @@ Add the following lines to the file `/assets/scss/_styles_project.scss` of your 
 
 To understand how `_variables_project.scss` and `_styles_project.scss` work, read the section [Project style files](https://www.docsy.dev/docs/adding-content/lookandfeel/#project-style-files) of Docsy document. 
 
+### Step 6: Add Snippet in VS Code
+
+The shortcode syntax is cumbersome, so I've added a snippet in Visual Studio Code, as below:
+
+```json
+{
+    "h-admonition":{
+        "prefix": "h-admon",
+        "body": [
+            "{{% admonition type=note title=\"Note\" %}}",
+            "${1:content}",
+            "{{% /admonition %}}"
+        ],
+    }
+}    
+```
+
 ## Conclusion
 
-In the figure below, the first admonition block is rendered with Material for MkDocs. The second one is the result of work described in this article.
+In the figure below, the first admonition block is rendered with Material for MkDocs. The second one is the result of the work described in this article.
 
 ![](images/result-comparision.png)
 
