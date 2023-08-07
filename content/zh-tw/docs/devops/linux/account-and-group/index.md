@@ -11,9 +11,9 @@ tags: ["linux"]
 - Service 帳號，用於執行特定服務。
 
 {{% admonition type=warn title="Warning" %}}
-    Running a service with a root user is very bad!
-    
-    每個服務都應該使用它專屬的 service 帳號來執行。
+Running a service with a root user is very bad!
+   
+每個服務都應該使用它專屬的 service 帳號來執行。
 {{% /admonition %}}
 
 ## 權限
