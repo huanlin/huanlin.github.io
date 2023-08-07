@@ -1,6 +1,7 @@
 ---
 title: 使用者帳號與群組
 weight: 5
+tags: ["linux"]
 ---
 
 有三類使用者：

@@ -1,6 +1,7 @@
 ---
 title: 終端機視窗與 CLI
 weight: 2
+tags: ["linux"]
 ---
 
 CLI：Command Line Interface，也就是命令列操作介面。

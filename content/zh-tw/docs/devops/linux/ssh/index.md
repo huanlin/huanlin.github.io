@@ -1,4 +1,8 @@
-# SSH (Secured Shell)
+---
+title: SSH (Secured Shell)
+weight: 9
+tags: ["linux"]
+---
 
 **摘要**：SSH 簡介，並說明如何以 SSH 密鑰的方式來登入遠端主機（以 DigitalOcean 雲端平台為例）。
 
