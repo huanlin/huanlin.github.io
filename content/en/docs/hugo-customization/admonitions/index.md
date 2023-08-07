@@ -7,8 +7,6 @@ description: >
 tags: ["hugo", "docsy"]
 ---
 
-**Background knowledge**: Hugo, Docsy
-
 ## Introduction
 
 After I created the website with Hugo and Docsy theme, I spent some time searching the Internet just to find out how I can add admonitions (callouts) in my articles. In my experience with MkDocs and Material theme, it was easy, and I'm pretty happy with the result -- the syntax is simple and the rendered blocks are colorful and beautiful. However, there is no equivalent in Hugo and Docsy theme.
