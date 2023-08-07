@@ -1,9 +1,13 @@
-# 在 Windows 11 運行 Docker 與 Kubernetes
+---
+title: 在 Windows 11 運行 Docker 與 Kubernetes
+weight: 1
+description: >
+  在 Windows 11 上面安裝 Docker Desktop 並運行 Kubernetes 的操作步驟。
+---
 
-**摘要**：在 Windows 11 上面安裝 Docker Desktop 並運行 Kubernetes 的操作步驟。
-
-!!! note
-    在 Windows 環境中運行的 k8s 無法 scale-out，故只能用於學習和測試，不可當 production 環境來用。
+{{% admonition type=note title="Note" %}}
+在 Windows 環境中運行的 k8s 無法 scale-out，故只能用於學習和測試，不可當 production 環境來用。
+{{% /admonition %}}
 
 ## 概述
 
@@ -13,8 +17,9 @@
 
 以此方式運行於本機的 k8s 雖然無法像在 production 環境那樣進行 scale-out，但是主要的元件和工具都有了，包括：一個主要節點（master node）、一個工作節點（worker node），以及完整功能的命令列工具：[kubectl](https://kubernetes.io/docs/reference/kubectl/)（常見讀音為 "cube C-T-L" 或者 "koob control"）。
 
-!!! info
-    如果需要 scale out 工作節點，可以使用 [kind](https://kind.sigs.k8s.io)（全名是 Kubernetes in Docker)。如果要安裝完整功能的 Kubernetes，則可以使用 [kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/)。
+{{% admonition type=info title="Info" %}}
+如果需要 scale out 工作節點，可以使用 [kind](https://kind.sigs.k8s.io)（全名是 Kubernetes in Docker)。如果要安裝完整功能的 Kubernetes，則可以使用 [kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/)。
+{{% /admonition %}}
 
 ## 1. 安裝 Docker Desktop
 
@@ -40,8 +45,9 @@
 
 ![](installing-docker-desktop-3.png)
 
-!!! note
-    如果你的作業環境沒有出現上圖的提示，應該就是不用更新 wsl，可略過以下步驟，直接跳到下一節。
+{{% admonition type=note title="Note" %}}
+如果你的作業環境沒有出現上圖的提示，應該就是不用更新 wsl，可略過以下步驟，直接跳到下一節。
+{{% /admonition %}}
 
 按照對話窗的提示，此時有兩個選擇：
 
@@ -64,8 +70,9 @@
 
 ![](installing-docker-desktop-4.png)
 
-!!! note
-    在我的 Windows 10 筆電上執行此命令時，我看到的情況和 Windows 11 不同。結果顯示有兩個 Windows 子系統 Linux，分別是「docker-desktop (預設值)」和「docker-desktop-data」。接下來的描述都是發生在我的 Windows 11 電腦上。
+{{% admonition type=note title="Note" %}}
+在我的 Windows 10 筆電上執行此命令時，我看到的情況和 Windows 11 不同。結果顯示有兩個 Windows 子系統 Linux，分別是「docker-desktop (預設值)」和「docker-desktop-data」。接下來的描述都是發生在我的 Windows 11 電腦上。
+{{% /admonition %}}
 
 接著用 `wsl --list --online` 查看有哪些 Linux 版本可以安裝：
 
@@ -87,8 +94,10 @@
 
 ![](installing-docker-desktop-7.png)
 
-!!! note
-    或者也可以在 Powershell 視窗中輸入 `ubuntu2204` 來啟動 Ubuntu，其中的 "2204" 是作業環境中安裝的 Ubuntu 版本號碼的前四碼。
+{{% admonition type=note title="Note" %}}
+或者也可以在 Powershell 視窗中輸入 `ubuntu2204` 來啟動 Ubuntu，其中的 "2204" 是作業環境中安裝的 Ubuntu 版本號碼的前四碼。
+{{% /admonition %}}
+    
 
 啟動 Ubuntu 之後，應該會看到他要求你建立第一個使用者帳戶，該帳戶也將會預設的系統管理員帳戶。如下圖：
 

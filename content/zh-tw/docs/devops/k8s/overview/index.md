@@ -1,4 +1,7 @@
-# Kubernetes 簡介
+---
+title: Kubernetes 簡介
+weight: 1
+---
 
 ## 背景知識
 
@@ -22,10 +25,10 @@
 
 首先來看官方網站的一段簡短介紹：
 
-!!! quote
-    [Kubernetes](https://kubernetes.io/docs/concepts/overview/), also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
- 
-    中文：Kubernetes 又稱為 K8s，是個開源系統，用來自動部署、擴展、和管理容器應用程式。
+
+> [Kubernetes](https://kubernetes.io/docs/concepts/overview/), also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
+> 
+> 中文：Kubernetes 又稱為 K8s，是個開源系統，用來自動部署、擴展、和管理容器應用程式。
 
 這段介紹對於剛入門學習的新手來說可能過於精簡，不妨搭配一個常見的比喻來協助理解：交響樂團。
 
@@ -45,15 +48,18 @@ K8s 就像是一個交響樂團的指揮，而演奏各種樂器的樂團成員�
 
 欲實現上述情境，自然需要多台主機來讓 K8s 發揮其功能。主機可以是實體機或目前更常見的虛擬機，統稱為「節點」（node）。實務上，我們會有一個或多個**主要節點**（master nodes）來擔任管理的角色，管理誰呢？管理其他負責各種任務的節點，即所謂的「**工作節點**」（worker nodes）。每個工作節點包含一個或多個容器應用程式，而這一群工作節點以及主節點集合起來，便是所謂的叢集（Cluster）。
 
-!!! note
-    叢集（Cluster）:由 Kubernetes 管理的一群節點，這些節點通常會運行一些容器化應用程式。多數情況下，叢集中的節點並不會公開暴露於網際網路。
+{{% admonition type=note title="Note" %}}
+叢集（Cluster）:由 Kubernetes 管理的一群節點，這些節點通常會運行一些容器化應用程式。多數情況下，叢集中的節點並不會公開暴露於網際網路。
+{{% /admonition %}}
+    
 
 ![](k8s-big-picture.png)
 
 一旦主要節點故障，整個叢集當中的所有工作節點也將無法正常運行，故實務上會配置兩個或更多的主要節點。此外，工作節點通常負載較重、需要較多資源，因為它們要運行多個容器應用程式。
 
-!!! info
-    這裡的 Master Node 在官方文件中比較常用的對等名詞是 Control Plane（控制平面）。
+{{% admonition type=note title="Note" %}}
+這裡的 Master Node 在官方文件中比較常用的對等名詞是 Control Plane（控制平面）。
+{{% /admonition %}}  
 
 現在我們已經初步認識了 K8s 的三個基礎元件：Master Node、Worker Node、Cluster。接著來看另一個重要的元件：Pod。
 
@@ -81,17 +87,15 @@ K8s 叢集中的虛擬網路會給每一個 Pod 指派專屬的 IP 位址。也�
 
 ![](k8s-pod-service.png)
 
-!!! info
-    你可能也想看看：[官方文件對 Service 的說明](https://kubernetes.io/docs/concepts/services-networking/service/)
-
+{{% admonition type=info title="Info" %}}
+你可能也想看看：[官方文件對 Service 的說明](https://kubernetes.io/docs/concepts/services-networking/service/)
+{{% /admonition %}}
+    
 與 Pod 類似，Kubernetes 也會給每一個 Service 指派一個 IP 位址，只是派給 Service 的 IP 位址是固定的，不像 Pods 那樣很容易因為重建而頻繁變動 IP 位址。然而，如果你的應用程式會以 HTTP 協定的方式提供外部存取，我們當然不希望用戶端以類似 `http://10.20.152.3:8080` 的位址來存取應用程式的服務，而會希望提供更友善的網址，例如 `https://my-app.xyz.com`，這個部份則是由 Kubernetes 的另一個元件來處理：Ingress。
 
 當外界要存取 Kubernetes 叢集中的應用程式服 務時，Ingress 會負責將來自外部的請求（通常是 HTTP 或 HTTPS 請求）轉介至對應的目標服務。其運作方式可參考下圖：
 
-<figure markdown>
-  ![](k8s-ingress.png)
-  <figcaption>圖片來源：kubernetes.io</figcaption>
-</figure markdown>
+![](k8s-ingress.png)
 
 ## 結語
 

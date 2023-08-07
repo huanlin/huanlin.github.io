@@ -1,8 +1,8 @@
-# Terraform 簡介
-
-**摘要：**簡單介紹 Terraform 在布建基礎設施方面的功能、Terraform 的運作方式、組態檔，以及幾個重要的 Terraform 命令。
-
-（預估閱讀時間：10 分鐘）
+---
+title: Terraform 簡介
+description: >
+  簡單介紹 Terraform 在布建基礎設施方面的功能、Terraform 的運作方式、組態檔，以及幾個重要的 Terraform 命令。
+---
 
 ## 什麼是 Terraform？
 
@@ -16,8 +16,9 @@ Terraform 是：
 
 自動的意思很直觀，優點是省時省力，並減少因為人工作業而容易犯的錯誤。那麼，「布建基礎設施」（provisioning infrastructure）指的又是什麼呢？
 
-!!! note
-    平日討論碰到需要講 infrastructure 的時候，口語上經常會簡稱「infra」。
+{{% admonition type=note title="Note" %}}
+平日討論碰到需要講 infrastructure 的時候，口語上經常會簡稱「infra」。
+{{% /admonition %}}
 
 舉例來說，你正在開發一個新的軟體專案，其中包含一些微服務，於是你打算準備一個作業環境來運行這些微服務。這些準備作業環境的工作，就是所謂的「布建基礎設施」。比如說，你可能會需要建立幾台虛擬機器，將你的微服務打包成幾個 Docker 容器，另外還需要部署一個資料庫容器。
 
@@ -39,12 +40,13 @@ Terraform 是：
 
 Terraform 的能力主要是用在第一塊，也就是布建基礎設施的部分。剛才舉例提到的建立 VPC、EC2 伺服器、安裝 Docker 與相關軟體、設定使用者帳號與權限、設定防火牆等工作，Terraform 都能派上用場。這些工作當然也可以由工程師手動進行，但如果交給 Terraform，不僅更輕鬆，而且更容易確保各項工作都按照我們期望的順序逐一完成。
 
-!!! note "Ansible vs. Terraform"
-    有個常見的問題是：Ansible 和 Terraform 二者功能似乎差不多，該用哪個？    
+{{% admonition type=note title="Ansible vs. Terraform" %}}
+有個常見的問題是：Ansible 和 Terraform 二者功能似乎差不多，該用哪個？    
 
-    二者皆可實現 Infrastructure as Code，功能也有若干重疊，故常令人不知該如何選擇。嚴格來說，Ansible 的主要能力是組態配置（configuration），它可以配置基礎設施的組態，也可以用來安裝軟體和部署應用程式。Terraform 的強項則是布建與管理基礎設施，至於部署應用程式方面的工作，亦可能搭配其他工具來達成。從年齡來看，Ansible 相對成熟，而 Terraform 是後起之秀，在調度（orchestration）方面有更多進階的功能。
+二者皆可實現 Infrastructure as Code，功能也有若干重疊，故常令人不知該如何選擇。嚴格來說，Ansible 的主要能力是組態配置（configuration），它可以配置基礎設施的組態，也可以用來安裝軟體和部署應用程式。Terraform 的強項則是布建與管理基礎設施，至於部署應用程式方面的工作，亦可能搭配其他工具來達成。從年齡來看，Ansible 相對成熟，而 Terraform 是後起之秀，在調度（orchestration）方面有更多進階的功能。
 
-    實務上，DevOps 團隊經常是二者並用——依實際需要解決的問題來選擇最適合的工具。
+實務上，DevOps 團隊經常是二者並用——依實際需要解決的問題來選擇最適合的工具。
+{{% /admonition %}}
 
 ### 調整基礎設施
 
@@ -77,8 +79,9 @@ Core 會根據組態檔描述的需求以及基礎設施當前的狀態來決定
 
 Terraform 的另一個主要元件是提供者（providers），例如 AWS、Azure、Google Cloud Platform，或其他 IaaS 平台。簡單來說，提供者就像是連接各種技術或服務平台的管道，而藉由該管道，不同的技術平台之間便可相互連接、存取對方提供的服務。
 
-!!! note "IaaS"
-    IaaS 是 Infrastructure as a Service 的縮寫，中文是「基礎設施即服務」。
+{{% admonition type=note title="IaaS" %}}
+IaaS 是 Infrastructure as a Service 的縮寫，中文是「基礎設施即服務」。
+{{% /admonition %}}   
 
 舉例來說，透過 AWS 提供者，你就能存取數百種 AWS 資源，像是 EC2 伺服器、AWS 使用者等等。透過 Kubernetes 提供者，則能夠存取 Kubernetes 的資源，如 Services、命名空間等等。剛才提到的 Core 元件就需要倚賴這些提供者，以串接 API 的方式來執行它的任務。
 
@@ -145,8 +148,9 @@ Terraform 網站的[提供者清單頁面](https://registry.terraform.io/browse/
   <figcaption>圖片來源：Terraform 官方網站</figcaption>
 </figure markdown>
 
-!!! info
-    參考官方文件以了解更多命令與說明：[Basic CLI Features](https://developer.hashicorp.com/terraform/cli/commands)
+{{% admonition type=info title="Info" %}}
+參考官方文件以了解更多命令與說明：[Basic CLI Features](https://developer.hashicorp.com/terraform/cli/commands)
+{{% /admonition %}}
 
 ## 結語
 

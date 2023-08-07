@@ -1,4 +1,7 @@
-# DevOps 概觀
+---
+title: DevOps 概觀
+weight: 1
+---
 
 DevOps 是 Development + Operations 的縮寫。DevOps 工程師就是同時具備這兩塊技術領域 knowhow 的專家。
 
@@ -16,8 +19,9 @@ DevOps 的核心：持續自動化軟體開發的 CI/CD 流程。
 - 雲端平台：AWS、Azure、Google Cloud
 - 持續監控：Prometheus
 
-!!! note "備註"
-    IaC 是 Infrastructure as Code 的縮寫，也就是以程式碼或組態檔的方式來布建基礎服務。
+{{% admonition type=note title="Note" %}}
+IaC 是 Infrastructure as Code 的縮寫，也就是以程式碼或組態檔的方式來布建基礎服務。
     容器調度的「調度」原文是 orchestration。
+{{% /admonition %}}
 
 學習 DevOps 就是要了解開發與部署流程中的相關技術，並熟悉工具的使用。
