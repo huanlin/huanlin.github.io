@@ -3,7 +3,7 @@ title = "Huanlin 學習筆記"
 
 # Language settings
 defaultContentLanguage = "zh-tw"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 
