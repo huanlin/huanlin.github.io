@@ -1,0 +1,7 @@
+[ui_search]
+other = "站內搜尋…"
+
+[post_reading_time]
+other = " 分鐘左右可讀完"
+[post_less_than_a_minute_read]
+other = "1 分鐘內可讀完"

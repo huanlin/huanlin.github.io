@@ -2,9 +2,8 @@ baseURL = "/"
 title = "Huanlin 學習筆記"
 
 # Language settings
-contentDir = "content/zh-tw"
 defaultContentLanguage = "zh-tw"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 
@@ -66,8 +65,7 @@ id = "G-S83RZSBDVH" # This ID is specific for https://huanlin.cc
     weight = 2
     contentDir = "content/en"
     [languages.en.params]
-      title = "DevOps Kindergarten"
-      description = "Learning notes about DevOps"
+      subtitle = "Learning notes, Tutorials"
 
   [languages.zh-tw]
     languageName = "Chinese"
@@ -75,8 +73,7 @@ id = "G-S83RZSBDVH" # This ID is specific for https://huanlin.cc
     weight = 1
     contentDir = "content/zh-tw"
     [languages.zh-tw.params]
-      title = "DevOps 小學堂"
-      description = "我的 DevOps 學習筆記"
+      subtitle = "我的學習筆記、教學文章"
       time_format_default = "2006-01-02"
       time_format_blog = "2006-01-02"
 
