@@ -7,10 +7,10 @@ title: Huan-Lin 學習筆記
 我的期望是打造一個更有條理、更好閱讀與方便學習的技術文章網站。</p>
 <p class="lead mt-1">如欲查看舊版的筆記網站，請至：<a href="https://huanlintalk.com">Blogger 平台的 Huanlin 學習筆記</a>。</p>
 <br/> 
-<a class="btn btn-lg btn-primary me-3 mb-4" href="/zh-tw/docs/">
+<a class="btn btn-lg btn-primary me-3 mb-4" href="/docs/">
   閱讀文章 <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
-<a class="btn btn-lg btn-secondary me-3 mb-4" href="/zh-tw/blog/">
+<a class="btn btn-lg btn-secondary me-3 mb-4" href="/blog/">
   閱讀網誌 <i class="fa-brands fa-blogger ms-2 "></i>
 </a>
 <p class="lead mt-5">轉載請註明出處，並提供連結至此網站的首頁。</p>
