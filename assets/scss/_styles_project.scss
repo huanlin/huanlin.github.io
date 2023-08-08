@@ -40,3 +40,9 @@ h2 {
 .td-toc a {
   font-weight: 400;
 }
+
+.td-max-width-on-larger-screens {
+  @include media-breakpoint-up(lg) {
+    max-width: 95%; /* Docsy 預設為 80% */
+  }
+}
