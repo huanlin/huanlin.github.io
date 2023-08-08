@@ -17,6 +17,8 @@
   --md-shadow-z1: 0 0.2rem 0.5rem #0000000d,0 0 0.05rem #0000001a;
   --md-shadow-z2: 0 0.2rem 0.5rem #0000001a,0 0 0.05rem #00000040;
   --md-shadow-z3: 0 0.2rem 0.5rem #0003,0 0 0.05rem #00000059;
+
+  --md-primary-fg-color: #16191F;
 }
 
 :root {
@@ -45,4 +47,32 @@ h2 {
   @include media-breakpoint-up(lg) {
     max-width: 95%; /* Docsy 預設為 80% */
   }
+}
+
+@media (min-width: 1200px) {
+  // 左邊主選單的寬度
+  .col-xl-2 {
+    flex: none;
+    width: 19%; // 原本為 16.66666667%
+  }
+
+  // 中間內文區域的寬度
+  .col-xl-8 {
+    flex: 0 0 auto;
+    width: 60%; // 原本為 66.66666667%;
+  }
+}
+
+// Docsy 預設的選單字型太大，顏色太淺，此處略作調整。
+.td-sidebar-nav .td-sidebar-link {
+  color: var(--md-primary-fg-color);
+  display: block;
+  padding-bottom: 0.375rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.td-toc #TableOfContents a {
+  color: var(--md-primary-fg-color);
+  font-size: 0.9rem;
 }
