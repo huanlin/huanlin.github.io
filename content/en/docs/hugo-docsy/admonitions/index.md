@@ -5,6 +5,7 @@ date: "2023-08-07"
 description: >
   How I add admonitions (callouts) to my Hugo website. 
 tags: ["hugo", "docsy"]
+weight: 2
 ---
 
 ## Introduction

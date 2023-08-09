@@ -2,7 +2,7 @@
   {{ with .TableOfContents -}}
     {{ if ne . `<nav id="TableOfContents"></nav>` -}}
       <!-- Docsy 原本沒有，這裡額外加上 "table of contents" -->
-      <div style="margin-left: -2px; font-weight: 700;">Table of contents</div>
+      <div style="margin-left: -2px; font-weight: 700; padding-bottom: 8px;">Table of contents</div>
       <div class="td-toc">        
         {{ . }}
       </div>

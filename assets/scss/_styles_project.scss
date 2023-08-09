@@ -30,6 +30,13 @@ h2 {
   font-weight: 600;
 }
 
+h2.feedback--title {
+  padding-top: 2rem;
+  font-size: 1.7rem;  
+  font-weight: 500;
+  color: var(--md-primary-fg-color);
+}
+
 .lead {
   font-size: 1.1rem;
   font-weight: 400;
@@ -72,7 +79,27 @@ h2 {
   font-weight: 400;
 }
 
+// 右邊的 table of contents 的樣式
 .td-toc #TableOfContents a {
   color: var(--md-primary-fg-color);
   font-size: 0.9rem;
+}
+
+// 右邊的 table of contents 區塊的位置保持固定
+@supports (position: sticky) {
+.td-sidebar-toc {
+    position: sticky;
+    top: 6rem;
+    height: calc(100vh - 6rem);
+    overflow-y: auto;
+  }
+}
+
+// 頁面頂端標題列（導覽列），樣式取自 Material for MkDocs。
+.td-navbar {
+  background: var(--md-primary-fg-color); // #30638e;
+
+  // 下方加上陰影
+  box-shadow: 0 0 0.2rem #0000001a, 0 0.2rem 0.4rem #0003;
+  transition: transform .25s cubic-bezier(.1,.7,.1,1),box-shadow .25s;
 }
