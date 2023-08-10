@@ -5,3 +5,6 @@ other = "站內搜尋…"
 other = " 分鐘左右可讀完"
 [post_less_than_a_minute_read]
 other = "1 分鐘內可讀完"
+
+[post_last_mod]
+other = "Last updated"
