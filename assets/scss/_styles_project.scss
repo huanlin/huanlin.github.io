@@ -95,6 +95,11 @@ h2.feedback--title {
   font-size: 0.9rem;
 }
 
+// 右邊的 table of contents 區塊的子標題縮排
+.td-toc li li {
+  margin-left: 0.9rem;
+}
+
 // 右邊的 table of contents 區塊的位置保持固定
 @supports (position: sticky) {
 .td-sidebar-toc {
