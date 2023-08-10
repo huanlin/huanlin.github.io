@@ -2,6 +2,7 @@ baseURL = "/"
 title = "Huanlin 學習筆記"
 
 # Language settings
+contentDir = "content/zh-tw"
 defaultContentLanguage = "zh-tw"
 
 # 注意：defaultContentLanguageInSubdir 不可為 true! 否則搜尋功能會 404 Error。
@@ -89,7 +90,7 @@ id = "G-S83RZSBDVH" # This ID is specific for https://huanlin.cc
       unsafe = true
   [markup.highlight]
     # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
-    style = "catppuccin-mocha"
+    style = "github-dark"
     # Uncomment if you want your chosen highlight style used for code blocks without a specified language
     # guessSyntax = "true"
 

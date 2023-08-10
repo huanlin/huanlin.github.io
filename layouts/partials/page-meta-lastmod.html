@@ -1,0 +1,27 @@
+<!-- Created Date -->
+{{ $pubdate := .PublishDate.Format "2006-01-02" }}
+Created: 
+<time datetime="{{ .PublishDate }}" title="{{ .PublishDate }}">
+    {{ $pubdate }}
+</time>
+
+{{ if .Lastmod }}
+    {{ $lastmod := .Lastmod.Format "2006-01-02" }}
+    {{ if ne $lastmod $pubdate }}
+        <span class="post-info-last-mod">
+            &nbsp; (Updated: 
+            <time datetime="{{ .Lastmod }}" title="{{ .Lastmod }}">
+                {{ $lastmod }}
+            </time>)
+          </span>
+    {{ end }}
+{{ else if and (.GitInfo) (.Site.Params.github_repo) }}
+<div class="text-muted mt-5 pt-3 border-top">
+  {{ T "post_last_mod" }} {{ .Lastmod.Format .Site.Params.time_format_default }}
+  {{ with .GitInfo }}: {{- /* Trim WS */ -}}
+    <a href="{{ $.Site.Params.github_repo }}/commit/{{ .Hash }}">
+      {{ .Subject }} ({{ .AbbreviatedHash }}) {{- /* Trim WS */ -}}
+    </a>
+  {{ end }}
+</div>
+{{ end }}

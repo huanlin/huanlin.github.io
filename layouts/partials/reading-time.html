@@ -1,0 +1,8 @@
+{{ if gt .ReadingTime 1 }} 
+    <p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp;
+    {{ .ReadingTime }} {{ T "post_reading_time" }} 
+    &nbsp;</p>
+{{ else }} 
+    {{- /* 閱讀時間少於一分鐘的話，完全不顯示此資訊 */ -}}
+    {{- /* T "post_less_than_a_minute_read" */ -}} 
+{{ end }}

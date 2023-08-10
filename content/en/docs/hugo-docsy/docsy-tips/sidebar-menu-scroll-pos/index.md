@@ -1,9 +1,10 @@
 ---
 title: Keep Sidebar Menu's Scroll Position
-date: "2023-08-09"
+date: "2023-08-08"
 description: >
   Docsy and many other Hugo themes have the same UI issue. Here is a solution.
 tags: ["hugo", "docsy"]
+lastmod: "2023-08-09"
 ---
 
 ## The Issue
