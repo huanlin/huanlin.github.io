@@ -55,7 +55,7 @@ Here is my customized version of `/layouts/partials/page-meta-lastmod.html`:
 {{ end }}
 ```
 
-I know the code isn't pretty. They just work.
+I know the code isn't pretty. It just works.
 
 Now if Hugo can fetch the last commit date of a post from my Git repo, the `.Lastmod` will have a value, hence displayed at the bottom of my posts. Or, if anything goes wrong with the `.Lastmod` variable, I can still use the `date` property in the frontmatter.
 
