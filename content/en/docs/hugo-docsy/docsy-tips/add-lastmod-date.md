@@ -45,11 +45,11 @@ Here is my customized version of `/layouts/partials/page-meta-lastmod.html`:
 
 ```go
 {{ if .Lastmod }}  
-  <div class="text-muted mt-5 pt-3 border-top">
+  <div class="text-muted pt-3 border-top">
     {{ T "post_last_mod" }}: {{ .Lastmod.Format .Site.Params.time_format_default }}
   </div>
 {{ else if .PublishDate }} 
-  <div class="text-muted mt-5 pt-3 border-top"> 
+  <div class="text-muted pt-3 border-top"> 
     {{ T "post_last_mod" }}: {{ .PublishDate.Format .Site.Params.time_format_default }}
   </div>    
 {{ end }}
