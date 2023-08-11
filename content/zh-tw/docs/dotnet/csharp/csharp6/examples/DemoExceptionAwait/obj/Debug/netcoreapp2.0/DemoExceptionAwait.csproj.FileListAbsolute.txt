@@ -1,0 +1,11 @@
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\obj\Debug\netcoreapp2.0\DemoExceptionAwait.csprojResolveAssemblyReference.cache
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\obj\Debug\netcoreapp2.0\DemoExceptionAwait.csproj.CoreCompileInputs.cache
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\obj\Debug\netcoreapp2.0\DemoExceptionAwait.AssemblyInfoInputs.cache
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\obj\Debug\netcoreapp2.0\DemoExceptionAwait.AssemblyInfo.cs
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\bin\Debug\netcoreapp2.0\DemoExceptionAwait.deps.json
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\bin\Debug\netcoreapp2.0\DemoExceptionAwait.runtimeconfig.json
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\bin\Debug\netcoreapp2.0\DemoExceptionAwait.runtimeconfig.dev.json
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\bin\Debug\netcoreapp2.0\DemoExceptionAwait.dll
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\bin\Debug\netcoreapp2.0\DemoExceptionAwait.pdb
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\obj\Debug\netcoreapp2.0\DemoExceptionAwait.dll
+D:\Work\Coding\GitHub\huanlin\csharp-book-support\Examples\Ch05\DemoExceptionAwait\obj\Debug\netcoreapp2.0\DemoExceptionAwait.pdb

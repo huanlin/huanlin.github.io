@@ -22,7 +22,7 @@
 }
 
 :root {
-  --bs-body-font-family: open sans, Noto Sans TC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --bs-body-font-family: Noto Sans TC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -45,6 +45,13 @@ h2.feedback--title {
   font-size: 1.7rem;  
   font-weight: 500;
   color: var(--md-primary-fg-color);
+}
+
+// Section 首頁的標題連結
+.section-index h5 a {
+  font-weight: 700;
+  font-family: '微軟正黑體', var(--bs-body-font-family);
+  font-size: 1.18rem;
 }
 
 .lead {
@@ -89,6 +96,13 @@ h2.feedback--title {
   font-weight: 400;
 }
 
+// 左邊選單的子項目縮排
+@media (min-width: 768px) {
+  .td-sidebar-nav__section .ul-1 ul {
+    padding-left: 1.2em;
+  }
+}
+
 // 右邊的 table of contents 的樣式
 .td-toc #TableOfContents a {
   color: var(--md-primary-fg-color);
@@ -117,4 +131,11 @@ h2.feedback--title {
   // 下方加上陰影
   box-shadow: 0 0 0.2rem #0000001a, 0 0.2rem 0.4rem #0003;
   transition: transform .25s cubic-bezier(.1,.7,.1,1),box-shadow .25s;
+}
+
+// 頂端導覽列的字體
+.td-navbar .nav-link {
+    text-transform: none;
+    font-weight: 500;
+    font-size: 1.05rem;
 }

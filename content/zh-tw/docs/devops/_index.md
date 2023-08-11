@@ -1,6 +1,7 @@
 ---
 title: DevOps 小學堂
-weight: 1
+weight: 2
+hide_feedback: true
 ---
 
 這裡有我學習 DevOps 相關技術的筆記，程度大概是幼幼班至小學吧，故稱為「小學堂」。

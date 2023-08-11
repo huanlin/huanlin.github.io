@@ -5,18 +5,6 @@ weight: 1
 hide_feedback: true
 ---
 
-{{% blocks/section color="light" type="row" %}}
+![創用 CC 授權條款](https://i.creativecommons.org/l/by-nc-nd/3.0/tw/88x31.png)
 
-{{% blocks/feature icon="fa-brands fa-blogger" title="" %}}
-[.NET](https://www.huanlintalk.com/)
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fa-brands fa-facebook" title="" %}}
-[DevOps 小學堂](https://www.facebook.com/huanlin.notes)
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fa-solid fa-book" title="" %}}
-[我寫的書](https://play.google.com/store/books/author?id=%E8%94%A1%E7%85%A5%E9%BA%9F)
-{{% /blocks/feature %}}
-
-{{% /blocks/section %}}
+這裡的文章，有些是摘自我的電子書，有些則是從我的部落格整理過來。如欲轉貼，請註明出處。

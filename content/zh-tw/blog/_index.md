@@ -1,5 +1,5 @@
 ---
-title: 網站日誌
+title: Blog
 menu: {main: {weight: 2}}
 weight: 2
 ---
