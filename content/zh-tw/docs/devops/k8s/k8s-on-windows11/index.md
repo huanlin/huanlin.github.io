@@ -1,6 +1,6 @@
 ---
 title: 在 Windows 11 運行 Docker 與 Kubernetes
-weight: 1
+weight: 2
 description: >
   在 Windows 11 上面安裝 Docker Desktop 並運行 Kubernetes 的操作步驟。
 ---
