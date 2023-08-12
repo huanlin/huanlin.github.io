@@ -35,8 +35,9 @@ Prometheus 的架構中，負責執行監試工作的主要元件叫做 Promethe
 
 由上圖可知，Prometheus 在蒐集數據時，除了直接從各種 Targets 拉取數據，也可以透過一個中間的 Pushgateway 來獲取某些短期工作所產生的數據。Retrivial 元件會將拉回的監測數據儲存至 TSDB，以便其他前端工具（Prometheus Web UI、Grafana 等等）透過 PromQL 來查詢 TSDB 中的數據。
 
-!!! note "Push vs. Pull"
-    雖然 Prometheus 獲取監測數據的方式有拉取和推送（透過 Pushgateway）兩種方式，但主要的方式為拉取，而推送的方式應該只用於特定短時間執行的工作（例如清理老舊檔案）。有些雲端監測服務是採用推送機制，例如 Amazon Cloud Watch、New Relic 等等。
+{{% admonition type=note title="Push vs. Pull" %}}
+雖然 Prometheus 獲取監測數據的方式有拉取和推送（透過 Pushgateway）兩種方式，但主要的方式為拉取，而推送的方式應該只用於特定短時間執行的工作（例如清理老舊檔案）。有些雲端監測服務是採用推送機制，例如 Amazon Cloud Watch、New Relic 等等。
+{{% /admonition %}}
 
 ### Target
 

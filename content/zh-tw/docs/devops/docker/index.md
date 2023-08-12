@@ -1,5 +1,5 @@
 ---
-title: Docker 容器
+title: Docker 基礎概念
 weight: 3
 ---
 
@@ -7,8 +7,9 @@ weight: 3
 
 容器是一種打包 app 的方式。透過容器管理工具（例如 Docker）來把 app 及其所需的相關檔案全包在一個特殊格式的檔案裡，而這個檔案就是所謂的容器影像檔（container image）。
 
-!!! note
-    如同程式碼經過編譯之後產生的 .exe 和 .dll 檔案，容器影像檔也是軟體開發過程的一種產出（artifact）。
+{{% admonition type=note title="Note" %}}
+如同程式碼經過編譯之後產生的 .exe 和 .dll 檔案，容器影像檔也是軟體開發過程的一種產出（artifact）。
+{{% /admonition %}}
 
 ## 容器放在哪裡？
 
@@ -16,8 +17,9 @@ weight: 3
 
 容器儲存庫可以是完全公開的，例如 Docker Hub，也可以是公司內部建立的私有儲存庫。
 
-!!! note
-    私有儲存庫不見得一定放在公司內部主機，也有可能上傳至其他雲端平台提供的儲存庫管理服務，例如 Amazon ECR。
+{{% admonition type=note title="Note" %}}
+私有儲存庫不見得一定放在公司內部主機，也有可能上傳至其他雲端平台提供的儲存庫管理服務，例如 Amazon ECR。
+{{% /admonition %}}
 
 ## 容器有何優點？
 
@@ -40,5 +42,6 @@ weight: 3
 3. Jenkins 自動執行 app 的編譯、測試、打包等工作，並將打包好的 Docker 容器檔案推送至私有的 Docker 儲存庫。
 4. 最後，由一台伺服器從私有的 Docker 儲存庫拉回容器檔案，並且從公開的 Docker Hub 拉回 app 運行所需之容器檔案，以便進行最後的整合與部署。
 
-!!! note
-    Docker 不是唯一的容器管理工具，另外還有 containerd、cri-o 等等。
+{{% admonition type=note title="Note" %}}
+Docker 不是唯一的容器管理工具，另外還有 containerd、cri-o 等等。
+{{% /admonition %}}
