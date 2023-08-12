@@ -6,6 +6,3 @@ tags: ["linux"]
 
 (TO-DO)
 
-## 下一步
-
-[Shell、sh 與 bash](shell-bash.md)

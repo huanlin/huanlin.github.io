@@ -1,5 +1,6 @@
 ---
 title: Prometheus 簡介
+weight: 9
 ---
 
 ## What

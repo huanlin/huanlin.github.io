@@ -1,5 +1,6 @@
 ---
 title: Terraform 簡介
+weight: 6
 description: >
   簡單介紹 Terraform 在布建基礎設施方面的功能、Terraform 的運作方式、組態檔，以及幾個重要的 Terraform 命令。
 ---

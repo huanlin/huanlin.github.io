@@ -74,7 +74,3 @@ groups
 
 - `adduser/addgroup/deluser/delgroup`：比較 user-friendly，適用於手動下指令的互動環境。
 - `useradd/groupadd/userdel/groupdel/usermod/groupmod`：下命令的時候須提供完整參數，較少互動功能，故比較適用於撰寫 script。
-
-## 下一步
-
-了解 [Linux 的檔案權限](file-permissions.md)。

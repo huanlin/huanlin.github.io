@@ -163,6 +163,3 @@ scp -i ~/.ssh/my_id_rsa test.txt .....
 - SSH 密鑰的存放位置是**用戶端電腦**的使用者帳戶的 `~/.ssh/` 目錄。
 - 用戶端電腦的公鑰必須放到**目標主機**的使用者帳戶的 `~/.ssh/authorized_keys` 檔案中，以便在驗證身分時，跟用戶端電腦上的私鑰進行比對。
 
-## 下一步
-
-Linux 基礎知識到此結束。接下來可以學習 [Git 版本控制](/git/git-intro.md)或 [Docker](/docker/docker-overview.md)。

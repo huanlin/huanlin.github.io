@@ -1,5 +1,6 @@
 ---
 title: Git 版本控制
+weight: 2
 ---
 
 {{% admonition type=note title="Note" %}}

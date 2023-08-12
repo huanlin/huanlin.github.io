@@ -1,6 +1,6 @@
 ---
 title: Ansible 簡介
-weight: 20
+weight: 7
 description: >
   簡單介紹 Ansible 的用途、主要構成元件，以及工作腳本（Playbook）的寫法。
 ---

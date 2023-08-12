@@ -9,4 +9,4 @@ tags: ["linux"]
 
 ## 下一步
 
-[SSH (Secured Shell](ssh.md)
+[SSH (Secured Shell](ssh)

@@ -1,5 +1,6 @@
 ---
 title: Python
+draft: true
 ---
 
 {{% admonition type=note title="Note" %}}

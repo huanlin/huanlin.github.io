@@ -78,7 +78,3 @@ sudo apt install net-tools
 | `shutdown -h now` | 關機。|
 | `passwd` | 變更使用者密碼。|
 | `sudo passwd `*`<username>`* | 以 root 權限變更特定使用者的密碼。|
-
-## 下一步
-
-了解 [Linux 的套件管理員](package-manager.md)。

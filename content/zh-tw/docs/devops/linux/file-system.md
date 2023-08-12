@@ -28,6 +28,3 @@ tags: ["linux"]
 
 檔案或資料夾名稱若以英文句點開頭，就會被 Linux 系統視為隱藏檔或隱藏資料夾。例如：`.profile`、`.vscode`。
 
-## 下一步
-
-了解 [終端機視窗與 CLI](terminal-and-cli.md)。
