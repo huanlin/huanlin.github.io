@@ -8,3 +8,16 @@ other = "1 分鐘內可讀完"
 
 [post_last_mod]
 other = "Last updated"
+
+[post_byline_by]
+other = "作者："
+
+[post_posts_in]
+other = "張貼於"
+
+[ui_read_more]
+other = "閱讀全文"
+
+# Used in sentences such as "Posted in News"
+[ui_in]
+other = "於"

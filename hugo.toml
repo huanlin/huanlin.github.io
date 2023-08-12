@@ -110,6 +110,7 @@ section = ["HTML", "RSS"] # Original: section = ["HTML", "RSS", "print"]
 [params]
 copyright = "Michael (Huan-Lin) Tsai"
 privacy_policy = "https://policies.google.com/privacy"
+default_blog_author = "Michael Tsai" # 自訂額外的參數，這樣每一篇部落格帖子的檔頭就不用提供 author 屬性。
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -187,7 +188,7 @@ no = "Sorry to hear that. Feel free to <a href='mailto: huanlin.tsai@gmail.com'>
 # If you want this feature, but occasionally need to remove the Reading time from a single page,
 # add "hide_readingtime: true" to the page's front matter
 [params.ui.readingtime]
-enable = true
+enable = false
 
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.

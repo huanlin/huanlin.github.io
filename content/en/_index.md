@@ -3,17 +3,17 @@ title: Huan-Lin's Notes
 ---
 
 {{< blocks/cover title="Welcome!" image_anchor="top" height="full" >}}
-<p class="lead mt-1">You can swicth to Chinese version on the upper right corner of the page.</p>
+<p class="lead mt-1">You can switch to Chinese at the upper right corner of the page.</p>
 </p>
 <p class="lead mt-1">Or visit <a href="https://huanlintalk.com">the former Blogger site</a> for older articles.</p>
 <br/> 
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/en/docs">
   Read the Docs <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
-<a class="btn btn-lg btn-secondary me-3 mb-4" href="/en/blog">
+<a class="btn btn-lg btn-secondary me-3 mb-4" href="/blog">
   Blogs <i class="fa-brands fa-blogger ms-2 "></i>
 </a>
-<p class="lead mt-5">If you'd like to share my posts/articles, please indicate the source and provide a link to this web site.</p>
+<p class="lead mt-5">If you'd like to share my posts/articles, please indicate the source and provide a link to this website.</p>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
 

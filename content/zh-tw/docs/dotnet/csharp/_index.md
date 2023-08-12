@@ -13,7 +13,6 @@ description:
 - [C# 8](csharp8)
 - [C# 9](csharp9)
 - [C# 10](csharp10)
-- C# 11 (尚未開始)
 
 ## 參考資料
 
