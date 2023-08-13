@@ -24,6 +24,7 @@ First, add a file `body-end.html` in the folder `/layouts/partials/hooks/` of yo
 
 Then add the following code to `body-end.html`:
 
+```javascript
 <script > 
   (function() {
     var a = document.querySelector("#td-section-nav");
@@ -32,6 +33,7 @@ Then add the following code to `body-end.html`:
     }), a.scrollTop = localStorage.getItem("menu.scrollTop")
   })()
 </script>
+```
 
 Job done.
 
