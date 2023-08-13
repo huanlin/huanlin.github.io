@@ -53,11 +53,11 @@ Self-hosting GitLab runner 包含以下步驟：
 
 ### 在目標主機上安裝 Runner
 
-我用來練習的目標主機是 DigitalOcean 平台上的一台 Linux VM。
+我用來練習的目標主機是 [DigitalOcean](https://www.digitalocean.com/) 平台上的一台 Linux VM。
 
 先登入我的 GitLab 帳號，建立一個練習用的專案。我的專案網址是 https://gitlab.com/huanlin1/test-gitlab-runner。
 
-在此專案的 Settings > CI/CD 頁面展開 Runners 區塊，可以看到有左右兩個區塊，分別是 Project runners 和 Shared runners。這裡要建立的是供特定專案使用的 runner，故按下圖操作：
+在此專案的 Settings > CI/CD 頁面展開 Runners 區塊，可以看到有左右兩個區塊，分別是 Project runners 和 Shared runners。這裡要建立的是供特定專案使用的 runner，按下圖操作：
 
 ![](images/gitlab-new-project-runner.png)
 
