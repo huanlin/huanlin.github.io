@@ -1,6 +1,7 @@
 ---
 title: 網站版面樣式修改記錄
 date: "2023-08-12"
+lastmod: "2023-08-13"
 description: >
   記錄我對 huanlin.cc 這個網站的 Hugo 與 Docsy 主題框架做了哪些調整。
 ---
@@ -27,7 +28,18 @@ description: >
 
 在調整樣式的時候，我經常參考和模仿 Material for MkDocs 的網頁風格，包括顏色、字體大小等等。詳見 [_variables_project.scss](#_variables_projectscss) 和 [_styles_project.scss](#_styles_projectscss)。
 
-## 左邊選單會記住卷軸位置
+## 左側選單
+
+左側選單（sidebar menu）主要有兩處修改：
+
+- 顯示三角形箭頭圖案，方便使用者一看就知道哪些選單項目還有子項可展開，以及哪些項目是沒有子項的葉節點。
+- 記住卷軸位置。
+
+### 顯示三角形箭頭圖案
+
+
+
+## 記住卷軸位置
 
 在操作 Docsy 的左邊選單時，如果在子項目之間點選切換，每點一次就會因為網頁重新載入而令左邊選單也重新整理。雖然 Docsy 會記住目前選擇的項目，並且令該項目加粗顯示，但卻不會記住卷軸位置。這會造成一個對使用者操作上的不方便，因為當左邊選單的項目很長的時候，使用者透過左邊選單區塊的垂直捲軸往下找到想要查看的文章，點選之後，左邊選單就會因為網頁重新載入而令卷軸位置回到最頂端，於是就看不到先前選取的那個項目了。
 
@@ -329,3 +341,4 @@ other = "閱讀全文"
 - `[ui_read_more]` 在英文語系檔案裡面的用詞是 "Read more"，可是到了中文語系的檔案裡面卻是「更多」——只有 more，沒了 read 動作。
 - `[post_last_mod]` 我決定使用英文 "Last update"。
 
+如欲取得完整檔案內容，可以[從我的 Docsy fork 下載 zh-tw.toml](https://github.com/huanlin/docsy/blob/main/i18n/zh-tw.toml)。
