@@ -10,7 +10,7 @@ description: >
 
 我的 huanlin.cc 網站是 host 在 Github 平台上，網頁生成工具是用 Hugo 搭配 Docsy theme。本文的目的是記錄我對此網站的 Hugo 與 Docsy 主題框架做了哪些調整。
 
-修改方法很簡單，只要從原本的 Docsy 原始碼資料夾複製需要修改的檔案至我的網站的相同目錄下，就能覆蓋掉 Docsy 原本的設計。
+我把所有調整或新增的檔案放在 Github 上面：[docsy-customization](https://github.com/huanlin/docsy-customization)。如果你要使用的話，只要先在你的網站安裝好 Docsy theme，然後把我的 repo 中的檔案覆蓋掉你的網站裡對應的檔案，即可套用我的自訂樣式。
 
 ## 文件首頁
 
