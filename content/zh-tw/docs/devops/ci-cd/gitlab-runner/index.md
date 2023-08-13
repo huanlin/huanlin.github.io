@@ -201,7 +201,7 @@ Verifying runner... is alive                        runner=U88hEGQAv
 
 ![](images/runner-created.png)
 
-### 運行 pipeline
+### 運行 Pipeline 並查看 Log
 
 底下是我的專案的 `.gitlab-ci.yml` 檔案內容：
 
@@ -249,5 +249,6 @@ deploy-job:
 
 ## 結語
 
-[GitLab 官方文件](https://docs.gitlab.com/runner/)對於 GitLab Runner 的說明還蠻清楚的，但如果沒有實際操作一番，恐怕還是不容易搞懂 Runner 和 Executor 各扮演什麼角色。就我目前的粗淺理解，Runner 比較像是一個經紀人，而真正執行工作、以及決定在何種環境下工作的是 Executor。
+[GitLab 官方文件](https://docs.gitlab.com/runner/)對於 GitLab runner 的說明還蠻清楚的，但如果沒有實際操作一番，恐怕還是不容易搞懂 runner 和 executor 各扮演什麼角色。就我的粗淺理解，runner 比較像是一個經紀人，而真正執行工作、以及決定在何種環境下工作的是 executor。
 
+本文的練習是讓 GitLab runner 執行於 VM，而實際執行工作的 `docker` executor。之後可以試試把 GitLab runner 執行於 Docker 容器，或者改用 `kubernetes` executor 來執行工作。
