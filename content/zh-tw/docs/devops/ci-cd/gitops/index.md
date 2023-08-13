@@ -64,7 +64,7 @@ PR（Pull Request）和 MR（Merge Request）指的是同一件事：合併請�
 
 大致了解 GitOpt 的 what、why、與 how 之後，這裡做個簡單總結：理想情況是所有基礎設施和應用程式都能透過各種工具的組態檔與腳本來定義（即 IaC），而這些檔案則全部集中放在 Git 儲存庫，成為**單一資訊來源**（single source of truth），然後搭配合併請求（PR 或 MR）、code review 等實務做法以及 CD/CD 工具來實現自動部署。剛才這一長串的文字描述可濃縮成一個好記的公式（摘自免費電子書 [A Beginner's Guide to GitOps](https://page.gitlab.com/resources-ebook-beginner-guide-gitops.html)）：
 
-`**GitOps = IaC + MRs + CI/CD**`
+**`GitOps = IaC + MRs + CI/CD`**
 
 ## 參考資料
 
