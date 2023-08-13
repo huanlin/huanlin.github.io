@@ -354,7 +354,7 @@ other = "閱讀全文"
 
 說明：
 
-- `[post_byline_by]` 是用於部落格文章的作者姓名之前的標籤文字。若使用 Docsy 原本的檔案，顯示作者姓名的時候會像這樣：`藉由: Michael`。
+- `[post_byline_by]` 是用於部落格文章的作者姓名之前的標籤文字。若使用 Docsy 原本的檔案，顯示作者姓名的時候會像這樣：`藉由 Michael`。
 - `[ui_read_more]` 在英文語系檔案裡面的用詞是 "Read more"，可是到了中文語系的檔案裡面卻是「更多」——只有 more，沒了 read 動作。
 - `[post_last_mod]` 我決定使用英文 "Last update"。
 
