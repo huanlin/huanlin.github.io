@@ -37,9 +37,22 @@ description: >
 
 ### 顯示三角形箭頭圖案
 
+Docsy 官方文件的 Customization > Navigation and Menus 的 [Section menu options](Section menu options) 一節當中有說明，只要修改 Hugo 組態檔，將 `params.ui.sidebar_menu_foldable` 參數設定為 `true`，即可令左側選單出現三角形箭頭圖案來表示可展開／摺疊的選單項目。
 
+以下摘自我的 `hugo.toml` 檔案內容：
 
-## 記住卷軸位置
+```toml
+# User interface configuration
+[params.ui]
+# Enable to show the side bar menu in its compact state.
+sidebar_menu_compact = true
+# 讓左邊選單可以折疊／展開
+sidebar_menu_foldable = true
+```
+
+儘管 Docsy theme 有提供這個選項，但是它的[展示網站](https://www.docsy.dev/docs/) 並沒有啟用此功能，再加上 Docsy 範本的 `hugo.toml` 檔案裡面也沒有 `sidebar_menu_foldable` 參數，導致我剛開始以為 Docsy 無此功能。我相信應該也有不少人跟我一樣吧，所以 GitHub 上面的 [issue #100](https://github.com/google/docsy/issues/100) 在我寫這篇筆記的時候都還是 open 狀態。
+
+### 記住卷軸位置
 
 在操作 Docsy 的左邊選單時，如果在子項目之間點選切換，每點一次就會因為網頁重新載入而令左邊選單也重新整理。雖然 Docsy 會記住目前選擇的項目，並且令該項目加粗顯示，但卻不會記住卷軸位置。這會造成一個對使用者操作上的不方便，因為當左邊選單的項目很長的時候，使用者透過左邊選單區塊的垂直捲軸往下找到想要查看的文章，點選之後，左邊選單就會因為網頁重新載入而令卷軸位置回到最頂端，於是就看不到先前選取的那個項目了。
 

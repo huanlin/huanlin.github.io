@@ -96,6 +96,11 @@ h2.feedback--title {
   font-weight: 400;
 }
 
+// 左邊選單的最左邊留白區域縮小一點點，以免選單文字太容易超出右邊界
+nav.foldable-nav .with-child, nav.foldable-nav .without-child {
+  margin-left: -0.4em; // 加了這行
+}
+
 // 左邊選單的子項目縮排
 @media (min-width: 768px) {
   .td-sidebar-nav__section .ul-1 ul {
