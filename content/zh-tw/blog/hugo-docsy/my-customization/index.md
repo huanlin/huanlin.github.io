@@ -64,7 +64,7 @@ sidebar_menu_foldable = true
 
 檔案：`/layouts/partials/toc.html`
 
-閱讀文章時，右邊會有一個區塊顯示文章大綱連結，也就內容的各級標題的連結。
+閱讀文章時，右邊會有一個區塊顯示文章大綱連結，也就是內文的各級標題連結。
 
 原本：
 
@@ -165,6 +165,8 @@ default_blog_author = "Michael Tsai"
 
 ### `_variables_project.scss`
 
+檔案內容：
+
 ```scss
 /*
   Add styles or override variables from the theme here.
@@ -180,6 +182,8 @@ $google_font_family: "Noto+Sans+TC:300,300i,400,400i,700,700i";
 其中 import 的 `_admonition.scss` 和 `_admonition_variables.scss` 也是放在同一個目錄下。這部分的細節已整理在另一篇文章：[Admonitions](/en/docs/hugo-docsy/admonitions/)。
 
 ### `_styles_project.scss`
+
+CSS 樣式的部分就不解釋了，直接把檔案內容貼上來：
 
 ```scss
 // This is a custom SCSS file for Hugo Docsy theme.
