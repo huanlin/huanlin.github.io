@@ -1,6 +1,6 @@
 ---
 title: "Argo CD 簡介"
-weight: 3
+weight: 4
 description: >
   簡單介紹 Argo CD 的用途與優點。
 tags: ["CI/CD"]  
