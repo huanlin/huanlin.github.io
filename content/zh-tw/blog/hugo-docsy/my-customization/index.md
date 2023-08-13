@@ -37,7 +37,7 @@ description: >
 
 ### 顯示三角形箭頭圖案
 
-Docsy 官方文件的 Customization > Navigation and Menus 的 [Section menu options](Section menu options) 一節當中有說明，只要修改 Hugo 組態檔，將 `params.ui.sidebar_menu_foldable` 參數設定為 `true`，即可令左側選單出現三角形箭頭圖案來表示可展開／摺疊的選單項目。
+Docsy 官方文件的 Navigation and Menus 的 [Section menu options](https://www.docsy.dev/docs/adding-content/navigation/#section-menu-options) 一節當中有說明，只要修改 Hugo 組態檔，將 `params.ui.sidebar_menu_foldable` 參數設定為 `true`，即可令左側選單出現三角形箭頭圖案來表示可展開／摺疊的選單項目。
 
 以下摘自我的 `hugo.toml` 檔案內容：
 
