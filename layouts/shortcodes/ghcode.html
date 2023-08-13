@@ -1,0 +1,15 @@
+{{- /*
+  Usage example: {{< ghcode "https://raw.githubusercontent.com/.." >}}
+  Source: https://discourse.gohugo.io/t/is-there-a-way-to-embed-raw-github-url-in-hugo/39957/14 
+*/ -}} 
+{{ $file := .Get 0 }}
+{{ with resources.GetRemote $file }}
+  {{ with .Err }}
+    {{ errorf "%s" . }}
+  {{ else }}
+    {{ $lang := path.Ext $file | strings.TrimPrefix "." }}
+    {{ highlight .Content $lang }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get remote resource." }}
+{{ end }}
