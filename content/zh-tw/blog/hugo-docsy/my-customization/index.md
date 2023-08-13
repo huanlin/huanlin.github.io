@@ -50,7 +50,7 @@ sidebar_menu_compact = true
 sidebar_menu_foldable = true
 ```
 
-儘管 Docsy theme 有提供這個選項，但是它的[展示網站](https://www.docsy.dev/docs/) 並沒有啟用此功能，再加上 Docsy 範本的 `hugo.toml` 檔案裡面也沒有 `sidebar_menu_foldable` 參數，導致我剛開始以為 Docsy 無此功能。我相信應該也有不少人跟我一樣吧，所以 GitHub 上面的 [issue #100](https://github.com/google/docsy/issues/100) 在我寫這篇筆記的時候都還是 open 狀態。
+儘管 Docsy theme 有提供這個選項，但是它的 [展示網站](https://www.docsy.dev/docs/) 並沒有啟用此功能，再加上 Docsy 範本的 `hugo.toml` 檔案裡面也沒有 `sidebar_menu_foldable` 參數，所以我一開始就以為 Docsy 無此功能。我相信應該也有不少人跟我一樣吧，以至於 GitHub 上面的 [issue #100](https://github.com/google/docsy/issues/100) 在我寫這篇筆記的時候都還是 open 狀態（可能後來才加入此功能，但 issue 沒人去更新了）。
 
 ### 記住卷軸位置
 
