@@ -20,7 +20,7 @@ GitLab runner 是 gitlab.com 提供的一個程式，可下載安裝於 Linux、
 
 接著從 [GitLab 官方文件](https://docs.gitlab.com/runner/)摘錄幾個基礎觀念，然後搭配一個簡單的練習來理解其運作方式。
 
-### GitLab Runner Types
+### GitLab Runners
 
 依「誰有存取權限」來看，GitLab runners 有三種：
 
@@ -28,7 +28,7 @@ GitLab runner 是 gitlab.com 提供的一個程式，可下載安裝於 Linux、
 - Group runners：在同一個 group 及其 subgroup 中的所有 projects 和都能使用。
 - Project runners：僅特定專案才能使用。
 
-### GitLab Runner Executor
+### GitLab Runner Executors
 
 在註冊 GitLab runner 時，必須選擇一個 executor 來負責執行 pipeline jobs。因應實際執行環境的需要，GitLab runner 提供了多種 executors 可供選擇，包括：
 
