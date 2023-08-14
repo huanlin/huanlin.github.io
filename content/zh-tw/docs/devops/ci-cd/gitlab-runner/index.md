@@ -11,6 +11,13 @@ tags: ["CI/CD", "GitLab"]
 
 GitLab runner 是 gitlab.com 提供的一個程式，可下載安裝於 Linux、Windows、VM、容器等環境。
 
+以下是幾個關鍵術語：
+
+| 術語 | 解釋 |
+|-----|:-----|
+| pipeline | CI/CD 管線（工作流程），在 GitLab 是定義在 `.gitlab-ci.yml` 檔案中。這個檔案又稱為 CI/CD 腳本或配置檔。閱讀官方文件：[CI/CD pipelines](https://docs.gitlab.com/ee/ci/pipelines/)。|
+| job | Job 是 CI/CD 腳本的最小作業單元，用來定義特定工作，例如建置、測試、部署等工作，在腳本中可能分別命名為 build、test、deploy。每一個 job 都包含一至多個命令。閱讀官方文件：[Jobs](https://docs.gitlab.com/ee/ci/jobs/)。|
+
 接著從 [GitLab 官方文件](https://docs.gitlab.com/runner/)摘錄幾個基礎觀念，然後搭配一個簡單的練習來理解其運作方式。
 
 ### GitLab Runner Types
@@ -23,8 +30,26 @@ GitLab runner 是 gitlab.com 提供的一個程式，可下載安裝於 Linux、
 
 ### GitLab Runner Executor
 
-- Executor 決定了每個 job 實際執行在什麼環境中。
-- 在註冊 GitLab runner 時，必須選擇一個 executor。
+在註冊 GitLab runner 時，必須選擇一個 executor 來負責執行 pipeline jobs。因應實際執行環境的需要，GitLab runner 提供了多種 executors 可供選擇，包括：
+
+| Executor 類型 | 用途／說明 |
+|--------------|:------------|
+| SSH executor | 讓你能夠透過 SSH 來對遠端主機執行 Bash 命令。|
+| Shell executor | 運行於主機的 shell 環境，可用於執行各種簡單的腳本和命令。|
+| Parallels executor | 使用 Parallels 虛擬化技術在虛擬機中運行 jobs。主要用於 MacOS 平台。 |
+| VirtualBox | 使用 VirtualBox 虛擬化技術在虛擬機中運行 jobs。主要用於 Linux 和 Windows 平台。 |
+| Docker executor | 使用 Docker 容器來運行 jobs，好處是容易確保作業在一致的環境中運行，並且容易配置和清理。你可以在 runner 的組態檔案（稍後的實作練習會提到）或 pipeline 腳本 `.gitlab-ci.yml` 中指定要使用的 Docker image。 |
+| Docker Autoscaler executor | 尚在實驗階段。是一種可根據實際作業需求（on-demand）而自動擴展的 Docker executor。 |
+| Docker Machine executor (auto-scaling) | 類似 Docker executor，但它在指定的 Docker Machine 虛擬機上運行 jobs。這對於需要運行在特定虛擬機環境中的作業非常有用。 |
+| Kubernetes executor | 使用 Kubernetes 叢集來運行 jobs，可利用 Kubernetes 的自動擴展和管理功能。 |
+| Instance executor | 尚在實驗階段，請參閱[官方文件的說明](https://docs.gitlab.com/runner/executors/instance.html)。 |
+| Custom executor | 如果 GitLab 提供的 executors 都無法滿足你的需求，便可自行撰寫 Custom executor。|
+
+{{% admonition type=note title="Note" %}}
+以上各 executors 的解釋，我覺得不夠清楚，也不到位。推薦閱讀兩份文件，以補本文不足之處：
+- [GitLab CI 之 Runner 的 Executor 該如何選擇？](https://chengweichen.com/2021/03/gitlab-ci-executor.html) by Cheng Wei Chen (艦長)
+- GitLab 官方文件：[Executors](https://docs.gitlab.com/runner/executors/)。
+{{% /admonition %}}
 
 ### Tags
 
@@ -39,6 +64,14 @@ job:
 ```
 
 這就表示 GitLab 只會使用具有 `ruby` tag 的 runner 來執行這個 job。
+
+## 運作方式
+
+1. 當一個 pipeline 被觸發十，GitLab 會根據 `.gitlab-ci.yml` 檔案中的設定來建立 job，並將 job 交給具有相同 tag 的 runner，然後再由 runner 啟動與之關聯的 executor 來執行 job。
+2. Executor 啟動時，會先從 GitLab repo 拉取專案原始碼到它所在的執行環境，然後開始執行 job。
+3. Executor 執行完 job 之後，將執行結果與 log 透過 runner 回報給 GitLab，以便呈現於 Web 管理介面，供使用者查看。若該 job 被設定成會去異動 repo 中的檔案，那麼 repo 中的變動會被推送回 GitLab 伺服器。
+
+特定 runner 與 executor 之間的關聯，是在註冊 runner 的時候就設定好的。這在稍後的實作練習當中就會看到。
 
 ## 實作練習
 
