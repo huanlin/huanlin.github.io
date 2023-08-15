@@ -11,9 +11,9 @@ tags: ["CI/CD", "GitLab"]
 
 ## 簡介
 
-GitLab runner 是 gitlab.com 提供的一個程式，可下載安裝於 Linux、Windows、VM、容器等環境。
+GitLab runner 是一個應用程式，其功用是運行 GitLab CI/CD 流程中的 jobs。
 
-以下是幾個關鍵術語：
+以下是閱讀本文之前需要了解的關鍵術語：
 
 | 術語 | 解釋 |
 |-----|:-----|
@@ -24,7 +24,11 @@ GitLab runner 是 gitlab.com 提供的一個程式，可下載安裝於 Linux、
 
 ### GitLab Runners
 
-依「誰有存取權限」來看，GitLab runners 有三種：
+若從「服務提供者」或「擁有管理權」的角度來看，GitLab runners 有兩種，一種是由 gitlab.com 提供的現成 runners，在官方文件裡面的說法是「SaaS runners」；另一種則是可以由我們自己完全控管的 runners，原文的說法是 self-managed runners。本文的焦點是後者。
+
+使用 self-managed runners 時，我們需要從 GitLab 平台下載 GitLab runner 應用程式，然後把它安裝在我們自己的伺服器上，而且需要完成一個註冊程序。稍後就會看到安裝與註冊 runner 的詳細步驟。
+
+另一方面，若依「誰有使用權限」來區分，則又可分為三種 GitLab runners：
 
 - Shared runners：在一台 GitLab 伺服器上面的所有專案都能使用。
 - Group runners：在同一個 group 及其 subgroup 中的所有 projects 都能使用。
@@ -32,7 +36,14 @@ GitLab runner 是 gitlab.com 提供的一個程式，可下載安裝於 Linux、
 
 ### GitLab Runner Executors
 
-註冊 GitLab runner 時，必須選擇一個 executor 來負責執行 pipeline jobs。因應實際執行環境的需要，GitLab runner 提供了多種 executors 可供選擇，包括：
+從名稱來看，GitLab runner 本身就帶有「執行工作」的意涵，但其實 **executor** 才是真正負責執行 CI/CD pipeline 中各項工作的「苦主」，而 runner 的角色與責任主要是在 GitLab 伺服器與 executor 之間傳遞訊息。
+
+!!! note
+    Runner 有點類似經紀人，在外面接洽新專案，再交給開發人員來進行實際的軟體開發工作。Executor 便是這個比喻中的開發人。
+
+理解 runner 與 executor 的責任與關係之後，實際運用時便不難理解為什麼註冊 GitLab runner 時必須選擇一個 executor 來負責執行 pipeline jobs。
+
+因應實際執行環境的需要，GitLab runner 提供了多種 executors 可供選擇，包括：
 
 | Executor 類型 | 用途／說明 |
 |--------------|:------------|
