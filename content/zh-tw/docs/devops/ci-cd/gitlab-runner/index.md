@@ -88,7 +88,7 @@ job:
 
 ## 實作練習
 
-Self-hosting GitLab runner 包含以下步驟：
+使用 self-managed GitLab runner 所需之步驟如下：
 
 1. 在目標主機上面安裝 runner 程式。
 2. 選擇一個 executor。
