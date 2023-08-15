@@ -38,8 +38,9 @@ GitLab runner 是一個應用程式，其功用是運行 GitLab CI/CD 流程中�
 
 從名稱來看，GitLab runner 本身就帶有「執行工作」的意涵，但其實 **executor** 才是真正負責執行 CI/CD pipeline 中各項工作的「苦主」，而 runner 的角色與責任主要是在 GitLab 伺服器與 executor 之間傳遞訊息。
 
-!!! note
-    Runner 有點類似經紀人，在外面接洽新專案，再交給開發人員來進行實際的軟體開發工作。Executor 便是這個比喻中的開發人。
+{{% admonition type=note title="Note" %}}
+Runner 有點類似經紀人，在外面接洽新專案，再交給開發人員來進行實際的軟體開發工作。Executor 便是這個比喻中的開發人。
+{{% /admonition %}}
 
 理解 runner 與 executor 的責任與關係之後，實際運用時便不難理解為什麼註冊 GitLab runner 時必須選擇一個 executor 來負責執行 pipeline jobs。
 
@@ -295,7 +296,7 @@ deploy-job:
 
 ## 結語
 
-[GitLab 官方文件](https://docs.gitlab.com/runner/)對於 GitLab runner 的說明還蠻清楚的，但如果沒有實際操作一番，恐怕還是不容易搞懂 runner 和 executor 各扮演什麼角色。就我的粗淺理解，runner 比較像是一個經紀人，而真正執行工作、以及決定在何種環境下工作的是 executor。Tag 則是用來確保特定 jobs 必定是由某個具有相同 tag 的 runner 來運行。
+[GitLab 官方文件](https://docs.gitlab.com/runner/)對於 GitLab runner 的說明還蠻清楚的，但如果沒有實際操作一番，恐怕還是不容易搞懂 runner 和 executor 各扮演什麼角色。我的理解是，runner 如同經紀人的角色，而真正執行工作、以及決定在何種環境下工作的是 executor。至於 tag 則是一種匹配或篩選 runner 的機制——用來確保特定 jobs 必定是由某個具有相同 tag 的 runner 來運行。
 
 本文的練習是讓 GitLab runner 執行於 Linux VM，而實際執行 jobs 的是 `docker` executor。之後可以試試把 GitLab runner 安裝於 Docker 容器，或者改用 `kubernetes` executor 來執行 jobs。
 
