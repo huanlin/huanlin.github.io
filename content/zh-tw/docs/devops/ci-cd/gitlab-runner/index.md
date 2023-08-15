@@ -81,7 +81,7 @@ job:
 
 ## 運作方式
 
-1. 當一個 pipeline 被觸發十，GitLab 會根據 `.gitlab-ci.yml` 檔案中的設定來建立 job，並將 job 交給具有相同 tag 的 runner，然後再由 runner 啟動與之關聯的 executor 來執行 job。
+1. 當一個 pipeline 被觸發時，GitLab 會根據 `.gitlab-ci.yml` 檔案中的設定來建立 job，並將 job 交給具有相同 tag 的 runner，然後再由 runner 啟動與之關聯的 executor 來執行 job。
 2. Executor 啟動時，會先從 GitLab repo 拉取專案原始碼到它所在的執行環境，然後開始執行 job。
 3. Executor 執行完 job 之後，將執行結果與 log 透過 runner 回報給 GitLab，以便呈現於 Web 管理介面，供使用者查看。若該 job 被設定成會去異動 repo 中的檔案，那麼 repo 中的變動會被推送回 GitLab 伺服器。
 

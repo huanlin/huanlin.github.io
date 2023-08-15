@@ -33,11 +33,11 @@
 <!-- 還需要判斷：只顯示在某個 list 頁面或首頁
 <h4>最近發布或更新的 5 篇文章</h4>
 <div>
-    {{ $byLastMod :=  .Site.RegularPages.ByLastmod  }}
-    {{ $recent := ($byLastMod | last 5).Reverse }}
+    {{ $byLastMod :=  .Site.RegularPages.ByLastmod.Reverse  }}
+    {{ $recent := range first 5 $byLastMod }}
 
     <ul>
-    {{ range $recent }}
+    {{ with $recent }}
       <li>
         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
         &nbsp; ({{ .Lastmod.Format "2006-01-02" }})

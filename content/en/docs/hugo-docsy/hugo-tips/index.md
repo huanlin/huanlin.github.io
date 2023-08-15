@@ -49,3 +49,9 @@ The following code can be used to show recent 5 posts:
 ```
 
 You can put them into a partial file, for example, if you're using Docsy theme, the `partials/section-index.html` might be a good choice.
+
+See also: 
+
+- [Sorting pages by last modified date in Hugo](https://echorand.me/posts/hugo-reverse-sort-modified/)
+- [Ordering content by modified date?](https://discourse.gohugo.io/t/ordering-content-by-modified-date/3175)
+- [Hugo 模板的一些配置](https://r888800009.github.io/wiki/hugo-template/)
