@@ -110,7 +110,7 @@ sudo gitlab-runner register
 
 執行此命令時，會先要求輸入 GitLab 伺服器的網址：
 
-```shell
+```text
 Enter the GitLab instance URL (for example, https://gitlab.com/):
 [https://gitlab.com/]:
 ```
