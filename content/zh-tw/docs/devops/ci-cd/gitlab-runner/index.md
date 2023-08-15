@@ -7,6 +7,8 @@ description: >
 tags: ["CI/CD", "GitLab"]  
 ---
 
+**背景知識：**[GitLab CI/CD](../gitlab-cicd/)
+
 ## 簡介
 
 GitLab runner 是 gitlab.com 提供的一個程式，可下載安裝於 Linux、Windows、VM、容器等環境。
@@ -15,7 +17,7 @@ GitLab runner 是 gitlab.com 提供的一個程式，可下載安裝於 Linux、
 
 | 術語 | 解釋 |
 |-----|:-----|
-| pipeline | CI/CD 管線（工作流程），在 GitLab 是定義在 `.gitlab-ci.yml` 檔案中。這個檔案又稱為 CI/CD 腳本或配置檔。閱讀官方文件：[CI/CD pipelines](https://docs.gitlab.com/ee/ci/pipelines/)。|
+| pipeline | CI/CD 管線（工作流程），在 GitLab 是定義於 `.gitlab-ci.yml` 檔案中。這個檔案又稱為 CI/CD 腳本或配置檔。閱讀官方文件：[CI/CD pipelines](https://docs.gitlab.com/ee/ci/pipelines/)。|
 | job | Job 是 CI/CD 腳本的最小作業單元，用來定義特定工作，例如建置、測試、部署等工作，在腳本中可能分別命名為 build、test、deploy。每一個 job 都包含一至多個命令。閱讀官方文件：[Jobs](https://docs.gitlab.com/ee/ci/jobs/)。|
 
 接著從 [GitLab 官方文件](https://docs.gitlab.com/runner/)摘錄幾個基礎觀念，然後搭配一個簡單的練習來理解其運作方式。
@@ -25,12 +27,12 @@ GitLab runner 是 gitlab.com 提供的一個程式，可下載安裝於 Linux、
 依「誰有存取權限」來看，GitLab runners 有三種：
 
 - Shared runners：在一台 GitLab 伺服器上面的所有專案都能使用。
-- Group runners：在同一個 group 及其 subgroup 中的所有 projects 和都能使用。
+- Group runners：在同一個 group 及其 subgroup 中的所有 projects 都能使用。
 - Project runners：僅特定專案才能使用。
 
 ### GitLab Runner Executors
 
-在註冊 GitLab runner 時，必須選擇一個 executor 來負責執行 pipeline jobs。因應實際執行環境的需要，GitLab runner 提供了多種 executors 可供選擇，包括：
+註冊 GitLab runner 時，必須選擇一個 executor 來負責執行 pipeline jobs。因應實際執行環境的需要，GitLab runner 提供了多種 executors 可供選擇，包括：
 
 | Executor 類型 | 用途／說明 |
 |--------------|:------------|
