@@ -25,5 +25,27 @@ It's not who you are underneath, it's what you do that defines you.
 {{%/* /admonition */%}}
 ```
 
+## Templates
 
+### Showing Recent Posts
 
+The following code can be used to show recent 5 posts:
+
+```html
+<h4>Recently added/updated posts</h4>
+<div>
+    {{ $byLastMod :=  .Site.RegularPages.ByLastmod  }}
+    {{ $recent := ($byLastMod | last 5).Reverse }}
+
+    <ul>
+    {{ range $recent }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        &nbsp; ({{ .Lastmod.Format "2006-01-02" }})
+      </li>
+    {{ end }}
+    </ul>
+</div>
+```
+
+You can put them into a partial file, for example, if you're using Docsy theme, the `partials/section-index.html` might be a good choice.
