@@ -2,13 +2,9 @@
 title: Click Image and Zoom-in
 ---
 
-## Medium Zoom
+I use [Medium Zoom](https://medium-zoom.francoischalifour.com/) in my Docsy website to make images clickable and zoomable. 
 
-Home page: [Medium Zoom](https://medium-zoom.francoischalifour.com/)
-
-### Docsy Example
-
-Add the following code in the file `/layouts/partials/hooks/body-end.html`:
+Simply add the following code in `/layouts/partials/hooks/body-end.html`:
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.7/medium-zoom.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -38,9 +34,7 @@ images.forEach(img => {
 
 That's it. Now the images are automatically clickable and zoomable.
 
-### Another Example
-
-[An example for Hugo](https://github.com/russmckendrick/blog/blob/428e00b236fd3fcf484190d1d32759b9a51643b6/layouts/partials/extend_footer.html#L1-L13)
+Here is [another example](https://github.com/russmckendrick/blog/blob/428e00b236fd3fcf484190d1d32759b9a51643b6/layouts/partials/extend_footer.html#L1-L13) used in a Hugo website that does not use the Docsy theme.
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S+Yti0U7QtuZvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
