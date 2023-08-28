@@ -159,7 +159,7 @@ build:
 
 圖中顯示的執行紀錄有兩次，一次成功，一次失敗，而失敗的那次是我刻意把 CI/CD 腳本中的 `image: ...` 那行拿掉，以便抓取錯誤訊息的截圖。從那筆顯示 failed 的紀錄點進去就能看到完整的執行紀錄，如下圖：
 
-![](image/../images/gitlab-cicd-failed-log.png)
+![](images/gitlab-cicd-failed-log.png)
 
 ### 建立 Docker Image 並推送至 Docker Hub
 

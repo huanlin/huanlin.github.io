@@ -144,3 +144,18 @@ nav.foldable-nav .with-child, nav.foldable-nav .without-child {
     font-weight: 500;
     font-size: 1.05rem;
 }
+
+// The outer page container for the default base template.
+.td-default {
+  main {
+    > section:first-of-type {
+      @include media-breakpoint-up(md) {
+        padding-top: 1rem; // by Michael: 原本是 8rem
+      }
+    }
+
+    section {
+      @extend .td-block-padding;
+    }
+  }
+}

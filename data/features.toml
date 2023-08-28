@@ -1,0 +1,44 @@
+[dotnet]
+weight = 1
+title = ".NET 筆記"
+url = "docs/dotnet"
+description = ".NET programming."
+[dotnet.icon]
+name = "code-slash"
+color = "black"
+
+[devops]
+weight = 2
+title = "DevOps 小學堂"
+url = "docs/devops"
+description = ".NET programming."
+[devops.icon]
+name = "tools"
+color = "black"
+
+[books]
+weight = 3
+title = "e-Books"
+url = "https://play.google.com/store/books/author?id=%E8%94%A1%E7%85%A5%E9%BA%9F"
+description = "到 Google Play 購買我的電子書"
+[books.icon]
+name = "book-half"
+color = "black"
+
+[braille]
+weight = 4
+title = "易點雙視"
+url = "https://innoobj.blogspot.com/"
+description = "下載易點雙試用版、使用手冊。"
+[braille.icon]
+name = "github"
+color = "black"
+
+[reserved]
+weight = 5
+title = "Reserved"
+url = ""
+description = "（施工中）"
+[reserved.icon]
+name = "box-fill"
+color = "gray"
