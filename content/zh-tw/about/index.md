@@ -2,14 +2,15 @@
 title: 關於我
 linkTitle: 關於我
 menu: {main: {weight: 10}}
+draft: true
 ---
 
-{{% blocks/cover title="關於我" image_anchor="bottom" height="auto" %}}
+{{% blocks/section %}}
 
 姓名：蔡煥麟（Michael Tsai）
 {.mt-5}
 
-{{% /blocks/cover %}}
+{{% /blocks/section %}}
 
 {{% blocks/lead %}}
 

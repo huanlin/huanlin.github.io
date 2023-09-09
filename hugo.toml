@@ -164,7 +164,7 @@ prism_syntax_highlighting = false
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
 # Set to true to disable the About link in the site footer
-footer_about_disable = false
+footer_about_disable = true
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
 navbar_logo = true
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
@@ -200,9 +200,9 @@ enable = false
   icon = "fa fa-envelope"
   desc = "Discussion and help from your fellow users"
 [[params.links.user]]
-  name ="Twitter"
-  url = "https://twitter.com/huanlin"
-  icon = "fab fa-twitter"
+  name ="Facebook"
+  url = "https://www.facebook.com/huanlin.notes/"
+  icon = "fab fa-facebook"
   desc = "Follow me on Twitter"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
@@ -219,14 +219,22 @@ enable = false
 # hugo module configuration
 
 [module]
-  # uncomment line below for temporary local development of module
-  # replacements = "github.com/google/docsy -> ../../docsy"
-  [module.hugoVersion]
-    extended = true
-    min = "0.110.0"
-  [[module.imports]]
-    path = "github.com/google/docsy"
-    disable = false
-  [[module.imports]]
-    path = "github.com/google/docsy/dependencies"
-    disable = false
+# uncomment line below for temporary local development of module
+# replacements = "github.com/google/docsy -> ../../docsy"
+[module.hugoVersion]
+  extended = true
+  min = "0.110.0"
+[[module.imports]]
+  path = "github.com/google/docsy"
+  disable = false
+[[module.imports]]
+  path = "github.com/google/docsy/dependencies"
+  disable = false
+[[module.imports]]
+  path = 'github.com/hugomods/icons/vendors/bootstrap'  
+[[module.imports]]
+  path = 'github.com/hugomods/icons/vendors/font-awesome'
+[[module.imports]]
+  path = 'github.com/hugomods/images'
+[[module.imports]]
+    path = 'github.com/hugomods/bootstrap'
