@@ -1,6 +1,6 @@
 ---
 title: "Hugo & Docsy"
-weight: 1
+weight: 5
 hide_feedback: true
 description: >
   My notes about Hugo and Docsy.

@@ -39,6 +39,7 @@ Based on my skills and experiences, I thought it should not be no sweat for me t
 
 - Communication & learning
 - English writing skill
+- Being a tester and user
 
 ### Communication & Learning
 
@@ -61,6 +62,14 @@ In the first two months, I was writing documents with Chinese. Then one day, my 
 Yes, there are AI translation tools that I can use for translating Chinese text to English. But the translation process still takes time. Obviously, it's best if I can think in English and write in English fluently. However, when I write in English, it's a slow and painful process to me. I kept scratching my head trying to find appropriate words, and I am not confident with the sentences I wrote.
 
 That's the reason I start writing blog posts in English. Although it's slow and painful to me, I think it's just a process and I have to go through this stage until I get used to it and be able to write in English fast enough.
+
+## Being a Test and User
+
+Yes, I'm also a tester and user, at least a part of it. Just as mentioned earlier, if I don't understand it, I can't write a good document for it. So before I can write the document, I have to be a tester and a user.
+
+Because of this, I was not only asking questions, but also be able to provide suggestions for development teams, such as bug reports, UI/UX improvement suggestions, wording..., etc. I feel happy when my suggestions are accepted. But when they are not accepted by the team, I didn't feel bad and just keep moving. 
+
+As a technical writer, I'm detail oriented. But I also understand that sometimes people are too busy to care about tiny little things.
 
 ## Types of Documents
 
