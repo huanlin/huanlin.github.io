@@ -1,9 +1,9 @@
 baseURL = "/"
-title = "Huanlin 學習筆記"
+title = "Huanlin's Notes"
 
 # Language settings
-contentDir = "content/zh-tw"
-defaultContentLanguage = "zh-tw"
+contentDir = "content/en"
+defaultContentLanguage = "en"
 
 # 注意：defaultContentLanguageInSubdir 不可為 true! 否則搜尋功能會 404 Error。
 # 參見：https://github.com/google/docsy/issues/1646
@@ -73,6 +73,7 @@ id = "G-S83RZSBDVH" # This ID is specific for https://huanlin.cc
       subtitle = "Learning notes, Tutorials"
 
   [languages.zh-tw]
+    disabled = true
     languageName = "Chinese"
     Title = "Huanlin 學習筆記"
     weight = 1
