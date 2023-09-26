@@ -33,9 +33,11 @@ After some interview process, about two months if I remembered correctly, I got 
 
 Before I got this job, I've been worked as a freelancer for about 7 years, and have been writing blogs and e-books about software programming for more than 10 years. Although I've never asked the IT manager who recruited me, I think it's my blog posts and published e-books that helped me got this job. 
 
-Based on my skills and experiences, I thought it should not be no sweat for me to be a full-time technical writer. Well, I was naive.
+Based on my skills and experiences, I thought it should be no sweat for me to be a full-time technical writer. Well, I was naive.
 
 ## What I learned
+
+During the three months, I've learned 
 
 - Communication & learning
 - English writing skill
@@ -43,33 +45,31 @@ Based on my skills and experiences, I thought it should not be no sweat for me t
 
 ### Communication & Learning
 
-The first thing I learned is communication. I mean lots of communication.
+Writing itself is a form of communication with readers. But before that, as a technical writer, I have to communicate with teams big time.
 
-I am a person who enjoy working and eating alone. Yet here I am, working as a technical writer, asking questions to collegues almost everyday. The team I worked with is a DevOps team, and the members are always busy developing, deploying, or fixing something. Sometimes I just felt that I should not distrub them, but I have to. So I can't say that I enjoyed this situation.
+I am a person who enjoy working and eating alone. Yet here I am, asking questions to collegues almost everyday. The team I worked with is a DevOps team, and the members are always busy developing, deploying, or fixing something. Sometimes I just felt that I should not distrub them, but I have to. After all, if I don't understand it, I can't write a good document for it.
 
-In addition, the first documentation project that assigned to me is all about data center management, which is totally new to me. I have to learn many terms so that I can understand what my collegues were talking about, then I can start writing something about it. 
-
-If I don't understand it, I can't write a good document for it.
+In addition, the first documentation project that assigned to me is all about data center management, which is totally new to me. I have to learn many terms so that I can understand what my collegues were talking about, and ask questions such as how this feature works, what are those fields for, where I can find relevant information..., etc. The process of gathering information is just like putting together a puzzle. 
 
 I'm not complaining here. Just stat the fact that it was quite a challenge to me. The old dog has to play new tricks. So keep learning is also essential for this job.
 
+After three months, I can see that my communication with teams is getting better. Some members start awaring that they should let me know when a new feature is being designed or implemented, so that I can keep up with their pace. 
+
 ## English Writing Skill
 
-The second thing that I learned is I need to improve my English writing skill as fast as I can. 
+The second thing I learned is that I need to improve my English writing skill as fast as I can. 
 
-In the first two months, I was writing documents with Chinese. Then one day, my supervisor told me that his boss prefers English documents. Since that day, I started writing documents in English. That's when I found it's urgent to improve my English writing skill. 
+In the first two months, I was writing documents in Chinese. Then one day, my supervisor told me that his boss prefers English documents. Since that day, I started writing documents in English, and soon realized that my English writing skills were far from sufficient. 
 
 Yes, there are AI translation tools that I can use for translating Chinese text to English. But the translation process still takes time. Obviously, it's best if I can think in English and write in English fluently. However, when I write in English, it's a slow and painful process to me. I kept scratching my head trying to find appropriate words, and I am not confident with the sentences I wrote.
 
-That's the reason I start writing blog posts in English. Although it's slow and painful to me, I think it's just a process and I have to go through this stage until I get used to it and be able to write in English fast enough.
+That's the reason I start writing blog posts in English. Although it's slow and painful to me, I think it's just a process and I have to go through this stage until I get used to it, and be able to write correct English fast enough.
 
-## Being a Test and User
+## Being a Tester and a User
 
 Yes, I'm also a tester and user, at least a part of it. Just as mentioned earlier, if I don't understand it, I can't write a good document for it. So before I can write the document, I have to be a tester and a user.
 
-Because of this, I was not only asking questions, but also be able to provide suggestions for development teams, such as bug reports, UI/UX improvement suggestions, wording..., etc. I feel happy when my suggestions are accepted. But when they are not accepted by the team, I didn't feel bad and just keep moving. 
-
-As a technical writer, I'm detail oriented. But I also understand that sometimes people are too busy to care about tiny little things.
+Because of this, I was not only asking questions, but also be able to provide suggestions for development teams, such as bug reports, UI/UX improvement suggestions, wording..., etc. I think it's a positive feedback loop that can help both the product and the documentation. Sometimes my suggestions were ignored or not accepted by the team, that's no big deal. I understand that sometimes people are too busy to care about tiny little things. Just move on and keep writing.
 
 ## Types of Documents
 
@@ -84,8 +84,10 @@ So far I've written the following types of documents:
 
 Markdown, GitLab Pages. Hugo with Docsy.
 
+ref: https://dev.to/maddy/my-first-three-months-as-a-technical-writer-2ee2
+
 ## Conclusion
 
 Working at this company is the best thing that happened to me in recent 10 years. I've learned a lot even I've just work here for three months. By the way, I've lost 7 kg so far. 
 
-Just thrive to survive and see how far I can go.
+Just strive to survive and see how far I can go.
