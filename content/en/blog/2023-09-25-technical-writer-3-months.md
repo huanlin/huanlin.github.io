@@ -27,7 +27,7 @@ For any question, do feel free to reach me and we look forward to
 hearing from you!
 ```
 
-It was sent from a semiconductor manufacturing company based in Taiwan. It's also an international company, a big one.
+It was sent from a an international company based in Taiwan. A big one.
 
 After some interview process, about two months if I remembered correctly, I got the offer letter.
 
@@ -49,13 +49,13 @@ Let me explain.
 
 Writing itself is a form of communication with readers. But before that, as a technical writer, I have to communicate with teams big time.
 
-I am a person who enjoys working and dining alone. Yet here I am, asking questions to colleagues almost everyday. The team I collaborate with is a DevOps team, and its members are always busy developing, deploying, or fixing something. Sometimes I just felt that I shouldn't distrub them, but I must. After all, if I don't understand it, I can't write a good document for it.
+I am a person who enjoys working and dining alone. Yet here I am, asking questions to colleagues almost everyday. The team I collaborate with is a DevOps team, and its members are always busy developing, deploying, or fixing something. Sometimes I just felt that I shouldn't interrupt them, but I have to. After all, if I don't understand it, I can't write a good document for it.
 
-In addition, my first documentation project was all about data center management, which was entirely new territory for me. I have to learn many terms to comprehend what my colleagues were discussing, and ask questions such as how this feature works, what are those fields for, where I can find relevant information..., etc. The process of gathering information was just like putting together a puzzle. 
+In addition, my first documentation project was all about data center management and automation, which was entirely new territory for me. I have to learn many terms to comprehend what my colleagues were discussing, and ask questions such as how this feature works, what are those fields for, where I can find relevant information..., etc. The process of gathering information was just like putting together a puzzle. 
 
 I'm not complaining; just saying that it was quite a challenge. The old dog has to play new tricks. So keep learning is essential for this job.
 
-After three months, I felt that my communication with the team is getting better. Some team members start awaring that they should inform me when new features are being designed or implemented, so that I can keep up with their pace. 
+After three months, I felt that my communication with the team is getting better. Some team members start to inform me when new features are being designed or implemented, so that I can keep up with their pace. 
 
 ## English Writing Skill
 
@@ -63,9 +63,9 @@ The second thing I learned is that I need to improve my English writing skill as
 
 In the first two months, I was writing documents in Chinese. Then, one day, my supervisor told me that his boss prefers English documents. Since that day, I started writing documents in English and soon realized that my English writing skills were far from sufficient. 
 
-Yes, there are AI translation tools that I can use for translating Chinese text to English. But the translation process still takes time. Obviously, it's best if I can think in English and write in English fluently. However, when I write in English, it's a slow and challenging process to me. I kept scratching my head, trying to find appropriate words, and I lack confidence in the sentences I write.
+Yes, there are AI translation tools that I can use for translating Chinese text to English. But the translation process still takes time. Obviously, it's best if I can think in English and write in English fluently. However, when I write in English, it's a slow and challenging process for me. I find myself scratching my head, trying to find the appropriate words, and I lack confidence in the sentences I write.
 
-That's the reason I started writing blog posts in English. Although it's a slow and challenging process for me, I think it's just a stage I have to go through until I get used to it and can write correct English quickly enough.
+That's the reason I started writing blog posts in English. Although it's a slow and challenging process for me, I believe it's just a stage I have to go through until I get used to it and can write correct English more quickly.
 
 ## Being a Tester and a User
 
@@ -86,10 +86,8 @@ So far I've written the following types of documents:
 
 Markdown, GitLab Pages. Hugo with Docsy.
 
-ref: https://dev.to/maddy/my-first-three-months-as-a-technical-writer-2ee2
-
 ## Conclusion
 
-Working at this company is the best thing that happened to me in recent 10 years. I've learned a lot even I've just work here for three months. By the way, I've lost 7 kg so far. 
+Working at this company is the best thing that happened to me in recent 10 years. I've learned a lot even I've worked here for just three months. By the way, I've lost 7 kg so far. 
 
 Just strive to survive and see how far I can go.
