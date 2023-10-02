@@ -29,7 +29,7 @@ hearing from you!
 
 It was sent from an international company based in Taiwan. A big one.
 
-After some interview process, about two months if I remembered correctly, I got the offer letter.
+After some interview processes, about two months if I remembered correctly, I got the offer letter.
 
 Before I got this job, I had been working as a freelancer for about 7 years, and had been writing blogs and e-books about software programming for more than 10 years. Although I never asked the IT manager who recruited me, I think it's my blog posts and published e-books that helped me get this job. 
 
