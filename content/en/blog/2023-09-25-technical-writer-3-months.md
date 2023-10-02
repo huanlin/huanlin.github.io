@@ -27,7 +27,7 @@ For any question, do feel free to reach me and we look forward to
 hearing from you!
 ```
 
-It was sent from a an international company based in Taiwan. A big one.
+It was sent from an international company based in Taiwan. A big one.
 
 After some interview process, about two months if I remembered correctly, I got the offer letter.
 
