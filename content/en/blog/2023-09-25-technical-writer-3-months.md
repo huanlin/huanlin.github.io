@@ -4,7 +4,7 @@ date: "2023-09-25"
 tags: ["Technical Writer"]
 ---
 
-It's been three months since I got a full-time job as a technical writer. So I think it's time to writing something about it.
+It's been three months since I got a full-time job as a technical writer. So I think it's time to write something about it.
 
 ## How I got this job?
 
