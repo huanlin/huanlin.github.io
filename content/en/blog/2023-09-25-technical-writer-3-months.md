@@ -35,7 +35,7 @@ Before I got this job, I had been working as a freelancer for about 7 years, and
 
 Based on my skills and experiences, I thought being a full-time technical writer would be a breeze. Well, I was naive.
 
-## What I learned
+## What I've learned
 
 During the three months, I've learned the following things are important:
 
