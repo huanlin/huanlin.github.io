@@ -1,5 +1,6 @@
 ---
 title: C# Dev Kit
+slug: csharp-dev-kit-introduction
 date: "2023-10-09"
 tags: ["C#"]
 ---
