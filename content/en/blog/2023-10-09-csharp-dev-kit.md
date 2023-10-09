@@ -27,4 +27,23 @@ I've also created a video to show how to create and run a Hello World C# project
 
 Youtube: [C# Dev Kit - Create and run a HelloWorld project in Visual Studio Code](https://www.youtube.com/watch?v=MSYtwrLI-jk)
 
-From now on, it will be easier to develop and test C# applications with Visual Studio Code.
+
+## Features
+
+Currently, C# Dev Kit supports some basic features such as:
+
+- Solution Explorer
+- IntelliSense / Code completion
+- Go to Definition
+- Find All References
+- Find All Implementations
+- Run unit tests
+
+Of course there are rooms for improvement, for instance: NuGet Manager, Symlink.
+
+## Conclusion
+
+From now on, it will be easier to develop and test C# applications with Visual Studio Code. However, for .NET developers working on Windows, Visual Studio 2022 is no doubt far better than C# Dev Kit. 
+
+I think C# Dev Kit is mainly targeting Linux and Mac developers, especially Microsoft have anounced that [Visual Studio for Mac will be retired on August 31, 2024](https://learn.microsoft.com/en-us/lifecycle/announcements/visual-studio-mac-end-of-servicing). By that time, I think Mac users will have no choice but move to Rider or C# Dev Kit.
+
