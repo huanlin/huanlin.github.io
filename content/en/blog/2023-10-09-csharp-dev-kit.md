@@ -7,9 +7,9 @@ tags: ["C#"]
 
 C# Dev Kit is a Visual Studio extension to enhance C# development in Visual Studio Code. This extension is based on the C# extension and can work with the following extensions:
 
-- IntelliCode for C# Dev Kit
-- .NET MAUI
-- Unity
+- [IntelliCode for C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscodeintellicode-csharp) (automatically installed with C# Dev Kit)
+- [.NET MAUI extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui)
+- [Unity extension](https://marketplace.visualstudio.com/items?itemName=VisualStudioToolsForUnity.vstuc)
 
 Something you need to know about C# Dev Kit:
 
