@@ -8,13 +8,14 @@
 <div class="td-blog-posts">
   {{ if .Pages -}}
     {{ $pag := .Paginate (( $.Scratch.Get "blog-pages").GroupByDate "2006" ) -}}
-    {{ range $pag.PageGroups -}}
-    <div class="h2">{{ T "post_posts_in" }} {{ .Key }}</div>
+    {{ range $pag.PageGroups -}}    
+    <div class="h2">{{ T "post_posts_in" }} {{ .Key }}</div>    
     <ul class="td-blog-posts-list">
       {{ range .Pages -}}
-      <li class="td-blog-posts-list__item">
+      <li class="td-blog-posts-list__item" >
         <div class="td-blog-posts-list__body">
-          <h5 class="mt-0 mb-1"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h5>
+          <hr style="border-top: 1px dotted;"/>
+          <h5 class="mt-0 mb-1" style="font-weight: 600;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h5>
           <p class="mb-2 mb-md-3"><small class="text-muted">{{ .Date.Format ($.Param "time_format_blog") }} {{ T "ui_in"}} {{ .CurrentSection.LinkTitle }}</small></p>
           <header class="article-meta">
             {{ partial "taxonomy_terms_article_wrapper.html" . -}}
@@ -24,8 +25,8 @@
           </header>
           {{ partial "featured-image.html" (dict "p" . "w" 250 "h" 125 "class" "float-start me-3 pt-1 d-none d-md-block") -}}
           <p class="pt-0 mt-0">{{ .Plain | safeHTML | truncate 100 }}</p>
-          <p class="pt-0"><a href="{{ .RelPermalink }}" aria-label="{{ T "ui_read_more"}} - {{ .LinkTitle }}">{{ T "ui_read_more"}}</a></p>
-        </div>
+          <p class="pt-0"><i class="fa-solid fa-circle-chevron-right" style="color:dimgray">&nbsp;</i><a href="{{ .RelPermalink }}" aria-label="{{ T "ui_read_more"}} - {{ .LinkTitle }}">{{ T "ui_read_more"}}</a></p>
+        </div>        
       </li>
       {{ end -}}
     </ul>
