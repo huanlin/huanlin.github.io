@@ -38,6 +38,8 @@ draft: false
 
 我錄製了一個影片放在 Youtube 上，你可以從這個影片大致了解如何建立一個 OpenAI 資源：
 
+Youtube video: [Create an Azure OpenAI Resource](https://youtu.be/fvU4XLW7Zco)
+
 ## Step 2: Call the API
 
 建立好 OpenAI 資源後，可以從 Azure 網站上找到三個關鍵資訊：
