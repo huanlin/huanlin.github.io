@@ -58,7 +58,7 @@ draft: false
 
 ### A REST Client Example
 
-如果你有使用 Visual Studio Code 和 REST Client 擴充套件，可以直接用以下範例來測試（必須把開頭三個變數替換成你自己的資源和設定）：
+如果你有使用 Visual Studio Code 和 [REST Client 擴充套件](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)，可以直接用以下範例來測試（必須把開頭三個變數替換成你自己的資源和設定）：
 
 ```
 @API_KEY = 0bc0xxxxxxxxxxxx7971
@@ -92,7 +92,6 @@ https://{{RESOURCE_NAME}}.openai.azure.com/openai/deployments/{{DEPLOYMENT_NAME}
 
 ```json
 HTTP/1.1 200 OK
-
 
 {
   "id": "chatcmpl-89WTdFFwqgeIZG6WNJ0g3mOxhaOb3",
