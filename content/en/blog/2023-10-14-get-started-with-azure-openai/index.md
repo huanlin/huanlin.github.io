@@ -79,11 +79,13 @@ api-key: {{API_KEY}}
 }
 ```
 
-請注意這裡的 endpoint 並不是先前網頁截圖中顯示的 `https://my-demo-ai-app.openai.azure.com/`（此 endpoint 會用於稍後的 c# 範例），而是：
+請注意這裡的 endpoint 並不是先前網頁截圖中顯示的 `https://my-demo-ai-app.openai.azure.com/`（此 endpoint 會用於稍後的 c# 範例），而是後面有加上 deployment name 和 Chat Completions API 路徑的 REST API endpoint：
 
 ```
 https://{{RESOURCE_NAME}}.openai.azure.com/openai/deployments/{{DEPLOYMENT_NAME}}/chat/completions?api-version=2023-05-15
 ```
+
+> 有關 Chat Completions 的 REST API endpoint 格式與查詢參數，可參考官方文件：[Azure OpenAI Service REST API reference: Chat completions](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference#chat-completions)。
 
 以上範例中，我在 POST request body 的 `messages` 陣列中加入了兩條訊息：
 
