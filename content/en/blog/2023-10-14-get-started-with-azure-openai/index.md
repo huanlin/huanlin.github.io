@@ -32,7 +32,7 @@ tags: ["C#", ".NET", "OpenAI"]
 
 如果沒有填寫正確的公司資料和 email，例如填寫 gmail、yahoo mail 等私人信箱，都無法通過審核。
 
-如果你是 Microsoft MVP，在選擇組織類型的時候有對應的選項可選：
+如果你是 Microsoft MVP，在選擇組織類型的時候有對應的選項：
 
 ![](images/requst-form-mvp.png)
 
