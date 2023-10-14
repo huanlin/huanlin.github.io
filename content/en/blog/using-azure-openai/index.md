@@ -1,6 +1,6 @@
 ---
 title: 玩玩看 Azure OpenAI
-slug: play-wth-azure-openai
+slug: get-started-with-azure-openai
 date: 2023-10-14
 description: 只是玩一下 Azure OpenAI，從建立資源到撰寫程式來呼叫 OpenAI 的 Chat Completions API。
 draft: false
@@ -55,6 +55,8 @@ draft: false
 ![](images/openai-deployments.png)
 
 有了上述資訊之後，便可以撰寫程式碼來呼叫 OpenAI 服務了。
+
+### A REST Client Example
 
 如果你有使用 Visual Studio Code 和 REST Client 擴充套件，可以直接用以下範例來測試（必須把開頭三個變數替換成你自己的資源和設定）：
 
