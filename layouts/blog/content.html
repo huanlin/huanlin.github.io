@@ -16,6 +16,11 @@
 		{{ end -}}
 	</header>
 	{{ .Content }}
+	<hr style="margin-top: 25px; margin-bottom: -8px;"/>
+	{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable) (.Site.GoogleAnalytics)) -}}
+		{{ partial "feedback.html" .Site.Params.ui.feedback }}
+		<br />
+	{{ end -}}	
 	{{ if (.Site.Params.DisqusShortname) -}}
 		<br />
 		{{- partial "disqus-comment.html" . -}}

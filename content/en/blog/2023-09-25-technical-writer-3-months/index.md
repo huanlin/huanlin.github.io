@@ -63,7 +63,7 @@ The second thing I learned is that I need to improve my English writing skill as
 
 In the first two months, I was writing documents in Chinese. Then, one day, my supervisor told me that his boss prefers English documents. Since that day, I started writing documents in English and soon realized that my English writing skills were far from sufficient. 
 
-Yes, there are AI translation tools that I can use for translating Chinese text to English. But the translation process still takes time. Obviously, it's best if I can think in English and write in English fluently. However, when I write in English, it's a slow and challenging process for me. I find myself scratching my head, trying to find the appropriate words, and I lack confidence in the sentences I write.
+Yes, there are AI translation tools that I can use for translating Chinese text to English. But the translation process still takes time. Obviously, it's best if I can think in English and write in English fluently. However, when I write in English, it's a slow and challenging process for me. I find myself scratching my head, trying to find the appropriate words, and I lack confidence in the sentences I wrote.
 
 That's the reason I started writing blog posts in English. Although it's a slow and challenging process for me, I believe it's just a stage I have to go through until I get used to it and can write correct English more quickly.
 
