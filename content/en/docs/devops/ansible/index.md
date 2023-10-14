@@ -38,7 +38,7 @@ Ansible 是用來自動化 IT 日常工作的工具。
 
 ## Ansible 的運作方式
 
-Ansilbe 是倚賴**模組（modules）**來執行實際的工作。
+Ansilbe 是倚賴**模組**（modules）來執行實際的工作。
 
 基本上，模組是負責執行特定任務的一些小程式。Ansible 所在的主控機器會將那些模組傳送至目標機器，然後執行它們的工作，並於任務完成後刪除。
 
@@ -100,7 +100,7 @@ Ansilbe 是倚賴**模組（modules）**來執行實際的工作。
 
 ## Playbook
 
-在 Ansible 中，每一個**工作（task）**代表一個需要執行的動作，而多項工作集合起來的任務腳本，就叫做 **Playbook**。一個 Playbook 就是一個 YAML 檔案。
+在 Ansible 中，每一個**工作**（task）代表一個需要執行的動作，而多項工作集合起來的任務腳本，就叫做 **Playbook**。一個 Playbook 就是一個 YAML 檔案。
 
 先看一個簡單範例：
 
