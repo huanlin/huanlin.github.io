@@ -9,7 +9,7 @@ title: Huan-Lin's Notes
   Read the Docs <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="/blog">
-  Blogs <i class="fa-brands fa-blogger ms-2 "></i>
+  Blog Posts <i class="fa-brands fa-blogger ms-2 "></i>
 </a>
 <p class="lead mt-5">If you'd like to share my articles, please provide a link to the source.</p>
 {{< blocks/link-down color="info" >}}
