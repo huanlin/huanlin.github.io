@@ -3,7 +3,6 @@ title: Huan-Lin's Notes
 ---
 
 {{< blocks/cover title="Welcome!" image_anchor="top" height="full" >}}
-<p class="lead mt-1">Or visit <a href="https://huanlintalk.com">the former Blogger site</a> for older articles.</p>
 <br/> 
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/docs">
   Read the Docs <i class="fas fa-arrow-alt-circle-right ms-2"></i>
@@ -11,7 +10,10 @@ title: Huan-Lin's Notes
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="/blog">
   Blog Posts <i class="fa-brands fa-blogger ms-2 "></i>
 </a>
+<br/> <br/> 
+<p class="lead mt-1">Or visit <a href="https://huanlintalk.com">the former Blogger site</a> for older articles.</p>
 <p class="lead mt-5">If you'd like to share my articles, please provide a link to the source.</p>
+<br/> 
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
 
