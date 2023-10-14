@@ -1,0 +1,14 @@
+@API_KEY = 0bc0ac9a19a5455aa0feb35c15d87971
+@RESOURCE_NAME = my-demo-ai-app
+@DEPLOYMENT_NAME = turbo-michael-35
+
+### OpenAI
+POST https://{{RESOURCE_NAME}}.openai.azure.com/openai/deployments/{{DEPLOYMENT_NAME}}/chat/completions?api-version=2023-05-15
+api-key: {{API_KEY}}
+
+{
+    "messages": [
+        { "role": "system", "content": "Please answer with Chinese."},
+        { "role": "user", "content": "Tell me a joke about dogs."}        
+    ]
+}
