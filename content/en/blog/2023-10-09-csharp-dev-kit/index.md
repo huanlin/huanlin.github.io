@@ -2,7 +2,7 @@
 title: Introduction to C# Dev Kit
 slug: csharp-dev-kit-introduction
 date: "2023-10-09"
-tags: ["C#"]
+tags: ["C#", ".NET"]
 ---
 
 C# Dev Kit is a Visual Studio extension to enhance C# development in Visual Studio Code. This extension is based on the C# extension and can work with the following extensions:
@@ -11,7 +11,7 @@ C# Dev Kit is a Visual Studio extension to enhance C# development in Visual Stud
 - [.NET MAUI extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui)
 - [Unity extension](https://marketplace.visualstudio.com/items?itemName=VisualStudioToolsForUnity.vstuc)
 
-![](/blog-images/csharp_dev_kit.png)
+![](images/csharp-dev-kit.png)
 
 Something you need to know about C# Dev Kit:
 

@@ -81,7 +81,7 @@ api-key: {{API_KEY}}
 
 請注意這裡的 endpoint 並不是先前網頁截圖中顯示的 `https://my-demo-ai-app.openai.azure.com/`（此 endpoint 會用於稍後的 c# 範例），而是：
 
-```text
+```
 https://{{RESOURCE_NAME}}.openai.azure.com/openai/deployments/{{DEPLOYMENT_NAME}}/chat/completions?api-version=2023-05-15
 ```
 
@@ -93,8 +93,6 @@ https://{{RESOURCE_NAME}}.openai.azure.com/openai/deployments/{{DEPLOYMENT_NAME}
 執行結果如下：
 
 ```json
-HTTP/1.1 200 OK
-
 {
   "id": "chatcmpl-89WTdFFwqgeIZG6WNJ0g3mOxhaOb3",
   "object": "chat.completion",
@@ -156,9 +154,9 @@ Console.WriteLine("AI assistant replied: ");
 Console.WriteLine(response.Choices[0].Message.Content);
 ```
 
-這次我在 system message 中明確指示 AI 助理要同時使用繁體中文和英文來回應，執行結果如下：
+這次我在 system message 中明確指示 AI 助理要同時使用繁體中文和英文來回應（第 17 行），執行結果如下圖：
 
-[](images/openai-demo-result.png)
+![](images/openai-demo-result.png)
 
 如此便可確認 .NET 程式也能順利呼叫 OpenAI 服務。至於那個蝙蝠俠的梗（哏）好不好笑，就不是重點了。
 
