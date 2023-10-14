@@ -3,7 +3,7 @@ title: Get Started with Azure OpenAI
 slug: get-started-with-azure-openai
 date: 2023-10-14
 description: 只是玩一下 Azure OpenAI，從建立資源到撰寫程式來呼叫 OpenAI 的 Chat Completions API。
-draft: false
+tags: ["C#", ".NET", "OpenAI"]
 ---
 
 前提：要有 Azure 帳號（可[免費試用](https://azure.microsoft.com/en-us/free/)）。
