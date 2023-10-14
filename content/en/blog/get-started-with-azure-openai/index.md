@@ -12,7 +12,7 @@ draft: false
 
 欲撰寫程式來使用 Azure OpenAI 服務，必須先在自己的 Azure 帳戶中建立 OpenAI 資源，並[設定一個 deployment](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal#deploy-a-model) 來指定欲使用哪一個訓練模型（例如 gpt-35-turbo、gpt-4 等等）。
 
-首先，登入 [Azure 入口網站](https://portal.azure.com/)，選擇建立資源（Create a resource）。然後在搜尋框中輸入 "openai"，即可找到建立 OpenAI 資源的地方。
+首先，登入 [Azure 入口網站](https://portal.azure.com/)，選擇建立資源（Create a resource）。然後在搜尋框中輸入 "openai"，即可找到建立 OpenAI 資源的地方。稍後有操作過程的影片連結）
 
 建立 OpenAI 資源時，頁面下方應該會看到如下圖的錯誤訊息：
 
@@ -36,9 +36,9 @@ draft: false
 
 兩天後，我收到了核准通知的 email。然後我打開網頁，登入 Azure 入口網站，前面圖中顯示的錯誤訊息便消失了，顯示我可以開始建立 OpenAI 資源。
 
-我錄製了一個影片放在 Youtube 上，你可以從這個影片大致了解如何建立一個 OpenAI 資源：
+我錄製了一個影片放在 Youtube 上，可大致了解如何建立一個 OpenAI 資源，連結如下：
 
-Youtube video: [Create an Azure OpenAI Resource](https://youtu.be/fvU4XLW7Zco)
+[Create an Azure OpenAI Resource](https://youtu.be/fvU4XLW7Zco)
 
 ## Step 2: Call the API
 
