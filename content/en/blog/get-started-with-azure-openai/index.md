@@ -14,7 +14,7 @@ draft: false
 
 首先，登入 [Azure 入口網站](https://portal.azure.com/)，選擇建立資源（Create a resource）。然後在搜尋框中輸入 "openai"，即可找到建立 OpenAI 資源的地方。稍後有操作過程的影片連結）
 
-建立 OpenAI 資源時，頁面下方應該會看到如下圖的錯誤訊息：
+建立 OpenAI 資源時，頁面下方可能會看到如下圖的錯誤訊息：
 
 ![](images/openai-need-apply.png)
 
