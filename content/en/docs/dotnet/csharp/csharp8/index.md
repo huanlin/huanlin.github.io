@@ -1,6 +1,8 @@
 ---
 title: C# 8
+slug: csharp-8
 weight: 3
+tags: [csharp]
 ---
 
 介紹 C# 8 的新增語法和改進之處，包括：

@@ -1,6 +1,8 @@
 ---
 title: C# 6
+slug: csharp-6
 weight: 1
+tags: [".NET", "csharp"]
 ---
 
 本章要介紹的是 C# 6 新增的語法，包括：

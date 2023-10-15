@@ -3,7 +3,7 @@ title: Get Started with Azure OpenAI
 slug: get-started-with-azure-openai
 date: 2023-10-14
 description: Azure OpenAI 入門。
-tags: ["C#", ".NET", "OpenAI"]
+tags: ["csharp", ".NET", "OpenAI"]
 ---
 
 ![](images/post-banner.png)

@@ -1,6 +1,8 @@
 ---
 title: C# 10
+slug: csharp-10
 weight: 5
+tags: [csharp]
 ---
 
 介紹 C# 10 的新增語法和改進之處，包括：

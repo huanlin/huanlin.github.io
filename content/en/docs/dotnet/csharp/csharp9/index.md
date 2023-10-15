@@ -1,6 +1,8 @@
 ---
 title: C# 9
+slug: csharp-9
 weight: 4
+tags: [csharp]
 ---
 
 本章要介紹的是 C# 9 的新增語法和改進之處，包括：

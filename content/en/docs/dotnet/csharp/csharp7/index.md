@@ -1,6 +1,8 @@
 ---
 title: C# 7
+slug: csharp-7
 weight: 2
+tags: [csharp]
 ---
 
 介紹 C# 7.0 至 7.3 的新增語法和改進之處，條列如下：
@@ -1355,7 +1357,7 @@ C# 6 的 expression-bodied members 語法有一些限制。底下是無法使用
 
 C# 7 解除了上述限制。因此，以下範例在 C# 7 都是合法的陳述式：
 
-~~~~~~~~csharp
+```csharp
 public class Student
 {
     private string _name;
@@ -1387,7 +1389,4 @@ public class Student
         remove => handler -= value;
     }
 }
-~~~~~~~~
-
-
-
+```
