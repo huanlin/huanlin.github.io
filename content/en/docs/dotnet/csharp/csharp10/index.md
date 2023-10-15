@@ -773,9 +773,3 @@ public class MyAsyncMethodBuilder
 
 如果你想要學習 `#line` 指示詞的用法，可參閱微軟文件：〈[Enhanced #line directives](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/enhanced-line-directives)〉。
 
----
-
-![創用 CC 授權條款](https://i.creativecommons.org/l/by-nc-nd/3.0/tw/88x31.png)
-
-⬆️[回頂端](https://github.com/huanlin/LearningNotes/blob/main/csharp10/_post.md#c-10)
-↩️[回首頁](https://github.com/huanlin/LearningNotes#readme)

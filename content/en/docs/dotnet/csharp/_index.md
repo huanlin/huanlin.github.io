@@ -6,7 +6,9 @@ hide_feedback: true
 description:   
 ---
 
-C# 筆記的主要參考資料：
+![創用 CC 授權條款](https://i.creativecommons.org/l/by-nc-nd/3.0/tw/88x31.png)
+
+參考資料：
 
 1. [微軟文件](https://docs.microsoft.com/zh-tw/dotnet/csharp/)
 2. [Programming C# 8.0: Build Cloud, Web, and Desktop Applications](https://www.amazon.com/Programming-8-0-Windows-Desktop-Applications/dp/1492056812) by Ian Griffiths.

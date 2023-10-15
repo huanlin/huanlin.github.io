@@ -913,9 +913,3 @@ while (await e.MoveNextAsync())
 
 💬 P.S. 本文提及「拉取資料」時，指的是 pull-based API，例如 `IEnumerable<T>`。沒有明確指出的是另一種 push-based API，例如 [`IObservable<T>`](https://docs.microsoft.com/zh-tw/dotnet/api/system.iobservable-1?view=net-6.0)。此外，本文也沒有介紹 `yield break` 和 [`IAsyncDisposable`](https://docs.microsoft.com/zh-tw/dotnet/api/system.iasyncdisposable?view=net-6.0)。
 
----
-
-![創用 CC 授權條款](https://i.creativecommons.org/l/by-nc-nd/3.0/tw/88x31.png)
-
-⬆️[回頂端](https://github.com/huanlin/LearningNotes/blob/main/csharp8/_post.md#c-8)
-↩️[回首頁](https://github.com/huanlin/LearningNotes#readme)

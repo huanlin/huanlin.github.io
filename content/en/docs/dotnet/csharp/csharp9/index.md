@@ -771,9 +771,3 @@ C# 9 還有一些比較小的改進，僅重點條列如下：
 - 可以對某個沒有回傳值的靜態方法套用 `[ModuleInitializer]` 特徵項，使其成為**模組初始函式**（module initializer）。當一個 .NET 組件被載入時，這個模組初始函式就會被執行，亦即只有在組件第一次載入的時候執行一次。
 - 擴充的局部方法（extended partial method）。此功能主要是用於一些會產生程式碼的設計工具。詳情可參考微軟文章：[擴充部分方法](https://docs.microsoft.com/zh-tw/dotnet/csharp/language-reference/proposals/csharp-9.0/extending-partial-methods)。
 
----
-
-![創用 CC 授權條款](https://i.creativecommons.org/l/by-nc-nd/3.0/tw/88x31.png)
-
-⬆️[回頂端](https://github.com/huanlin/LearningNotes/blob/main/csharp9/_post.md#c-9)
-↩️[回首頁](https://github.com/huanlin/LearningNotes#readme)

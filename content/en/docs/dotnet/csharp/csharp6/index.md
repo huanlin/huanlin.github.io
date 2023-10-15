@@ -638,10 +638,3 @@ static async Task LogAsync(string s)
 順便提及，實務上，用來保存記錄的 `LogAsync` 函式不應該再拋出例外，否則外層的 `catch` 區塊又會再次拋出新的例外，那麼第 18 行用來返回錯誤訊息的陳述式就執行不到了；也就是說，原本要記錄下來的例外會被丟棄，若將來要調閱記錄檔案來查問題，會找不到相關線索。
 
 > 範例原始碼：[DemoExceptionAwait](examples/DemoExceptionAwait)。
-
----
-
-![創用 CC 授權條款](https://i.creativecommons.org/l/by-nc-nd/3.0/tw/88x31.png)
-
-⬆️[回頂端](https://github.com/huanlin/LearningNotes/blob/main/csharp6/_post.md#c-6)
-↩️[回首頁](https://github.com/huanlin/LearningNotes#readme)
