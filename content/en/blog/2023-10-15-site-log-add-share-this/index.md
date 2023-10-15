@@ -131,6 +131,23 @@ Below is the content of `/layouts/blog/content.html`:
 </div>
 ```
 
+I've also added CSS to `/assets/scss/_style_project.scss` for overriding the size and position of ShareThis buttons:
+
+```css
+/* Override the size and position of ShareThis reaction buttons */
+.st-btn > svg {
+  height: 32px !important;
+  width: 32px !important;  
+}
+#st-1 .st-btn {
+  padding-left: 0px !important;
+  padding-bottom: 0px !important;
+  width: 60px !important;
+}
+```
+
+---
+
 Hopefully the Docsy issue [Page feedback: support Google Analytics 4](https://github.com/google/docsy/issues/1302) will be fixed soon.
 
 Keep writing!
