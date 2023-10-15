@@ -2,8 +2,10 @@
 title: 網站版面樣式修改記錄
 date: "2023-08-12"
 lastmod: "2023-08-13"
+slug: hugo-website-customization
 description: >
   記錄我對 huanlin.cc 這個網站的 Hugo 與 Docsy 主題框架做了哪些調整。
+tags: [hugo, docsy]  
 ---
 
 ***

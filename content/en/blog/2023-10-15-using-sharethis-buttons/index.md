@@ -1,9 +1,9 @@
 ---
-title: "[Site Log] Added ShareThis Reaction Buttons"
-slug: sitelog-added-sharethis-reaction-buttons
+title: "Using ShareThis Reaction Buttons"
+slug: using-sharethis-reaction-buttons
 date: 2023-10-15
 description: Docsy's built-in user feedback feature is replaced with ShareThis reaction buttons.
-tags: ["SiteLog"]
+tags: ["SiteLog", "hugo", "docsy"]
 ---
 
 ## Change Summary

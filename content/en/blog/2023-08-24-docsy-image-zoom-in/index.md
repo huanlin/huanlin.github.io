@@ -1,5 +1,8 @@
 ---
-title: Click Image and Zoom-in
+title: Docsy - Click Image and Zoom-in
+date: 2023-08-24
+slug: docsy-image-zoom-in
+tags: [hugo, docsy]
 ---
 
 I use [Medium Zoom](https://medium-zoom.francoischalifour.com/) in my Docsy website to make images clickable and zoomable. 

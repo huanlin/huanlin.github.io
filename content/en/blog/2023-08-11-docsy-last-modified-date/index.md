@@ -1,5 +1,7 @@
 ---
-title: Show The Last Modified Date
+title: Docsy - Show The Last Modified Date
+date: 2023-08-11
+slug: docsy-show-last-modified-date
 tags: ["hugo", "docsy"]
 ---
 

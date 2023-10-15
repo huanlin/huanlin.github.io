@@ -1,11 +1,10 @@
 ---
-title: "Admonitions"
-hide_feedback: true
+title: "Admonitions for My Hugo Website"
 date: "2023-08-07"
+slug: "admonitions-for-hugo-website"
 description: >
   How I add admonitions (callouts) to my Hugo website. 
-tags: ["hugo", "docsy"]
-weight: 2
+tags: [SiteLog, "hugo", "docsy"]
 ---
 
 ## Introduction

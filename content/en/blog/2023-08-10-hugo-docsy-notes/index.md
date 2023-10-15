@@ -1,4 +1,9 @@
-# Hugo 與 Docsy 筆記
+---
+title: Hugo 與 Docsy 筆記
+date: 2023-08-10
+slug: notes-about-hugo-docsy
+tags: [hugo, docsy]
+---
 
 **摘要**：我使用 Hugo 與 Docsy theme 的一點粗淺心得，以及和 MkDocs 的比較。
 
