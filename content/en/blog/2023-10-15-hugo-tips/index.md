@@ -2,6 +2,7 @@
 title: "Hugo Tip & Tricks"
 date: "2023-08-09"
 slug: hugo-tips
+url: hugo-tips
 description: >
   Some tips & tricks that I found useful with Hugo.
 tags: ["hugo"]

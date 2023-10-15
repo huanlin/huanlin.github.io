@@ -8,6 +8,12 @@ tags: ["SiteLog", "hugo", "docsy"]
 
 ## Change Summary
 
+Two changes has been made today. The first is change is a fix for `C#` tag 404 error, see another post for details: [Hugo Tips & Tricks](/hugo-tips).
+
+The second change is using ShareThis reaction buttons for user feedback. Explained in the next section.
+
+## ShareThis Reaction Buttons for User Feedback
+
 - Disabled Docsy theme's built-in user feedback feature because it is not working. 
 - Added ShareThis reaction buttons as the alternative for user feedback.
 
@@ -15,7 +21,7 @@ See the figure below:
 
 ![](images/site-changes.png)
 
-## Disabling Docsy's User Feedback Feature
+### Disabling Docsy's User Feedback Feature
  
 Docsy's built-in user feedback is now disabled in hugo.toml of this site:
 
@@ -38,7 +44,7 @@ I think that's why I couldn't find the `Helpful` event in the Google Analytics e
 
 Since the user feedback feature is not working, I use ShareThis reaction buttons instead.
 
-## Adding ShareThis Reaction Buttons
+### Adding ShareThis Reaction Buttons
 
 [ShareThis](https://platform.sharethis.com/) provides free shareing tools for websites. I only use the reaction buttons. 
 
