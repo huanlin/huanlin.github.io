@@ -28,6 +28,8 @@ Because Docsy is still using the deprecated Google Analytics method which is Uni
 
 Relevant issue: [Page feedback: support Google Analytics 4](https://github.com/google/docsy/issues/1302)
 
+In the above issue, it mentioned that "Kubernetes docs had switched to using `gtag.js` in their override of [layouts/partials/feedback.html](https://github.com/kubernetes/website/blob/main/layouts/partials/feedback.html) already 4 years ago."
+
 I think that's why I couldn't find the `Helpful` event in the Google Analytics event report:
 
 ![](images/google-analytics-events.png)
