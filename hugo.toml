@@ -112,7 +112,9 @@ section = ["HTML", "RSS"] # Original: section = ["HTML", "RSS", "print"]
   priority = 0.5
 
 [params]
+author = "Michael Tsai"
 copyright = "Michael (Huan-Lin) Tsai"
+description = ".NET programming, DevOps, software development, technical writing."
 privacy_policy = "https://policies.google.com/privacy"
 default_blog_author = "Michael Tsai" # 自訂額外的參數，這樣每一篇部落格帖子的檔頭就不用提供 author 屬性。
 
