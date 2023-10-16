@@ -48,16 +48,16 @@ Since the user feedback feature is not working, I use ShareThis reaction buttons
 
 [ShareThis](https://platform.sharethis.com/) provides free shareing tools for websites. I only use the reaction buttons. 
 
-To use ShareThis buttons, first register an account on ShareThis.com and activate the JavaScript. I copied the following code from ShareThis.com and paste it into `/layouts/partials/hooks/head-end.html`.
+To use ShareThis buttons, first register an account on ShareThis.com and activate the code provided by ShareThis.com. For example:
 
 ```html
 <!-- ShareThis -->
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=652ac3cc05f82e0013986ed2&product=inline-reaction-buttons' async='async'></script>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=XXXXc3cc05f82e00139XXXX&product=inline-reaction-buttons' async='async'></script>
 ```
 
-Once the above change is published to the website, go back to ShareThis.com and click `Activate` to verify that the JavaScript is installed successfully. 
+Copy the code from ShareThis.com and paste it into `/layouts/partials/hooks/head-end.html`. After the change is published to the website, go back to ShareThis.com, enter the domain name of your website and click `Activate code` button to verify that the code is installed successfully. 
 
-Once the JavaScript is active, copy the code of reaction buttons from ShareThis.com and paste it to the location where we want them to be. Below is the code of reaction buttons:
+Once the code is activated, copy the code for reaction buttons from ShareThis.com and paste it to the location where you want them to be. Below is the code of reaction buttons:
 
 ```
 <!-- ShareThis BEGIN -->
