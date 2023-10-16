@@ -9,26 +9,7 @@ It's been three months since I got a full-time job as a technical writer. So I t
 
 ## How I got this job?
 
-The story is simple. One day, I got an email from the HR department of a company asking me if I'm interested in a technical writer job. Here is the email:
-
-```
-Hi Huanlin,
-Good day!
-
-This is OOO , Talent Acquisition Specialist from OOO HQ.
-We are impressed by your experience, wondering if you would be 
-interested in our Technical Writer position?
-
-Here's JD for your reference: https://...
- 
-If yes, our IT manager would like to invite you to hava a formal 
-inteview and you could know more about this role and the vision.
- 
-For any question, do feel free to reach me and we look forward to 
-hearing from you!
-```
-
-It was sent from an international company based in Taiwan. A big one.
+The story is simple. One day, I got an email from the HR department of a company asking me if I'm interested in a technical writer job. 
 
 After some interview processes, about two months if I remembered correctly, I got the offer letter.
 
