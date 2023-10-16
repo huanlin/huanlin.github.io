@@ -19,6 +19,8 @@ description: "從書中摘出我特別有感的兩個段落，講的是關於保
 
 以下先摘錄原文，然後是我修改後的中文翻譯。（註：不代表我修改後的翻譯一定更通順正確，只是我的一點個人偏執罷了。）
 
+## 摘錄
+
 第一段，英文：
 
 > Documentation that is not 100% accurate all the time cannot be trusted. As soon as you know documentation can be misleading from time to time, it loses its credibility. It might still be a bit useful, but it will take more time to find out what's right and what's wrong in it. And when it comes to creating documentation, it's hard to dedicate time to it when you know it won't be accurate for long; its lifespan is a big motivation killer.
