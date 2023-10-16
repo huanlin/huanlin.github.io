@@ -1,6 +1,6 @@
 ---
 title: 《高品質軟體文件》筆記：維持文件的正確性
-slug: living-documentation-notes
+slug: living-doc-accuracy
 date: 2023-10-16
 tags: ["TechnicalWriting"]
 description: "從書中摘出我特別有感的兩個段落，講的是關於保持文件的正確性（摘自第 1 章）"
