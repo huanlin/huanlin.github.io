@@ -1,7 +1,7 @@
 ---
 title: My First Three Months As A Technical Writer
 date: "2023-09-25"
-tags: ["work"]
+tags: ["TechnicalWriter"]
 draft: true
 ---
 

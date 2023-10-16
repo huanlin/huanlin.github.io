@@ -14,7 +14,7 @@ tags: ["TechnicalWriting"]
 
 我也有買英文版，所以經常中英交替著看。這裡我想從書中摘出我特別有感的兩個段落，講的是關於保持文件的正確性（摘自第 1 章）。
 
-以下先摘錄原文，然後是我自己翻譯的中文：
+以下先摘錄原文，然後是我修改後的中文翻譯。（註：不代表我修改後的翻譯一定更通順正確，只是我的一點個人偏執罷了。）
 
 > Documentation that is not 100% accurate all the time cannot be trusted. As soon as you know documentation can be misleading from time to time, it loses its credibility. It might still be a bit useful, but it will take more time to find out what's right and what's wrong in it. And when it comes to creating documentation, it's hard to dedicate time to it when you know it won't be accurate for long; its lifespan is a big motivation killer.
 
