@@ -44,6 +44,6 @@ Therefore: You need to think about how you address the accuracy of your document
 
 持續更新文件以保持其正確性，其中的付出和成效是很難被看見的，尤其在當下或短時間內。這是身為 technical writer 必須有的體認和覺悟。
 
-能夠在不被 appreciate 的情況下還願意花時間（加班）更新文件的細微角落，就像程式設計師即使在沒有別人 review 程式碼的情況下依然堅持寫 clean code，是需要一些信念的。
+能夠在不被 appreciate 的情況下還願意花時間（加班）更新文件的細微角落，就像程式設計師即使在沒有別人 review 程式碼的情況下依然堅持寫 clean code，是需要一些信念來支撐的。
 
 Keep writing!
