@@ -32,13 +32,14 @@ description: "從書中摘出我特別有感的兩個段落，講的是關於保
 第二段，英文：
 
 > But updating documentation is one of the most unappreciated tasks ever. It is not interesting and doesn't seem rewarding. However, you can have nice documentation if you take it seriously and decide to tackle it with a well-chosen mechanism to enforce accuracy at all times.
-Therefore: You need to think about how you address the accuracy of your documentation.
+>
+> **Therefore: You need to think about how you address the accuracy of your documentation.**
 
 第二段，中譯：
 
 > 然而，更新文件是最不受重視的工作之一。它不有趣，似乎也不會有什麼回報。但如果你認真對待並決定採取適當機制來確保其正確性，便能寫出好文件。
 > 
-> 因此：你需要思考如何處理文件的正確性。
+> **因此：你需要思考如何處理文件的正確性。**
 
 ## 感想
 
