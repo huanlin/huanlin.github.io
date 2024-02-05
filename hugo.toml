@@ -155,9 +155,6 @@ github_branch= "main"
 # GCS ID for *.huanlin.cc domain.
 gcs_engine_id = "652a2136426a44a0b"
 
-# Enable Algolia DocSearch
-algolia_docsearch = false
-
 # Enable Lunr.js offline search
 # Note by Michael Tsai (2023-8-6): When Lunr.js is enabled, Chrome DevTools will show JavaScript errors!
 offlineSearch = false
@@ -232,9 +229,6 @@ enable = false
   min = "0.110.0"
 [[module.imports]]
   path = "github.com/google/docsy"
-  disable = false
-[[module.imports]]
-  path = "github.com/google/docsy/dependencies"
   disable = false
 [[module.imports]]
   path = 'github.com/hugomods/icons/vendors/bootstrap'  
