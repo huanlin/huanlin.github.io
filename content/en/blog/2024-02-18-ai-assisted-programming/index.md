@@ -65,11 +65,13 @@ Copilot 官方文件提供了 VS Code、Visual Studio、JetBrains 等 IDE 的安
 - 必須是 Visual Studio 2022 17.6 或之後的版本才有支援 Copilot。
 - 在 Visual Studio 中安裝好 Colilot extension 之後，還必須加入你的 GitHub 帳號：從主選單點擊 **File > Account Settings...**。詳細步驟請參考：[Adding public GitHub accounts](https://learn.microsoft.com/en-us/visualstudio/ide/work-with-github-accounts?view=vs-2022#adding-public-github-accounts)
 
-如果一切安裝設定妥當，在 Visual Studio 編輯器中敲程式碼的時候，Copilot 便會開始工作，而且我們可以從 Output 視窗中查看它是否真的有在工作。如下圖：
+如果一切安裝設定妥當，在 Visual Studio 編輯器中敲程式碼的時候，Copilot 便會開始工作。
+
+Copilot 建議的程式碼會以灰色字體呈現，此時按 Tab 鍵即可接受建議。我們也可以從 Output 視窗中查看它是否真的有在工作，如下圖：
 
 ![](images/vs-output-copilot.png)
 
-Copilot 建議的程式碼會以灰色字體呈現，此時按 Tab 鍵即可接受建議。
+> 備註：我的 Visual Studio 還有安裝 [Visual chatGPT Studio extension](https://marketplace.visualstudio.com/items?itemName=jefferson-pires.VisualChatGPTStudio)。
 
 ## 測試看看
 
