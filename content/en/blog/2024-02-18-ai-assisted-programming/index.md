@@ -40,7 +40,7 @@ https://github.com/settings/copilot
 
 點擊 Start free trial 按鈕可以免費試用 30 天，但啟用之前必須先輸入你的信用卡資料。試用期限結束後，便會自動從你的信用卡扣款。
 
-> 為何 Colilot 要收費？因為 Copilot 背後所倚賴的 GPT3 模型的訓練成本相當貴。
+> 為何 Colilot 要收費？因為 Copilot 背後所倚賴的 GPT3 模型的訓練成本很高。
 
 若已經訂閱，頁面看起來會類似以下截圖：
 
