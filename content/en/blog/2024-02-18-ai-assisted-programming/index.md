@@ -20,7 +20,7 @@ tags: ["Visual Studio", "Copilot"]
 - 重新組織程式碼，使其更易讀易懂。
 - 自動找出程式中的 bug 並給予修正。
 
-亦可參考官網的展示動畫來了解 Colilot 的功能：<https://github.com/features/copilot>。
+亦可參考官網的展示動畫來了解 Copilot 的功能：<https://github.com/features/copilot>。
 
 ### 如果沒有 Copilot...
 
@@ -40,7 +40,7 @@ https://github.com/settings/copilot
 
 點擊 Start free trial 按鈕可以免費試用 30 天，但啟用之前必須先輸入你的信用卡資料。試用期限結束後，便會自動從你的信用卡扣款。
 
-> 為何 Colilot 要收費？因為 Copilot 背後所倚賴的 GPT3 模型的訓練成本很高。
+> 為何 Copilot 要收費？因為它背後所倚賴的 GPT3 模型的訓練成本很高。
 
 若已經訂閱，頁面看起來會類似以下截圖：
 
@@ -63,7 +63,7 @@ Copilot 官方文件提供了 VS Code、Visual Studio、JetBrains 等 IDE 的安
 如果是 Visual Studio，有兩個使用須知：
 
 - 必須是 Visual Studio 2022 17.6 或之後的版本才有支援 Copilot。
-- 在 Visual Studio 中安裝好 Colilot extension 之後，還必須加入你的 GitHub 帳號：從主選單點擊 **File > Account Settings...**。詳細步驟請參考：[Adding public GitHub accounts](https://learn.microsoft.com/en-us/visualstudio/ide/work-with-github-accounts?view=vs-2022#adding-public-github-accounts)
+- 在 Visual Studio 中安裝好 Copilot extension 之後，還必須加入你的 GitHub 帳號：從主選單點擊 **File > Account Settings...**。詳細步驟請參考：[Adding public GitHub accounts](https://learn.microsoft.com/en-us/visualstudio/ide/work-with-github-accounts?view=vs-2022#adding-public-github-accounts)
 
 如果一切安裝設定妥當，在 Visual Studio 編輯器中敲程式碼的時候，Copilot 便會開始工作。
 
