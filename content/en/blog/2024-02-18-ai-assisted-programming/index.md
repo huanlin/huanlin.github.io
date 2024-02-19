@@ -58,6 +58,13 @@ https://github.com/settings/copilot
 
 Copilot 官方文件提供了 VS Code、Visual Studio、JetBrains 等 IDE 的安裝說明，可由此進入：[Getting started with GitHub Copilot](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot)，然後從頁面上方選擇你使用的 IDE。
 
+我在 VS Code 和 Visual Studio 都安裝了以下擴充功能：
+
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+- [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
+
+我的 Visual Studio 還有安裝 [Visual chatGPT Studio extension](https://marketplace.visualstudio.com/items?itemName=jefferson-pires.VisualChatGPTStudio)。
+ 
 ### For Visual Studio
 
 如果是 Visual Studio，有兩個使用須知：
@@ -70,8 +77,6 @@ Copilot 官方文件提供了 VS Code、Visual Studio、JetBrains 等 IDE 的安
 Copilot 建議的程式碼會以灰色字體呈現，此時按 Tab 鍵即可接受建議。我們也可以從 Output 視窗中查看它是否真的有在工作，如下圖：
 
 ![](images/vs-output-copilot.png)
-
-> 備註：我的 Visual Studio 還有安裝 [Visual chatGPT Studio extension](https://marketplace.visualstudio.com/items?itemName=jefferson-pires.VisualChatGPTStudio)。
 
 ## 測試看看
 
@@ -96,6 +101,14 @@ Console.WriteLine("Hello, World!");
 一旦確定 Copilot 能正常工作，之後就可以快樂使用了。
 
 > 三不五時可能要登入 GitHub 網站查看用量和費用。
+
+當你在 VS Code 編輯器中敲入文字時，如果看到如下圖的星星圖案，可以用滑鼠點一下來打開 inline chat 文字框，然後對 Copilot 下達指令。
+
+![](images/vscopilot-inline-chat.png)
+
+這個 inline chat 功能是由 GitHub Copilot Chat extension 提供。你也可以從 VS Code 的 Activity Bar 開啟 Chat 面板，如下圖所示：
+
+![](images/vscode-copilot-chat.png)
 
 ## 結語
 
