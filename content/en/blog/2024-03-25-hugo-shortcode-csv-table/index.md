@@ -1,5 +1,5 @@
 ---
-title: Hugo Shortcode for rendering a CSV file as an HTML table
+title: A Hugo Shortcode for rendering a CSV file as an HTML table
 slug: hugo-shortcode-csv-table
 date: 2024-03-25
 tags: ["Hugo"]
