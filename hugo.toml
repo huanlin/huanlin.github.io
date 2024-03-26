@@ -89,10 +89,22 @@ id = "G-S83RZSBDVH" # This ID is specific for https://huanlin.cc
       block = true
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.extensions.typographer]
+        disable = true
+        apostrophe = '&rsquo;'        
+        ellipsis = '&hellip;'
+        emDash = '&mdash;'
+        enDash = '&ndash;'
+        leftAngleQuote = '&laquo;'
+        leftDoubleQuote = '&ldquo;'
+        leftSingleQuote = '&lsquo;'
+        rightAngleQuote = '&raquo;'
+        rightDoubleQuote = '&rdquo;'
+        rightSingleQuote = '&rsquo;'      
   [markup.highlight]
     # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
     style = "vs"
-    lineNos = true
+    lineNos = false
     lineNumbersInTable = true
     tabWidth = 4
     # Uncomment if you want your chosen highlight style used for code blocks without a specified language
