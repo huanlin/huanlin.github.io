@@ -20,6 +20,8 @@ title: API reference
 
 The result page should work like [the official Redoc demo](https://redocly.github.io/redoc/), that is when an item in the left side menu is clicked, the content area should scroll to the corresponding section. However, when I click the side menu, the content area doesn't scroll at all.
 
+> I should create a repository to show this issue in action. But I'm pretty tired by the time of writing. Maybe some other day.
+
 Tools and versions:
 
 - [Redoc 2.1.3](https://github.com/Redocly/redoc)
@@ -40,8 +42,6 @@ It took me almost an entire day just to find that the issue could be resolved by
 Note that when the above code is removed, Hugo will fail to build the website because there are many modules depending on it. Therefore, there are more lines need to be removed in the same file. [Click here to see more code on GitHub](https://github.com/google/docsy/blob/v0.9.0/assets/scss/main.scss#L8-#L9)
 
 At the end of the day, I managed to remove Bootstrap and related code. The website was built successfuly and the side menu in the Redoc page works normally.
-
-> I should create a repository to show this issue in action. But I'm pretty tired by the time of writing. Maybe some other day.
 
 ### Possible related issue
 
