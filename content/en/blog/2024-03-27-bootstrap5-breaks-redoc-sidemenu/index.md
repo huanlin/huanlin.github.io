@@ -43,7 +43,7 @@ Note that when the above code is removed, Hugo will fail to build the website be
 
 At the end of the day, I managed to remove Bootstrap and related code. The website was built successfuly and the side menu in the Redoc page worked normally.
 
-### Possible related issue
+### Possible related issues
 
 After I came up with my workaround and went home, I searched Google and found that the following issues seems relevant:
 
