@@ -21,8 +21,9 @@ The result page should work like [the official Redoc demo](https://redocly.githu
 
 Tools and versions:
 
-- Docsy 0.9.0
-- Bootstrap 5.3.1
+- [Redoc 2.1.3](https://github.com/Redocly/redoc)
+- [Docsy 0.9.0](https://github.com/google/docsy)
+- [Bootstrap 5.3.1](https://github.com/twbs/bootstrap)
 
 ## Investigation
 
