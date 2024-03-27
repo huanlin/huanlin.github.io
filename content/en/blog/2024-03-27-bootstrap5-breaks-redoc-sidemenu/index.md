@@ -45,7 +45,11 @@ At the end of the day, I managed to remove Bootstrap and related code. The websi
 
 ### Possible related issue
 
-- [#1987 - Redoc sidemenu doesn't auto-activate for certain styled outer container](https://github.com/Redocly/redoc/issues/1987)
+After I came up with my workaround and went home, I searched Google and found that the following issues seems relevant:
+
+- Docsy issue #1628: [Redoc left navigation auto scrolling and link changing on scrolling is not working anymore](https://github.com/google/docsy/issues/1628)
+- Redoc issue #1235: [Left navigation auto scrolling and link changing on scrolling is not working](https://github.com/Redocly/redoc/issues/1235)
+- Redoc issue #1987 [Redoc sidemenu doesn't auto-activate for certain styled outer container](https://github.com/Redocly/redoc/issues/1987)
 
 ## Solution
 
