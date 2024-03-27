@@ -2,6 +2,7 @@
 title: Redoc side menu woes with Bootstrap 5.x
 slug: "redoc-side-menu-woes-with-bootstrap-5"
 date: 2024-03-27
+tags: [Hugo, Docsy, Redoc, OpenAPI]
 ---
 
 ## Symptom
