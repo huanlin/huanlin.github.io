@@ -19,7 +19,7 @@ title: API reference
 
 The result page should work like [the official Redoc demo](https://redocly.github.io/redoc/), that is when an item in the left side menu is clicked, the content area should scroll to the corresponding section. However, when I click the side menu, the content area doesn't scroll at all.
 
-Version numbers of tools:
+Tools and versions:
 
 - Docsy 0.9.0
 - Bootstrap 5.3.1
