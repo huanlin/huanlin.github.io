@@ -1,6 +1,6 @@
 ---
-title: Redoc side menu doesn't work with Bootstrap 5.x
-slug: "redoc-side-menu-does-not-work-with-bootstrap-5"
+title: Redoc side menu woes with Bootstrap 5.x
+slug: "redoc-side-menu-woes-with-bootstrap-5"
 date: 2024-03-27
 ---
 
