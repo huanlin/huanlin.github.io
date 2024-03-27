@@ -20,7 +20,7 @@ title: API reference
 
 The result page should work like [the official Redoc demo](https://redocly.github.io/redoc/), that is when an item in the left side menu is clicked, the content area should scroll to the corresponding section. However, when I click the side menu, the content area doesn't scroll at all.
 
-> I should create a repository to show this issue in action. But I'm pretty tired by the time of writing. Maybe some other day.
+> I should create a repository on GitHub to show this issue in action. But I'm pretty tired by the time of writing. Maybe some other day.
 
 Tools and versions:
 
