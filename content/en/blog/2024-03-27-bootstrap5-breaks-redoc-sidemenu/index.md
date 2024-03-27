@@ -28,7 +28,7 @@ Tools and versions:
 
 I'm not proficient in front-end technologies, so I used a rudimentary method to find the cause -- I removed some code from Docsy, bit by bit, until the side menu's scrolling behavior works.
 
-It took me almost two days only to find that the issue will be fixed if I remove the following code from Docsy's `/asset/scss/main.scss`:
+It took me almost an entire day just to find that the issue could be resolved by removing the following code from Docsy's `/asset/scss/main.scss`:
 
 ```scss
 @import "../vendor/bootstrap/scss/bootstrap";
