@@ -49,7 +49,7 @@ At the end of the day, I managed to remove Bootstrap and related code. The websi
 
 ## Solution
 
-As mentioned in the last section, creating a layout dedicated for Redoc could be a workaround, just like [the Swagger layout in Docsy](https://github.com/google/docsy/tree/v0.9.0/layouts/swagger). Just don't include Bootstrap components in the page layout.
+As mentioned in the last section, creating a layout dedicated for Redoc could be a workaround, just like [the Swagger layout in Docsy](https://github.com/google/docsy/tree/v0.9.0/layouts/swagger), without including Bootstrap components in the page.
 
 However, it's just a workaround, not a perfect solution. I'll come back and update this post if I find something new.
 
