@@ -20,9 +20,11 @@ title: API reference
 
 The result page should work like [the official Redoc demo](https://redocly.github.io/redoc/), that is when an item in the left side menu is clicked, the content area should scroll to the corresponding section. However, when I click the side menu, the content area doesn't scroll at all.
 
-> I should create a repository on GitHub to show this issue in action. But I'm pretty tired by the time of writing. Maybe some other day.
+### Demo
 
-Tools and versions:
+To see the issue and a fixed version in action, go to this page: [Demo Open API](/docs/demo).
+
+### Tools and versions
 
 - [Redoc 2.1.3](https://github.com/Redocly/redoc)
 - [Docsy 0.9.0](https://github.com/google/docsy)
@@ -41,7 +43,7 @@ It took me almost an entire day just to find that the issue could be resolved by
 
 Note that when the above code is removed, Hugo will fail to build the website because there are many modules depending on it. Therefore, there are more lines need to be removed in the same file. [Click here to see more code on GitHub](https://github.com/google/docsy/blob/v0.9.0/assets/scss/main.scss#L8-#L9)
 
-At the end of the day, I managed to remove Bootstrap and related code. The website was built successfuly and the side menu in the Redoc page worked normally.
+At the end of the day, I managed to remove Bootstrap CSS v5.x and related code. The website was built successfully and the side menu in the Redoc page worked normally.
 
 ### Possible related issues
 
@@ -53,13 +55,5 @@ After I came up with my workaround and went home, I searched Google and found th
 
 ## Solution
 
-As mentioned in the last section, creating a layout dedicated for Redoc could be a workaround, just like [the Swagger layout in Docsy](https://github.com/google/docsy/tree/v0.9.0/layouts/swagger), without including Bootstrap components in the page.
+As mentioned in the last section, creating a layout dedicated for Redoc and excluding Bootstrap CSS v5.x can fix this issue. However, I would call it a workaround, not a perfect solution. If you have better ideas for this issue, kindly let me know.
 
-However, it's just a workaround, not a perfect solution. I'll come back and update this post if I find something new.
-
-Until then.
-
-## Demo
-
-[Demo 1: Redoc buggy](/docs/demo/redoc-buggy)
-[Demo 2: Redoc fixed](/docs/demo/redoc-fixed)
