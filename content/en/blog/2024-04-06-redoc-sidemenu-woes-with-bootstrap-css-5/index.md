@@ -22,9 +22,17 @@ The result page should work like [the official Redoc demo](https://redocly.githu
 
 ![](images/redoc-sidemenu-issue.png)
 
+Well, that's not the whole story. Interestingly, it works in some environments. I have tested it with the three machines:
+
+- Ubuntu 20.04
+- Windows Server 2019
+- Windows 10
+
+All three machines have installed the same version of Chrome, and the Redoc rendered OpenAPI page works only on Windows Server 2019 machine. Weird enough.
+
 ### Demo
 
-To see the issue and a fixed version in action, go to this page: [Demo Open API](/docs/demo).
+To see the issue and a fixed version in action, go to this page: [Demo Open API](/docs/demo). However, just as mentioned earlier, the issue might not appear on your machine.
 
 ### Tools and versions
 
@@ -36,16 +44,14 @@ To see the issue and a fixed version in action, go to this page: [Demo Open API]
 
 I'm not proficient in front-end technologies, so I used a rudimentary method to find the cause -- I removed some code from Docsy, bit by bit, until the side menu's scrolling behavior works.
 
-It took me almost an entire day just to find that the issue could be resolved by removing the following code from Docsy's `/asset/scss/main.scss`:
+It took me almost an entire day testing the issue with three different operating systems, just to find that the issue could be resolved by removing the following code from Docsy's `/asset/scss/main.scss`:
 
 ```scss
 @import "../vendor/bootstrap/scss/bootstrap";
 @import "support/bootstrap_vers_test";
 ```
 
-Note that when the above code is removed, Hugo will fail to build the website because there are many modules depending on it. Therefore, there are more lines need to be removed in the same file. [Click here to see more code on GitHub](https://github.com/google/docsy/blob/v0.9.0/assets/scss/main.scss#L8-#L9)
-
-At the end of the day, I managed to remove Bootstrap CSS v5.x and related code. The website was built successfully and the side menu in the Redoc page worked normally.
+At the end of the day, I managed to create my own Redoc layout page and remove Bootstrap CSS v5.x. Now, the side menu in the web page rendered by Redoc worked normally.
 
 ### Possible related issues
 
