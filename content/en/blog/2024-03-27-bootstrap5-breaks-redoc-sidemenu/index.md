@@ -58,3 +58,7 @@ As mentioned in the last section, creating a layout dedicated for Redoc could be
 However, it's just a workaround, not a perfect solution. I'll come back and update this post if I find something new.
 
 Until then.
+
+## Demo
+
+[Demo 1](/docs/demo/redoc)
