@@ -61,4 +61,5 @@ Until then.
 
 ## Demo
 
-[Demo 1](/docs/demo/redoc)
+[Demo 1: Redoc buggy](/docs/demo/redoc-buggy)
+[Demo 2: Redoc fixed](/docs/demo/redoc-fixed)

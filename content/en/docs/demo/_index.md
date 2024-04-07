@@ -1,7 +1,7 @@
 ---
-title: Demo
-toc_hide: true
-hide_summary: true
+title: Demo OpenAPI
+toc_hide: false
+hide_summary: false
 ---
 
 Readers should not see this page.
