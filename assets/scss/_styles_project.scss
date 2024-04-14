@@ -160,13 +160,3 @@ nav.foldable-nav .with-child, nav.foldable-nav .without-child {
   }
 }
 
-/* Override the size and position of ShareThis reaction buttons */
-.st-btn > svg {
-  height: 32px !important;
-  width: 32px !important;  
-}
-#st-1 .st-btn {
-  padding-left: 0px !important;
-  padding-bottom: 0px !important;
-  width: 60px !important;
-}
