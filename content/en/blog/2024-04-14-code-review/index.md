@@ -8,17 +8,17 @@ In this post:
 - 為何做 code review？
 - 走味的 code review。
 
-## 為何做 code review？
+## 為何做 code review？ {#why-code-review}
 
 實施 code review 的兩個主要理由：提高程式品質，以及傳遞知識。
 
-### 提高程式品質
+### 提高程式品質 {#better-code-quality}
 
 Code review 可提升程式碼的品質，包括可讀性、可維護性等等，並減少應用程式的 bug。
 
 程式碼的品質提高，洩漏至產品的 bug 數量減少，便能降低未來產品上線後的問題反饋、排查、debug、和部署新版本的成本。
 
-### 促進了解，傳遞知識
+### 促進了解，傳遞知識 {#sharing-knowledge}
 
 - 新人可透過 code review 加速上手。
 - 減少知識壁壘。code review 過程是公開透明的，所有團隊成員都能看到。
@@ -28,11 +28,11 @@ Code review 可提升程式碼的品質，包括可讀性、可維護性等等�
 
 有了上述優點，實踐 code review 的團隊理論上應該會更快樂。然而實際上是否如此，恐怕要打個問號，因為在實施 code review 過程中還有許多「眉角」，一不小心就會走偏。接著就來看看有哪些需要注意的地方。
 
-## 走味的 code review
+## 走味的 code review {#bad-smells}
 
 這裡談一下走味的 code review，意思是實踐 code review 而導致的一些扭曲現象或者 anti-patterns。
 
-### 馬馬虎虎
+### 馬馬虎虎 {#careless}
 
 當團隊中的每一位成員忙於衝刺自己手上的工作，很可能沒有時間和心力去看別人寫的 code 並提出建議。也許今天比較有空，就看一下別人的 pull request；若沒空，就隨便瞄幾眼，或者跳過。（反正還有其他人會看，應該吧？）
 
@@ -46,7 +46,7 @@ Code review 可提升程式碼的品質，包括可讀性、可維護性等等�
 
 然後，團隊成員可能會看到越來越多的 LGTM。至於有沒有真的看程式碼，就自由心證了。
 
-### 合作無間
+### 合作無間 {#buddy-system}
 
 在強制要求 code review 的團隊中，可能會在 CI/CD pipeline 裡面加入一個卡控規則：至少要有另一個人的 review 和 approve，CI/CD pipeline 才能往下執行。
 
@@ -56,7 +56,23 @@ Code review 可提升程式碼的品質，包括可讀性、可維護性等等�
 
 然後，可能就會有某一位團隊成員感到納悶：「為什麼有些人的 PR 總是一個小時內就 approve 了，我的 PR 卻常常要等一兩天？」
 
-### 粗魯的評論
+### 重重關卡 {#complex-approval}
+
+想像開發團隊分別為 testing、staging、和 production 三種環境訂下 code reivew 的關卡：
+
+- 部署應用程式的新版本至 testing 環境時，需要 developer 和 project manager 的 review。
+- QA 工程師在測試機完成測試之後，也需要 project manager 的核准才能將新版程式推送至 staging 環境。
+- 最後，程式要部署至 production 環境時，則需要 project manager 和 CTO 都核准才能放行。
+
+儘管這些關卡提供了更安全的卡控，但整個開發、測試和部署流程非常倚賴 project manager 這個角色，可能成為瓶頸，替原本已經有點笨重的流程平添更多阻礙。
+
+### 目標持續移動 {#moving-target}
+
+收到通知被指定為某個 PR 的 reviewer 之後，你花了時間認真且仔細地閱讀程式碼，然後提出了一些修改建議。就在你覺得差不多完成 review 工作時又收到通知，這個 PR 有新的 commits 推上來。因此，你又得重頭檢查一遍。再次確認新的變動沒有其他問題之後，趕緊點下 "Approve" 按鈕，結果這個 PR 的狀態卻還是「需要 review」的狀態。怎麼回事？原來又有新的 commits 推上來。
+
+像這種 review 過程仍有新的變動不斷推送至 repository 的情形，容易令 reviewer 感到挫折與煩躁，引發內心小劇場：「怎麼不事先確定程式碼都寫好了才發 PR 呢？」
+
+### 粗魯的評論 {#mean-review}
 
 透過 code review 所獲得的修改建議都一定是好的、對的嗎？不一定。我們甚至可能會收到到一些粗心的，甚至粗魯的 review 建議。
 
@@ -86,8 +102,7 @@ Code review 是知識傳遞與彼此溝通想法的過程，其中必然有溝�
 
 當然啦，接受建議的那一方也不要過於敏感、太容易感到被人冒犯。如果是建設性的建議，保持開放的心胸與對方討論，虛心學習，會是比較好的。
 
-
-## 結語
+## 結語 {#conclusion}
 
 一般而言，code review 能提升程式碼與軟體產品的品質，降低日後的維護成本，也能促進團隊成員之間的溝通與知識傳遞。但實際上做起來仍有許多細節要留意，以免走偏了，甚至引發團隊成員之間的不愉快。其中的溝通藝術，是我認為最重要的部分。
 

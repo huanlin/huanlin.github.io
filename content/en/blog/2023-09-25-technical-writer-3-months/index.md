@@ -1,7 +1,7 @@
 ---
-title: My First Three Months As A Technical Writer
+title: My first three months as a technical writer
 date: "2023-09-25"
-tags: ["TechnicalWriter"]
+tags: ["Technical Writing"]
 draft: true
 ---
 
