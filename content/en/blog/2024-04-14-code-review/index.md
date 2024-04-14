@@ -68,7 +68,7 @@ Code review 可提升程式碼的品質，包括可讀性、可維護性等等�
 4. 只要求改，不提供具體理由。
 5. 陷入面子之爭。
 
-對別人的工作產出提供建議，我覺得是有點嚴肅的事情，而且很容易冒犯到對方。故提出 review 建議的人，我想還是應該盡到說明的責任——除非錯誤非常明顯且毫無爭議（例如拼字錯誤）。提供連結指向 coding standard 或 best practice 也是 ok 的，但如果都不解釋原由，就不大好了。以下舉兩個以較誇張的例子，以凸顯什麼是令人感覺武斷、粗魯的 review 建議：
+對別人的工作產出提供建議，我覺得是有點嚴肅的事情，而且很容易冒犯到對方。故提出 review 建議的人，我想還是應該盡到說明的責任——除非錯誤非常明顯且毫無爭議（例如拼字錯誤）。提供連結指向 coding standard 或 best practice 也是 ok 的，但如果都不解釋原由，就不大好了。以下舉兩個比較誇張的例子，以凸顯什麼是令人感覺武斷、粗魯的 review 建議：
 
 - This code looks like shit. (:thumbdown)
 - Rename the `PowerOff` method to `TurnPowerOff`.
