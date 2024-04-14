@@ -40,7 +40,7 @@ Code review 可提升程式碼的品質，包括可讀性、可維護性等等�
 
 想像一下，某一個 PR 裡面包含上千行的程式碼，變動橫跨二、三十個檔案，這樣的 PR 要花多少心力和時間去仔細 review？
 
-於是可能出現一種情形：少量變動的 PR，容易獲得其他人的 review 建議；<mark>若 PR 變動量大到一個程度，review 建議可能就只有四個字母：LGTM。</mark>也就是 looks good to me 的意思。
+於是可能出現一種情形：少量變動的 PR，容易獲得其他人的 review 建議；<mark>若 PR 變動量大到一個程度，review 建議可能就只有四個字母：LGTM。</mark>也就是 looks good to me 的意思。（下圖取自 [Reddit 論壇](https://www.reddit.com/r/ProgrammerHumor/comments/w92k2i/lgtm/)）
 
 ![](images/lgtm.png#center)
 
