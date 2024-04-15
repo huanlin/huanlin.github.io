@@ -214,6 +214,9 @@ CSS 樣式的部分就不解釋了，直接把檔案內容貼上來：
 :root {
   --bs-body-font-family: Noto Sans TC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  // for mark tag
+  --line-yellow: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='120' height='6' viewBox='0 0 120 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M119 0.8C60 4 50-0.5 1 1.5' stroke='%23fc0' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
 }
 
 .logo-image-height {
@@ -328,6 +331,37 @@ h2.feedback--title {
     text-transform: none;
     font-weight: 500;
     font-size: 1.05rem;
+}
+
+// The outer page container for the default base template.
+.td-default {
+  main {
+    > section:first-of-type {
+      @include media-breakpoint-up(md) {
+        padding-top: 1rem; // by Michael: 原本是 8rem
+      }
+    }
+
+    section {
+      @extend .td-block-padding;
+    }
+  }
+}
+
+// img[src$="#center"] 用來將圖片置中
+img[src$="#center"] {
+  display: block;
+  margin: 1.0rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+// Mark tag as a yellow underline.
+mark {
+  color: inherit;
+  background: var(--line-yellow) bottom left/100% 0.3em no-repeat;
+  text-decoration: none;
+  padding-bottom: 0.3em;
 }
 ```
 
