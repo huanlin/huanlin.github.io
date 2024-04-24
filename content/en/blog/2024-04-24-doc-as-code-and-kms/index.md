@@ -4,7 +4,7 @@ slug: "doc-as-code-and-kms"
 date: 2024-04-24
 ---
 
-你任職的公司裡面有沒有使用現成的知識分享平台或知識管理系統？例如 Confluence、Document360 等等。
+你任職的公司裡面有沒有使用現成的知識分享平台或知識管理系統？例如 [Confluence](https://www.atlassian.com/software/confluence)、[Document360](https://document360.com/) 等等。
 
 目前我是用 markdown 編寫技術文件，搭配 Git workflow 來自動建置與發佈文件至網站。我寫的文件主要是軟體系統的 user guide 以及 API reference manual。像這類正規的產品文件，許多開放原始碼專案也都是採用類似的作法，例如 [Kubernetes Documentation](https://kubernetes.io/docs/home/)，以及[這篇筆記所在的網站](https://huanlin.cc)（使用 Hugo 建置）。
 
