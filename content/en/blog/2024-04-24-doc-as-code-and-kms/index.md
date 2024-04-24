@@ -2,7 +2,6 @@
 title: Doc as Code 與知識管理系統
 slug: "doc-as-code-and-kms"
 date: 2024-04-24
-draft: true
 ---
 
 不知道大家的公司有沒有使用現成的知識分享平台或知識管理系統？例如 Confluence、Document360 等等。
