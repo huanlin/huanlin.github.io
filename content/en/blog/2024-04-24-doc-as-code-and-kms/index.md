@@ -4,13 +4,11 @@ slug: "doc-as-code-and-kms"
 date: 2024-04-24
 ---
 
-不知道大家的公司有沒有使用現成的知識分享平台或知識管理系統？例如 Confluence、Document360 等等。
+你任職的公司裡面有沒有使用現成的知識分享平台或知識管理系統？例如 Confluence、Document360 等等。
 
-目前我是用 markdown 搭配 Git workflow 來寫技術文件，而文件類型主要是軟體系統的 user guide 以及 API reference manual。像這類正規的產品文件，許多開放原始碼專案也都是採用類似的作法，例如 [Kubernetes Documentation](https://kubernetes.io/docs/home/)，以及[這篇筆記所在的網站](https://huanlin.cc)（使用 Hugo 建置）。
+目前我是用 markdown 編寫技術文件，搭配 Git workflow 來自動建置與發佈文件至網站。我寫的文件主要是軟體系統的 user guide 以及 API reference manual。像這類正規的產品文件，許多開放原始碼專案也都是採用類似的作法，例如 [Kubernetes Documentation](https://kubernetes.io/docs/home/)，以及[這篇筆記所在的網站](https://huanlin.cc)（使用 Hugo 建置）。
 
-然而，使用 markdown 撰寫文件，並搭配靜態網站生成工具（如 Hugo）來建立技術文件網站，對企業內部需要知識管理的情況適用嗎？這是我目前在想的問題。
-
-透過這篇筆記整理一下我目前的想法。
+然而，使用 markdown 撰寫文件，並搭配靜態網站生成工具（如 Hugo）來建立技術文件網站，對企業內部需要知識管理的情況適用嗎？它能夠滿足企業對 KMS 的需求嗎？對此問題，我並沒有十分確定的答案，僅透過這篇筆記梳理目前的想法。
 
 簡單起見，接下來的討論，會把 markdown + Git workflow 的文件製作方式稱為 Doc as Code，即 Documentation as Code 的簡寫。
 
