@@ -2,6 +2,7 @@
 title: Doc as Code 與知識管理系統
 slug: "doc-as-code-and-kms"
 date: 2024-04-24
+tags: ["Technical Writing"]
 ---
 
 你任職的公司裡面有沒有使用現成的知識分享平台或知識管理系統？例如 [Confluence](https://www.atlassian.com/software/confluence)、[Document360](https://document360.com/) 等等。
