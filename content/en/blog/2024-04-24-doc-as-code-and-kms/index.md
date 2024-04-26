@@ -7,15 +7,17 @@ tags: ["Technical Writing"]
 
 你任職的公司裡面有沒有使用現成的知識分享平台或知識管理系統？例如 [Confluence](https://www.atlassian.com/software/confluence)、[Document360](https://document360.com/) 等等。
 
-> 更新：後來從[我的臉書貼文](https://www.facebook.com/huanlin.notes/posts/pfbid02Tv4rBkjcZVongWKDnJ5bz3aEUeLWGgvugvrrNcQ6iCoJDRwPXnfAHeH8a9bLkTkql)下方收到一些網友的分享，得知有些公司是用 Notion、OneNote、Google Docs、Azure DevOps 的 wiki 等等。也很高興看到有人的公司是採用 monorepo + markdown 的作法。
+> 更新：後來從[我的臉書貼文](https://www.facebook.com/huanlin.notes/posts/pfbid02Tv4rBkjcZVongWKDnJ5bz3aEUeLWGgvugvrrNcQ6iCoJDRwPXnfAHeH8a9bLkTkql)下方收到一些網友的分享，得知有些公司是用 Notion、OneNote、Google Docs、Azure DevOps 的 wiki 等等。也很高興看到有人的公司是採用 monorepo + markdown 的作法，也就是稍後會提到的 Docs as Code。
 
 目前我是用 markdown 編寫技術文件，搭配 Git workflow 來自動建置與發佈文件至網站。我寫的文件主要是軟體系統的 user guide 以及 API reference manual。像這類正規的產品文件，許多開放原始碼專案也都是採用類似的作法，例如 [Kubernetes Documentation](https://kubernetes.io/docs/home/)，以及[這篇筆記所在的網站](https://huanlin.cc)（使用 Hugo 建置）。
 
 然而，使用 markdown 撰寫文件，並搭配靜態網站生成工具（如 Hugo）來建立技術文件網站，對企業內部需要知識管理的情況適用嗎？它能夠滿足企業對 KMS 的需求嗎？對此問題，我並沒有十分確定的答案，僅透過這篇筆記梳理目前的想法。
 
-簡單起見，接下來的討論，會把 markdown + Git workflow 的文件製作方式稱為 Doc as Code，即 Documentation as Code 的簡寫。
+簡單起見，接下來的討論，會把 markdown + Git workflow 的文件製作方式稱為 Docs as Code，即 Documentation as Code 的簡寫。
 
-## Doc as Code
+## Docs as Code
+
+Docs as Code 指的是用跟寫程式一樣的工具來寫文件。我用來寫文件的編輯器是 VS Code，檔案內容的格式則為 markdown。
 
 優點：
 
@@ -29,7 +31,7 @@ tags: ["Technical Writing"]
 缺點：
 
 - Markdown 語法雖然簡單，但是對於沒寫過的人來說，還是有一點學習門檻。一旦拿來跟 WYSIWYG 介面的文件管理平台比較，親和力就輸了一截。（熟悉 markdown 的人應該會覺得 markdown 才更親切吧。）
-- 搜尋能力僅限於「這個文件網站」，也就是同一個 Git repository 內的文件。如果企業內部想要建立一個統一的知識管理平台，Doc as Code 方法很難做到跨站搜尋和跨產品搜尋，除非把所有產品的文件全都放在同一個 Git repository（也就是同一個網站）。
+- 搜尋能力僅限於「這個文件網站」，也就是同一個 Git repository 內的文件。如果企業內部想要建立一個統一的知識管理平台，Docs as Code 方法很難做到跨站搜尋和跨產品搜尋，除非把所有產品的文件全都放在同一個 Git repository（也就是同一個網站）。
 - 使用者 feedback 和互動功能通常比較陽春。如果是封閉的企業內部網路（防火牆阻止外連），相關功能甚至完全不 work（例如無法使用 [giscus 留言板](https://giscus.app/)）。
 
 {{< admonition tip "Tip" >}}
@@ -78,3 +80,8 @@ tags: ["Technical Writing"]
 怎樣寫出好的文件內容？關鍵還是在人。
 
 Keep writing!
+
+## 延伸閱讀 {#see-also}
+
+- [Docs as Code](https://www.writethedocs.org/guide/docs-as-code/) by Eric Holscher
+- 
