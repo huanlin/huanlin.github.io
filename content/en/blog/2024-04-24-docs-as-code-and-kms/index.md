@@ -1,6 +1,6 @@
 ---
-title: Doc as Code 與知識管理系統
-slug: "doc-as-code-and-kms"
+title: Docs as Code 與知識管理系統
+slug: "docs-as-code-and-kms"
 date: 2024-04-24
 tags: ["Technical Writing"]
 ---
