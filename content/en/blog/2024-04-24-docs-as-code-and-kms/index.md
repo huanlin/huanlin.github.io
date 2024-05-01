@@ -84,4 +84,4 @@ Keep writing!
 ## 延伸閱讀 {#see-also}
 
 - [Docs as Code](https://www.writethedocs.org/guide/docs-as-code/) by Eric Holscher
-- 
+- [Crafting Docs for Success: An End-to-End Approach to Developer Documentation](https://www.amazon.com/Crafting-Docs-Success-End-End-ebook/dp/B0CD9RHQ4F) by Diana Lakatos
