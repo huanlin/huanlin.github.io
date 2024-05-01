@@ -9,7 +9,7 @@ tags: ["Technical Writing"]
 
 > 更新：後來從[我的臉書貼文](https://www.facebook.com/huanlin.notes/posts/pfbid02Tv4rBkjcZVongWKDnJ5bz3aEUeLWGgvugvrrNcQ6iCoJDRwPXnfAHeH8a9bLkTkql)下方收到一些網友的分享，得知有些公司是用 Notion、OneNote、Google Docs、Azure DevOps 的 wiki 等等。也很高興看到有人的公司是採用 monorepo + markdown 的作法，也就是稍後會提到的 Docs as Code。
 
-目前我是用 markdown 編寫技術文件，搭配 Git workflow 來自動建置與發佈文件至網站。我寫的文件主要是軟體系統的 user guide 以及 API reference manual。像這類正規的產品文件，許多開放原始碼專案也都是採用類似的作法，例如 [Kubernetes Documentation](https://kubernetes.io/docs/home/)，以及[這篇筆記所在的網站](https://huanlin.cc)（使用 Hugo 建置）。
+目前我是用 markdown 編寫技術文件，搭配 Git workflow 來自動建置與發佈文件至網站。我寫的文件主要是軟體系統的 user guide 以及 API tutorial。像這類正規的產品文件，許多開放原始碼專案也都是採用類似的作法，例如 [Kubernetes Documentation](https://kubernetes.io/docs/home/)，以及[這篇筆記所在的網站](https://huanlin.cc)（使用 Hugo 建置）。
 
 然而，使用 markdown 撰寫文件，並搭配靜態網站生成工具（如 Hugo）來建立技術文件網站，對企業內部需要知識管理的情況適用嗎？它能夠滿足企業對 KMS 的需求嗎？對此問題，我並沒有十分確定的答案，僅透過這篇筆記梳理目前的想法。
 
