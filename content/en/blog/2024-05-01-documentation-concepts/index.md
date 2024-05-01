@@ -80,3 +80,8 @@ Documentation as a product 簡稱 Docs as a product，指的是把「技術文�
 喔對了，非正規文件當然也可以用上述理念和方法來撰寫，例如部落格就是練習寫文件的一個好方法（儘管有點老派，但還是很棒的方法）。
 
 Keep writing!
+
+## 延伸閱讀 {#see-also}
+
+- [Diátaxis 文件類型框架](https://diataxis.fr/)
+- [Docs as Code 與知識管理系統](https://huanlin.cc/blog/2024/04/24/docs-as-code-and-kms/)
