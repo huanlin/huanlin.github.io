@@ -85,5 +85,7 @@ Keep writing!
 
 ## 延伸閱讀 {#see-also}
 
-- [Diátaxis 文件類型框架](https://diataxis.fr/)
 - [Docs as Code 與知識管理系統](https://huanlin.cc/blog/2024/04/24/docs-as-code-and-kms/)
+- [Diátaxis 文件類型框架](https://diataxis.fr/)
+- [Crafting Docs for Success: An End-to-End Approach to Developer Documentation](https://www.amazon.com/Crafting-Docs-Success-End-End-ebook/dp/B0CD9RHQ4F) by Diana Lakatos
+- [I'd Rather Be Writing](https://idratherbewriting.com/)
