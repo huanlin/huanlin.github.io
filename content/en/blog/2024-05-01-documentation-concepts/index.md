@@ -1,5 +1,5 @@
 ---
-title: 技術文件寫作的基本理念
+title: 技術寫作入門：docs as a product 與 content first
 description: Basic concepts of technical writing
 slug: "documentaion-concepts"
 date: 2024-05-01
@@ -10,13 +10,10 @@ tags: ["Technical Writing"]
 
 ## 概要
 
-在這篇筆記，我想整理幾個有關技術文件寫作的重要觀念和理念：
+[上一篇筆記](https://huanlin.cc/blog/2024/04/24/docs-as-code-and-kms/)提到 Docs as Code，指的是以跟寫程式一樣或相似的工具與流程來製作文件。這篇筆記要再介紹兩個有關技術文件寫作的基礎觀念：
 
-- 理念：Docs as a product，指的是把「技術文件」當成一個產品來發展和維護。
-- 理念：Content first，即內容優先。既不是工具優先、平台優先，也不是美觀樣式優先。
-- 方法：Docs as Code，指的是以跟寫程式一樣或相似的工具與流程來製作文件。
-
-有關 Docs as Code，我在[上一篇筆記](https://huanlin.cc/blog/2024/04/24/docs-as-code-and-kms/)中已經有稍微提到，這篇筆記就不展開細說（未來可能針對這個主題再另外寫一篇筆記）。
+- Docs as a product，指的是把「技術文件」當成一個產品來發展和維護。
+- Content first，即內容優先。既不是工具優先、平台優先，也不是美觀樣式優先。
 
 ## Docs as a product
 
@@ -36,9 +33,9 @@ Documentation as a product 簡稱 Docs as a product，指的是把「技術文�
 
 內容優先，這也相當直觀，文件首重其內容是否有用，自然是內容優先了。強調這點的原因是相對於其他考量來說的，例如：優先考慮文件撰寫工具或文件管理平台是否容易取得、工具是否好用、產生出來的文件是否美觀 fancy 等等。
 
-當然，這是基於前一項理念來說的，也就是 docs as a product。
+Content first 的前提是上一節介紹的 docs as a product。因為有些文件並不需要那麼嚴肅認真地對待，例如一些不穩定的知識、臨時筆記、零碎知識等等，我們可能不會大費周章去把它們當成一個產品來發展與維護，於是內容結構如何、是否易讀易懂，也就不需要那麼講究。
 
-有些文件並不需要那麼嚴肅認真地對待，例如一些不穩定的暫時知識、零碎知識，我們可能就不會大費周章去把它們當成一個產品來發展與維護，於是內容結構如何、是否易讀易懂，也就變成次要的了。
+那麼，如果要認真去寫**正規文件**，該如何構思文件的架構呢？
 
 ### 構思文件架構 {#ideate-content-structure}
 
