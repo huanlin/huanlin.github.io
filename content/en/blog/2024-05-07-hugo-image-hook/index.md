@@ -1,6 +1,6 @@
 ---
 title: "Center images with URI fragment"
-date: "2024-05-06"
+date: "2024-05-07"
 slug: center-images-with-uri-fragment
 tags: ["Hugo", "Docsy"]
 ---
@@ -94,4 +94,4 @@ Download the source code of the [embeded image render hook](https://github.com/g
 
 Note that the above code will not compile with Hugo v0.124.
 
-Keep writing :)
+Keep writing!
