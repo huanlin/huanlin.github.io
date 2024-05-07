@@ -1,6 +1,6 @@
 ---
 title: "Center images with URI fragment"
-date: "2024-05-07"
+date: "2024-05-06"
 slug: center-images-with-uri-fragment
 tags: ["Hugo", "Docsy"]
 ---
