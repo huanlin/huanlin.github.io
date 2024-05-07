@@ -2,7 +2,7 @@
 title: "Center images with URI fragment"
 date: "2024-05-07"
 slug: center-images-with-uri-fragment
-tags: ["hugo"]
+tags: ["Hugo", "Docsy"]
 ---
 
 ## How
