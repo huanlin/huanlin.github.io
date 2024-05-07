@@ -92,4 +92,6 @@ Download the source code of the [embeded image render hook](https://github.com/g
 {{- /**/ -}}
 ```
 
-Work done.
+Note that the above code will not compile with Hugo v0.124.
+
+Keep writing :)
