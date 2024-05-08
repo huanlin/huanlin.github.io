@@ -32,7 +32,7 @@ It works as expected until I upgrade Hugo to v0.124.
 
 ## The issue
 
-Using the above appoach, images are not centered anymore with Hugo v0.124.x and v0.125.x.
+Using the above appoach, <mark>images are not centered anymore with Hugo v0.124.x and v0.125.6.</mark>
 
 After some tests, I've found that it's because [Hugo's built-in image hook](https://gohugo.io/render-hooks/images/) removed the URI fragment `#center` when converting markdown to HTML.
 
