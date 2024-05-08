@@ -28,8 +28,6 @@ img[src$="#center"] {
 }
 ```
 
-It works as expected until I upgrade Hugo to v0.124.
-
 ## The issue
 
 Using the above appoach, <mark>images are not centered anymore with Hugo v0.124.x and v0.125.6.</mark>
