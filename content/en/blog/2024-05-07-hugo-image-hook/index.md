@@ -60,7 +60,7 @@ According to the Hugo document: [Image render hooks](https://gohugo.io/render-ho
         enableDefault = false
 ```
 
-Once the default image hook is disabled, the URI fragment `#cener` is correctly render in the result HTML, hence the image is centered.
+Once the default image hook is disabled, the URI fragment `#cener` is correctly rendered in the result HTML, hence images can be centered.
 
 ## Approach 2: Custom image hook
 
