@@ -6,7 +6,7 @@ tags: ["Hugo", "Docsy"]
 ---
 
 {{< admonition type=warning title="Update" >}}
-**2024-05-08:** After I [post a question](https://discourse.gohugo.io/t/the-embeded-image-render-hook-removes-uri-fragment-of-src-attribute/49684) on the Hugo discourse site, Joe Mooring replied and confirmed it is a bug in Hugo. He also created a [ticket](https://github.com/gohugoio/hugo/issues/12468) and a [pull request](https://github.com/gohugoio/hugo/pull/12469) for it. Therefore, this post will be outdated when his pull request is merged and released.
+**2024-05-08:** After I [post a question](https://discourse.gohugo.io/t/the-embeded-image-render-hook-removes-uri-fragment-of-src-attribute/49684) on the Hugo discourse site, Joe Mooring replied and confirmed it is a bug in Hugo. He also created a [ticket](https://github.com/gohugoio/hugo/issues/12468) and a [pull request](https://github.com/gohugoio/hugo/pull/12469) for it. Therefore, when his pull request is merged and released, most content of this post will be outdated except the "How" section.
 {{< /admonition >}}
 
 ## How
