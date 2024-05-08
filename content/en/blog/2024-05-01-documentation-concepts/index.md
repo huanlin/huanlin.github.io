@@ -41,7 +41,7 @@ Content first 的前提是上一節介紹的 docs as a product。因為有些文
 
 一旦確定要撰寫**正規文件**，把文件當成一項產品來認真看待，便需要規劃和構思文件結構與內容。此時，有一個名為 [Diátaxis](https://diataxis.fr/) 的文件構思框架可以派上用場。如下圖（取自 diataxis.fr）：
 
-![](images/diataxis.png)
+![](images/diataxis.png#center)
 
 此框架把文件分成四大類：
 
