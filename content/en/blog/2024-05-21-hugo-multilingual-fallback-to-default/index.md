@@ -29,6 +29,10 @@ Here is how I set it up for my website:
     lang = "zh"
 ```
 
+In addition, I commented out all contentDir settings in my hugo.toml according to [the official document](https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts):
+
+> if you add a mounts section you should remove the old contentDir, staticDir, etc. settings.
+
 Hugo and Docsy versions:
 
 - Hugo v0.125.6

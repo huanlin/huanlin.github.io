@@ -66,25 +66,27 @@ id = "G-S83RZSBDVH" # This ID is specific for https://huanlin.cc
 # Language configuration
 
 [languages]
-[languages.en]
-languageName = "English"
-Title = "Huanlin Notes"
-# Weight used for sorting.
-weight = 2
-#contentDir = "content/en"
-[languages.en.params]
-subtitle = "Learning notes, Tutorials"
+  [languages.en]
+    languageName = "English"
+    Title = "Huanlin Notes"
+    # Weight used for sorting.
+    weight = 2
+  #contentDir = "content/en"
+  [languages.en.params]
+    subtitle = "Learning notes, Tutorials"
+    time_format_default = "2006-01-02"
+    time_format_blog = "2006-01-02"
 
-[languages.zh]
-disabled = false
-languageName = "中文 (Chinese)"
-Title = "Huanlin 學習筆記"
-weight = 1
-#contentDir = "content/zh"
-[languages.zh.params]
-subtitle = "我的學習筆記、教學文章"
-time_format_default = "2006-01-02"
-time_format_blog = "2006-01-02"
+  [languages.zh]
+    disabled = false
+    languageName = "中文 (Chinese)"
+    Title = "Huanlin 學習筆記"
+    weight = 1
+  #contentDir = "content/zh"
+  [languages.zh.params]
+    subtitle = "我的學習筆記、教學文章"
+    time_format_default = "2006-01-02"
+    time_format_blog = "2006-01-02"
 
 [markup]
 [markup.goldmark]
