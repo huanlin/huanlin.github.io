@@ -1,6 +1,7 @@
 ---
 title: "[Hugo] Multilingual - fall back to the default language"
 date: 2024-05-22
+slug: "hugo-multilingual-fall-back-to-default-language"
 tags: ["Hugo", "Docsy"]
 ---
 
