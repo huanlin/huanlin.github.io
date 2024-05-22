@@ -1,5 +1,6 @@
 ---
 title: "[Hugo][Multilingual] - Fall back to the default language"
+date: 2024-05-22
 tags: ["Hugo", "Docsy"]
 ---
 
