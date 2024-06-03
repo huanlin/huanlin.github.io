@@ -14,7 +14,7 @@ tags: ["Technical Writing"]
 - 你覺得寫文件最傷腦筋的是什麼？
 - 你用 AI 寫文件嗎？AI 會取代寫手嗎？
 
-## To write or not to write?
+## 需要寫文件嗎？文件有用嗎？ {#to-write-or-not}
 
 有此一說：「沒人喜歡寫文件。」
 
