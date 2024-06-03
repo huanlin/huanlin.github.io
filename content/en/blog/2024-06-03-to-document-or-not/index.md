@@ -46,7 +46,7 @@ Living Documentation 一書的作者亦在書中坦言：「更新文件是最�
 - [Microsoft Learning](http://www.microsoft.com/learning) 及其[文件原始碼](https://github.com/MicrosoftLearning)
 - [Kubernetes Documentation](https://kubernetes.io/docs/) 及其[文件原始碼](https://github.com/kubernetes/kubernetes)
 
-上面列出的技術文件，在我看來都體現了 documentation as a product 的精神（簡稱 docs as a product），也就是把文件當成一項產品來構思、發展、和維護，是正式（或者正規）的產品文件。它們的文件原始碼是以 markdown 來編寫，基本上可以說是採用 Docs-as-Code 方法所製作的文件。
+上面列出的技術文件，在我看來都體現了 **documentation as a product** 的精神（簡稱 docs as a product），也就是把文件當成一項產品來構思、發展、和維護，是正式（或者正規）的產品文件。它們的文件原始碼是以 markdown 來編寫，基本上可以說是採用 **Docs-as-Code** 方法所製作的文件。
 
 之所以列舉上面幾份參考文件，是因為我擔心讀者會誤以為這裡所談的文件也包含一些比較零散或隨興的開發筆記。故在此強調，接著要討論的，都是針對「正式文件」，例如產品的 user guide、tutorials、API reference manual 等等。
 
