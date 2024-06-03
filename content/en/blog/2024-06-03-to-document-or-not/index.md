@@ -75,7 +75,7 @@ OK，我覺得可以這樣看：
 
 故我的意見肯定是偏頗的，是偏向 Docs-as-Code 方法的。
 
-不過，如果某些現成的文件管理平台是支援 markdown 的，我便覺得會是可以考慮的選項。例如 Micrisoft Azure DevOps 的 Wiki、Document 360 等等。這是因為考慮將來文件可能在不同平台之間 migration，如果被平台鎖住（vendor lock-in），無法輕易移轉文件，恐怕會很傷腦筋。
+不過，如果某些現成的文件管理平台是支援 markdown 的，我便覺得會是可以考慮的選項。例如 Microsoft Azure DevOps 的 Wiki、Document 360 等等。這是因為考慮將來文件可能在不同平台之間 migration，如果被平台鎖住（vendor lock-in），無法輕易移轉文件，恐怕會很傷腦筋。
 
 ## 你覺得寫文件最傷腦筋的是什麼？ {#most-bothersome}
 
