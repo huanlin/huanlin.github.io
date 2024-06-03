@@ -69,7 +69,7 @@ OK，我覺得可以這樣看：
 
 ## Docs-as-Code 方法適合我嗎？ {#docs-as-code}
 
-這個問題不好回答。就我目前接觸到的意見，難以接受的人大多是習慣所見即所得的編輯方式（例如 Word、Confluence），故很難接受改用 markdown 來編寫文件。
+這個問題不好回答。就我目前接觸到的意見，難以接受的人大多是習慣「所見即所得」的編輯方式（例如 Word、Confluence），故很難接受改用 markdown 來編寫文件。
 
 對於這點，我恐怕很難給出什麼好的建議。由於我喜歡使用 markdown 寫任何東西，所以 Docs-as-Code 這種使用 makrdown 編輯，並且用 git workflow 自動建置與發佈文件網站的做法，深得我心。
 
