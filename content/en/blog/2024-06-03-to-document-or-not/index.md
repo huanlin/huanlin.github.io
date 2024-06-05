@@ -4,106 +4,108 @@ date: 2024-06-03
 tags: ["Technical Writing"]
 ---
 
-從事全職 technical writer 即將屆滿一年，似乎是個適當時機整理一下工作心得與觀察。另一方面，我最近對公司內部單位以線上直播的形式做了兩次關於文件製作的簡報，也蒐集到一些值得整理下來的問題和意見。
+> This is a translation by AI. **如欲閱讀中文版，請使用頁面右上角的語言切換器。**
 
-故這一篇筆記，我會以 Q & A 的形式來說說我對「寫文件」這件事情的看法，並分享一些心得。這次整理了五個問題：
+After working as a full-time technical writer for almost a year, it seems like an appropriate time to summarize my experiences and observations. On the other hand, I recently gave two presentations on document production to internal teams using online live streaming, and I collected some questions and feedback worth organizing.
 
-- 需要寫文件嗎？文件有用嗎？
-- 何時該考慮製作「正式文件」？
-- Docs-as-Code 方法適合我嗎？
-- 你覺得寫文件最傷腦筋的是什麼？
-- 你用 AI 寫文件嗎？AI 會取代寫手嗎？
+So in this note, I will discuss my views on "writing documents" in the form of Q&A and share some insights. I have compiled five questions this time:
 
-## 需要寫文件嗎？文件有用嗎？ {#to-write-or-not}
+- Do we need to write documents? Are documents useful?
+- When should we consider creating "formal documents"?
+- Is the Docs-as-Code method suitable for me?
+- What do you find most bothersome about writing documents?
+- Do you use AI to write documents? Will AI replace human writers?
 
-有此一說：「沒人喜歡寫文件。」
+## Do we need to write documents? Are documents useful? {#to-write-or-not}
 
-Living Documentation 一書的作者亦在書中坦言：「更新文件是最不受重視的工作之一。它不有趣，似乎也不會有什麼回報。」
+There is a saying: "No one likes to write documents."
 
-也有人曾經用比較委婉的方式問我：「你知道你寫的文件有誰在看嗎？大家好像都是直接找人問比較快。」
+The author of the book "Living Documentation" also admitted in the book: "Updating documents is one of the least valued tasks. It is not fun and seems to have little return."
 
-有的人則更直接：「你寫的文件應該沒人看。」
+Some people have asked me in a more polite way: "Do you know who reads the documents you write? It seems like it's faster to just ask someone directly."
 
-這些對文件是否有用的疑問或看法，在我看來都很正常。我開箱 3C 產品的時候，也幾乎沒在看產品說明書的。然而，有些電器用品的某些功能或用法可能稍微複雜些，那時我會慶幸還能找到產品說明書。例如我最近買的一支能夠除塵螨的乾濕兩用吸塵器，使用一陣子之後，覺得該清理濾網了，才發現其中一處濾網，我實在想不透該怎麼拆卸，看了說明書才恍然大悟：竟然是用其中一支比較細長的吸頭來拆裝。
+Others are more direct: "No one probably reads the documents you write."
 
-所以，文件有沒有用？有沒有人會讀？
+These doubts or opinions about the usefulness of documents seem normal to me. When I unpack consumer electronics, I rarely read the product manuals. However, some functions or usage of certain appliances may be a bit more complicated. In those cases, I am glad to find the product manual. For example, I recently bought a vacuum cleaner that can remove dust mites. After using it for a while, I realized that I needed to clean the filter, but I couldn't figure out how to remove it. It wasn't until I read the manual that I realized I needed to use one of the narrower suction heads to disassemble it.
 
-你需要它時，它就有用；你若不需要，也不代表別人一定不需要。
+So, are documents useful? Will anyone read them?
 
-它有點像保險——當你不需要的時候，可能覺得每年繳保險費是多餘的開銷；當你需要它的時候，則會慶幸還好當初有保險（說不定還覺得當初保太少）。
+When you need them, they are useful; just because you don't need them doesn't mean others don't. 
 
-故此，如果你是寫文件的人，請不用把別人對文件有用無用的評論放在心上。尤其當你是全職的 technical writer，寫文件就是本務，是該做的事；思考如何把文件寫得好、對讀者有用，才是要緊的事。
+It's a bit like insurance - when you don't need it, you may feel that paying insurance premiums every year is unnecessary expenses; when you need it, you will be glad that you had insurance (maybe even feel that you didn't have enough insurance).
 
-如果你不是 technical writer 呢？ Well, if you feel like to write, you write. Don't care about what people say. 寫作本身就是最好的報償，我相信有寫作習慣的人都能體會這句話的含意。
+Therefore, if you are someone who writes documents, don't worry about what others say about the usefulness of documents. Especially when you are a full-time technical writer, writing documents is your job, something you should do; it is important to think about how to write good documents that are useful to readers.
 
-所以，想寫就寫吧。與其煩惱 to write or not to write、或者文件是否有用，不如思考自己該寫什麼內容、以及怎樣把它寫好。
+If you are not a technical writer? Well, if you feel like writing, then write. Don't care about what people say. Writing itself is the best reward, and I believe those who have the habit of writing can understand the meaning of this sentence.
 
-如果您還是覺得，「你說的好像有那麼一丁點道理，但是你可以提出更具體或者更有力的證明嗎？」
+So, just write if you want to. Instead of worrying about whether to write or not to write, or whether documents are useful, it is better to think about what content you should write and how to write it well.
 
-以下文件或許可以當作參考案例：
+If you still think, "What you said makes some sense, but can you provide more specific or more compelling evidence?"
 
-- Amazon 的 [AWS Documentaion](https://docs.aws.amazon.com/) 以及[文件原始碼](https://github.com/awsdocs)。
-- [Microsoft Learning](http://www.microsoft.com/learning) 及其[文件原始碼](https://github.com/MicrosoftLearning)
-- [Kubernetes Documentation](https://kubernetes.io/docs/) 及其[文件原始碼](https://github.com/kubernetes/kubernetes)
+The following documents may serve as reference examples:
 
-上面列出的技術文件，在我看來都體現了 **documentation as a product** 的精神（簡稱 docs as a product），也就是把文件當成一項產品來構思、發展、和維護，是正式（或者正規）的產品文件。它們的文件原始碼是以 markdown 來編寫，基本上可以說是採用 **Docs-as-Code** 方法所製作的文件。
+- [AWS Documentation](https://docs.aws.amazon.com/) and its [source code](https://github.com/awsdocs).
+- [Microsoft Learning](http://www.microsoft.com/learning) and its [source code](https://github.com/MicrosoftLearning).
+- [Kubernetes Documentation](https://kubernetes.io/docs/) and its [source code](https://github.com/kubernetes/kubernetes).
 
-之所以列舉上面幾份參考文件，是因為我擔心讀者會誤以為這裡所談的文件也包含一些比較零散或隨興的開發筆記。故在此強調，接著要討論的，都是針對「正式文件」，例如產品的 user guide、tutorials、API reference manual 等等。
+The technical documents listed above, in my opinion, embody the spirit of **documentation as a product** (referred to as docs as a product), which means conceptualizing, developing, and maintaining documents as formal (or official) product documents. Their source code is written in markdown and can be considered as documents produced using the **Docs-as-Code** method.
 
-## 何時該考慮製作正式文件？ {#do-i-need-docs-as-a-product}
+I listed the above reference documents because I am concerned that readers might mistakenly think that the documents discussed here also include some scattered or casual development notes. So, I want to emphasize that what we are going to discuss next is focused on "formal documents," such as product user guides, tutorials, API reference manuals, and so on.
 
-我不想假裝我知道所有事情。每一家公司、每一個軟體專案和開發團隊的情況不盡相同，是否需要花時間去製作正式的產品文件，得由團隊評估產品的**目標使用者**是否需要。
+## When should we consider creating formal documents? {#do-i-need-docs-as-a-product}
 
-舉例來說，有的應用程式，目標使用者可能就是自家內部的幾位 developers，大家只要看程式碼和其中的註解就大致能理解。這種情況，我想通常是不需要額外花時間人力去製作正式文件，甚至連討論「要不要文件」都顯得多餘。
+I don't want to pretend that I know everything. The need to spend time creating formal product documents depends on whether the **target users** of the product require them, and this varies for each company, software project, and development team.
 
-那麼，如果是開放原始碼專案，目標使用者數量較多（也許數十人或數百人）呢？所有的使用者也都能看到原始碼和程式註解，那還有需要製作正式的產品文件嗎？這個問題可能還會附加一個 p.s.：「我的程式碼已經 self-explained 了，一看就懂。」
+For example, for some applications, the target users may be a few internal developers, and everyone can understand by looking at the code and its comments. In such cases, I think there is usually no need to spend additional time and effort creating formal documents, and even discussing "whether to have documents" seems unnecessary.
 
-OK，我覺得可以這樣看：
+So, what if it is an open-source project with a larger number of target users (perhaps tens or hundreds of people)? And all users can access the source code and program comments, is there still a need to create formal product documents? This question may come with an additional note: "My code is self-explained, easy to understand at a glance."
 
-- 如果程式碼真的很簡單易懂，您覺得**任何人**只要看程式碼都應該能懂，碰到問題也都能解決，那麼的確，或許不用費心去製作正式文件；只要寫一點 readme 和 FAQ 便足夠應付。當然，這也跟應用程式本身的規模與複雜性有關係。
-- 不妨自問：「都有英文版了，還需要有中文譯本嗎？」雖然不是完全相同等級的問題，但本質是相似的，即：<mark>能夠為使用者節省可觀的學習、閱讀、和尋找的時間嗎？</mark>若您肯定中文譯本是有助於加速學習的，又怎會否定產品文件對使用者的幫助呢？
-- 問兩次原則。即同一個問題被問了兩次，這通常真實反映了使用者的困境，應視為一種徵兆：可能需要把它寫入文件。
-- 看一下 [Kubernetes 文件](ttps://kubernetes.io/docs/)，然後想像一下，如果 K8s 開發團隊宣稱：「我們的程式碼都寫得易讀易懂，也有適時寫註解，而且都公開在 GitHub 上面了，所以不用寫產品使用手冊和 API 教學文件。」
+OK, here's how I see it:
 
-接著來談談 Docs-as-Code。
+- If the code is really simple and easy to understand, and you believe that **anyone** should be able to understand it just by looking at the code and can solve problems, then perhaps there is no need to go through the trouble of creating formal documents; writing a readme and FAQ should be sufficient. Of course, this also depends on the scale and complexity of the application itself.
+- Ask yourself: "If there is already an English version, do we still need a Chinese translation?" Although not exactly the same level of question, the essence is similar: <mark>Can it save users a considerable amount of time in learning, reading, and searching?</mark> If you believe that a Chinese translation would help accelerate learning, how can you deny the help of product documents to users?
+- The "ask twice" principle. If the same question is asked twice, it usually reflects the users' dilemma and should be considered as a sign that it needs to be written in the documents.
+- Take a look at the [Kubernetes documentation](https://kubernetes.io/docs/) and imagine if the K8s development team claimed, "Our code is easy to read and understand, and we have timely comments. It is all publicly available on GitHub, so there is no need to write product manuals and API tutorials."
 
-## Docs-as-Code 方法適合我嗎？ {#docs-as-code}
+Now let's talk about the Docs-as-Code approach.
 
-這個問題不好回答。就我目前接觸到的意見，難以接受的人大多是習慣「所見即所得」的編輯方式（例如 Word、Confluence），故很難接受改用 markdown 來編寫文件。
+## Is the Docs-as-Code method suitable for me? {#docs-as-code}
 
-對於這點，我恐怕很難給出什麼好的建議。由於我喜歡使用 markdown 寫任何東西，所以 Docs-as-Code 這種使用 markdown 編輯，並且用 git workflow 自動建置與發佈文件網站的做法，深得我心。
+This question is not easy to answer. Based on the opinions I have encountered so far, people who are not accepting of it are mostly accustomed to the "what you see is what you get" editing style (such as Word, Confluence), so it is difficult for them to accept writing documents in markdown.
 
-故我的意見肯定是偏頗的，是偏向 Docs-as-Code 方法的。
+I'm afraid I can't give good advice on this point. Because I like to use markdown to write anything, the Docs-as-Code approach, which involves writing in markdown and using a git workflow to automatically build and publish a documentation website, resonates with me.
 
-不過，如果某些現成的文件管理平台是支援 markdown 的，我便覺得會是可以考慮的選項。例如 Microsoft Azure DevOps 的 Wiki、Document 360 等等。這是因為考慮將來文件可能在不同平台之間 migration，如果被平台鎖住（vendor lock-in），無法輕易移轉文件，恐怕會很傷腦筋。
+So my opinion is definitely biased towards the Docs-as-Code method.
 
-## 你覺得寫文件最傷腦筋的是什麼？ {#most-bothersome}
+However, if certain existing document management platforms support markdown, I think it would be a viable option. For example, Microsoft Azure DevOps Wiki, Document 360, and so on. This is because considering the possibility of migrating documents between different platforms in the future, it would be troublesome if the documents are locked to a specific platform (vendor lock-in) and cannot be easily transferred.
 
-就目前的經驗來說，當我需要針對一個我不懂的技術或產品來寫文件，但參考資料又不容易蒐集，這個時候最令我傷腦筋。
+## What do you find most bothersome about writing documents? {#most-bothersome}
 
-尤其是架構、設計決策、一些歷史背景因素等等，若當初開發團隊沒有留下記錄，且隨著產品的演進而更新，那麼等到將來有一天突然驚覺需要寫產品文件，屆時要挖出這些設計決策，往往很費力。
+Based on my current experience, the most bothersome thing is when I need to write documents about a technology or product that I don't understand well, and it is not easy to gather reference materials.
 
-## 你用 AI 寫文件嗎？AI 會取代寫手嗎？ {#ai}
+Especially when it comes to architecture, design decisions, and some historical background factors, if the development team did not leave any records and updated them as the product evolved, it becomes difficult to dig out these design decisions when suddenly realizing the need to write product documents.
 
-我寫文件時，經常使用 AI 小幫手。有時候用它來翻譯，有時候用它幫我潤飾字詞、校正錯字與文法，有時也嘗試請它幫我產生一段文字，甚至 API 範例。
+## Do you use AI to write documents? Will AI replace human writers? {#ai}
 
-只要 AI 能夠幫助我提高效率，我會更頻繁地使用它。至於它會不會取代我的工作，我不擔心。
+I often use AI assistants when writing documents. Sometimes I use them for translation, sometimes for polishing words, correcting spelling and grammar, and sometimes I even ask them to generate a piece of text or API examples.
 
-當 AI 可以寫得比我更好，我就用它來寫。如果能利用 AI 寫得更多、更好，或者讓我有更多休閒時間，何樂而不為？
+As long as AI can help me improve efficiency, I will use it more frequently. As for whether it will replace my work, I'm not worried.
 
-> 然而，AI 真能寫出「新產品」的文件嗎？一個全新開發的產品，AI 能夠提供什麼樣的文件素材？我不是很懂 AI，歡迎留言告訴我。
+When AI can write better than me, I will use it to write. If I can use AI to write more and better, or have more leisure time, why not?
+
+> However, can AI really write documents for "new products"? What kind of document materials can AI provide for a completely new development? You may know more about AI than I do, so please leave a comment and let me know.
 
 ## Conclusion
 
-- 要不要製作正式的產品文件，評估的關鍵在於產品的目標使用者是否需要，不應一概而論。
-- 文件，需要的人就需要；不需要的人就不需要。懂的就懂 XD (kidding)
-- 保留設計決策對寫文件很重要。
-- 善用 AI 提高生產力，不用怕被取代。
+- Whether to create formal product documents depends on whether the target users of the product need them and should not be generalized.
+- Documents are needed by those who need them; those who don't need them don't. XD (just kidding)
+- Preserving design decisions is important for writing documents.
+- Make good use of AI to increase productivity without fear of being replaced.
 
-最後，把文章開頭提到的 Living Documentation 書中的句子完整摘錄如下：
+Finally, I would like to quote the following sentence from the book "Living Documentation":
 
-> 「更新文件是最不受重視的工作之一。它不有趣，似乎也不會有什麼回報。**但如果你認真對待並決定採取適當機制來確保其正確性，便能寫出好文件。**」
+> "Updating documents is one of the least valued tasks. It is not fun and seems to have little return. **But if you take it seriously and decide to adopt appropriate mechanisms to ensure its correctness, you can write good documents.**"
 
-你知道嗎？寫出對使用者有用的文件之後，不僅自己開心，回報也會漸漸出現——這是以我個人的經驗來說的。
+Did you know? After writing useful documents for users, not only will you be happy, but the rewards will gradually appear - this is based on my personal experience.
 
 Keep writing!
