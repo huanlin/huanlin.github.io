@@ -1,8 +1,11 @@
 ---
 title: 要不要寫文件？
+slug: "to-document-or-not"
 date: 2024-06-03
 tags: ["Technical Writing"]
 ---
+
+> To read the English translation, use the language selector on the upper right corner of the page.
 
 從事全職 technical writer 即將屆滿一年，似乎是個適當時機整理一下工作心得與觀察。另一方面，我最近對公司內部單位以線上直播的形式做了兩次關於文件製作的簡報，也蒐集到一些值得整理下來的問題和意見。
 

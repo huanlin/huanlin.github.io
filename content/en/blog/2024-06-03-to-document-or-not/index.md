@@ -1,5 +1,6 @@
 ---
 title: To document or not?
+slug: "to-document-or-not"
 date: 2024-06-03
 tags: ["Technical Writing"]
 ---
