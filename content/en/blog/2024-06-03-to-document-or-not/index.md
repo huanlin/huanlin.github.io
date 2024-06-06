@@ -5,7 +5,7 @@ date: 2024-06-03
 tags: ["Technical Writing"]
 ---
 
-> This is a translation by AI. **如欲閱讀中文版，請使用頁面右上角的語言切換器。**
+> This is a translation by AI. **如欲閱讀中文版，請使用頁面上方的語言切換器。**
 
 After working as a full-time technical writer for almost a year, it seems like an appropriate time to summarize my experiences and observations. On the other hand, I recently gave two presentations on document production to internal teams using online live streaming, and I collected some questions and feedback worth organizing.
 
