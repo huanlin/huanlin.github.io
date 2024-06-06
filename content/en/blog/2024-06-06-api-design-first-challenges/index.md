@@ -5,7 +5,7 @@ date: 2024-06-05
 tags: ["API Design"]
 ---
 
-底下框框內的文字是 Copilot 幫我產生的內容：
+底下框框內的文字是 Copilot 幫我產生的內容（已棄用）：
 
 {{% admonition type=note title="AI 提供的文字" %}}
 API design-first 是一種強大的方法，用於構建強大且可擴展的 API。然而，它也帶來了一系列的挑戰。在這篇博客文章中，我們將探討在採用 API design-first 方法時所面臨的一些常見挑戰，並討論克服這些挑戰的策略。
