@@ -1,7 +1,7 @@
 ---
 title: API design-first 方法的挑戰
 slug: "api-design-first-challenges"
-date: 2024-06-05
+date: 2024-06-06
 tags: ["API Design"]
 ---
 
@@ -25,7 +25,9 @@ API design-first 是一種強大的方法，用於構建強大且可擴展的 AP
 
 ## 簡介 {#introduction}
 
-API **design-first**（設計優先）方法也稱為 contract-first（合約優先），指的是先設計 API，並以特定格式的語法寫成 API spec（規格），然後再由 developers 按照 API spec 來實作。用來撰寫 API spec 的語法，目前看到比較受歡迎的是 OpenAPI（前身叫做 Swagger），而使用 OpenAPI 撰寫的規格，可以用一些現成工具（例如 SwaggerUI 或 Redoc）轉換成網頁形式的 API 參考手冊，相當方便。
+API **design-first**（設計優先）方法也稱為 contract-first（合約優先），指的是先設計 API，並以特定格式的語法寫成 API spec（規格），然後再由 developers 按照 API spec 來實作。
+
+用來撰寫 API spec 的語法，目前看到比較受歡迎的是 OpenAPI（前身叫做 Swagger），而使用 OpenAPI 撰寫的規格，可以用一些現成工具（例如 SwaggerUI 或 Redoc）轉換成網頁形式的 API 參考手冊，相當方便。
 
 相較於 design-first，另一種作法是 **code-first**，也就是先寫程式碼，不過通常還是會有一些不那麼正規嚴謹的需求分析與設計文件。而且，採用 code-first 方法的團隊也可以用工具產生 API 參考手冊，做法是在程式碼當中寫一些特定的標註（annotations）或註解，然後用工具讀取程式碼檔案來產生 OpenAPI spec  檔案，最後再轉換成 API 參考手冊。
 
