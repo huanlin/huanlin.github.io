@@ -7,7 +7,7 @@ draft: true
 
 這裡用一張概念圖來簡單介紹 LLMs (large language models) 的基礎觀念，稍後附上文字說明。
 
-![](images/llm-concept-map.png)
+![](images/llm-concept-map.png#center)
 
 說明：
 
@@ -29,7 +29,7 @@ draft: true
 ## 為何需要建構我們自己的 LLMs？ {#why-build-our-own-llms}
 
 - 學習 LLMs 是如何運作的，並了解其限制。
-- 開發人員能更細緻地控制與調教模型。
+- 開發人員能更細緻地控制與調整模型。
 - 更佳的執行效能。
 - 符合特定的資料隱私與保密政策。
 
@@ -38,7 +38,7 @@ draft: true
 訓練 LLMs 的過程包含兩個主要步驟：
 
 1. 預訓練（pre-training）
-2. 細部調教（fine-tunning）
+2. 微調（fine-tunning）
 
 ## 轉換器架構 {#transformer}
 
