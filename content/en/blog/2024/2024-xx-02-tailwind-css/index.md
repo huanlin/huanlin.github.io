@@ -14,7 +14,9 @@ Hugo 昨天（2024-06/25）發布了 [v0.128.0](https://github.com/gohugoio/hugo
 
 [CSS Utility Classes and "Separation of Concerns"](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)
 
-該文的發表日期是 2017 年 8 月 7 日，作者便是 Tailwind CSS 的創始人 Adam Wathan。我仔細讀完後，覺得這篇文章清楚闡述了 Tailwind CSS 的由來和設計理念。作者用一個實際的例子來解釋他是如何一步一步地降低 HTML 和 CSS 之間的耦合，最終達到他覺得比較理想的樣子：許多精心規劃和命名的 CSS classes，方便以組合的方式重複使用樣式；除了能讓版面風格趨向一致，也能減少日後維護 CSS 的成本、避免 CSS 繼承造成的混亂。
+該文的發表日期是 2017 年 8 月 7 日，作者便是 Tailwind CSS 的創始人 Adam Wathan。我仔細讀完後，覺得這篇文章清楚闡述了 Tailwind CSS 的由來和設計理念，頗有收穫。
+
+作者用一個實際的例子來解釋他是如何一步一步地降低 HTML 和 CSS 之間的耦合，最終達到他覺得比較理想的樣子：許多精心規劃和命名的 CSS classes，方便以組合的方式重複使用樣式；除了能讓版面風格趨向一致，也能減少日後維護 CSS 的成本、避免 CSS 繼承造成的混亂。
 
 ## "Separation of Concerns" 是個迷思
 
