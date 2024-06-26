@@ -31,7 +31,7 @@ Bootstrap 和 Tailwind CSS 的設計都屬於第二種，也就是 HTML 依賴 C
 
 我也一併讀了文中引用的其他文章，其中有兩篇我覺得也值得一讀（特別是像我這種不熟前端技術的人）：
 
-- [About HTML semantics and front-end architecture](https://nicolasgallagher.com/about-html-semantics-front-end-architecture/) by Nicolas Gallagher (2022-03-15)
+- [About HTML semantics and front-end architecture](https://nicolasgallagher.com/about-html-semantics-front-end-architecture/) by Nicolas Gallagher (2012-03-15)
 - [Block Element Modifier](http://getbem.com/introduction/) (BEM)
 
 這篇筆記只是記錄自己的一點閱讀心得，就先寫到這裡吧。如果你也有興趣了解，網路上可以找到許多前輩分享的文章，例如：[Tailwind CSS 新手上路：概念、安裝與工具推薦](https://medium.com/@Kelly_CHI/tailwind-css-introduction-and-tools-68e770b2bf7f)。之所以特別提這篇文章，是因為我覺得它開頭那張圖特別好笑，反映了許多人對 Tailwind CSS 的想法轉變歷程——從一開始的嫌惡之情，到使用之後發覺「真香」，從此成為愛用者。
