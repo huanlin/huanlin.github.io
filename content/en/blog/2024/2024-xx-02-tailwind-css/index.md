@@ -4,7 +4,7 @@ slug: introduction-to-tailwind-css
 date: 2024-06-26
 ---
 
-Hugo 昨天（2024-06/25）發布了 [v0.128.0](https://github.com/gohugoio/hugo/releases/tag/v0.128.0)，其 release note 提到這次加入了 TailwindCSS v4 (alpha)。我對前端技術相當陌生，以前聽過 Tailwind，但從未花時間去了解它。由於我的文件網站和部落格都使用 Hugo，所以這次花了一點時間去了解什麼是 Tailwind CSS，以及它有什麼特別之處。
+Hugo 昨天（2024-06-25）發布了 [v0.128.0](https://github.com/gohugoio/hugo/releases/tag/v0.128.0)，其 release note 提到這次加入了 TailwindCSS v4 (alpha)。我對前端技術相當陌生，以前聽過 Tailwind，但從未花時間去了解它。由於我的文件網站和部落格都使用 Hugo，所以這次花了一點時間去了解什麼是 Tailwind CSS，以及它有什麼特別之處。
 
 首先，我從 [Tailwind CSS 官網](https://tailwindcss.com/)看到這句話：
 
