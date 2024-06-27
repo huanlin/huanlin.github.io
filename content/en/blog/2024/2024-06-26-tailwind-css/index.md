@@ -24,8 +24,8 @@ Hugo 昨天（2024-06-25）發布了 [v0.128.0](https://github.com/gohugoio/hugo
 
 作者認為應該要思考的是**依賴的方向**（dependency direction）。有兩個方向：
 
-1. CSS 依賴 HTML。<br />這種設計方式，HTML 裡面主要是文件內容，至於樣式的部分，則會基於 HTML 的文件結構來撰寫 CSS 類別。最終的成品傾向於讓 HTML 盡量單純（很少 CSS），以便只要更換一整套的 CSS 就能切換網頁的風格樣式。這種設計大抵可以宣稱符合 Separation of Concerns 原則。
-2. HTML 依賴 CSS。<br />撰寫 CSS 的時候，樣式名稱會以比較通用的「功能」來命名，例如 `.btn`、`.btn-primary`、`.card` 等等，而不會涉及特定內容或領域知識（例如 `.author-form`）。
+1. **CSS 依賴 HTML**<br />這種設計方式，HTML 裡面主要是文件內容，至於樣式的部分，則會基於 HTML 的文件結構來撰寫 CSS 類別。最終的成品傾向於讓 HTML 盡量單純（很少 CSS），以便只要更換一整套的 CSS 就能切換網頁的風格樣式。這種設計大抵可以宣稱符合 Separation of Concerns 原則。
+2. **HTML 依賴 CSS**<br />撰寫 CSS 的時候，樣式名稱會以比較通用的「功能」來命名，例如 `.btn`、`.btn-primary`、`.card` 等等，而不會涉及特定內容或領域知識（例如 `.author-form`）。
 
 Bootstrap 和 Tailwind CSS 的設計都屬於第二種，也就是 HTML 依賴 CSS。
 
@@ -36,6 +36,6 @@ Bootstrap 和 Tailwind CSS 的設計都屬於第二種，也就是 HTML 依賴 C
 - [About HTML semantics and front-end architecture](https://nicolasgallagher.com/about-html-semantics-front-end-architecture/) by Nicolas Gallagher (2012-03-15)
 - [Block Element Modifier](http://getbem.com/introduction/) (BEM)
 
-這篇筆記只是記錄自己的一點閱讀心得，就先寫到這裡吧。如果你也有興趣了解，網路上可以找到許多前輩分享的文章，例如：[Tailwind CSS 新手上路：概念、安裝與工具推薦](https://medium.com/@Kelly_CHI/tailwind-css-introduction-and-tools-68e770b2bf7f)。之所以特別提這篇文章，是因為我覺得它開頭那張圖特別好笑，反映了一些人對 Tailwind CSS 的想法轉變歷程——從一開始的嫌惡之情，到使用之後發覺「真香」，從此成為愛用者。
+這篇筆記只是記錄自己的一點閱讀心得，就先寫到這裡吧。如果你也有興趣了解，網路上可以找到許多前輩分享的文章，例如：[Tailwind CSS 新手上路：概念、安裝與工具推薦](https://medium.com/@Kelly_CHI/tailwind-css-introduction-and-tools-68e770b2bf7f)。之所以提這篇文章，是因為我覺得它開頭那張圖特別好笑，反映了一些人對 Tailwind CSS 的想法轉變歷程——從一開始的嫌惡之情，到使用之後發覺「真香」，從此成為愛用者。
 
 Keep learning!
