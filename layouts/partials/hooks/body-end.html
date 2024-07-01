@@ -13,11 +13,12 @@ images.forEach(img => {
 </script>
 
 <script > 
-  /* */
+  /* Remeber the scroll position  ofthe section menu. See Docsy issue #257. */
   (function() {
     var a = document.querySelector("#td-section-nav");
-    addEventListener("beforeunload", function(b) {
-        localStorage.setItem("menu.scrollTop", a.scrollTop)
-    }), a.scrollTop = localStorage.getItem("menu.scrollTop")
+    addEventListener("beforeunload", function() {
+        localStorage.setItem("menu.scrollTop", a.scrollTop);
+    });
+    a.scrollTop = localStorage.getItem("menu.scrollTop");
   })()
 </script>
