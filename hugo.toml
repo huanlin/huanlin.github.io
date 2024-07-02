@@ -194,6 +194,8 @@ navbar_logo = true
 navbar_translucent_over_cover_disable = false
 # Enable to show the side bar menu in its compact state.
 sidebar_menu_compact = true
+# Sidebar cache limit (default is 2000, which means sidebar cache will be enabled when the number of pages > 2000)
+#sidebar_cache_limit = 10
 # 讓左邊選單可以折疊／展開
 sidebar_menu_foldable = true
 # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
