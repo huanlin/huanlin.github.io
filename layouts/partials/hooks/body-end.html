@@ -11,14 +11,3 @@ images.forEach(img => {
   });
 });
 </script>
-
-<script > 
-  /* Remember the scroll position of the section menu. See Docsy issue #257. */
-  (function() {
-    var a = document.querySelector("#td-section-nav");
-    addEventListener("beforeunload", function() {
-        localStorage.setItem("menu.scrollTop", a.scrollTop);
-    });
-    a.scrollTop = localStorage.getItem("menu.scrollTop");
-  })()
-</script>
