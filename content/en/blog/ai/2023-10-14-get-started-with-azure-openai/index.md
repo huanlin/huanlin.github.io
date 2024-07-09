@@ -3,7 +3,7 @@ title: Get Started with Azure OpenAI
 slug: get-started-with-azure-openai
 date: 2023-10-14
 description: Azure OpenAI 入門。
-tags: ["csharp", ".NET", "OpenAI"]
+tags: ["AI", "csharp", ".NET"]
 ---
 
 ![](images/post-banner.png)
@@ -78,7 +78,7 @@ api-key: {{API_KEY}}
 {
     "messages": [
         { "role": "system", "content": "Please answer with Chinese."},
-        { "role": "user", "content": "Tell me a joke about dogs."}        
+        { "role": "user", "content": "Tell me a joke about dogs."}
     ]
 }
 ```

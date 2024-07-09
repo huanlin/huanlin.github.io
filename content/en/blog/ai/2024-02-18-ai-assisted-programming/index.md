@@ -2,7 +2,7 @@
 title: GitHub Copilot 入門
 slug: get-started-with-github-copilot
 date: 2024-02-18
-tags: ["Visual Studio", "Copilot"]
+tags: ["AI", "Visual Studio", "Copilot"]
 ---
 
 
@@ -64,7 +64,7 @@ Copilot 官方文件提供了 VS Code、Visual Studio、JetBrains 等 IDE 的安
 - [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
 
 我的 Visual Studio 還有安裝 [Visual chatGPT Studio extension](https://marketplace.visualstudio.com/items?itemName=jefferson-pires.VisualChatGPTStudio)。
- 
+
 ### For Visual Studio
 
 如果是 Visual Studio，有兩個使用須知：
