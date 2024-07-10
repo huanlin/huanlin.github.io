@@ -28,10 +28,8 @@
 
 <img
     {{- range $k, $v := $attributes -}}
-      {{- if $v -}}
+        {{- if $v -}}
         {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
-      {{- end -}}
+        {{- end -}}
     {{- end -}}>
-
-
 
