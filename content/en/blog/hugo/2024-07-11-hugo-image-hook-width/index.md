@@ -5,7 +5,9 @@ slug: center-images-with-uri-fragment
 tags: ["Hugo"]
 ---
 
-Hugo version: 0.128.2
+This post shows how I support image width with the URL query parameter `width`.
+
+**Hugo version: 0.128.2**
 
 ## Requirement
 
@@ -23,9 +25,9 @@ Rendered HTML:
 
 ## Implementation
 
-Add a file "render-image.html" under the website's `/layouts/_default/_markup/` folder. Add the following code to the file:
+Add a file "**render-image.html**" under the website's `/layouts/_default/_markup/` folder. Add the following code to the file:
 
-```hugo
+```go
 {{- $u := urls.Parse .Destination -}}
 {{- $src := $u.String -}}
 {{- if not $u.IsAbs -}}
@@ -62,5 +64,5 @@ The above code is modified from the [Hugo embedded image render hook](https://gi
 
 ## See also
 
-- [Center images with URL fragment]({{< ref "../2024-05-07-hugo-image-center/index.md" >}})
+- [Hugo - Center images with URL fragment]({{< ref "../2024-05-07-hugo-image-center/index.md" >}})
 - [Hugo embeded link render hook](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/_markup/render-link.html)
