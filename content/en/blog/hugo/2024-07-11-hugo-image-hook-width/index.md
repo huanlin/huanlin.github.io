@@ -66,3 +66,4 @@ The above code is modified from the [Hugo embedded image render hook](https://gi
 
 - [Hugo - Center images with URL fragment]({{< ref "../2024-05-07-hugo-image-center/index.md" >}})
 - [Hugo embeded link render hook](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/_markup/render-link.html)
+- [Hugomods Images module's render hook](https://github.com/hugomods/images/blob/main/layouts/_default/_markup/render-image.html)
