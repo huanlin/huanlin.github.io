@@ -7,7 +7,7 @@ draft: true
 
 這裡用一張概念圖來簡單介紹 LLMs (large language models) 的基礎觀念，稍後附上文字說明。
 
-![](images/llm-concept-map.png#center)
+![](images/llm-concept-map.png?width=650px#center "Figure 1")
 
 說明：
 
