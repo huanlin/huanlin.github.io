@@ -34,11 +34,9 @@ Add a file "**render-image.html**" under the website's `/layouts/_default/_marku
   {{- $path := strings.TrimPrefix "./" $u.Path }}
   {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
     {{- $src = .RelPermalink -}}
-    {{/* Commented because there is no need to keep the query string in the src attribute
     {{- with $u.RawQuery -}}
       {{- $src = printf "%s?%s" $src . -}}
     {{- end -}}
-    */}}
     {{- with $u.Fragment -}}
       {{- $src = printf "%s#%s" $src . -}}
     {{- end -}}
