@@ -1,7 +1,7 @@
 ---
-title: "Hugo image render hook with width parameter"
+title: "A Hugo image render hook that supports width parameter"
 date: "2024-07-10"
-slug: center-images-with-uri-fragment
+slug: hugo-image-render-hook-width-param
 tags: ["Hugo"]
 ---
 
