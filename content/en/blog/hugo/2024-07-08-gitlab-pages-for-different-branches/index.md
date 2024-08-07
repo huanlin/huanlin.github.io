@@ -16,3 +16,12 @@ It doesn't work because each page's URL must be ended with "index.html," which w
 I couldn't get it work. A comment of [a Stackoverflow post](https://stackoverflow.com/questions/75853041/gitlab-pipeline-deploy-subfolders-to-gitlab-pages) explained:
 
 
+## Something really useful
+
+After spending serveral hours trying, I found the following posts on GitLab that are useful:
+
+- [Allow customizing the artifacts path ("public") in GitLab Pages](https://gitlab.com/groups/gitlab-org/-/epics/10126)
+- [Automatically use the "publish" property in the pages job as an artifact](https://gitlab.com/gitlab-org/gitlab/-/issues/398145)
+
+Conclusion: at the time of writing, GitLab Pages doesn't support deploying multiple branches.
+
