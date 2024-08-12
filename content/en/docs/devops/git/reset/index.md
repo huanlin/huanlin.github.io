@@ -17,7 +17,7 @@ git reset --hard 6f3efa2d     # 倒退至指定的 commit ID
 
 加上 `--hard` 參數表示那些跳過的 commits 全都不要了。
 
-{{< admonition warn "警告" >}}
+{{< admonition warning "警告" >}}
 在多人共同協作同一個 repository 的場合，不可隨意使用 `git reset` 命令，以免造成別人修改好的內容消失不見。
 {{< /admonition >}}
 
