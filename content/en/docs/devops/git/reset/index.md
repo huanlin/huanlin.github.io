@@ -4,7 +4,7 @@ title: Git reset
 
 `git reset` 命令可將目前工作副本的 `HEAD` 指向先前的某一次 commit，通常表示要放棄近期的某個或某些 commits，以便將本機的 repository 回復至先前的某個版本。
 
-參考文件：[git-reset](https://git-scm.com/docs/git-reset)
+此命令有三種模式：soft、hard、和 mixed。這裡只介紹 hard 模式，相關細節請參考文件：[git-reset](https://git-scm.com/docs/git-reset)。
 
 範例：
 
@@ -16,6 +16,10 @@ git reset --hard 6f3efa2d     # 倒退至指定的 commit ID
 ```
 
 加上 `--hard` 參數表示那些跳過的 commits 全都不要了。
+
+{{< admonition warn "警告" >}}
+在多人共同協作同一個 repository 的場合，不可隨意使用 `git reset` 命令，以免造成別人修改好的內容消失不見。
+{{< /admonition >}}
 
 ## Push to remote
 
