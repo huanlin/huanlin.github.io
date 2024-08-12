@@ -40,3 +40,8 @@ remote: GitLab: You are not allowed to force push code to a protected branch on 
 解決方法是暫時解除該分支的保護：至 GitLab 網站，進入專案的管理頁面，然後進入 Settings > Repository > Protected branches，找到分支後，將它 `Unprotect`，或者把該分支的 `Allowed to force push` 選項開啟。然後再執行一次 `git push -f` 命令。
 
 成功推送至遠端後，記得恢復該分支的保護。
+
+See also:
+
+- [GitLab Docs > Protected branches](https://docs.gitlab.com/ee/user/project/protected_branches.html)
+- [GitLab Docs > Protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
