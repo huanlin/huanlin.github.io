@@ -17,10 +17,6 @@ git reset --hard 6f3efa2d     # 倒退至指定的 commit ID
 
 加上 `--hard` 參數表示那些跳過的 commits 全都不要了。
 
-{{< admonition warning "警告" >}}
-在多人共同協作同一個 repository 的場合，不可隨意使用 `git reset` 命令，以免造成別人修改好的內容消失不見。
-{{< /admonition >}}
-
 ## Push to remote
 
 使用 `git reset` 變更本機的工作副本之後，還必須把變更推送至遠端的來源 repository，否則下次 `git pull` 又會從遠端把剛才跳過的 commits 恢復，並將 `HEAD` 指向最新版本。
@@ -40,6 +36,10 @@ remote: GitLab: You are not allowed to force push code to a protected branch on 
 解決方法是暫時解除該分支的保護：至 GitLab 網站，進入專案的管理頁面，然後進入 Settings > Repository > Protected branches，找到分支後，將它 `Unprotect`，或者把該分支的 `Allowed to force push` 選項開啟。然後再執行一次 `git push -f` 命令。
 
 成功推送至遠端後，記得恢復該分支的保護。
+
+{{< admonition warning "警告" >}}
+此操作應該只用於自己獨立工作的分支上，絕對不要任用使用於多人共同協作的分支，例如 main 和 develop。場合。因為你透過強制 push 操作來「刪除」遠端 repo 中的那些 commits 可能已經被其他人拉回本機繼續修改，而當他們改完要推送變更至遠端 rep 時會被拒絕，所機魚的分支已經不存在了。
+{{< /admonition >}}
 
 See also:
 
