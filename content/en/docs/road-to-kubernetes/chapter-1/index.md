@@ -1,6 +1,5 @@
 ---
 title: "Chapter 1: 概述"
-slug: "road-to-kubernetes-start"
 draft: true
 ---
 
@@ -86,11 +85,10 @@ Here’s a few highlights of challenges that we will likely face when using just
 
 總之，沒有萬靈丹。
 
-## 學習方式
+## 學習方法
 
 1. 手動部署
 2. 使用容器來部署
 3. 使用 Kubernetes 來部署
 
 一定要先學會手動部署，這很重要，因為你才會知道自動化部署的背後其實都做了哪些事情。要是你在一知半解的情況下完成自動化部署，那麼將來一旦出狀況，你就會感到相當棘手，不知如何解決。而且，任何東西遲早都會出狀況。
-
