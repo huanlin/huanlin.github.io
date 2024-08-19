@@ -53,3 +53,7 @@ About modules:
 
 - 所有小寫字母開頭的型別、變數、或常數，只有在模組內部才能使用。
 - 所有大寫字母開頭的型別、變數、或常數，都會 export 供外界使用。
+
+## References
+
+- [Go in Action 2nd Edition](https://www.manning.com/books/go-in-action-second-edition)
