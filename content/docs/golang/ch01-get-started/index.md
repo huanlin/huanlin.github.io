@@ -1,5 +1,6 @@
 ---
 title: Chapter 1 - Get started
+weight: 11
 ---
 
 ## Module

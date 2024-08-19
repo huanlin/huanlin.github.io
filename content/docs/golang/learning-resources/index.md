@@ -1,5 +1,6 @@
 ---
 title: Learning resources
+weight: 1
 ---
 
 Some recommended resources about learning Go programming.
