@@ -1,6 +1,5 @@
 ---
 title: Learning resources
-draft: true
 ---
 
 Some recommended resources about learning Go programming.
