@@ -1,6 +1,6 @@
 ---
 title: DevOps 小學堂
-weight: 2
+weight: 10
 hide_feedback: true
 ---
 
