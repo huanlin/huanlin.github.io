@@ -1,5 +1,6 @@
 ---
 title: "[Hugo] Center images with URI fragment"
+linkTitle: "Center images /w URI fragment"
 date: "2024-05-07"
 slug: center-images-with-uri-fragment
 tags: ["Hugo", "Docsy"]

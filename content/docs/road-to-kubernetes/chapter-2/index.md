@@ -1,5 +1,5 @@
 ---
-title: "Chapter 2: 建立 Python 和 JavaScript web apps"
+title: "2: 建立 Python 和 JavaScript web apps"
 draft: true
 ---
 

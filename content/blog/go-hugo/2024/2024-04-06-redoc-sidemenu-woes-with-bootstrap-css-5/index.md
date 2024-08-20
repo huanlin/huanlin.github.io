@@ -1,5 +1,5 @@
 ---
-title: Redoc side menu woes with Bootstrap CSS 5.x
+title: "Redoc side menu woes with Bootstrap CSS 5.x"
 slug: "redoc-side-menu-woes-with-bootstrap-css-5"
 date: 2024-04-06
 tags: [Hugo, Docsy, Redoc, OpenAPI]
@@ -73,7 +73,7 @@ Here is the source code of my customized Redoc layout, and the file path name is
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
   <head>
-    <!-- Use the following lines to replace {{ partial "head.html" . }} -->        
+    <!-- Use the following lines to replace {{ partial "head.html" . }} -->
     <!-- Note: Use Bootstrap CSS v4.x instead of v5.x to ensure the side-menu links work as expected. -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -94,9 +94,9 @@ Here is the source code of my customized Redoc layout, and the file path name is
             {{ partial "toc.html" . }}
             {{ partial "taxonomy_terms_clouds.html" . }}
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">          
--->          
-          <main role="main">          
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+-->
+          <main role="main">
             {{ partial "version-banner.html" . }}
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
             {{ block "main" . }}{{ end }}
@@ -117,7 +117,7 @@ To use the above Redoc layout, add a markdown page as below, or refer to [the so
 title: "Pet Store API (working)"
 type: redoc
 weight: 2
-description: "Demonstrating a customized Redoc layout for fixing side-menu links." 
+description: "Demonstrating a customized Redoc layout for fixing side-menu links."
 ---
 
 {{</* redoc "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v2.0/yaml/petstore.yaml" */>}}

@@ -1,5 +1,5 @@
 ---
-title: "Chapter 1: 概述"
+title: "1: 概述"
 draft: true
 ---
 

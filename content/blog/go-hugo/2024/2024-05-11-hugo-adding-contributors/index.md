@@ -1,5 +1,6 @@
 ---
-title: "Adding contributors to your Hugo website"
+title: "[Hugo] Implementing contributors"
+linkTitle: "Implementing contributors"
 date: "2024-05-11"
 tags: ["Hugo", "Docsy"]
 contributors: ["Michael Tsai", "蔡煥麟"]
@@ -48,7 +49,7 @@ Here is the complete code:
 	{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
 	{{- if .Params.contributors -}}
 		{{ partial "contributors.html" . }}
-	{{- end -}}		
+	{{- end -}}
 	<header class="article-meta">
 		{{ partial "taxonomy_terms_article_wrapper.html" . -}}
 		{{ if (and (not .Params.hide_readingtime) (.Site.Params.ui.readingtime.enable)) -}}
@@ -60,7 +61,7 @@ Here is the complete code:
 	{{ partial "page-meta-lastmod.html" . }}
     <br />
 	{{ partial "feedback.html" . -}}
-	
+
 	<!-- Customized by Michael: Use Giscus comment system. -->
 	{{- partial "giscus-comment.html" . -}}
 </div>
@@ -79,7 +80,7 @@ Create a new file: `/layouts/partials/contributors.html`, then add the following
     {{- range .Params.contributors -}}
         {{ . }}&nbsp;&nbsp;
     {{- end -}}
-</div>    
+</div>
 ```
 
 The above template simply displays each contributor's name.
@@ -119,7 +120,7 @@ Then, the `contributor.html` file might look like this:
         {{- $url := printf "http://mycompany.com/emp/%s" (index $author 0) -}}
         <a href={{ $url }} target="_blank">{{ $author 1 }}</a> &nbsp;&nbsp;
     {{- end -}}
-</div>    
+</div>
 ```
 
 ## Final words
