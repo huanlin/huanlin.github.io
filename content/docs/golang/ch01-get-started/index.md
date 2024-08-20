@@ -3,6 +3,14 @@ title: Chapter 1 - Get started
 weight: 11
 ---
 
+## Go 的語言特性
+
+ 沒有內建的 GUI 框架或套件
+ -
+ -  Concurrency。
+ - 函式可回傳多個值。
+ - 標準函式庫提供了常用的工具套件，包括網路通訊、HTTP、序列化、加解密等等。
+
 ## Module
 
 一個 Go module 就是一個 project。
@@ -59,4 +67,5 @@ About modules:
 
 ## References
 
-- [Go in Action 2nd Edition](https://www.manning.com/books/go-in-action-second-edition)
+- [Go in Action, 2nd Edition](https://www.manning.com/books/go-in-action-second-edition)
+- [Go in Practice, 2nd Edition](https://www.manning.com/books/go-in-practice-second-edition)
