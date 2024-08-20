@@ -21,7 +21,8 @@ Youtube 上面也有很多教學影片，有的影片甚至長達 7 小時：[Le
 
 | Title | Level | Description |
 |-------|-------|-------------|
-| [Go in Action 2nd Edition](https://www.manning.com/books/go-in-action-second-edition) | 入門 | 介紹語法和語言特性，最後一章介紹單元測試。未包含 web 程式設計相關議題。|
+| [Go in Action, 2nd Edition](https://www.manning.com/books/go-in-action-second-edition) | 入門 | 介紹語法和語言特性，最後一章介紹單元測試。未包含 web 程式設計相關議題。|
+| [Go in Practice, 2nd Edition](https://www.manning.com/books/go-in-practice-second-edition) | 入門至進階 | 著重實戰所需的知識與技術，不會詳細介紹一些基礎語法，例如變數如何宣告與賦值、如何寫迴圈等等，但重要的語言特性都有涵蓋，像是介面、泛型、concurrency、錯誤處理等等。後面幾章還介紹了單元測試、Web API、雲端應用程式設計等議題。|
 | [Let's Go](https://lets-go.alexedwards.net/) | 入門至實戰 | 從 Hello World 到開發 Web 應用程式。 |
 | [100 Go Mistakes and How to Avoid Them](https://100go.co/book/) | 中高階 | |
 
