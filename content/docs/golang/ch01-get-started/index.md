@@ -10,6 +10,8 @@ weight: 11
  - 函式可回傳多個值。
  - 標準函式庫提供了常用的工具套件，包括網路通訊、HTTP、序列化、加解密等等。
 
+> 如果需要開發跨平台的 GUI 應用程式，可以試試開源專案 [Wails](https://wails.io/)。
+
 ## Module
 
 一個 Go module 就是一個 project。
