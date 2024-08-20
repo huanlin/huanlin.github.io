@@ -3,6 +3,17 @@ title: Chapter 1 - Get started
 weight: 11
 ---
 
+Ref: [[Golang] Modules and Packages](https://pjchender.dev/golang/modules-and-packages/)
+
+## Go 的語言特性
+
+ - 沒有內建的 GUI 框架或套件。
+ - Concurrency。
+ - 函式可回傳多個值。
+ - 標準函式庫提供了常用的工具套件，包括網路通訊、HTTP、序列化、加解密等等。
+
+> 如果需要開發跨平台的 GUI 應用程式，可以試試開源專案 [Wails](https://wails.io/)。
+
 ## Module
 
 一個 Go module 就是一個 project。
@@ -24,7 +35,7 @@ go 1.23.0
 
 以此範例而言，`hellogo` 目錄即成為你的 project 的 main module，而 Go 編譯器在建置應用程式時，便會參考此目錄下的 `go.mod` 檔案。
 
-接著在此目錄中建立一個 `main.go` 檔案，內容為：
+接著在此目錄中建立一個 `hello.go` 檔案，內容為：
 
 ```go
 package main
@@ -36,7 +47,7 @@ func main() {
 }
 ```
 
-- `package` 表明這個模組的名稱叫做 `main`。
+- `package` 表明這個模組的名稱叫做 `main`，即應用程式的主模組。主模組的名稱必須是 `main`，而且會包含程式的進入點：main 函式。
 - `import` 表明此模組需要引用 `fmt` 模組。
 - `main()` 函式為每一個 Go 應用程式的進入點。
 
@@ -54,9 +65,11 @@ go build main.go
 
 About modules:
 
+- Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
 - 所有小寫字母開頭的型別、變數、或常數，只有在模組內部才能使用。
 - 所有大寫字母開頭的型別、變數、或常數，都會 export 供外界使用。
 
 ## References
 
-- [Go in Action 2nd Edition](https://www.manning.com/books/go-in-action-second-edition)
+- [Go in Action, 2nd Edition](https://www.manning.com/books/go-in-action-second-edition)
+- [Go in Practice, 2nd Edition](https://www.manning.com/books/go-in-practice-second-edition)
