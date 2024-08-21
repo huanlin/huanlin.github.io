@@ -13,6 +13,7 @@ Some recommended resources about learning Go programming.
 |-------|-------|-------------|
 | [A Tour of Go](https://go.dev/tour/) | 入門 | 一小塊接著一小塊的學習方式，容易消化。 |
 | [Go by Example](https://gobyexample.com/) | 入門 | 有許多範例，每個範例都有解說。 |
+| [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) | 入門 | (還沒看) |
 | [Effective Go](https://go.dev/doc/effective_go) | 進階 | 由 Golang core team 撰寫的技術文章。 |
 
 Youtube 上面也有很多教學影片，有的影片甚至長達 7 小時：[Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU)。
