@@ -1,5 +1,5 @@
 ---
-title: Chapter 1 - Get started
+title: 1. Get started
 weight: 11
 ---
 
