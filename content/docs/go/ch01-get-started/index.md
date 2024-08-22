@@ -16,7 +16,14 @@ Ref: [[Golang] Modules and Packages](https://pjchender.dev/golang/modules-and-pa
 
 ## Module
 
-一個 Go module 就是一個 project。
+什麼是 Go module，以及它的幾個重要特性：
+
+- 一個 module 是一個 project，有一個版本編號。
+- 一個 module 包含一個或多個 packages。
+- Modules 可以直接從版本控制儲存庫下載，或者從 module proxy 伺服器下載。
+- 每一個 module 都是以 module path 來作為唯一識別，這個模組路徑是宣告在一個 go.mod 檔案中。
+
+### Hello, World
 
 使用 `go mod init` 命令來建立模組：
 
@@ -34,6 +41,8 @@ go 1.23.0
 ```
 
 以此範例而言，`hellogo` 目錄即成為你的 project 的 main module，而 Go 編譯器在建置應用程式時，便會參考此目錄下的 `go.mod` 檔案。
+
+> `go.mod` 檔案所在的目錄稱為 **模組根目錄**（module root directory）。
 
 接著在此目錄中建立一個 `hello.go` 檔案，內容為：
 
@@ -70,12 +79,41 @@ Go 的 package 有兩種：
 - executable package：會編譯成可執行的應用程式，其主模組的名稱必須是 `main`，而且會包含程式的進入點：`main` 函式。
 - library package：供其他套件引用，不會編譯成可執行檔。套件名稱不用是 `main`。
 
-### Modules
+### Module paths
+
+模組路徑是模組的正式名稱（唯一識別名稱），宣告於模組的 go.mod 檔案，而且模組路徑要能表達該模組的用途，以及可以從何處找到它。
+
+模組路徑通常包含三個部分：
+
+- repository root path
+- repository 中的目錄
+- 主要的版本編號（只有在主要版本編號為 2 或更高的版本才需要）
+
+範例：
+
+```go
+module example.com/x/mod
+```
+
+如果此範例的模組的版本是 v1.0.0，那麼它的 v2.0.0 版（以及之後版本）的模組路徑就要加上主版本號，例如：
+
+```go
+module example.com/x/mod/v2
+```
+
+## More about modules
 
 - Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
 - 所有大寫字母開頭的名稱都會被 export，即可供外界使用。（等同其他物件導向語言的 `public` 存取範圍）
 - 所有小寫字母開頭的名稱只能在模組內部使用。
 - 使用 `import` 來引用模組中的套件時，只能引用該模組 export 的（公開的）套件。
+
+## Recommended reading
+
+建議閱讀 Go 官方文件以了解更多細節：
+
+- [Go Modules Reference](https://go.dev/ref/mod)
+- [go.mod file reference](https://go.dev/doc/modules/gomod-ref)
 
 ## References
 
