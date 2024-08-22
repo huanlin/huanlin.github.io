@@ -92,13 +92,13 @@ Go 的 package 有兩種：
 範例：
 
 ```go
-module example.com/x/mod
+module example.com/mymodule
 ```
 
-如果此範例的模組的版本是 v1.0.0，那麼它的 v2.0.0 版（以及之後版本）的模組路徑就要加上主版本號，例如：
+如果此範例的模組的版本是 v0.x.x 或 v1.x.x，那麼它的 v2.0.0 版（以及之後版本）的模組路徑就要加上主版本號，例如：
 
 ```go
-module example.com/x/mod/v2
+module example.com/mymodule/v2
 ```
 
 ## More about modules
