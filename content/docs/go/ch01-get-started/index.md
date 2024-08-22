@@ -7,10 +7,10 @@ Ref: [[Golang] Modules and Packages](https://pjchender.dev/golang/modules-and-pa
 
 ## Go 的語言特性
 
- - 沒有內建的 GUI 框架或套件。
- - Concurrency。
- - 函式可回傳多個值。
- - 標準函式庫提供了常用的工具套件，包括網路通訊、HTTP、序列化、加解密等等。
+- 沒有內建的 GUI 框架或套件。
+- Concurrency。
+- 函式可回傳多個值。
+- 標準函式庫提供了常用的工具套件，包括網路通訊、HTTP、序列化、加解密等等。
 
 > 如果需要開發跨平台的 GUI 應用程式，可以試試開源專案 [Wails](https://wails.io/)。
 
@@ -47,7 +47,7 @@ func main() {
 }
 ```
 
-- `package` 表明這個模組的名稱叫做 `main`，即應用程式的主模組。主模組的名稱必須是 `main`，而且會包含程式的進入點：main 函式。
+- `package` 表明這個模組的名稱叫做 `main`。
 - `import` 表明此模組需要引用 `fmt` 模組。
 - `main()` 函式為每一個 Go 應用程式的進入點。
 
@@ -63,11 +63,19 @@ go run main.go
 go build main.go
 ```
 
-About modules:
+### Packages
+
+Go 的 package 有兩種：
+
+- executable package：會編譯成可執行的應用程式，其主模組的名稱必須是 `main`，而且會包含程式的進入點：`main` 函式。
+- library package：供其他套件引用，不會編譯成可執行檔。套件名稱不用是 `main`。
+
+### Modules
 
 - Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
-- 所有小寫字母開頭的型別、變數、或常數，只有在模組內部才能使用。
-- 所有大寫字母開頭的型別、變數、或常數，都會 export 供外界使用。
+- 所有大寫字母開頭的名稱都會被 export，即可供外界使用。（等同其他物件導向語言的 `public` 存取範圍）
+- 所有小寫字母開頭的名稱只能在模組內部使用。
+- 使用 `import` 來引用模組中的套件時，只能引用該模組 export 的（公開的）套件。
 
 ## References
 
