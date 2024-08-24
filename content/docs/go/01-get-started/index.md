@@ -1,5 +1,5 @@
 ---
-title: 1. Get started
+title: 01. Get started
 weight: 11
 ---
 
@@ -49,7 +49,9 @@ go 1.23.0
 ```go
 package main
 
-import "fmt"
+import (
+    "fmt"
+)
 
 func main() {
     fmt.Println("Hello, World!")
