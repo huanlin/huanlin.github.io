@@ -38,20 +38,20 @@ Go 的優點與強項：
 首先，我們要建立一個專案目錄，並使用 `go mod init` 命令來建立模組：
 
 ```shell
-mkdir demo1
-cd demo1
-go mod init hellogo
+mkdir demo01
+cd demo01
+go mod init demo01
 ```
 
 上述命令會在當前目前建立一個 `go.mod` 檔案，內容是該模組的資訊，以及描述它依賴哪些模組（如果有的話）。上述指令所建立的 `go.mod` 檔案內容會像這樣：
 
 ```text
-module hellogo
+module demo01
 
 go 1.23.0
 ```
 
-以此範例而言，在 demo1 目錄底下撰寫的程式，都會包在 `hellogo` 模組裡面，而 Go 編譯器在建置應用程式時，也會參考此目錄下的 `go.mod` 檔案。
+以此範例而言，在 demo1 目錄底下撰寫的程式，都會包在 `demo01` 模組裡面，而 Go 編譯器在建置應用程式時，也會參考此目錄下的 `go.mod` 檔案。
 
 > `go.mod` 檔案所在的目錄稱為 **模組根目錄**（module root directory）。
 
@@ -88,7 +88,7 @@ func main() {
 到目前為止，此應用程式的檔案目錄結構會像這樣：
 
 ```text
-/demo1
+/demo01
     go.mod
     hello.go
 ```
@@ -105,15 +105,15 @@ go run hello.go
 go build
 ```
 
-上述命令會在當前目錄下產生一個可執行檔，檔案名稱會是 `hellogo.exe`（因為 `go.mod` 中宣告的模組名稱是 `hellogo`）。
+上述命令會在當前目錄下產生一個可執行檔，檔案名稱會是 `demo01.exe`。
 
-> 如果要在 Windows 作業環境的 PowerShell 命令視窗中執行此範例程式，請輸入 `./hellogo`，而不要只輸入 `hellogo`，否則 PowerShell 可能會告訴你無法識別該命令。
+> 如果要在 Windows 作業環境的 PowerShell 命令視窗中執行此範例程式，請輸入 `./demo01`，而不要只輸入 `demo01`，否則 PowerShell 可能會告訴你無法識別該命令。
 
 ## Hello World v2
 
 本節要稍微改造前面的 hellogo 範例程式，加入單元測試。完成本節的練習之後，應該就能體會「單元測試是 Go 程式的一級公民」這句話的意思。
 
-首先，把之前的 `demo1` 目錄下的 `hello.go` 檔案改成以下內容：
+首先，把之前的 `demo01` 目錄下的 `hello.go` 檔案改成以下內容：
 
 ```go
 package main
@@ -139,7 +139,7 @@ func main() {
 
 也就是說，程式的進入點 `main()` 函式會去呼叫 `hello.go` 中的 `hello()` 函式來取得欲顯示的字串。
 
-使用 `go build` 命令來建置應用程式，然後執行 `./hellogo` 看看結果是否符合預期。
+使用 `go build` 命令來建置應用程式，然後執行 `./demo01` 看看結果是否符合預期。
 
 如果一切順利，接著就來看看，如果要為 `hello()` 函式撰寫單元測試該怎麼做。
 
@@ -172,7 +172,7 @@ func TestHello(t *testing.T) {
 接著開啟一個命令視窗，使用以下命令來運行測試：
 
 ```go
-cd demo1
+cd demo01
 go test
 ```
 
@@ -182,6 +182,46 @@ go test
 PASS
 ok      hellogo 0.116s
 ```
+
+## 用 godoc 產生文件 {#godoc}
+
+Go 工具組當中有一個 `godoc` 可以用來產生應用程式的文件。我們可以用前面的範例程式來簡單體驗一下。
+
+首先，在 `main.go` 檔案的最上方加入一些註解：
+
+```go
+/*
+Demo01 is a simple program that prints "Hello, World!" to the console.
+It also demonstrates how to write tests for Go programs.
+*/
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println(hello())
+}
+```
+
+接著開啟命令視窗，執行 `godoc`：
+
+```shell
+cd demo01
+godoc -http=localhost:8000
+```
+
+然後 `godoc` 會輸出一些訊息：
+
+```console
+using module mode; GOMOD=D:\Projects\learning-go\demo01\go.mod
+go: no module dependencies to download
+```
+
+然後，本機應該會起始一個 HTTP 服務，你可以用瀏覽器開啟 `http://localhost:8000` 來查看生成的文件，看起來會像底下這張截圖。
+
+![](images/godoc-demo.png)
+
+在此頁面搜尋字串 "demo01"，應該就能找到剛才加入的註解。
 
 ## More about modules and packages
 
