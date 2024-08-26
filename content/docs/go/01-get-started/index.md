@@ -89,7 +89,7 @@ func main() {
 - executable package：要編譯成可執行的應用程式，其 package 名稱必須是 `main`，而且會包含程式的進入點：`main` 函式。
 - library package：供其他套件引用，不會編譯成可執行檔。套件名稱不用是 `main`。
 
-此範例的 package 名稱是 `main`，而且有成進入點 `main` 函式，表示我們會將它建置成一個可執行的應用程式。
+此範例的 package 名稱是 `main`，而且有進入點 `main` 函式，表示我們會將它建置成一個可執行的應用程式。
 
 到目前為止，此應用程式的檔案目錄結構會像這樣：
 
