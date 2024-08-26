@@ -4,8 +4,6 @@ weight: 11
 tags: [Go]
 ---
 
-Ref: [[Golang] Modules and Packages](https://pjchender.dev/golang/modules-and-packages/)
-
 ## Go 語言簡介
 
 Go 於 2007 年誕生，由 Google 創建。
@@ -42,12 +40,15 @@ Go 的優點與強項：
 - Modules 可以直接從版本控制儲存庫下載，或者從 module proxy 伺服器下載。
 - 每一個 module 都是以 module path 來作為唯一識別，這個模組路徑是宣告在一個 go.mod 檔案中。
 
-### Hello, World
+接著先嘗試寫一個最簡單的 Hello World 程式來了解 module 實際上是怎麼定義的。
+
+## Hello, World
 
 使用 `go mod init` 命令來建立模組：
 
 ```shell
-cd hellogo
+mkdir demo1
+cd demo1
 go mod init hellogo
 ```
 
@@ -59,7 +60,7 @@ module hellogo
 go 1.23.0
 ```
 
-以此範例而言，`hellogo` 目錄即成為你的 project 的 main module，而 Go 編譯器在建置應用程式時，便會參考此目錄下的 `go.mod` 檔案。
+以此範例而言，在 demo1 目錄底下撰寫的程式，都會包在 `hellogo` 模組裡面，而 Go 編譯器在建置應用程式時，也會參考此目錄下的 `go.mod` 檔案。
 
 > `go.mod` 檔案所在的目錄稱為 **模組根目錄**（module root directory）。
 
@@ -77,11 +78,26 @@ func main() {
 }
 ```
 
-- `package` 表明這個模組的名稱叫做 `main`。
-- `import` 表明此模組需要引用 `fmt` 模組。
+- `package` 表明這個套件的名稱叫做 `main`。
+- `import` 表明此套件需要引用 `fmt` 套件。
 - `main()` 函式為每一個 Go 應用程式的進入點。
 
-使用 `go run` 命令來執行此程式：
+這裡需要了解一點 Go 的 package 基本知識。Go 的 package 有兩種：
+
+- executable package：要編譯成可執行的應用程式，其 package 名稱必須是 `main`，而且會包含程式的進入點：`main` 函式。
+- library package：供其他套件引用，不會編譯成可執行檔。套件名稱不用是 `main`。
+
+此範例的 package 名稱是 `main`，而且有成進入點 `main` 函式，表示我們會將它建置成一個可執行的應用程式。
+
+到目前為止，此應用程式的檔案目錄結構會像這樣：
+
+```text
+/demo1
+    go.mod
+    hello.go
+```
+
+你可以使用 `go run` 命令來執行此程式：
 
 ```shell
 go run main.go
@@ -90,17 +106,14 @@ go run main.go
 也可以用 `go build` 命令來將程式碼編譯成可執行檔：
 
 ```shell
-go build main.go
+go build
 ```
 
-### Packages
+上述命令會在當前目錄下產生一個可執行檔，檔案名稱會是 `hellogo.exe`（因為 `go.mod` 中宣告的模組名稱是 `hellogo`）。
 
-Go 的 package 有兩種：
+> 如果要在 Windows 作業環境的 PowerShell 命令視窗中執行此範例程式，請輸入 `./hellogo`，而不要只輸入 `hellogo`，否則 PowerShell 可能會告訴你無法識別該命令。
 
-- executable package：會編譯成可執行的應用程式，其主模組的名稱必須是 `main`，而且會包含程式的進入點：`main` 函式。
-- library package：供其他套件引用，不會編譯成可執行檔。套件名稱不用是 `main`。
-
-### Module paths
+## Module paths
 
 模組路徑是模組的正式名稱（唯一識別名稱），宣告於模組的 go.mod 檔案，而且模組路徑要能表達該模組的用途，以及可以從何處找到它。
 
@@ -122,12 +135,16 @@ module example.com/mymodule
 module example.com/mymodule/v2
 ```
 
-## More about modules
+### More about modules
 
 - Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
 - 所有大寫字母開頭的名稱都會被 export，即可供外界使用。（等同其他物件導向語言的 `public` 存取範圍）
 - 所有小寫字母開頭的名稱只能在模組內部使用。
 - 使用 `import` 來引用模組中的套件時，只能引用該模組 export 的（公開的）套件。
+
+## Hello World v2
+
+
 
 ## Recommended reading
 
@@ -140,3 +157,4 @@ module example.com/mymodule/v2
 
 - [Go in Action, 2nd Edition](https://www.manning.com/books/go-in-action-second-edition)
 - [Go in Practice, 2nd Edition](https://www.manning.com/books/go-in-practice-second-edition)
+- [[Golang] Modules and Packages](https://pjchender.dev/golang/modules-and-packages/)
