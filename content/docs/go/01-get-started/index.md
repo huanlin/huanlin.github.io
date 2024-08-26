@@ -80,9 +80,9 @@ func main() {
 }
 ```
 
-- `package` 表明這個套件的名稱叫做 `main`。
+- `package main` 表明此套件的名稱叫做 `main`。
 - `import` 表明此套件需要引用 `fmt` 套件。
-- `main()` 函式為每一個 Go 應用程式的進入點。
+- `main()` 函式為應用程式的進入點。
 
 這裡需要了解一點 Go 的 package 基本知識。Go 的 package 有兩種：
 
