@@ -1,5 +1,5 @@
 ---
-title: 02. Variables
+title: 02 Variables
 tags: [Go]
 ---
 

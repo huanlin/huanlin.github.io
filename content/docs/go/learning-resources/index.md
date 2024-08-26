@@ -1,5 +1,5 @@
 ---
-title: 00. Learning resources
+title: 00 Learning resources
 weight: 1
 tags: [Go]
 ---
