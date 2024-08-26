@@ -31,20 +31,11 @@ Go 的優點與強項：
 
 > 如果需要開發跨平台的 GUI 應用程式，可以試試開源專案 [Wails](https://wails.io/)。
 
-## Module
-
-什麼是 Go module，以及它的幾個重要特性：
-
-- 一個 module 是一個 project，有一個版本編號。
-- 一個 module 包含一個或多個 packages。
-- Modules 可以直接從版本控制儲存庫下載，或者從 module proxy 伺服器下載。
-- 每一個 module 都是以 module path 來作為唯一識別，這個模組路徑是宣告在一個 go.mod 檔案中。
-
-接著先嘗試寫一個最簡單的 Hello World 程式來了解 module 實際上是怎麼定義的。
+接著就來嘗試寫一個最簡單的 Hello World 程式來認識 Go 應用程式的基本結構。
 
 ## Hello, World
 
-使用 `go mod init` 命令來建立模組：
+首先，我們要建立一個專案目錄，並使用 `go mod init` 命令來建立模組：
 
 ```shell
 mkdir demo1
@@ -52,7 +43,7 @@ cd demo1
 go mod init hellogo
 ```
 
-此命令會在當前目前建立一個 `go.mod` 檔案，內容是該模組的資訊，以及描述它依賴哪些模組（如果有的話）。上述指令所建立的檔案內容會像這樣：
+上述命令會在當前目前建立一個 `go.mod` 檔案，內容是該模組的資訊，以及描述它依賴哪些模組（如果有的話）。上述指令所建立的 `go.mod` 檔案內容會像這樣：
 
 ```text
 module hellogo
@@ -63,6 +54,11 @@ go 1.23.0
 以此範例而言，在 demo1 目錄底下撰寫的程式，都會包在 `hellogo` 模組裡面，而 Go 編譯器在建置應用程式時，也會參考此目錄下的 `go.mod` 檔案。
 
 > `go.mod` 檔案所在的目錄稱為 **模組根目錄**（module root directory）。
+
+這裡先簡單介紹 Go module 的幾個基礎觀念：
+
+- 一個 module 是一個 project，有一個版本編號。
+- 一個 module 包含一個或多個 packages。
 
 接著在此目錄中建立一個 `hello.go` 檔案，內容為：
 
@@ -100,7 +96,7 @@ func main() {
 你可以使用 `go run` 命令來執行此程式：
 
 ```shell
-go run main.go
+go run hello.go
 ```
 
 也可以用 `go build` 命令來將程式碼編譯成可執行檔：
@@ -113,7 +109,90 @@ go build
 
 > 如果要在 Windows 作業環境的 PowerShell 命令視窗中執行此範例程式，請輸入 `./hellogo`，而不要只輸入 `hellogo`，否則 PowerShell 可能會告訴你無法識別該命令。
 
-## Module paths
+## Hello World v2
+
+本節要稍微改造前面的 hellogo 範例程式，加入單元測試。完成本節的練習之後，應該就能體會「單元測試是 Go 程式的一級公民」這句話的意思。
+
+首先，把之前的 `demo1` 目錄下的 `hello.go` 檔案改成以下內容：
+
+```go
+package main
+
+func hello() string {
+    return "Hello, World!"
+}
+```
+
+這裡定義了一個名為 `hello` 的函式，此函式沒有傳入參數，而回傳值是一個字串 "Hello, World!"。
+
+接著，在相同目錄下新增一個 `main.go` 檔案，內容為：
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println(hello())
+}
+```
+
+也就是說，程式的進入點 `main()` 函式會去呼叫 `hello.go` 中的 `hello()` 函式來取得欲顯示的字串。
+
+使用 `go build` 命令來建置應用程式，然後執行 `./hellogo` 看看結果是否符合預期。
+
+如果一切順利，接著就來看看，如果要為 `hello()` 函式撰寫單元測試該怎麼做。
+
+### 加入單元測試 {#add-unit-tests}
+
+Go 的單元測試檔案有固定的命名慣例：其主檔名必須以 `_test` 結尾。比如說，要測試的對象是 `hello.go`，那麼其測試檔案的名稱就必須是 `hello_test.go`，而且兩個檔案要放在同一個目錄下。
+
+因此，接著要新增一個 `hello_test.go` 檔案，內容如下：
+
+```go
+package main
+
+import "testing"
+
+func TestHello(t *testing.T) {
+    actual := hello()
+    expect := "Hello, World!"
+
+    if actual != expect {
+        t.Errorf("got %q want %q", actual, expect)
+    }
+}
+```
+
+此測試函式的邏輯不難，但有一些地方需要留意：
+
+- 測試函式的命名必須以大寫英文字母開頭，也就是 exported 函式（可供外界存取），這樣才能讓測試工具「看得見」它。
+- 測試函式固定有一個傳入參數： `t *testing.T`。這個參數會由測試工具傳入，內容則是測試框架的執行個體。
+
+接著開啟一個命令視窗，使用以下命令來運行測試：
+
+```go
+cd demo1
+go test
+```
+
+如果測試成功，應該會看到類似以下輸出結果：
+
+```console
+PASS
+ok      hellogo 0.116s
+```
+
+## More about modules and packages
+
+- Modules 可以直接從版本控制儲存庫下載，或者從 module proxy 伺服器下載。
+- Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
+- 所有大寫字母開頭的名稱都會被 export，即可供外界使用。（等同其他物件導向語言的 `public` 存取範圍）
+- 所有小寫字母開頭的名稱只能在模組內部使用。
+- 使用 `import` 來引用模組中的套件時，只能引用該模組 export 的（公開的）套件。
+- 每一個 module 都是以 module path 來作為唯一識別，這個模組路徑是宣告在一個 go.mod 檔案中。
+
+### Module paths
 
 模組路徑是模組的正式名稱（唯一識別名稱），宣告於模組的 go.mod 檔案，而且模組路徑要能表達該模組的用途，以及可以從何處找到它。
 
@@ -135,20 +214,7 @@ module example.com/mymodule
 module example.com/mymodule/v2
 ```
 
-### More about modules
-
-- Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
-- 所有大寫字母開頭的名稱都會被 export，即可供外界使用。（等同其他物件導向語言的 `public` 存取範圍）
-- 所有小寫字母開頭的名稱只能在模組內部使用。
-- 使用 `import` 來引用模組中的套件時，只能引用該模組 export 的（公開的）套件。
-
-## Hello World v2
-
-
-
-## Recommended reading
-
-建議閱讀 Go 官方文件以了解更多細節：
+建議閱讀 Go 官方文件以了解更多有關 modules 的細節：
 
 - [Go Modules Reference](https://go.dev/ref/mod)
 - [go.mod file reference](https://go.dev/doc/modules/gomod-ref)
