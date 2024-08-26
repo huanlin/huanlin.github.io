@@ -26,7 +26,9 @@ cd demo01
 go mod init demo01
 ```
 
-上述命令會在當前目前建立一個 `go.mod` 檔案，內容是該模組的資訊，以及描述它依賴哪些模組（如果有的話）。上述指令所建立的 `go.mod` 檔案內容會像這樣：
+> 備註：這個 "mod" 一般讀音近似「罵的」。似乎比較少聽到「mode」的唸法。
+
+上述命令會在當前目前建立一個 `go.mod` 檔案，內容是該模組的資訊，以及描述它依賴哪些外部模組（如果有的話）。上述指令所建立的 `go.mod` 檔案內容會像這樣：
 
 ```text
 module demo01
@@ -34,16 +36,32 @@ module demo01
 go 1.23.0
 ```
 
-以此範例而言，在 demo1 目錄底下撰寫的程式，都會包在 `demo01` 模組裡面，而 Go 編譯器在建置應用程式時，也會參考此目錄下的 `go.mod` 檔案。
+這個模組即代表一個 project，其名稱通常是你的 Git repository 的名稱，而且所在目錄的名稱也會跟模組名稱一樣。比如說，如果是 GitHub 平台上的一個名為 "learning-go" 的 repository，那麼剛才的 `go mod init` 指令會這麼寫：
 
-> `go.mod` 檔案所在的目錄稱為 **模組根目錄**（module root directory）。
+```text
+mkdir learning-go
+cd learning-go
+go mod init github.com/learning-go
+```
 
-這裡先簡單介紹 Go module 的幾個基礎觀念：
+而此命令一樣只是單純地在當前目錄下建立一個 `go.mod` 檔案，內容為：
 
-- 一個 module 是一個 project，有一個版本編號。
-- 一個 module 包含一個或多個 packages。
+```text
+module github.com/learning-go
 
-接著在此目錄中建立一個 `hello.go` 檔案，內容為：
+go 1.23.0
+```
+
+有關 module 的運作方式與內容寫法還有許多細節可談，這裡只先整理一點小常識：
+
+- 一個 module 即是一個 project，有一個版本編號。
+- `go.mod` 檔案所在的目錄稱為 **模組根目錄**（module root directory）。
+
+透過 `go.mod` 檔案把專案的基本資訊定義好之後，接著要往下一個實作議題靠近：套件（package）。
+
+一個 project 是由一個或多個程式檔案組成，而這個組成的方式，是以 package 來作為邏輯分割單位。之所以說「邏輯分割」，是因為一個 package 通常會由多個 .go 的程式檔案所組成。
+
+延續剛才的範例，在 `demo01` 目錄下建立一個 `hello.go` 檔案，內容為：
 
 ```go
 package main
@@ -57,18 +75,20 @@ func main() {
 }
 ```
 
+在這個檔案中：
+
 - `package main` 表明此套件的名稱叫做 `main`。
 - `import` 表明此套件需要引用 `fmt` 套件。
 - `main()` 函式為應用程式的進入點。
 
-這裡需要了解一點 Go 的 package 基本知識。Go 的 package 有兩種：
+這裡需要介紹一點 Go 的 package 小常識，即 Go 的 package 有兩種：
 
-- executable package：要編譯成可執行的應用程式，其 package 名稱必須是 `main`，而且會包含程式的進入點：`main` 函式。
-- library package：供其他套件引用，不會編譯成可執行檔。套件名稱不用是 `main`。
+- **Executable package**：要編譯成可執行的應用程式，其 package 名稱必須是 `main`，而且會包含程式的進入點：`main` 函式。
+- **Library package**：供其他套件引用，不會編譯成可執行檔。這類套件的名稱不會是 `main`，而應該是符合該套件用途的名稱，例如 `http`、`list`、`fmt` 等等。注意 Go 官方建議的套件命名慣例是**簡短而且全部小寫**，即不要大小寫混用，也不要使用底線字元 ( `_` )。此外，套件名稱是可以用縮寫的——前提是那個縮寫是很常見、且一看就明白，例如 `fmt`、`strconv` 等等。
 
-此範例的 package 名稱是 `main`，而且有進入點 `main` 函式，表示我們會將它建置成一個可執行的應用程式。
+> 命名不是一件容易的事。有關 package 的命名，可參考 Go 部落格的 [Package names](https://go.dev/blog/package-names)。
 
-到目前為止，此應用程式的檔案目錄結構會像這樣：
+現在回到我們的範例程式。到目前為止，此應用程式的檔案目錄結構會像這樣：
 
 ```text
 /demo01
@@ -76,7 +96,9 @@ func main() {
     hello.go
 ```
 
-你可以使用 `go run` 命令來執行此程式：
+由於我們打算建立一個可執行的應用程式，故此範例的 package 名稱是 `main`，而且有進入點 `main` 函式。順便提及，雖然套件名稱是 `main`，但程式檔案名稱並不需要命名為 `main.go`（當然也可以這麼做）。
+
+接著，使用 `go run` 命令來執行此程式：
 
 ```shell
 go run hello.go
@@ -89,6 +111,8 @@ go build
 ```
 
 上述命令會在當前目錄下產生一個可執行檔，檔案名稱會是 `demo01.exe`（因為 `go.mod` 檔案中宣告的模組名稱是 `demo01`）。
+
+補充說明：
 
 - 如果要在 Windows 作業環境的 PowerShell 命令視窗中執行此範例程式，請輸入 `./demo01`，而不要只輸入 `demo01`，否則 PowerShell 可能會告訴你無法識別該命令。
 - 如果要指定編譯的目標作業系統，可預先設定 Go 的環境變數 `GOOS`。詳情參見官方文件：[Environment variables](https://pkg.go.dev/cmd/go#hdr-Environment_variables)。
