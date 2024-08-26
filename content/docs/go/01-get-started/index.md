@@ -1,6 +1,7 @@
 ---
 title: 01. Get started
 weight: 11
+tags: [Go]
 ---
 
 Ref: [[Golang] Modules and Packages](https://pjchender.dev/golang/modules-and-packages/)

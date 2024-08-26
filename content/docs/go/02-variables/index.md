@@ -1,5 +1,6 @@
 ---
 title: 02. Variables
+tags: [Go]
 ---
 
 ## Syntax
