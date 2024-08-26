@@ -113,7 +113,8 @@ go build
 
 上述命令會在當前目錄下產生一個可執行檔，檔案名稱會是 `demo01.exe`。
 
-> 如果要在 Windows 作業環境的 PowerShell 命令視窗中執行此範例程式，請輸入 `./demo01`，而不要只輸入 `demo01`，否則 PowerShell 可能會告訴你無法識別該命令。
+- 如果要在 Windows 作業環境的 PowerShell 命令視窗中執行此範例程式，請輸入 `./demo01`，而不要只輸入 `demo01`，否則 PowerShell 可能會告訴你無法識別該命令。
+- 如果要指定編譯的目標作業系統，可預先設定 Go 的環境變數 `GOOS`。詳情參見官方文件：[Environment variables](https://pkg.go.dev/cmd/go#hdr-Environment_variables)。
 
 ## 加入單元測試 {#unit-test}
 
