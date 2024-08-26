@@ -111,7 +111,7 @@ go run hello.go
 go build
 ```
 
-上述命令會在當前目錄下產生一個可執行檔，檔案名稱會是 `demo01.exe`。
+上述命令會在當前目錄下產生一個可執行檔，檔案名稱會是 `demo01.exe`（因為 `go.mod` 檔案中宣告的模組名稱是 `demo01`）。
 
 - 如果要在 Windows 作業環境的 PowerShell 命令視窗中執行此範例程式，請輸入 `./demo01`，而不要只輸入 `demo01`，否則 PowerShell 可能會告訴你無法識別該命令。
 - 如果要指定編譯的目標作業系統，可預先設定 Go 的環境變數 `GOOS`。詳情參見官方文件：[Environment variables](https://pkg.go.dev/cmd/go#hdr-Environment_variables)。
@@ -226,12 +226,30 @@ go: no module dependencies to download
 
 在此頁面搜尋字串 "demo01"，應該就能找到剛才加入的註解。
 
-## More about modules and packages
+## Packages and modules
+
+### Packages
+
+範例：
+
+```text
+.                -> 專案的根目錄
+├── go.mod       -> 定義專案的名稱和 dependencies
+├── hello.go     -> 實作 package main
+└── cart         -> 用來放 cart 套件的程式碼
+    └── cart.go  -> 實作 cart 套件
+```
+
+- Go 是以 package 來作為隔離的基本單位。
+- 隸屬同一個 package 的程式碼可以互相存取任何東西，包括變數、函式、型別等等。
+- 不同 package 的程式碼只能使用對方 export 出來的東西。
+  - Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
+  - 所有大寫字母開頭的名稱都會被 export，即可供外界使用。（等同其他物件導向語言的 `public` 存取範圍）
+  - 所有小寫字母開頭的名稱只能在模組內部使用。
+
+### Modules
 
 - Modules 可以直接從版本控制儲存庫下載，或者從 module proxy 伺服器下載。
-- Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
-- 所有大寫字母開頭的名稱都會被 export，即可供外界使用。（等同其他物件導向語言的 `public` 存取範圍）
-- 所有小寫字母開頭的名稱只能在模組內部使用。
 - 使用 `import` 來引用模組中的套件時，只能引用該模組 export 的（公開的）套件。
 - 每一個 module 都是以 module path 來作為唯一識別，這個模組路徑是宣告在一個 go.mod 檔案中。
 
@@ -264,6 +282,5 @@ module example.com/mymodule/v2
 
 ## References
 
-- [Go in Action, 2nd Edition](https://www.manning.com/books/go-in-action-second-edition)
+- [Go by Example](https://www.manning.com/books/go-by-example)
 - [Go in Practice, 2nd Edition](https://www.manning.com/books/go-in-practice-second-edition)
-- [[Golang] Modules and Packages](https://pjchender.dev/golang/modules-and-packages/)
