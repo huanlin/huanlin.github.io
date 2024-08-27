@@ -1,6 +1,5 @@
 ---
 title: 01 Get started
-weight: 11
 tags: [Go]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: 02 Hello World
-weight: 12
 tags: [Go]
 ---
 
