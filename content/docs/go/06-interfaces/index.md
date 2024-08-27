@@ -64,7 +64,7 @@ type customersGetter interface {
 
 然而，把實作放在服務端，而介面定義在用戶端，難道不會發生循環參考的情形嗎？在 Go 是不會的，因為 Go 的介面是以隱含的方式對應至實作，而不需要明確宣告某個型別實作哪個介面。
 
-> 事實上，Go 根本沒有 Java 或 C# 的 `implements` 關鍵字。
+> 事實上，Go 根本沒有 Java 的 `implements` 關鍵字，也沒有類似 C# 的明確實作介面的語法。
 
 ## 避免回傳介面 {#avoid-returning-interfaces}
 
