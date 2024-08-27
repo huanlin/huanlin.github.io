@@ -75,7 +75,7 @@ in general, returning an interface restricts flexibility because we force all th
 建議的做法是：
 
 - 回傳結構（structs），而不要回傳介面。
-- 如果可行的話，讓介面成為函式的傳入參數。
+- 如果可能的話，讓介面成為函式的傳入參數。
 
 > 標準函式庫的 `io.Reader` 之所以定義了介面，是因為設計者事先已經確知（而非預測或想像）這樣的抽象層是有助於重複使用的。
 
