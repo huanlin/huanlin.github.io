@@ -3,13 +3,77 @@ title: 03 Code organization
 tags: [Go]
 ---
 
+## Packages
+
+**定義：** 一個 package 是一個或多個 .go 程式檔案所組成；這些程式檔案會放在同一個資料夾底下，而這個資料夾的名稱通常會跟 package 名稱一樣。
+
+換言之，package 一個邏輯切割單位，讓不同用途的程式碼之間得以適度隔離。
+
+另外要知道的是，Go 的 package 有兩種：
+
+- 可執行套件：套件名稱一定是 `main`，而且不能被其他套件引用。
+- 函式庫套件：套件名稱不是 `main` 的都是函式庫套件，可供其他套件引用。
+
+至於不同的 package 之間要如何開放或隱藏某些資源或服務，請看下一節的說明。
+
 ## Scope
 
-程式裡面有許多變數、函式、型別等識別字，依照它們宣告時的所在位置和寫法，可分為三種可見範圍：
+程式裡面有許多變數、函式、型別等識別字，依照它們宣告時的所在位置和寫法，分為三種可見範圍：
 
 - block：宣告在 `{...}` 區塊裡面的變數只有該區塊的程式碼可存取。
-- package：同一個 package 內的 .go 程式檔案可存取彼此的變數（以及函式、型別等等），無論它們是否為 exported（公開成員）。
+- package：同一個 package 內的 .go 程式檔案可互相存取彼此的任何東西，包括變數、函式、型別等等，無論它們是否為 exported（公開成員）。
 - global：只要是 exported 變數（名稱以大寫英文開頭來命名的都是），就能夠被任何程式碼存取。
+
+正如前面提過的，package 是 Go 程式的邏輯切割單位。如果要讓 package 當中的某個東西公開讓其他套件也能使用，就必須以大寫英文開頭來命名。參考以下範例：
+
+```go
+package config
+
+var ConfigFileName string = "d:/work/config.yaml" // 任何套件皆可存取。
+var encoding string = "UTF-8" // 僅相同 package 的程式碼可以存取。
+
+func createConfig() { // 僅相同 package 的程式碼可以存取。
+    // ...
+}
+```
+
+## Modules
+
+每一個 project 都應該建立一個 `go.mod` 檔案來設定專案的基本資訊（名稱、版本）以及管理它所依賴的外部模組。
+
+也就是說，一個 module 即代表一個應用程式專案。每個 module 是由一個或多個 packages 所組成，而且 module 名稱通常是以該專案的 Git repository 名稱來命名。
+
+建立 `go.mod` 檔案的方式，是在專案根目錄底下執行 `go mod init` 命令。比如說，專案名稱是 `todoapp`，便可使用以下命令來建立 `go.mod` 檔案：
+
+```shell
+mkdir todoapp
+cd todoapp
+go mod init todoapp
+```
+
+上述命令所建立的 `go.mod` 檔案，其內容會像這樣：
+
+```text
+module todoapp
+
+go 1.23.0
+```
+
+如果這個專案的原始碼是放在 GitHub 平台上的一個名為 "learning-go" 的 repository，那麼剛才的 `go mod init` 指令會這麼寫：
+
+```text
+mkdir todoapp
+cd todoapp
+go mod init github.com/todoapp
+```
+
+上述命令同樣只是在當前目錄建立一個 `go.mod` 檔案，內容會變成：
+
+```text
+module github.com/todoapp
+
+go 1.23.0
+```
 
 ## Variable shadowing
 
