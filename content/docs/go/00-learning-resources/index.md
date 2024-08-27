@@ -31,6 +31,7 @@ Some recommended resources about learning Go programming.
 | [Go by Example](https://www.manning.com/books/go-by-example) | 中高階 | ⭐⭐⭐⭐⭐ | 適合 Go 語言的初學者，但必須具備其他程式語言的開發經驗。 |
 | [100 Go Mistakes and How to Avoid Them](https://100go.co/book/) | 中高階 | ⭐⭐⭐⭐⭐ | Go 專業開發人員必讀。 |
 | [Go in Action, 2nd Edition](https://www.manning.com/books/go-in-action-second-edition) | 入門 | | 介紹語法和語言特性，最後一章介紹單元測試。未包含 web 程式設計相關議題。|
+| [Learning Go 2nd Edition](https://www.amazon.com/Learning-Go-Jon-Bodner-ebook/dp/B0CS5DY1VN) | 入門至進階 |  |
 | [Let's Go](https://lets-go.alexedwards.net/) | 入門至實戰 |  | 從 Hello World 到開發 Web 應用程式。 |
 
 ## Courses
