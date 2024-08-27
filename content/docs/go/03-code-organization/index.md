@@ -1,24 +1,15 @@
 ---
-title: 02 Variables
+title: 03 Code organization
 tags: [Go]
 ---
 
-## Syntax
+## Scope
 
-使用 `var` 宣告變數，使用 `=` 運算子來賦值。
+程式裡面有許多變數、函式、型別等識別字，依照它們宣告時的所在位置和寫法，可分為三種可見範圍：
 
-範例：
-
-```go
-var x int
-var y int = 100
-```
-
-使用 `:=` 運算子來宣告變數且賦值（不用寫 `var`）：
-
-```go
-sum := 100
-```
+- block：宣告在 `{...}` 區塊裡面的變數只有該區塊的程式碼可存取。
+- package：同一個 package 內的 .go 程式檔案可存取彼此的變數（以及函式、型別等等），無論它們是否為 exported（公開成員）。
+- global：只要是 exported 變數（名稱以大寫英文開頭來命名的都是），就能夠被任何程式碼存取。
 
 ## Variable shadowing
 
