@@ -29,8 +29,36 @@ ref: https://livebook.manning.com/book/go-in-practice-second-edition/chapter-2/v
 
 - **解決方案**：
 
-    目前比較受歡迎的一種組態檔案格式是 JSON (JavaScript Object Notation)。Go 標準函式庫提供了內建的 JSON 解析、反序列化和序列化功能。
+    目前比較受歡迎的一種組態檔案格式是 JSON (JavaScript Object Notation)。Go 標準函式庫提供了內建的 JSON 解析、反序列化和序列化功能。另外常見的兩種組態檔格式為 YAML 和 INI 檔案。跟 JSON 比起來，YAML 和 INI 的好處是人類更容易閱讀（而且 JSON 不能寫註解）。
 
-[12-factor apps](http://12factor.net/) 方法所建議的模式：透過環境變數來傳遞 configuration。
+> [12-factor apps](http://12factor.net/) 方法所建議的模式：透過環境變數來傳遞 configuration。
 
+
+### JSON
+
+```json
+{
+     "enabled": true,
+     "path": "/usr/local"
+}
+```
+
+### YAML
+
+```yaml
+# A comment line
+enabled: true
+path: /usr/local
+```
+
+### INI
+
+```ini
+; A comment line
+[Section]
+enabled = true
+path = /usr/local # another comment
+```
+
+### 使用環境變數來保存組態 {#config-via-env-vars}
 
