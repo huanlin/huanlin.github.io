@@ -1,6 +1,7 @@
 ---
 title: 04 建立命令列應用程式
 linkTitle: 04 建立 CLI 應用程式
+tags: [Go]
 draft: true
 ---
 
@@ -16,7 +17,7 @@ Go 的旗標系統不允許結合多個旗標，所以它會把 `-la` 視為一�
 
 為了讓我們開發的 Go 應用程式支援 Linux 風格的命令選項，比較好的解法是使用現成的套件。底下是兩個頗受歡迎的套件：
 
-- [corba](https://github.com/spf13/cobra) - 許多 Go 專案都有使用，如 Kubernetes、Hugo、和 GitHub CLI 等等。
+- [cobra](https://github.com/spf13/cobra) - 許多 Go 專案都有使用，如 Kubernetes、Hugo、和 GitHub CLI 等等。
 - [cli](https://github.com/urfave/cli) - 開源的 platform-as-a-service (PaaS) 專案 Cloud Foundry 有使用此套件。
 
 ref: https://livebook.manning.com/book/go-in-practice-second-edition/chapter-2/v-6/21
@@ -61,4 +62,7 @@ path = /usr/local # another comment
 ```
 
 ### 使用環境變數來保存組態 {#config-via-env-vars}
+
+
+## Working with web servers {#web-servers}
 
