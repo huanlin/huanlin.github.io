@@ -98,13 +98,23 @@ func main() {
 
 由於我們打算建立一個可執行的應用程式，故此範例的 package 名稱是 `main`，而且有進入點 `main` 函式。順便提及，雖然套件名稱是 `main`，但程式檔案名稱並不需要命名為 `main.go`（當然也可以這麼做）。
 
+## 建置與執行程式 {#build-and-run}
+
 接著，使用 `go run` 命令來執行此程式：
 
 ```shell
 go run hello.go
 ```
 
-也可以用 `go build` 命令來將程式碼編譯成可執行檔：
+或者
+
+```shell
+go run .
+```
+
+以上兩種寫法都行。
+
+如果要建置應用程式，則是用 `go build` 命令來將程式碼編譯成可執行檔：
 
 ```shell
 go build
@@ -112,10 +122,22 @@ go build
 
 上述命令會在當前目錄下產生一個可執行檔，檔案名稱會是 `demo01.exe`（因為 `go.mod` 檔案中宣告的模組名稱是 `demo01`）。
 
-補充說明：
+> 如果要在 Windows 作業環境的 PowerShell 命令視窗中執行此範例程式，請輸入 `./demo01`，而不要只輸入 `demo01`，否則 PowerShell 可能會告訴你無法識別該命令。
 
-- 如果要在 Windows 作業環境的 PowerShell 命令視窗中執行此範例程式，請輸入 `./demo01`，而不要只輸入 `demo01`，否則 PowerShell 可能會告訴你無法識別該命令。
-- 如果要指定編譯的目標作業系統，可預先設定 Go 的環境變數 `GOOS`。詳情參見官方文件：[Environment variables](https://pkg.go.dev/cmd/go#hdr-Environment_variables)。
+建置應用程式時，也可以透過參數來指定輸出的可執行檔案名稱。例如：
+
+```shell
+go build -o hello.exe
+```
+
+由 `go build` 命令所產生的可執行檔案就是一個可直接部署的應用程式。也就是說，不需要額外打包函式庫，而只要把這個可執行檔複製到其他電腦上面就能執行。
+
+不過，如果建置應用程式所在的作業環境跟部署的目標環境是不同平台，就需要稍微動一點手腳。關於這個部分，會需要知道 Go 的兩個環境變數：
+
+- `GOOS`：指定目標作業系統。
+- `GOARCH`：指定目標機器的指令架構。
+
+詳情可參閱官方文件：[Environment variables](https://pkg.go.dev/cmd/go#hdr-Environment_variables)。
 
 ## 加入單元測試 {#unit-test}
 
