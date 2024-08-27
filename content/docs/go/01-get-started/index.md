@@ -32,5 +32,32 @@ Go 的優點與強項：
 
 ## 建立開發環境 {#setup-dev-env}
 
+## 安裝 Go {#installing-go}
+
 *(TODO)*
 
+## IDE
+
+比較常聽到建議使用的 IDE 有這些：
+
+- Visual Studio Code
+- GoLand by JetBrains
+- Neovim
+
+對鍵盤操控效率極為講究的人可能會喜歡 Neovim 或 JetBrains。我個人是習慣用 VS Code。
+
+順便整理一下我用 VS Code 寫 Go 程式的一點筆記：
+
+- 按 Ctrl+S 存檔時會自動重新排版程式碼，可輕鬆維持一致的程式碼風格。
+- 與 Go 有關的 extensions：
+  - [Go](https://marketplace.visualstudio.com/items?itemName=golang.go) by the Go Team at Google
+  - [Go Test Explorer](https://marketplace.visualstudio.com/items?itemName=premparihar.gotestexplorer)
+
+底下截圖展示了我撰寫本文時的 VS Code 工作環境：
+
+![](images/vscode-go.png)
+
+左下角的 Go 面板可以查看 Go 環境變數以及安裝了哪些 Go tools。
+
+
+*-- to be continued --*

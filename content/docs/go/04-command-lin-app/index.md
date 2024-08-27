@@ -4,6 +4,8 @@ linkTitle: 04 建立 CLI 應用程式
 draft: true
 ---
 
+## 剖析命令列選項 {#command-line-flags}
+
 Go 標準函式庫中的命令列參數和選項的處理方式是基於 Plan 9 作業系統，這與現今廣泛使用的 GNU/Linux 和 BSD (Berkeley Software Distribution) 的系統（如 Mac OS X 和 FreeBSD）有所不同。
 
 例如，在 Linux 和 BSD 系統上，您可以使用命令 `ls -la` 來列出目錄中的所有文件。`ls` 是命令，而 `-la` 包含了兩個選項，或者兩個旗標（flags，這是 Go 函式庫的用語）。`l` 旗標告訴 `ls` 使用長格式列出檔案，而 `a` 旗標（代表 "all"）則使列表包含隱藏文件。
@@ -18,3 +20,17 @@ Go 的旗標系統不允許結合多個旗標，所以它會把 `-la` 視為一�
 - [cli](https://github.com/urfave/cli) - 開源的 platform-as-a-service (PaaS) 專案 Cloud Foundry 有使用此套件。
 
 ref: https://livebook.manning.com/book/go-in-practice-second-edition/chapter-2/v-6/21
+
+## 應用程式的組態 {#app-config}
+
+- **問題**：
+
+    應用程式需要保存組態，因為這些組態可能數量眾多，命令列參數難以應付。
+
+- **解決方案**：
+
+    目前比較受歡迎的一種組態檔案格式是 JSON (JavaScript Object Notation)。Go 標準函式庫提供了內建的 JSON 解析、反序列化和序列化功能。
+
+[12-factor apps](http://12factor.net/) 方法所建議的模式：透過環境變數來傳遞 configuration。
+
+
