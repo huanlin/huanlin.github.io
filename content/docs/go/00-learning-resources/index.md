@@ -8,7 +8,7 @@ Some recommended resources about learning Go programming.
 
 ## Free resources
 
-免費資源太多了，不怕沒得學，只怕難選擇。這裡只列出幾個比較多人推薦的：
+免費資源太多了，不怕沒得學，只怕難選擇。這裡只列出幾個我覺得不錯的：
 
 | Title                                                              | Level | Remark                                 |
 | ------------------------------------------------------------------ | ----- | -------------------------------------- |
@@ -17,11 +17,13 @@ Some recommended resources about learning Go programming.
 | [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) | 入門  | 以撰寫測試來學習 Go 語言。（我覺得是很棒的學習方式） |
 | [Effective Go](https://go.dev/doc/effective_go)                    | 進階  | 由 Golang core team 撰寫的技術文章。 |
 
-Youtube 上面也有很多教學影片，有的影片甚至長達 7 小時：[Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU)。
+我學習 Go 的方式，剛開始就是先從上面列表中的前三個網站做為敲門磚，學習一點基本觀念，寫一點程式碼，同時也用一些零碎時間看 Youtube 上面的影片。碰到想要更深入了解的部分，就針對特定議題來閱讀 Go 的官方文章，或者找書來讀。
 
 ## Books
 
-以下書單，有打星星的是我對那本書的喜愛程度。沒有打星星的則表示沒看過，或者只看了一點點，無從評論。
+跟著一本書來學習的好處是比較有系統地、按步就班地學習。
+
+以下書單，前面四本我都有買。有打星星的是我對那本書的喜愛程度，沒有打星星的則代表還沒看，或者只看了一點點，還沒有想法。
 
 | Title <div style="width: 320px;"></div>| Level<div style="width: 100px;"></div> | My Rate (5) | Description |
 |-----------------------|------------------------|---------|------------------------------------|
