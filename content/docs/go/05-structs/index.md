@@ -144,3 +144,81 @@ func main() {
 
 > 如果有給欄位命名，那麼即使只有一個欄位，也必須以名稱來存取該欄位，而不能用型別。
 
+## 範例六：結構中的 tags {#tags}
+
+結構的欄位可以附加額外的描述資訊（metadata），稱為「標籤」（tags）。
+
+Tags 的寫法是用一對 backtick 字元 ( ` ) 包住一組或多組 key: "value" 字串。每一組 key-value pair 是以空白字元隔開。
+
+範例：
+
+```go
+type Animal struct {
+    name string `help: "動物的種類或名稱，只要是貓或狗就行。"`
+}
+```
+
+這裡替 `name` 欄位加上了一個 tag。該 tag 的 key 是 `help`，而 value 是 `"動物的...."`。
+
+以下示範如何讀取欄位的 tag 內容：
+
+```go
+func (a Animal) speak() string {
+    switch a.name {
+    case "cat":
+        return "meow"
+    case "dog":
+        return "woof"
+    default:
+        if member, ok := reflect.TypeOf(a).FieldByName("name"); ok {
+            return fmt.Sprintf("無效的動物名稱：%s", member.Tag.Get("help"))
+        }
+        return "nondescript animal noise?"
+    }
+}
+```
+
+這裡使用了 [Go 的 reflection 套件](https://pkg.go.dev/reflect)來取得結構的執行時期型別資訊，並以 `FieldByName` 來取得結構成員。取得結構成員之後，便可以透過它的 `Tag.Get("help")` 方法來取得 tag key 為 "help" 的內容。
+
+## 範例七：將 tags 用於 JSON 序列化
+
+```go
+package main
+
+import (
+    "fmt"
+    "encoding/json"
+)
+
+type Animal struct {
+    Name string `json:"animal_name"`
+    ScientificName string `json:"scientific_name"`
+    Weight float32 `json:"animal_average_weight"`
+}
+
+func main() {
+    a := Animal{
+        Name: "cat",
+        ScientificName: "Felis catus",
+        Weight: 10.5,
+    }
+
+    output, err := json.Marshal(a)
+    if err != nil {
+        panic("couldn't encode json")
+    }
+    fmt.Println(string(output))
+}
+```
+
+請注意這裡的 `Animal` 結構的所有欄位成員的名稱開頭第一個字元都是大寫英文字母，表示它們是公開給任何程式碼存取。如果欄位名稱以小寫英文字母開頭，將導致 `encoding/json` 套件的函式無法存取它們。
+
+程式的執行結果如下：
+
+```json
+{"animal_name":"cat","scientific_name":"Felis catus","animal_average_weight":10.5}
+```
+
+## References
+
+- Go in Practice, Second Edition
