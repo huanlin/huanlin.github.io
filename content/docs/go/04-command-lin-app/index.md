@@ -5,6 +5,44 @@ tags: [Go]
 draft: true
 ---
 
+## 使用 os.Args 取得命令列參數 {#os-args}
+
+Go 標準函式庫的 `os` 套件有一個公開變數 `Args` 可用來取得應用程式執行時所傳入的命令列參數。
+
+- `os.Args[0]` 是執行應用程式時的檔案名稱。
+- `os.Args[1]` 是第 1 個命令列參數。
+- `os.Args[2]` 是第 2 個命令列參數。依此類推。
+
+範例：
+
+```go
+ackage main
+
+import (
+    "fmt"
+    "log"
+    "os"
+    "strings"
+)
+
+func main() {
+    if len(os.Args) < 2 {
+        log.Println("need to provide filename!")
+        os.Exit(1)
+    }
+
+    fileContents, err := os.ReadFile(os.Args[1])
+    if err != nil {
+        log.Println(err)
+        os.Exit(1)
+    }
+
+    words := strings.Fields(string(fileContents))
+
+    fmt.Println("Found", len(words), "words")
+}
+```
+
 ## 剖析命令列選項 {#command-line-flags}
 
 Go 標準函式庫中的命令列參數和選項的處理方式是基於 Plan 9 作業系統，這與現今廣泛使用的 GNU/Linux 和 BSD (Berkeley Software Distribution) 的系統（如 Mac OS X 和 FreeBSD）有所不同。
@@ -33,7 +71,6 @@ ref: https://livebook.manning.com/book/go-in-practice-second-edition/chapter-2/v
     目前比較受歡迎的一種組態檔案格式是 JSON (JavaScript Object Notation)。Go 標準函式庫提供了內建的 JSON 解析、反序列化和序列化功能。另外常見的兩種組態檔格式為 YAML 和 INI 檔案。跟 JSON 比起來，YAML 和 INI 的好處是人類更容易閱讀（而且 JSON 不能寫註解）。
 
 > [12-factor apps](http://12factor.net/) 方法所建議的模式：透過環境變數來傳遞 configuration。
-
 
 ### JSON
 

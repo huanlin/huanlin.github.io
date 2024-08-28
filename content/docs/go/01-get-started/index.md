@@ -12,6 +12,7 @@ Go 程式語言沒有以下語法或機制：
 - 沒有型別繼承。
 - 沒有 exception handling 語法（沒有 `try...catch`，也沒有 `throw`）。
 - 沒有巨集（macro）。
+- 沒有 enum。（可以用具名常數）
 - 沒有局部函式（partial functions）。
 - 不支援變數延遲估值（lazy variable evaluation）。
 - 沒有運算子多載（operator overloading）。
