@@ -1,6 +1,5 @@
 ---
-title: 重要語法和基礎知識
-draft: true
+title: 雜七雜八但很重要
 ---
 
 整理一些重要或者比較 tricky 的語法知識。
@@ -80,7 +79,7 @@ if (err != nil) {
 
 此範例所要表達的是：我不在乎 `ReadFile()` 執行成功時回傳的結果，而只看它是否返回錯誤。
 
-## If with a short statement
+## If with a short statement {#if-with-statement}
 
 Like `for` 迴圈, the `if` statement can start with a short statement to execute before the condition.
 
@@ -101,6 +100,12 @@ func pow(x, n, lim float64) float64 {
 
 ## 取得物件或變數的型別 {#get-type}
 
+這裡示範三種方法：
+
+- 使用 fmt.Printf 的 %T 旗號。
+- 使用 reflect 套件。
+- 使用 type assertion。
+
 ### 使用 fmt.Printf 的 %T 旗號 {#printf-t-flag}
 
 ```go
@@ -117,7 +122,7 @@ fmt.Printf("%v", reflect.TypeOf(10))   // int
 fmt.Printf("%v", reflect.TypeOf("Go")) // string
 ```
 
-## 使用 type assertion
+### 使用 type assertion {#type-assertion}
 
 ```go
 var x interface{} = 7
@@ -129,4 +134,3 @@ case int:
 ```
 
 參閱 A Tour of Go: [Type assertions](https://go.dev/tour/methods/15)
-
