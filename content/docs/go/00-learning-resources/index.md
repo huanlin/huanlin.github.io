@@ -22,9 +22,9 @@ Some recommended resources about learning Go programming.
 
 跟著一本書來學習的好處是比較有系統地、按步就班地學習。
 
-以下書單，前面四本我都有買。有打星星的是我對那本書的喜愛程度，沒有打星星的則代表還沒看，或者只看了一點點，還沒有想法。
+以下書單，前面四本我都有買。有給分的是我對那本書的喜愛程度，沒有給分的代表還沒看，或者只看了一點點，還沒有想法。
 
-| Title <div style="width: 300px;"></div>| Level<div style="width: 80px;"></div> | My Rate | Description |
+| Title <div style="width: 300px;"></div>| Level<div style="width: 80px;"></div> | Rate | Description |
 |-----------------------|------------------------|---------|------------------------------------|
 | [Go in Practice, 2nd Edition](https://www.manning.com/books/go-in-practice-second-edition) | 中高階 | 5/5 | 著重實戰所需的知識與技術，不會詳細介紹基礎語法，例如變數如何宣告與賦值、如何寫迴圈等等，但重要的語言特性都有涵蓋，像是介面、泛型、concurrency、錯誤處理等等。後面幾章還介紹了單元測試、Web API、雲端應用程式設計等議題。|
 | [Go by Example](https://www.manning.com/books/go-by-example) | 中高階 | 5/5 | 適合 Go 語言的初學者，但必須具備其他程式語言的開發經驗。 |

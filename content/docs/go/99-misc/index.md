@@ -1,5 +1,5 @@
 ---
-title: 99 雜七雜八但很重要
+title: 99 雜七雜八但是重要
 ---
 
 整理一些重要或者比較 tricky 的語法知識。
@@ -134,3 +134,9 @@ case int:
 ```
 
 參閱 A Tour of Go: [Type assertions](https://go.dev/tour/methods/15)
+
+
+[100-mistakes]: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
+[go-in-action]: https://www.manning.com/books/go-in-action-second-edition
+[go-in-practice]: https://www.manning.com/books/go-in-practice-second-edition
+[go-by-example]: https://www.manning.com/books/go-by-example

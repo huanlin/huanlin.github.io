@@ -145,5 +145,3 @@ module example.com/mymodule/v2
   - Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
   - 大寫字母開頭的名稱會被 export，即可供外界使用。
   - 小寫字母開頭的名稱無法被外界存取。
-
-[100-mistakes]: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
