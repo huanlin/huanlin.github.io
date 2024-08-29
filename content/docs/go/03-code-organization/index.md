@@ -9,6 +9,16 @@ tags: [Go]
 
 換言之，package 一個邏輯切割單位，讓不同用途的程式碼之間得以適度隔離。
 
+範例：
+
+```text
+.                -> 專案的根目錄
+├── go.mod       -> 定義專案的名稱和 dependencies
+├── hello.go     -> 實作 package main
+└── cart         -> 用來放 cart 套件的程式碼
+    └── cart.go  -> 實作 cart 套件
+```
+
 另外要知道的是，Go 的 package 有兩種：
 
 - 可執行套件：套件名稱一定是 `main`，而且不能被其他套件引用。
@@ -90,57 +100,50 @@ module github.com/todoapp
 go 1.23.0
 ```
 
-{{% admonition type=note title="Note" %}}
-模組名稱雖然可以不包含 URL，但是帶有 URL 的模組名稱有助於找到並下載該模組，而且可以確保名稱唯一，避免跟其他模組名稱衝突或混淆。因此，建議的做法是以 URL 的寫法來指定模組名稱。
-{{% /admonition %}}
+### Module paths
 
-## More on variables
+模組路徑是模組的正式名稱（唯一識別名稱），宣告於模組的 go.mod 檔案，而且模組路徑要能表達該模組的用途，以及可以從何處找到它。
 
-既然前面提到變數的可見範圍，這裡再介紹與變數有關的的兩個議題：variable shadowing 和 blank identifier。
+模組路徑通常包含三個部分：
 
-### Variable shadowing
-
-以下範例程式可以編譯和執行，但寫法容易令人 confuse：
-
-```go
-var case1 bool = true
-var sum int = 100
-
-func main() {
-    if case1 {
-        sum := add(5, 5) // 區域變數
-        fmt.Println(sum)
-    } else {
-        m := add(10, 10) // 區域變數
-        fmt.Println(sum)
-    }
-
-    fmt.Println(sum) // 使用全域變數
-}
-
-func add(x, y int) int {
-    return x + y
-}
-```
-
-程式中有幾處 `sum` 變數，有的是全域變數，有的是區域變數。雖然能通過編譯，但人眼容易誤讀，因為 `:=` 運算子可以同時宣告變數且賦值，使其左側的變數成為區域變數。如果使用 `=` 運算子，則會使用先前宣告過的變數，在此範例便是全域的 `sum`。
-
-參見：[100 Go Mistakes and How to Avoid Them][100-mistakes] 的第 1 條：Unintended variable shadowing。
-
-### Blank identifier
-
-呼叫函式時，如果某個回傳值無需處理，可以用一個 blank identifier 字元（ `_` ）來承接該回傳值。
+- repository root path
+- repository 中的目錄
+- 主要的版本編號（只有在主要版本編號為 2 或更高的版本才需要）
 
 範例：
 
 ```go
--, err = ReadFile("no/file)
-if (err != nil) {
-    fmt.Println("Error: err)
-}
+module example.com/mymodule
 ```
 
-此範例所要表達的是：我不在乎 `ReadFile()` 執行成功時回傳的結果，而只看它是否返回錯誤。
+如果此範例的模組的版本是 v0.x.x 或 v1.x.x，那麼它的 v2.0.0 版（以及之後版本）的模組路徑就要加上主版本號，例如：
 
+```go
+module example.com/mymodule/v2
+```
+
+{{% admonition type=note title="Note" %}}
+模組名稱雖然可以不包含 URL，但是帶有 URL 的模組名稱有助於找到並下載該模組，而且可以確保名稱唯一，避免跟其他模組名稱衝突或混淆。因此，建議的做法是以 URL 的寫法來指定模組名稱。
+{{% /admonition %}}
+
+最後整理幾個重點：
+
+- 每一個 module 都是以 module path 來作為唯一識別，這個模組路徑是宣告在一個 go.mod 檔案中。
+- Modules 可以直接從版本控制儲存庫下載，或者從 module proxy 伺服器下載。
+- 使用 `import` 來引用模組中的套件時，只能引用該模組 export 的（公開的）套件。
+
+建議閱讀 Go 官方文件以了解更多有關 modules 的細節：
+
+- [Go Modules Reference](https://go.dev/ref/mod)
+- [go.mod file reference](https://go.dev/doc/modules/gomod-ref)
+
+## Summary
+
+- Go 是以 package 來作為隔離的基本單位。
+- 隸屬同一個 package 的程式碼可以互相存取宣告於 package 層級的名稱，如變數、函式、型別等等。
+- 不同 package 的程式碼只能使用對方 export 出來的東西。
+  - Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
+  - 大寫字母開頭的名稱會被 export，即可供外界使用。
+  - 小寫字母開頭的名稱無法被外界存取。
 
 [100-mistakes]: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
