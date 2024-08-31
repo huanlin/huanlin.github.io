@@ -7,16 +7,17 @@ Some recommended resources about learning Go programming.
 
 ## Free resources
 
-免費資源太多了，不怕沒得學，只怕難選擇。這裡只列出幾個我覺得不錯的：
+這個時代，免費資源超多，不怕沒得學，只怕難選擇。這裡只列出一些我有看的，也覺得不錯的：
 
 | Title                                                              | Level | Remark                                 |
 | ------------------------------------------------------------------ | ----- | -------------------------------------- |
+| [使用 Golang 打造 Web 應用程式](https://willh.gitbook.io/build-web-application-with-golang-zhtw) by 保哥 | 入門至實戰 | 最後一次更新似乎是 2021 年，一些入門或通用知識還是蠻值得參考。 | 
 | [A Tour of Go](https://go.dev/tour/)                               | 入門  | 一小塊接著一小塊的學習方式，容易消化。 |
 | [Go by Example](https://gobyexample.com/)                          | 入門  | 有許多範例，每個範例都有解說。         |
 | [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) | 入門  | 以撰寫測試來學習 Go 語言。（我覺得是很棒的學習方式） |
 | [Effective Go](https://go.dev/doc/effective_go)                    | 進階  | 由 Golang core team 撰寫的技術文章。 |
 
-我學習 Go 的方式，剛開始就是先從上面列表中的前三個網站做為敲門磚，學習一點基本觀念，寫一點程式碼，同時也用一些零碎時間看 Youtube 上面的影片。碰到想要更深入了解的部分，就針對特定議題來閱讀 Go 的官方文章，或者找書來讀。
+另外，我也會用一些零碎時間看 Youtube 教學影片。碰到想要更深入了解的部分，就針對特定議題來閱讀 Go 的官方文章，或者找書來讀。
 
 ## Books
 
@@ -35,4 +36,4 @@ Some recommended resources about learning Go programming.
 
 ## Courses
 
-從缺，因為我沒有購買任何 Golang 線上課程。
+從缺，因為我沒有購買線上課程。
