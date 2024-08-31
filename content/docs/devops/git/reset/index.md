@@ -44,4 +44,4 @@ remote: GitLab: You are not allowed to force push code to a protected branch on 
 See also:
 
 - [GitLab Docs > Protected branches](https://docs.gitlab.com/ee/user/project/protected_branches.html)
-- [GitLab Docs > Protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
+- [GitHub Docs > About protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
