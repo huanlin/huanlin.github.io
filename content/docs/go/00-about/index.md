@@ -11,7 +11,6 @@ tags: [Go]
 
 至於能學到什麼程度，自己也沒把握，畢竟每個人一天都是 24 小時，生活中經常要分心去處理很多待辦事項，很難專精。而且，這個領域變化很快，明天會發生什麼事情都很難說。
 
-
 ## About this note
 
 由於我有一點點其他程式語言的經驗，所以學習 Golang 的時候會跳過一些基礎語法，只留意我不熟悉的部分。因此，我的筆記也會跳過許多基礎的東西，甚至有可能遺漏一些重要的觀念。
@@ -32,7 +31,7 @@ tags: [Go]
 
 | Title                                                              | Level | Remark                                 |
 | ------------------------------------------------------------------ | ----- | -------------------------------------- |
-| [使用 Golang 打造 Web 應用程式](https://willh.gitbook.io/build-web-application-with-golang-zhtw) by 保哥 | 入門至實戰 | 最後一次更新似乎是 2021 年，一些入門或通用知識還是蠻值得參考。 | 
+| [使用 Golang 打造 Web 應用程式](https://willh.gitbook.io/build-web-application-with-golang-zhtw) by 保哥 | 入門至實戰 | 最後一次更新似乎是 2021 年，仍有許多入門和通用知識值得參考。 | 
 | [A Tour of Go](https://go.dev/tour/)                               | 入門  | 一小塊接著一小塊的學習方式，容易消化。 |
 | [Go by Example](https://gobyexample.com/)                          | 入門  | 有許多範例，每個範例都有解說。         |
 | [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) | 入門  | 以撰寫測試來學習 Go 語言。（我覺得是很棒的學習方式） |
@@ -44,9 +43,9 @@ tags: [Go]
 
 跟著一本書來學習的好處是比較有系統地、按步就班地學習。
 
-以下書單，前面四本我都有買。有給分的是我對那本書的喜愛程度（不代表看完了）。沒有給分的代表還沒看，或者只看了一點點，還沒有想法。
+以下書單，前面四本我都有買。有給分的是我對那本書的喜愛程度（滿分是 5 分），不代表看完了。
 
-| Title <div style="width: 300px;"></div>| Level<div style="width: 80px;"></div> | Rate | Description |
+| Title <div style="width: 140px;"></div>| Level<div style="width: 80px;"></div> | Rate | Description |
 |-----------------------|------------------------|---------|------------------------------------|
 | [Go in Practice, 2nd Edition](https://www.manning.com/books/go-in-practice-second-edition) | 中高階 | 5/5 | 著重實戰所需的知識與技術，不會詳細介紹基礎語法，例如變數如何宣告與賦值、如何寫迴圈等等，但重要的語言特性都有涵蓋，像是介面、泛型、concurrency、錯誤處理等等。後面幾章還介紹了單元測試、Web API、雲端應用程式設計等議題。|
 | [Go by Example](https://www.manning.com/books/go-by-example) | 中高階 | 5/5 | 適合 Go 語言的初學者，但必須具備其他程式語言的開發經驗。 |
