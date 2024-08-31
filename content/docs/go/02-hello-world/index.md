@@ -10,8 +10,7 @@ tags: [Go]
 1. 首先要寫一個最簡單的 Hello World 程式，開始認識 Go 應用程式的基本結構：模組和套件。
 2. 接著對 Hello World 做一點小改版，以便快速體驗如何撰寫單元測試。
 3. 繼續修改 Hello World 範例。這次要加入一點註解，然後用 `godoc` 工具來產生文件。
-4. 使用命令列參數。這裡會用上標準函式庫的 "flag" 套件來剖析命令列參數。
-5. 一個非常簡單的 HTTP server。
+4. 一個非常簡單的 HTTP server。
 
 乍看可能會覺得練習的份量多了點，但其實每一個練習都很簡單。
 
@@ -267,14 +266,31 @@ go: no module dependencies to download
 
 在此頁面搜尋字串 "demo01"，應該就能找到剛才加入的註解。
 
-## 剖析命令列參數 {#cli-flags}
-
-*(TODO)*
-
 ## 簡單的 HTTP server {#http-server}
 
-*(TODO)*
+Go 標準函式庫的 `http` 套件提供了開發 web client 和 web server 的相關功能。底下是一個簡單的 HTTP server。
 
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
+func hello(w http.ResponseWriter, req *http.Request) {
+	fmt.Fprintf(w, "Hello world!\n")
+}
+
+func main() {
+	http.HandleFunc("/hello", hello)
+	http.ListenAndServe(":8090", nil)
+}
+```
+
+使用 `go run .` 命令執行此程式，便可啟動一個 HTTP server，監聽的 port 是 8090。
+
+接著開啟瀏覽器測試看看，在網址列輸入 `http://localhost:8090/hello`，應該能在網頁上看到 "Hello world!"。這是因為程式已經預先指定路徑 `/hello` 的 HTTP 請求將會指派給 `hello` 函式處理。
 
 ## Summary
 
@@ -284,6 +300,7 @@ go: no module dependencies to download
 - 如何宣告變數和賦值。
 - 使用 `go build` 來建置應用程式。
 - 撰寫和運行單元測試。
+- 一個極陽春的 HTTP server。
 
 以下回顧幾個重點觀念：
 
