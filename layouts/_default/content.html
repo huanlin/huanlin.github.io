@@ -11,8 +11,13 @@
 		{{ end -}}
 	</header>
 	{{ .Content }}
-	<br />
-	{{ partial "page-meta-lastmod.html" . }}
+	<br /><i class="fa-regular fa-comment"></i> <em>先這樣，也許有空時會再更新。</em> &nbsp;
+	<em>我的其他站點： </em>
+	    <a href="https://www.facebook.com/huanlin.notes" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a> &nbsp;&nbsp;
+		<a href="https://www.huanlintalk.com/" target="_blank"><i class="fa-brands fa-blogger-b fa-lg" style="color: #e48125;"></i></a> &nbsp;&nbsp;
+		<a href="https://leanpub.com/u/michaeltsai" target="_blank"><i class="fa-brands fa-leanpub fa-lg" style="color: #1d1e20;"></i></a>
+	<br /><br />
+	{{ partial "page-meta-lastmod.html" . }} 
     <br />
 	{{ partial "feedback.html" . -}}
 	

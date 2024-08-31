@@ -3,7 +3,9 @@ title: 00 Learning resources
 tags: [Go]
 ---
 
-Some recommended resources about learning Go programming.
+整理一些學習 Go 程式設計的資源，主要是網站和書籍。
+
+之所以把參考資源放在整本筆記的最前面，是因為：我的筆記可能很簡略、粗糙，甚至可能有寫錯的地方。換言之，比起閱讀我的筆記，我更建議初學者先參考其他更完整或者更權威的學習材料。
 
 ## Free resources
 
@@ -37,3 +39,4 @@ Some recommended resources about learning Go programming.
 ## Courses
 
 從缺，因為我沒有購買線上課程。
+
