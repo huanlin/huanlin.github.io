@@ -4,7 +4,7 @@ Rob Pike 說：
 
 又說：
 
-"Don’t design with interfaces, discover them."
+"Don't design with interfaces, discover them."
 
 後面這句可能更需要我們留意。
 
