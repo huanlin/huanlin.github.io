@@ -1,8 +1,9 @@
 ---
 title: 03 命令列應用程式
 tags: [Go]
-draft: true
 ---
+
+> **未完成，先別看！**
 
 ## 使用 os.Args 取得命令列參數 {#os-args}
 
@@ -95,8 +96,6 @@ enabled = true
 path = /usr/local # another comment
 ```
 
-### 使用環境變數來保存組態 {#config-via-env-vars}
+## 使用環境變數來保存組態 {#config-via-env-vars}
 
-
-## Working with web servers {#web-servers}
-
+*(TODO)*

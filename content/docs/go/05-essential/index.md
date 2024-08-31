@@ -82,9 +82,7 @@ if (err != nil) {
 
 ## If with a short statement {#if-with-statement}
 
-Like `for` 迴圈, the `if` statement can start with a short statement to execute before the condition.
-
-Variables declared by the statement are only in scope until the end of the `if`.
+類似 `for` 迴圈，`if` 敘述也可以先有一個短敘述（short statement），然後才跟著判斷式。
 
 範例：
 
@@ -98,6 +96,8 @@ func pow(x, n, lim float64) float64 {
 ```
 
 第 2 行的意思是先把 `math.Pow()` 的結果指派給變數 `v`，然後判斷 `v` 是否小於 `lim`。
+
+注意：由 `if` 的短敘述所宣告的變數只活在 `if` 區塊內。
 
 ## 取得物件或變數的型別 {#get-type}
 
