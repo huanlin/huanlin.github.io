@@ -268,7 +268,7 @@ go: no module dependencies to download
 
 ## 簡單的 HTTP server {#http-server}
 
-Go 標準函式庫的 `http` 套件提供了開發 web client 和 web server 的相關功能。底下是一個簡單的 HTTP server。
+Go 標準函式庫的 `http` 套件提供了開發 web client 和 web server 的相關功能。底下是一個簡單的 HTTP server 範例程式。
 
 ```go
 package main
@@ -288,9 +288,9 @@ func main() {
 }
 ```
 
-使用 `go run .` 命令執行此程式，便可啟動一個 HTTP server，監聽的 port 是 8090。
+在此程式檔案的所在目錄下使用 `go run .` 命令來執行此程式，便可啟動一個 HTTP server，監聽的 port 是 8090。
 
-接著開啟瀏覽器測試看看，在網址列輸入 `http://localhost:8090/hello`，應該能在網頁上看到 "Hello world!"。這是因為程式已經預先指定路徑 `/hello` 的 HTTP 請求將會指派給 `hello` 函式處理。
+接著開啟瀏覽器測試看看，在網址列輸入 `http://localhost:8090/hello`，應該能在網頁上看到 "Hello world!"。這是因為程式中使用了 `http.HandleFunc()` 函式來指定路徑 `/hello` 的 HTTP 請求要指派給 `hello` 函式處理。
 
 ## Summary
 
