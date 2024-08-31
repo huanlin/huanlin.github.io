@@ -1,5 +1,5 @@
 ---
 title: Golang
 linkTitle: Go
-weight: 20
+weight: 30
 ---
