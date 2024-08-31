@@ -37,6 +37,10 @@ Go 的優點與強項：
 
 請參閱官方文件：[Download and install](https://go.dev/doc/install)
 
+安裝完成後，開啟命令列視窗，執行 `go version` 命令查看版本。
+
+> 撰寫本文時，我安裝的 Go 版本是 v1.23.0。
+
 ### IDE
 
 比較常聽到建議使用的 IDE：
