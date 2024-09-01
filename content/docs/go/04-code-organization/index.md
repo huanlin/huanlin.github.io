@@ -26,7 +26,7 @@ tags: [Go]
 
 至於不同的 package 之間要如何開放或隱藏某些資源或服務，請看下一節的說明。
 
-## Scope
+### Scope
 
 程式裡面的識別字（identifiers），像是變數、函式、型別等等，依照它們宣告時的所在位置和寫法，分為三種可見範圍：
 
@@ -61,6 +61,35 @@ func createConfig() { // 僅相同 package 的程式碼可以存取。
 這是因為，同一套件裡面的任何東西只要沒有被 `{...}` 包起來，在同一個套件範圍內都是共享的。這是 Go 語言賦予 package 的特性和規則。
 
 > 也許有人會覺得這是 Go 語言的一個限制或缺點，但從另一個角度來看，寫程式的時候不用老是費心去考慮某些變數或函式到底要隱藏到什麼程度，也能讓事情變得簡單一點。
+
+### Variable shadowing
+
+以下範例程式可以編譯和執行，但寫法容易令人 confuse：
+
+```go
+var case1 bool = true
+var sum int = 100
+
+func main() {
+    if case1 {
+        sum := add(5, 5) // 區域變數
+        fmt.Println(sum)
+    } else {
+        m := add(10, 10) // 區域變數
+        fmt.Println(sum)
+    }
+
+    fmt.Println(sum) // 使用全域變數
+}
+
+func add(x, y int) int {
+    return x + y
+}
+```
+
+程式中有幾處 `sum` 變數，有的是全域變數，有的是區域變數。雖然能通過編譯，但人眼容易誤讀，因為 `:=` 運算子可以同時宣告變數且賦值，使其左側的變數成為區域變數。如果使用 `=` 運算子，則會使用先前宣告過的變數，在此範例便是全域的 `sum`。
+
+參見：[100 Go Mistakes and How to Avoid Them][100-mistakes] 的第 1 條：Unintended variable shadowing。
 
 ## Modules
 
