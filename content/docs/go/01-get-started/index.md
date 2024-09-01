@@ -26,7 +26,7 @@ Go 的優點與強項：
 - 很適合開發 CLI 和伺服器端應用程式。
 - 函式可回傳多個值。於是，函式可以輕易回傳錯誤，故也就不需要 throw exceptions 了。就如 Rob Pike 於 2015 年發表的文章所說，[errors are values](https://go.dev/blog/errors-are-values)。直到現在（2024 年）依然如此。
 - Concurrency。非同步呼叫的語法非常簡單直觀，跟循序呼叫的語法幾乎一樣。
-- 單元測試在 Go 語言中是一級公民：測試程式的檔案名稱一律命名為 *欲測試之程式檔名*_test.go，而且兩個檔案要放在同一個目錄下。例如 hello.go 的測試程式會叫做 hello_test.go。
+- 單元測試在 Go 語言中是一級公民：測試程式的檔案名稱一律命名為「*欲測試之程式檔名*`_test`.go」，而且兩個檔案要放在同一個目錄下。例如 hello.go 的測試程式會叫做 hello_test.go。
 - 標準函式庫提供了常用的工具套件，包括網路通訊、HTTP、序列化、加解密等等。
 
 > 如果需要開發跨平台的 GUI 應用程式，可以試試開源專案 [Wails](https://wails.io/)。
