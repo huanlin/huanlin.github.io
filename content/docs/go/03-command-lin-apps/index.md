@@ -3,7 +3,7 @@ title: 03 命令列應用程式
 tags: [Go]
 ---
 
-> **未完成，先別看！**
+> **這篇筆記還沒寫完，先別看！**
 
 ## 使用 os.Args 取得命令列參數 {#os-args}
 
@@ -16,7 +16,7 @@ Go 標準函式庫的 `os` 套件有一個公開變數 `Args` 可用來取得應
 範例：
 
 ```go
-ackage main
+package main
 
 import (
     "fmt"
@@ -43,7 +43,7 @@ func main() {
 }
 ```
 
-## 剖析命令列參數 {#command-line-flags}
+## 剖析命令列參數與選項 {#command-line-flags}
 
 Go 標準函式庫中的命令列參數和選項的處理方式是基於 Plan 9 作業系統，這與現今廣泛使用的 GNU/Linux 和 BSD (Berkeley Software Distribution) 的系統（如 Mac OS X 和 FreeBSD）有所不同。
 
