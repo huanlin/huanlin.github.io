@@ -107,9 +107,9 @@ case int:
 
 參閱 A Tour of Go: [Type assertions](https://go.dev/tour/methods/15)
 
-## `defer` 關鍵字 {#defer}
+## Defer 陳述句 {#defer}
 
-Go 的 `defer` 關鍵字可用來將函式的執行時機延後至包覆函式返回之前才執行，常用於清理資源（例如確保關閉資料庫連線）。
+Go 的 `defer` 關鍵字可用來將一個函式呼叫的執行時機延後至包覆函式（surrounding function）結束之前才執行，常用於清理資源（例如確保關閉資料庫連線）。
 
 範例：
 
@@ -166,6 +166,8 @@ func main() {
 2
 1
 ```
+
+另外要注意的是，延後執行的時機除了函式正常返回，還有一種情況：goroutine 發生了執行時期的 panics。相關細節與注意事項可參閱官方文件：[Defer statements](https://go.dev/ref/spec#Defer_statements)。
 
 
 [100-mistakes]: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
