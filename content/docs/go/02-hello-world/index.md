@@ -292,6 +292,19 @@ func main() {
 
 接著開啟瀏覽器測試看看，在網址列輸入 `http://localhost:8090/hello`，應該能在網頁上看到 "Hello world!"。這是因為程式中使用了 `http.HandleFunc()` 函式來指定路徑 `/hello` 的 HTTP 請求要指派給 `hello` 函式處理。
 
+### Factored import
+
+此範例的 `import` 敘述採用了所謂的「**factored**`」 import 寫法，也就是以圓形括弧包住所有需要引用的套件。引用多個套件十，一般的慣例是先寫標準函式庫的套件，然後是其他非標準函式庫的套件。例如：
+
+```go
+import (
+    "fmt"
+    "net/http"
+ 
+    "golang.org/x/net/html"
+)
+```
+
 ## Summary
 
 前面幾個練習涵蓋了下列議題：
