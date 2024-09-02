@@ -274,17 +274,17 @@ Go 標準函式庫的 `http` 套件提供了開發 web client 和 web server 的
 package main
 
 import (
-	"fmt"
-	"net/http"
+    "fmt"
+    "net/http"
 )
 
 func hello(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "Hello world!\n")
+    fmt.Fprintf(w, "Hello world!\n")
 }
 
 func main() {
-	http.HandleFunc("/hello", hello)
-	http.ListenAndServe(":8090", nil)
+    http.HandleFunc("/hello", hello)
+    http.ListenAndServe(":8090", nil)
 }
 ```
 
@@ -300,7 +300,7 @@ func main() {
 import (
     "fmt"
     "net/http"
- 
+
     "golang.org/x/net/html"
 )
 ```

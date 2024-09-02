@@ -1,8 +1,14 @@
 ---
-title: 結構
+title: 06 結構
 tags: [Go]
-draft: true
 ---
+
+Go 的設計者對物件導向程式設計（object-oriented programming）的看法跟一般認知的 OOP 不大相同。
+
+Go 沒有類別和繼承機制，但是有結構（struct），而且：
+
+- 我們可以將任何函式附加（attach）至**同一個 package 中**的任何具象型別。換言之，如果函式和型別隸屬不同 package，那就不行。比如說，我們不能函式附加至 Go 標準函式庫的 `time.Duration`。
+- 型別能夠隱含地實作介面（無需明白宣告欲實作哪個介面）。
 
 ## 範例一：宣告一個結構型別 {#ex1}
 
@@ -28,7 +34,7 @@ func main() {
 **注意：**
 
 - 給 `age` 成員賦值的時候，最後的逗號不可省略，否則編譯器會視為語法錯誤。這是 Go 設計者貼心的地方。
-- 這裡的結構型別 `Person` 是以英文大寫開頭，表示可以公開給其他套件使用。
+- 這裡的結構型別 `Person` 是以英文大寫開頭，表示可以公開給其他套件使用。如果要限定同一套件才能使用，則名稱必須改為小寫開頭的 `person`。
 
 如果使用 `new` 來建立結構，會得到一個指向結構的指標；而使用 `&` 運算子也同樣會得到指向結構的指標。參考下範例所示：
 
@@ -232,7 +238,3 @@ func main() {
 ```json
 {"animal_name":"cat","scientific_name":"Felis catus","animal_average_weight":10.5}
 ```
-
-## References
-
-- Go in Practice, Second Edition
