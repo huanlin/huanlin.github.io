@@ -30,6 +30,20 @@ Go 應用程式是由多個 packages 組成，而一個 **package** 是一個或
 
 至於不同的 package 之間要如何開放或隱藏某些資源或服務，請看下一節的說明。
 
+### Package 的命名 {#package-names}
+
+好的套件名稱應簡潔明白，通常是名詞，而且全都是用英文小寫。注意不可以用底線（snake case）或大小寫混和（mixedCaps）。
+
+範例：
+
+- `list`
+- `http`
+- `strconv` （兩個單字的縮寫組合: string conversion）
+- `syscall` （兩個單字的縮寫組合：system call）
+- `fmt` （format 的縮寫）
+
+詳見 Go 官方部落格：[Package names](https://go.dev/blog/package-names)。
+
 ### Scope
 
 程式裡面的識別字（identifiers），像是變數、函式、型別等等，依照它們宣告時的所在位置和寫法，分為三種可見範圍：
