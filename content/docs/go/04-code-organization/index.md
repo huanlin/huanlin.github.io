@@ -97,9 +97,9 @@ func add(x, y int) int {
 
 ## Modules
 
-一個 Go 專案通常只包含一個模組（**module**），亦可能包含多個 modules。每個 module 是由一個或多個 packages 所組成，而且會放在 repository 的根目錄，其名稱通常是以該專案的 repository 名稱來命名。模組的根目錄之下需要一個 `go.mod` 檔案來設定專案的基本資訊（名稱、版本）以及管理它所依賴的外部模組。
+一個 Go 專案通常只包含一個模組（**module**），亦可能包含多個 modules，而每個 module 是由一個或多個 packages 所組成。
 
-簡單來說，一個 **module** 通常代表一個應用程式專案。
+專案的主模組會放在 repository 的根目錄，其名稱通常會跟專案的 repository 名稱相同。模組的根目錄之下需要一個 `go.mod` 檔案來設定專案的基本資訊（名稱、版本）以及管理它所依賴的外部模組。簡單來說，一個 module 通常代表一個應用程式專案。
 
 > A repository contains one or more modules. A **module** is a collection of related Go packages that are released together. A Go repository typically contains only one module, located at the root of the repository.
 >
