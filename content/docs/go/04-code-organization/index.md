@@ -30,7 +30,7 @@ Go 應用程式是由多個 packages 組成，而一個 **package** 是一個或
 
 至於不同的 package 之間要如何開放或隱藏某些資源或服務，請看下一節的說明。
 
-### Package 的命名 {#package-names}
+### Package 名稱 {#package-names}
 
 好的套件名稱應簡潔明白，通常是名詞，而且全都是用英文小寫。注意不可以用底線（snake case）或大小寫混和（mixedCaps）。
 
@@ -187,6 +187,10 @@ module example.com/mymodule/v2
 
 - [Go Modules Reference](https://go.dev/ref/mod)
 - [go.mod file reference](https://go.dev/doc/modules/gomod-ref)
+
+## Project layout
+
+GitHub 平台上面有一個用來展示 Go 專案結構的 repository 可以參考：[project-layout](https://github.com/golang-standards/project-layout)。
 
 ## Summary
 
