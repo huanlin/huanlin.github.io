@@ -5,7 +5,11 @@ tags: [Go]
 
 ## Packages
 
-一個 package 是一個或多個 .go 程式檔案所組成；這些程式檔案會放在同一個資料夾底下，而這個資料夾的名稱通常會跟 package 名稱一樣。
+Go 應用程式是由多個 packages 組成，而一個 **package** 是一個或多個 .go 程式檔案所組成；這些程式檔案會放在同一個資料夾底下，而這個資料夾的名稱通常會跟 package 名稱一樣。
+
+> A **package** is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package.
+>
+> Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
 
 換言之，package 一個邏輯切割單位，讓不同用途的程式碼之間得以適度隔離。
 
@@ -93,9 +97,13 @@ func add(x, y int) int {
 
 ## Modules
 
-每一個 project 都應該建立一個 `go.mod` 檔案來設定專案的基本資訊（名稱、版本）以及管理它所依賴的外部模組。
+一個 Go 專案通常只包含一個模組（**module**），亦可能包含多個 modules。每個 module 是由一個或多個 packages 所組成，而且會放在 repository 的根目錄，其名稱通常是以該專案的 repository 名稱來命名。模組的根目錄之下需要一個 `go.mod` 檔案來設定專案的基本資訊（名稱、版本）以及管理它所依賴的外部模組。
 
-也就是說，一個 module 即代表一個應用程式專案。每個 module 是由一個或多個 packages 所組成，而且 module 名稱通常是以該專案的 Git repository 名稱來命名。
+簡單來說，一個 **module** 通常代表一個應用程式專案。
+
+> A repository contains one or more modules. A **module** is a collection of related Go packages that are released together. A Go repository typically contains only one module, located at the root of the repository.
+>
+> Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
 
 建立 `go.mod` 檔案的方式，是在專案根目錄底下執行 `go mod init` 命令。比如說，專案名稱是 `todoapp`，便可使用以下命令來建立 `go.mod` 檔案：
 
@@ -174,3 +182,9 @@ module example.com/mymodule/v2
   - Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
   - 大寫字母開頭的名稱會被 export，即可供外界使用。
   - 小寫字母開頭的名稱無法被外界存取。
+
+## References
+
+- Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
+
+[100-mistakes]: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them

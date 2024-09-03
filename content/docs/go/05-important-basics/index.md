@@ -284,6 +284,12 @@ func main() {
 
 另外要注意的是，延後執行的時機除了函式正常返回，還有一種情況：goroutine 發生了執行時期的 panics。相關細節與注意事項可參閱官方文件：[Defer statements](https://go.dev/ref/spec#Defer_statements)。
 
+## Coding style
+
+最後整理幾個 Go 程式編寫風格指南：
+
+- 官方的 [Go Style Guide](https://google.github.io/styleguide/go/guide)
+
 
 [100-mistakes]: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
 [go-in-action]: https://www.manning.com/books/go-in-action-second-edition
