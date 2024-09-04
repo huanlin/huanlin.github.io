@@ -58,6 +58,84 @@ Go 的旗標系統不允許結合多個旗標，所以它會把 `-la` 視為一�
 - [cobra](https://github.com/spf13/cobra) - 許多 Go 專案都有使用，如 Kubernetes、Hugo、和 GitHub CLI 等等。
 - [cli](https://github.com/urfave/cli) - 開源的 platform-as-a-service (PaaS) 專案 Cloud Foundry 有使用此套件。
 
+## Cobra 範例 {#cobra-example}
+
+`go.mod` 檔案內容：
+
+```text
+module github.com/huanlin/learning-go/cli-cobra
+
+go 1.23.0
+
+require github.com/spf13/cobra v1.8.1
+
+require (
+    github.com/inconshreveable/mousetrap v1.1.0 // indirect
+    github.com/spf13/pflag v1.0.5 // indirect
+)
+```
+
+主程式：
+
+```go
+package main
+
+import (
+    "fmt"
+
+    "github.com/spf13/cobra"
+)
+
+var helloCommand *cobra.Command
+
+func init() {
+    helloCommand = &cobra.Command{
+        Use:   "cli-cobra",
+        Short: "Print hello world",
+        Run:   sayHello,
+    }
+    helloCommand.Flags().StringP("name", "n", "World", "要跟誰說 hello。")
+    helloCommand.MarkFlagRequired("name")
+    helloCommand.Flags().StringP("language", "l", "en", "用哪一種語言說 hello。")
+}
+
+func sayHello(cmd *cobra.Command, args []string) {
+    name, _ := cmd.Flags().GetString("name")
+    greeting := "Hello"
+    language, _ := cmd.Flags().GetString("language")
+    switch language {
+    case "en":
+        greeting = "Hello"
+    case "es":
+        greeting = "Hola"
+    case "fr":
+        greeting = "Bonjour"
+    case "zh":
+        greeting = "哈囉"
+    }
+    fmt.Printf("%s %s!\n", greeting, name)
+}
+
+func main() {
+    helloCommand.Execute()
+}
+```
+
+執行 `go build` 命令來建置應用程式。
+
+以下是執行程式時不帶任何命令列參數的輸出結果：
+
+```console
+Error: required flag(s) "name" not set
+Usage:
+  hello [flags]
+
+Flags:
+  -h, --help              help for hello
+  -l, --language string   用哪一種語言說 hello。 (default "en")
+  -n, --name string       要跟誰說 hello。 (default "World")
+```
+
 ## 應用程式的組態 {#app-config}
 
 - **問題**：
