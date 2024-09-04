@@ -11,7 +11,7 @@ Go 應用程式是由多個 packages 組成，而一個 **package** 是一個或
 >
 > Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
 
-換言之，package 一個邏輯切割單位，讓不同用途的程式碼之間得以適度隔離。
+換言之，package 是一個邏輯切割單位，讓不同用途的程式碼之間得以適度隔離。
 
 範例：
 
@@ -28,7 +28,7 @@ Go 應用程式是由多個 packages 組成，而一個 **package** 是一個或
 - 可執行套件：套件名稱一定是 `main`，而且不能被其他套件引用。
 - 函式庫套件：套件名稱不是 `main` 的都是函式庫套件，可供其他套件引用。
 
-至於不同的 package 之間要如何開放或隱藏某些資源或服務，請看下一節的說明。
+至於不同的 package 之間要如何開放或隱藏某些資源或服務，稍後會再說明。
 
 ### Package 名稱 {#package-names}
 
@@ -135,18 +135,18 @@ module todoapp
 go 1.23.0
 ```
 
-如果這個專案的原始碼是放在 GitHub 平台上的一個名為 "learning-go" 的 repository，那麼剛才的 `go mod init` 指令會這麼寫：
+如果這個專案的原始碼是放在 GitHub 平台上的 repository，那麼剛才的 `go mod init` 指令會這麼寫：
 
 ```text
-mkdir todoapp
-cd todoapp
-go mod init github.com/todoapp
+go mod init github.com/michael/todoapp
 ```
+
+其中的 `michael` 是 GitHub 使用者帳戶。
 
 上述命令同樣只是在當前目錄建立一個 `go.mod` 檔案，內容會變成：
 
 ```text
-module github.com/todoapp
+module github.com/michael/todoapp
 
 go 1.23.0
 ```

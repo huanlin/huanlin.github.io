@@ -62,7 +62,8 @@ encrypt.EncryptSHA()  // DON'T
 
 ## 更多風格指南 {#more-guides}
 
-- 官方文件：[Go Style Guide](https://google.github.io/styleguide/go/guide)
+- 官方文件：[Go Style Decisions](https://google.github.io/styleguide/go/decisions)
+- 官方文件：[Go Style Best practices](https://google.github.io/styleguide/go/best-practices)
 - Uber Go Style guide
   - [英文版](https://github.com/uber-go/guide/blob/master/style.md)
   - [繁體中文版](https://github.com/ianchen0119/uber_go_guide_tw)

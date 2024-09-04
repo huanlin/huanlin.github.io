@@ -122,9 +122,13 @@ func main() {
 }
 ```
 
-像 `func (a Animal) speak() string {` 這樣的寫法稱為 "**a method with a receiver**"。說它是個「方法」，以便和結構中的「函式」區別。
+像 `func (a Animal) speak() string {` 這樣的寫法稱為 "**a method with a receiver**"。事實上，「**方法**」（method）這個名詞在 Go 語言中是有正式定義的：
 
-值得一提的是，每次呼叫 `a.speak()` 時，傳入 `speak()` 函式的 `a` 參數都是另一個新副本。如果想要讓 `speak()` 函式中修改原始傳入的 `a` 結構的內容，就要宣告成指標，像這樣：
+**A method is a function with a receiver.**
+
+> 參見 The Go Programming Language Specification: [Method declarations](https://go.dev/ref/spec#Method_declarations)。
+
+值得一提的是，每次呼叫 `a.speak()` 時，傳入 `speak()` 方法的 `a` 參數都是另一個新副本。如果想要讓 `speak()` 方法中修改原始傳入的 `a` 結構的內容，就要宣告成指標，像這樣：
 
 ```go
 func (a *Animal) speak() string {
