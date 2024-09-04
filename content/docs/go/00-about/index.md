@@ -29,7 +29,7 @@ tags: [Go]
 
 | Title                                                              | Level | Remark                                 |
 | ------------------------------------------------------------------ | ----- | -------------------------------------- |
-| [使用 Golang 打造 Web 應用程式](https://willh.gitbook.io/build-web-application-with-golang-zhtw) by 保哥 | 入門至實戰 | 最後一次更新似乎是 2021 年，仍有許多入門和通用知識值得參考。 | 
+| [使用 Golang 打造 Web 應用程式](https://willh.gitbook.io/build-web-application-with-golang-zhtw) by 保哥 | 入門至實戰 | 最後一次更新似乎是 2021 年，仍有許多入門和通用知識值得參考。 |
 | [A Tour of Go](https://go.dev/tour/)                               | 入門  | 一小塊接著一小塊的學習方式，容易消化。 |
 | [Go by Example](https://gobyexample.com/)                          | 入門  | 有許多範例，每個範例都有解說。         |
 | [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) | 入門  | 以撰寫測試來學習 Go 語言。（我覺得是很棒的學習方式） |
@@ -56,3 +56,11 @@ tags: [Go]
 
 從缺，因為我沒有購買線上課程。
 
+## 版本歷史
+
+以下表格是我這份 Go 學習筆記的修改歷史的摘要。
+
+| 日期        | 更新了什麼                                                 |
+|------------|-----------------------------------------------------------|
+| 2024-09-02 | 增加〈雜七雜八但是重要〉、〈結構〉。 |
+| 2024-08-31 | 初次發布：關於這個筆記、Get started、Hello world、命令列應用程式、Code organization。 |
