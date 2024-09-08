@@ -4,13 +4,104 @@ tags: [Go]
 draft: true
 ---
 
+## 隱含的介面實作 {#implicit-interfaces}
+
+Go 的介面跟其他程式語言的介面都是用來定義共同行為，但是在 Go 語言中，介面的實作是隱含的、由編譯器自動識別的，亦即無須明白宣告某個型別實作了那些介面。也因為這個緣故，撰寫 Go 程式的時候大多是先寫具象（concrete）型別的程式碼，而不是預先定義介面。
+
+### 先實作具象型別 {#concrete-first}
+
+以下範例摘自《Go by Example》第 2 章：
+
+```go
+type slackNotifier struct {           
+    apiKey  string
+    channel string
+    // ..other fields
+}
+
+func (s *slackNotifier) notify(msg string) {   
+    fmt.Println("slack:", msg)
+}
+
+func (s *slackNotifier) disconnect() {
+    fmt.Println("slack: disconnecting")
+}
+
+type smsNotifier struct {
+    gatewayIP string
+    // ..other fields
+}
+
+func (s *smsNotifier) notify(msg string) {       
+    fmt.Println("sms:", msg)
+}
+```
+
+`slackNotifier` 和 `smsNotifier` 都是具象型別，分別代表兩種通知方式。
+
+- `slackNotifier` 結構有兩個方法：`notify` 和 `disconnect`。
+- `smsNotifier` 結構只有一個方法：`notify`。
+
+於是，我們發現這兩個結構有一個共同點：它們的 `notify` 方法長得一模一樣。
+
+### 發現介面 {#discover-interface}
+
+發現具象型別的共同行為之後，便可以為這個行為定義一個介面。在前面的範例中，兩個結構的共同點是 `notify` 方法，故我們可以為它定義一個叫做 `notifier` 的介面：
+
+```go
+type notifier interface {
+    notify(message string)   
+}
+```
+
+然後實作此介面的方法：
+
+```go
+func notify(s *server, n notifier) {   
+    if !s.slow() {
+        return
+    }
+    msg := fmt.Sprintf(
+        "%s server is slow: %s",       
+        s.url, s.responseTime,
+    )
+    n.notify(msg)               
+}
+```
+
+### 使用介面 {#wiring-up}
+
+```go
+func main() {
+    authServer := &server {
+        url: "auth",
+        responseTime: time.Minute
+    }
+    slack := &slackNotifier { /* Slack specific configuration */ }
+    sms   := &smsNotifier   { /* SMS specific configuration   */ }
+
+    notify(authServer, slack)
+    notify(authServer, sms)
+}
+```
+
+程式執行結果：
+
+```text
+$ go run .
+slack: auth server is slow: 1m0s
+sms: auth server is slow: 1m0s
+```
+
+**延伸閱讀：** [Go Data Structures: Interfaces](https://research.swtch.com/interfaces)
+
 ## 小心誤用介面 {#interface-pollution}
 
-Go 語言的介面在設計上跟許多物件導向程式語言的介面用法有很大的不同，可能是這個原因，使得介面經常被誤用或濫用。
+Go 語言的介面在設計上跟許多物件導向程式語言的介面不大相同，可能是這個原因，使得介面經常被誤用或濫用。
 
 Rob Pike（Go 語言的其中一名主要開發者）曾說過：
 
-> Don’t design with interfaces, discover them.
+> Don't design with interfaces, discover them.
 
 意思是，只有當我們發現這裡或那裡需要一個介面會比較好的時候，才去定義介面。這可以避免我們太早傷腦筋去設計「想像中的」介面，也能避免過度設計。
 
