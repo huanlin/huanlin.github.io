@@ -138,6 +138,13 @@ func (a *Animal) speak() string {
 
 這裡只需要修改一行程式碼而已，其他地方不變。
 
+**重點整理：**
+
+- 方法（methods）是帶有一個 *receiver* 的函式，而 receiver 是寫在函式名稱前面的一個特殊參數，該參數的型別則表明了這是哪個型別的方法。
+- Receiver 有兩種：pointer receiver 和 value receiver。前者可以修改傳入物件的內容，後者不行。
+
+> 熟悉物件導向程式語言的人可以把 receiver 參數理解為 `this` 或 `self`，即「當前的物件本身」。
+
 ## 範例五：結構成員可以匿名 {#nameless-field}
 
 ```go
