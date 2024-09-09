@@ -5,8 +5,9 @@ tags: [Go]
 
 ## Packages
 
-Go 應用程式是由多個 packages 組成，而一個 **package** 是一個或多個 .go 程式檔案所組成；這些程式檔案會放在同一個資料夾底下，而這個資料夾的名稱通常會跟 package 名稱一樣。
+Go 應用程式是由多個 packages 組成，一個 **package** 在檔案系統中就是一個資料夾，該資料夾底下的 .go 程式檔案必然隸屬同一個 package（否則無法通過編譯）。
 
+> [!quote]
 > A **package** is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package.
 >
 > Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
@@ -16,12 +17,26 @@ Go 應用程式是由多個 packages 組成，而一個 **package** 是一個或
 範例：
 
 ```text
-.                -> 專案的根目錄
-├── go.mod       -> 定義專案的名稱和 dependencies
-├── hello.go     -> 實作 package main
-└── cart         -> 用來放 cart 套件的程式碼
-    └── cart.go  -> 實作 cart 套件
+.                           -> 專案的根目錄
+├─ go.mod                   -> 定義專案的名稱和 dependencies
+├─ hello.go                 -> 實作 package main
+└─ auth/                    -> auth 套件
+    ├─ auth.go              -> auth 相關功能的實作
+    ├─ auth_test            -> auth 相關功能的測試
+    └─ token/               -> token 套件
+        ├─ token.go         -> token 相關功能的實作
+        └─ token_test.go    -> token 相關功能的測試
 ```
+
+Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 裡面可能會宣告套件名稱為 `authentication`：
+
+```go
+package authentication
+
+....
+```
+
+那樣的話，`auth_test.go` 的套件名稱也必須是 `authentication`，因為同一個資料夾底下的 .go 檔案必須隸屬同一個套件。
 
 另外要知道的是，Go 的 package 有兩種：
 
@@ -32,7 +47,7 @@ Go 應用程式是由多個 packages 組成，而一個 **package** 是一個或
 
 ### Package 名稱 {#package-names}
 
-好的套件名稱應簡潔明白，通常是名詞，而且全都是用英文小寫。注意不可以用底線（snake case）或大小寫混和（mixedCaps）。
+<mark>套件名稱應簡潔明白，通常是名詞，而且全都是用英文小寫。注意不可以用底線（snake case）或大小寫混和（mixedCaps）。</mark>
 
 範例：
 
@@ -78,6 +93,7 @@ func createConfig() { // 僅相同 package 的程式碼可以存取。
 
 這是因為，同一套件裡面的任何東西只要沒有被 `{...}` 包起來，在同一個套件範圍內都是共享的。這是 Go 語言賦予 package 的特性和規則。
 
+> [!note]
 > 也許有人會覺得這是 Go 語言的一個限制或缺點，但從另一個角度來看，寫程式的時候不用老是費心去考慮某些變數或函式到底要隱藏到什麼程度，也能讓事情變得簡單一點。
 
 ### Variable shadowing
@@ -151,6 +167,30 @@ module github.com/michael/todoapp
 
 go 1.23.0
 ```
+
+其中的 `github.com/michael/todoapp` 可以只是單純的邏輯路徑，亦即實際的檔案系統中不需要真的有這樣的路徑。比如說，它的 go.mod 檔案可能是建立於 `/work/app/` 目錄下：
+
+```text
+/work/app/          -> 專案的根目錄
+  ├─ go.mod         -> 定義專案的名稱和 dependencies
+  ├─ main.go        -> 主程式套件
+  └─ auth/          -> auth 套件
+      ├─ auth.go    -> auth 相關功能的實作
+      ├─ auth_test  -> auth 相關功能的測試
+```
+
+當 `main.go` 要引用（import）`auth` 套件時，它的 `import` 陳述句會像這樣：
+
+```go
+package main
+
+import (
+    "fmt"
+    "github.com/michael/todoapp/auth"
+)
+```
+
+也就是說，在引用 local folder 的套件時，`import` 的完整路徑名稱會是 `<module path>/<package path>`。此例的 module path 是 `github.com/michael/todoapp/`，而 package path 是 `auth`。
 
 ### Module paths
 
