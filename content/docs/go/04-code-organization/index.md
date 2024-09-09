@@ -199,7 +199,7 @@ import (
 模組路徑通常包含三個部分：
 
 - repository root path
-- repository 中的目錄
+- repository 中的目錄名
 - 主要的版本編號（只有在主要版本編號為 2 或更高的版本才需要）
 
 範例：
