@@ -2,9 +2,9 @@
   Source: https://github.com/HEIGE-PCloud/DoIt/blob/main/assets/css/_partial/_single/_admonition.scss
   Modified by Michael Tsai (2023-8-6), to make it similar to MkDocs Material's admonitions.
 
-  All related files: 
+  All related files:
     /assets/scss/_admonition_variables.scss
-    /assets/scss/_admonition.scss 
+    /assets/scss/_admonition.scss
     /layouts/shortcodes/admonition.html
 */
 .admonition {
@@ -50,6 +50,9 @@
     padding-bottom: 0.2rem;
   }
 
+  .admonition-content code {
+    background-color: inherit;
+  }
 
   i.icon {
     font-size: 0.85rem;

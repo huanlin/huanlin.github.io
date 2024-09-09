@@ -1,0 +1,40 @@
+{{- $iconMap := dict "note" "fas fa-pencil-alt fa-fw" -}}
+{{- $iconMap  = dict "info" "fas fa-info-circle fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "tip" "fas fa-lightbulb fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "question" "fas fa-question-circle fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "warning" "fas fa-exclamation-triangle fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "caution" "fas fa-exclamation-triangle fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "important" "fa-solid fa-star fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "failure" "fas fa-times-circle fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "danger" "fas fa-skull-crossbones fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "bug" "fas fa-bug fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "example" "fas fa-list-ol fa-fw" | merge $iconMap -}}
+{{- $iconMap  = dict "quote" "fas fa-quote-right fa-fw" | merge $iconMap -}}
+{{- $iconDetails := "fas fa-angle-right fa-fw" -}}
+<!--
+  Source: https://github.com/HEIGE-PCloud/DoIt/blob/main/layouts/shortcodes/admonition.html
+  Modified by Michael Tsai (2023-8-6):
+    - Removed Open/Close icon, so it's always displayed as open.
+
+  All related files:
+    /assets/scss/_variables_project.scss
+    /assets/scss/_admonition.scss
+    /layouts/shortcodes/admonition.html
+-->
+
+{{- $type := .AlertType | default "note" -}}
+<div class="td-max-width-on-larger-screens details admonition {{ $type }}">
+    <div class="details-summary admonition-title">
+        <i class="icon {{ index $iconMap $type | default (index $iconMap "note") }}"></i>
+        {{ with .AlertTitle }}
+            {{ . }}
+        {{ else }}
+            {{ or (i18n .AlertType) (title .AlertType) }}
+        {{ end }}
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">
+            {{ .Text | safeHTML -}}
+        </div>
+    </div>
+</div>
