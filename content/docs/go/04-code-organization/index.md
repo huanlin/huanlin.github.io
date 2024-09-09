@@ -152,7 +152,7 @@ module todoapp
 go 1.23.0
 ```
 
-如果這個專案的原始碼是放在 GitHub 平台上的 repository，那麼剛才的 `go mod init` 指令會這麼寫：
+如果這個專案的原始碼是放在 GitHub 平台上的 repository，那麼剛才的 `go mod init` 指令可以這麼寫：
 
 ```text
 go mod init github.com/michael/todoapp
@@ -168,10 +168,10 @@ module github.com/michael/todoapp
 go 1.23.0
 ```
 
-其中的 `github.com/michael/todoapp` 可以只是單純的邏輯路徑，亦即實際的檔案系統中不需要真的有這樣的路徑。比如說，它的 go.mod 檔案可能是建立於 `/work/app/` 目錄下：
+其中的 `github.com/michael/todoapp` 可以只是單純的邏輯路徑，亦即實際的檔案系統中不需要真的有這樣的路徑。比如說，它的 go.mod 檔案可能是建立於 `app` 目錄下：
 
 ```text
-/work/app/          -> 專案的根目錄
+app/                -> 專案的根目錄
   ├─ go.mod         -> 定義專案的名稱和 dependencies
   ├─ main.go        -> 主程式套件
   └─ auth/          -> auth 套件
