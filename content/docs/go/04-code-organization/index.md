@@ -192,6 +192,8 @@ import (
 
 也就是說，在引用 local folder 的套件時，`import` 的完整路徑名稱會是 `<module path>/<package path>`。此例的 module path 是 `github.com/michael/todoapp/`，而 package path 是 `auth`。
 
+See also: [Golang imports tutorial](https://www.youtube.com/watch?v=Nv8J_Ruc280)
+
 ### Module paths
 
 <mark>模組路徑是模組的正式名稱（唯一識別名稱）</mark>，宣告於模組的 go.mod 檔案，而且模組路徑要能表達該模組的用途，以及可以從何處找到它。
