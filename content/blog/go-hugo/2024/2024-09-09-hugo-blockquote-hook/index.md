@@ -6,6 +6,19 @@ tags: ["Hugo"]
 
 Hugo supports [blockquote render hooks](https://gohugo.io/render-hooks/blockquotes/) since v0.132.0, which makes it easy to create beautiful alert boxes with the simple blockquote syntax. This is great because I don't need to use shortcodes for creating alert boxes anymore.
 
+Here are supported alert types:
+
+- `NOTE`
+- `TIP`
+- `WARNING`
+- `IMPORTANT`
+- `CAUTION`
+- `QUOTE`
+- `BUG`
+- `DANGER`
+
+P.S. They can be written with lowercase.
+
 ## Examples
 
 ### Note
@@ -56,6 +69,16 @@ Hugo supports [blockquote render hooks](https://gohugo.io/render-hooks/blockquot
 ```
 
 > [!CAUTION]
+> It's not who I'm underneath, but what I do, that defines me.
+
+### Quote
+
+```text
+> [!QUOTE]
+> It's not who I'm underneath, but what I do, that defines me.
+```
+
+> [!QUOTE]
 > It's not who I'm underneath, but what I do, that defines me.
 
 ## Implementation
@@ -276,6 +299,9 @@ important = 'Important'
 note = 'Note'
 tip = 'Tip'
 warning = 'Warning'
+quote = "Quote"
+bug = "Bug"
+danger = "Danger"
 ```
 
 ### Hugo configuration

@@ -115,6 +115,7 @@ func add(x, y int) int {
 
 專案的主模組會放在 repository 的根目錄，其名稱通常會跟專案的 repository 名稱相同。模組的根目錄之下需要一個 `go.mod` 檔案來設定專案的基本資訊（名稱、版本）以及管理它所依賴的外部模組。簡單來說，一個 module 通常代表一個應用程式專案。
 
+> [!quote]
 > A repository contains one or more modules. A **module** is a collection of related Go packages that are released together. A Go repository typically contains only one module, located at the root of the repository.
 >
 > Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
@@ -173,9 +174,8 @@ module example.com/mymodule
 module example.com/mymodule/v2
 ```
 
-{{% admonition type=note title="Note" %}}
-模組名稱雖然可以不包含 URL，但是帶有 URL 的模組名稱有助於找到並下載該模組，而且可以確保名稱唯一，避免跟其他模組名稱衝突或混淆。因此，建議的做法是以 URL 的寫法來指定模組名稱。
-{{% /admonition %}}
+> [!note]
+> 模組名稱雖然可以不包含 URL，但是帶有 URL 的模組名稱有助於找到並下載該模組，而且可以確保名稱唯一，避免跟其他模組名稱衝突或混淆。因此，建議的做法是以 URL 的寫法來指定模組名稱。
 
 最後整理幾個重點：
 
