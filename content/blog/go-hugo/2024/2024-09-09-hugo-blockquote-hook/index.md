@@ -100,14 +100,8 @@ P.S. They can be written with lowercase.
 {{- $iconMap  = dict "quote" "fas fa-quote-right fa-fw" | merge $iconMap -}}
 {{- $iconDetails := "fas fa-angle-right fa-fw" -}}
 <!--
-  Source: https://github.com/HEIGE-PCloud/DoIt/blob/main/layouts/shortcodes/admonition.html
-  Modified by Michael Tsai (2023-8-6):
-    - Removed Open/Close icon, so it's always displayed as open.
-
-  All related files:
-    /assets/scss/_variables_project.scss
-    /assets/scss/_admonition.scss
-    /layouts/shortcodes/admonition.html
+  Modified from https://github.com/HEIGE-PCloud/DoIt/blob/main/layouts/shortcodes/admonition.html
+  2024-09-09: Michael Tsai - Removed Open/Close icon, so it's always displayed as open.
 -->
 
 {{- $type := .AlertType | default "note" -}}
@@ -134,13 +128,8 @@ P.S. They can be written with lowercase.
 
 ```scss
 /*
-  Below is copied from DoIt theme:
+  Modified from DoIt theme:
   https://github.com/HEIGE-PCloud/DoIt/blob/main/assets/css/_variables.scss
-
-  All related files:
-    /assets/scss/_admonition_variables.scss
-    /assets/scss/_admonition.scss
-    /layouts/shortcodes/admonition.html
 */
 
 // ========== Admonition ========== //
