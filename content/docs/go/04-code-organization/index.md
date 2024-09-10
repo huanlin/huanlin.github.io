@@ -229,15 +229,21 @@ module example.com/mymodule/v2
 
 ### Download a module
 
-使用 `go get` 命令來下載模組。
+如果你的專案要使用某個外部模組，就必須先使用 `go get` 命令來把它下載至本機電腦。
 
 範例：
 
-```shell
+```text
 go get github.com/huanlin/learning-go
 ```
 
-上述命令執行時，會直接到 GitHub 主機下載我的 `learning-go` 模組。
+上述命令會直接到遠端的 GitHub 主機下載我的 `learning-go` 專案。
+
+請注意，只有當模組符合此條件時，`go get` 命令才能成功下載：<mark>模組有包含 `go.mod` 檔案，而且 `go.mod` 檔案中的模組路徑與它所在的遠端 Git repository 的路徑相同。</mark>
+
+> 除了 GitHub 之外，只要是 Git-based repositories，也都可以利用此命令來下載位於遠端主機的模組。例如：BitBucket。
+
+**See also:** [What is 'go get' command in Go](https://gosamples.dev/go-get/).
 
 #### Troubleshooting
 
@@ -263,13 +269,13 @@ module learning-go
 
 解決方法是隨意修改專案中的某個檔案，然後推送變更至 GitHub 主機，以產生一個新的 commit。接著以 `go get` 命令下載模組，並且在命令結尾處附加 @*<commit-hash>* 即可。比如說，commit hash 是 aa1ff21，那麼下載模組的命令會像這樣：
 
-```shell
+```text
 go get github.com/huanlin/learning-go@@aa1ff21
 ```
 
 或者，也可以在 GitHub 上面建立一個 Release Tag，例如：`v0.0.1-beta`，然後告訴 `go get` 命令要下載這個版本的模組：
 
-```shell
+```text
 go get github.com/huanlin/learning-go@v0.0.1-beta
 ```
 
