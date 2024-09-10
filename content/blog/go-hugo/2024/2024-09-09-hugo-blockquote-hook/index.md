@@ -14,8 +14,6 @@ Here are supported alert types:
 - `IMPORTANT`
 - `CAUTION`
 - `QUOTE`
-- `BUG`
-- `DANGER`
 
 P.S. They can be written with lowercase.
 
