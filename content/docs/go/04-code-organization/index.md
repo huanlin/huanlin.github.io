@@ -247,7 +247,7 @@ go get github.com/huanlin/learning-go
 
 #### Troubleshooting
 
-如果 `go get` 出現以下錯誤訊息：
+我曾經在使用 `go get` 命令時碰到以下錯誤訊息：
 
 ```text
 go: github.com/huanlin/learning-go@upgrade (v0.0.0-20240904141749-ce362a80bcf3)
@@ -257,13 +257,13 @@ go: github.com/huanlin/learning-go@upgrade (v0.0.0-20240904141749-ce362a80bcf3)
                 but was required as: github.com/huanlin/learning-go
 ```
 
-通常是因為這個專案的 `go.mod` 檔案中最初的模組路徑是寫成 `learning-go`：
+後來發現是因為這個專案的 `go.mod` 檔案中最初的模組路徑是寫成 `learning-go`，像這樣：
 
 ```text
 module learning-go
 ```
 
-而且就這樣推送至遠端 GitHub 主機。於是，當我們使用 `go get github.com/huanlin/learning-go` 命令欲下載該模組時，雖然 GitHub 主機上的確有這個 repository，可是 `go get` 命令發現它的 `go.mod` 檔案裡面寫的模組路徑並非 `github.com/huanlin/learning-go`，於是顯示錯誤訊息並拒絕下載。
+將檔案推送至遠端 GitHub 主機之後，如果用 `go get github.com/huanlin/learning-go` 命令來下載該模組，雖然 GitHub 主機上的確有這個 repository，可是 `go get` 命令發現該模組的 `go.mod` 檔案裡面寫的模組路徑並不是 `github.com/huanlin/learning-go`，於是顯示錯誤訊息並拒絕下載。
 
 此時若修改 `go.mod` 檔案的內容，把模組路徑改為相符的 `github.com/huanlin/learning-go`，再推送至 GitHub 主機，然後再嘗試執行一遍剛才的 `go get` 命令，結果還是會得到同樣的錯誤訊息。這是 Go 在本機電腦的模組快取機制所造成的現象。
 
