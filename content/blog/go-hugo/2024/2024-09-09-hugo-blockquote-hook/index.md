@@ -22,61 +22,61 @@ P.S. They can be written with lowercase.
 ### Note
 
 ```text
-> [!NOTE]
+> [!note]
 > This is a note.
 ```
 
-> [!NOTE]
+> [!note]
 > It's not who I'm underneath, but what I do, that defines me.
 
 ### Tip
 
 ```text
-> [!TIP]
+> [!tip]
 > It's not who I'm underneath, but what I do, that defines me.
 ```
 
-> [!TIP]
+> [!tip]
 > It's not who I'm underneath, but what I do, that defines me.
 
 ### Important
 
 ```text
-> [!IMPORTANT]
+> [!important]
 > It's not who I'm underneath, but what I do, that defines me.
 ```
 
-> [!IMPORTANT]
+> [!important]
 > It's not who I'm underneath, but what I do, that defines me.
 
 ### Warning
 
 ```text
-> [!WARNING]
+> [!warning]
 > It's not who I'm underneath, but what I do, that defines me.
 ```
 
-> [!WARNING]
+> [!warning]
 > It's not who I'm underneath, but what I do, that defines me.
 
 ### Caution
 
 ```text
-> [!CAUTION]
+> [!caution]
 > It's not who I'm underneath, but what I do, that defines me.
 ```
 
-> [!CAUTION]
+> [!caution]
 > It's not who I'm underneath, but what I do, that defines me.
 
 ### Quote
 
 ```text
-> [!QUOTE]
+> [!quote]
 > It's not who I'm underneath, but what I do, that defines me.
 ```
 
-> [!QUOTE]
+> [!quote]
 > It's not who I'm underneath, but what I do, that defines me.
 
 ## Implementation
