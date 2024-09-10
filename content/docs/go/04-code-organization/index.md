@@ -168,10 +168,10 @@ module github.com/michael/todoapp
 go 1.23.0
 ```
 
-其中的 `github.com/michael/todoapp` 可以只是單純的邏輯路徑，亦即實際的檔案系統中不需要真的有這樣的路徑。比如說，它的 go.mod 檔案可能是建立於 `app` 目錄下：
+其中的 `github.com/michael/todoapp` 即此專案儲存於 GitHub 平台上的路徑，但本機的檔案系統不需要有這樣的路徑，例如它可能存放在 D:/work/todoapp/ 目錄下，有著類似底下的目錄結構：
 
 ```text
-app/                -> 專案的根目錄
+todoapp/            -> 專案的根目錄
   ├─ go.mod         -> 定義專案的名稱和 dependencies
   ├─ main.go        -> 主程式套件
   └─ auth/          -> auth 套件
@@ -182,10 +182,7 @@ app/                -> 專案的根目錄
 當 `main.go` 要引用（import）`auth` 套件時，它的 `import` 陳述句會像這樣：
 
 ```go
-package main
-
 import (
-    "fmt"
     "github.com/michael/todoapp/auth"
 )
 ```
@@ -229,6 +226,52 @@ module example.com/mymodule/v2
 
 - [Go Modules Reference](https://go.dev/ref/mod)
 - [go.mod file reference](https://go.dev/doc/modules/gomod-ref)
+
+### Download a module
+
+使用 `go get` 命令來下載模組。
+
+範例：
+
+```shell
+go get github.com/huanlin/learning-go
+```
+
+上述命令執行時，會直接到 GitHub 主機下載我的 `learning-go` 模組。
+
+#### Troubleshooting
+
+如果 `go get` 出現以下錯誤訊息：
+
+```text
+go: github.com/huanlin/learning-go@upgrade (v0.0.0-20240904141749-ce362a80bcf3)
+    requires github.com/huanlin/learning-go@v0.0.0-20240904141749-ce362a80bcf3:
+    parsing go.mod:
+        module declares its path as: learning-go
+                but was required as: github.com/huanlin/learning-go
+```
+
+通常是因為這個專案的 `go.mod` 檔案中最初的模組路徑是寫成 `learning-go`：
+
+```text
+module learning-go
+```
+
+而且就這樣推送至遠端 GitHub 主機。於是，當我們使用 `go get github.com/huanlin/learning-go` 命令欲下載該模組時，雖然 GitHub 主機上的確有這個 repository，可是 `go get` 命令發現它的 `go.mod` 檔案裡面寫的模組路徑並非 `github.com/huanlin/learning-go`，於是顯示錯誤訊息並拒絕下載。
+
+此時若修改 `go.mod` 檔案的內容，把模組路徑改為相符的 `github.com/huanlin/learning-go`，再推送至 GitHub 主機，然後再嘗試執行一遍剛才的 `go get` 命令，結果還是會得到同樣的錯誤訊息。這是 Go 在本機電腦的模組快取機制所造成的現象。
+
+解決方法是隨意修改專案中的某個檔案，然後推送變更至 GitHub 主機，以產生一個新的 commit。接著以 `go get` 命令下載模組，並且在命令結尾處附加 @*<commit-hash>* 即可。比如說，commit hash 是 aa1ff21，那麼下載模組的命令會像這樣：
+
+```shell
+go get github.com/huanlin/learning-go@@aa1ff21
+```
+
+或者，也可以在 GitHub 上面建立一個 Release Tag，例如：`v0.0.1-beta`，然後告訴 `go get` 命令要下載這個版本的模組：
+
+```shell
+go get github.com/huanlin/learning-go@v0.0.1-beta
+```
 
 ## Project layout
 
