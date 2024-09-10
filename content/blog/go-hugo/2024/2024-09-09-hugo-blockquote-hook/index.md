@@ -178,11 +178,6 @@ $admonition-background-color-map: (
 /*
   Source: https://github.com/HEIGE-PCloud/DoIt/blob/main/assets/css/_partial/_single/_admonition.scss
   Modified by Michael Tsai (2024-09-09), to make it similar to MkDocs Material's admonitions.
-
-  All related files:
-    /assets/scss/_admonition_variables.scss
-    /assets/scss/_admonition.scss
-    /layouts/shortcodes/admonition.html
 */
 .admonition {
   position: relative;
