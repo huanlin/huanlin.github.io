@@ -339,9 +339,10 @@ github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 ...(略)
 ```
 
-參閱官方文件：[go mod tidy](https://go.dev/ref/mod#go-mod-tidy)。
+延伸閱讀：
 
-延伸閱讀：[Youtube 影片：how to import Golang local package](https://youtu.be/Nv8J_Ruc280?si=g5-SBXY1VYh5q1ko)
+- 官方文件：[go mod tidy](https://go.dev/ref/mod#go-mod-tidy)
+- Youtube 影片：[how to import Golang local package](https://youtu.be/Nv8J_Ruc280?si=g5-SBXY1VYh5q1ko) （這影片把模組路徑和 import 套件時的路徑寫法講解得很清楚）
 
 ## Project layout
 
