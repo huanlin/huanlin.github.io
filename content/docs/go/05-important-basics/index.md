@@ -43,6 +43,43 @@ num = 3.1416      // 編譯錯誤。
 num = int(3.1416) // OK! num 的數值為 3。
 ```
 
+## 取得型別資訊 {#get-type}
+
+這裡示範三種方法來取得變數的型別資訊：
+
+- 使用 fmt.Printf 的 %T 旗號。
+- 使用 reflect 套件。
+- 使用 type assertion。
+
+### 使用 fmt.Printf 的 %T 旗號 {#printf-t-flag}
+
+```go
+var count int = 42
+fmt.Printf("variable count=%v is of type %T \n", count, count)
+```
+
+### 使用 reflect 套件 {#reflect-package}
+
+使用 `reflect.TypeOf()` 方法：
+
+```go
+fmt.Printf("%v", reflect.TypeOf(10))   // int
+fmt.Printf("%v", reflect.TypeOf("Go")) // string
+```
+
+### 使用 type assertion {#type-assertion}
+
+```go
+var x interface{} = 7
+
+switch x.(type) {
+case int:
+    fmt.Println("int")
+}
+```
+
+參閱 A Tour of Go: [Type assertions](https://go.dev/tour/methods/15)
+
 ## 指標 {#pointers}
 
 Go 具備類似 C/C++ 的指標語法，但是更安全。Go 不允許指標運算，而且它有資源回收器在背後監視著每一個指標；當某一塊記憶體沒有任何指標指向它，Go 才會將那塊記憶體釋放。
@@ -166,7 +203,7 @@ if (err != nil) {
 
 此範例所要表達的是：我不在乎 `ReadFile()` 執行成功時回傳的結果，而只看它是否返回錯誤。
 
-## 流程控制
+## 基本流程控制
 
 ### for 迴圈 {#for-loop}
 
@@ -247,43 +284,6 @@ func pow(x, n, lim float64) float64 {
 第 2 行的意思是先把 `math.Pow()` 的結果指派給變數 `v`，然後判斷 `v` 是否小於 `lim`。
 
 注意：由 `if` 的短敘述所宣告的變數只活在那個 `if` 區塊內。
-
-## 取得物件或變數的型別 {#get-type}
-
-這裡示範三種方法：
-
-- 使用 fmt.Printf 的 %T 旗號。
-- 使用 reflect 套件。
-- 使用 type assertion。
-
-### 使用 fmt.Printf 的 %T 旗號 {#printf-t-flag}
-
-```go
-var count int = 42
-fmt.Printf("variable count=%v is of type %T \n", count, count)
-```
-
-### 使用 reflect 套件 {#reflect-package}
-
-使用 `reflect.TypeOf()` 方法：
-
-```go
-fmt.Printf("%v", reflect.TypeOf(10))   // int
-fmt.Printf("%v", reflect.TypeOf("Go")) // string
-```
-
-### 使用 type assertion {#type-assertion}
-
-```go
-var x interface{} = 7
-
-switch x.(type) {
-case int:
-    fmt.Println("int")
-}
-```
-
-參閱 A Tour of Go: [Type assertions](https://go.dev/tour/methods/15)
 
 ## Defer 陳述句 {#defer}
 
