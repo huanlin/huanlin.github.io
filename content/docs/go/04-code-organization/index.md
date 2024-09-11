@@ -270,13 +270,73 @@ module learning-go
 解決方法是隨意修改專案中的某個檔案，然後推送變更至 GitHub 主機，以產生一個新的 commit。接著以 `go get` 命令下載模組，並且在命令結尾處附加 @*<commit-hash>* 即可。比如說，commit hash 是 aa1ff21，那麼下載模組的命令會像這樣：
 
 ```text
-go get github.com/huanlin/learning-go@@aa1ff21
+go get github.com/huanlin/learning-go@aa1ff21
 ```
 
 或者，也可以在 GitHub 上面建立一個 Release Tag，例如：`v0.0.1-beta`，然後告訴 `go get` 命令要下載這個版本的模組：
 
 ```text
 go get github.com/huanlin/learning-go@v0.0.1-beta
+```
+
+### `go mod tidy` command
+
+`go mod tidy` 命令會找到專案的 `go.mod` 檔案，並針對模組依賴關係執行以下工作：
+
+- 刪除沒用到的模組。
+- 下載需要的模組。
+- 更新 `go.mod` 和 `go.sum` 檔案。
+
+舉例來說，假設 go.mod 檔案內容是：
+
+```text
+module github.com/huanlin/learning-go
+
+go 1.23.0
+
+require github.com/shirou/gopsutil/v4 v4.24.8
+```
+
+執行 `go mod tidy` 命令時，它會自動下載需要的套件：
+
+```console
+go: downloading github.com/shirou/gopsutil/v4 v4.24.8
+go: downloading github.com/shoenig/go-m1cpu v0.1.6
+go: downloading github.com/tklauser/go-sysconf v0.3.12
+go: downloading github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c
+
+...(略)
+```
+
+並且更新 `go.mod` 檔案：
+
+```text
+module github.com/huanlin/learning-go
+
+go 1.23.0
+
+require github.com/shirou/gopsutil/v4 v4.24.8
+
+require (
+    github.com/go-ole/go-ole v1.2.6 // indirect
+    github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0 // indirect
+    github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect
+    github.com/shoenig/go-m1cpu v0.1.6 // indirect
+    ...(略)
+)
+```
+
+可以看到 `go mod tidy` 命令自動替 `go.mod` 檔案加入了一堆間接依賴的模組。
+
+最後是 `go.sum` 檔案：
+
+```text
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/go-ole/go-ole v1.2.6 h1:/Fpf6oFPoeFik9ty7siob0G6Ke8QvQEuVcuChpwXzpY=
+github.com/go-ole/go-ole v1.2.6/go.mod h1:pprOEPIfldk/42T2oK7lQ4v4JSDwmV0As9GaiUsvbm0=
+github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
+...(略)
 ```
 
 ## Project layout
