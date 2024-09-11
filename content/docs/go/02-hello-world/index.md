@@ -101,20 +101,29 @@ func main() {
 接著，使用 `go run` 命令來執行此程式：
 
 ```shell
+cd demo01
 go run hello.go
 ```
 
 或者
 
 ```shell
+cd demo01
 go run .
 ```
 
-以上兩種寫法都行。
+或者
+
+```shell
+go run demo01/hello.go
+```
+
+以上三種寫法都行。
 
 如果要建置應用程式，則是用 `go build` 命令來將程式碼編譯成可執行檔：
 
 ```shell
+cd demo01
 go build
 ```
 
