@@ -3,9 +3,28 @@ title: 04 Code organization
 tags: [Go]
 ---
 
+## 概述 {#introduction}
+
+Go 的**模組（module）**與**套件（package）**是兩個重要觀念，因為它們決定了一個 Go 應用程式的組成結構以及依賴關係（dependencies）。
+
+一個 module 通常就是一個應用程式專案，而這個 module 裡面會有多個 packages。一個 package 在檔案系統中就是一個資料夾，而 package 資料夾裡面又可以有資料夾，於是形成 package 的命名空間（namespace）。我們可以觀察一個實際的專案來快速掌握剛才說的概念。
+
+以開源專案 gopsutil 為例，此專案的 GitHub 網址是：
+
+<https://github.com/shirou/gopsutil>
+
+首先，專案名稱 "gopsutil" 彰顯了 Go 對於模組和套件的命名建議：全部小寫的英文，而且盡量簡潔。
+
+接著要看的是此專案的根目錄底下有一個 `go.mod` 檔案，這個就是用來描述模組的檔案。根目錄底下還有一個 `go.sum` 檔案也是必須的，裡面包含該應用程式用到的所有外部模組的 checksum，但這個檔案內容會透過工具產生，不用自己編寫。
+
+
+*<TODO>*
+
+以下小節分別說明 package 和 module 的相關細節。
+
 ## Packages
 
-Go 應用程式是由多個 packages 組成，一個 **package** 在檔案系統中就是一個資料夾，該資料夾底下的 .go 程式檔案必然隸屬同一個 package（否則無法通過編譯）。
+Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中就是一個資料夾，該資料夾底下的 .go 程式檔案必然隸屬同一個 package（否則無法通過編譯）。
 
 > [!quote]
 > A **package** is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package.
