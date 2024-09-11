@@ -153,7 +153,7 @@ fmt.Println() // 輸出: 0:地 3:鼠
 
 ## Blank identifier
 
-呼叫函式時，如果某個回傳值無需處理，可以用一個 blank identifier 字元（ `_` ）來承接該回傳值。
+呼叫函式時，如果某個回傳值無需處理，可以用一個 blank identifier 字元，也就是底線（ `_` ）來承接該回傳值。
 
 範例：
 
@@ -166,7 +166,70 @@ if (err != nil) {
 
 此範例所要表達的是：我不在乎 `ReadFile()` 執行成功時回傳的結果，而只看它是否返回錯誤。
 
-## If with a short statement {#if-with-statement}
+## 流程控制
+
+### for 迴圈 {#for-loop}
+
+基本寫法：
+
+```go
+i := 1
+for i <= 3 {
+    fmt.Println(i)
+}
+
+for j := 0; j < 3; j++ {
+    fmt.Println(j)
+}
+
+for {  // 無限迴圈
+    fmt.Println("loop")
+}
+```
+
+迴圈裡面可以用 `continue` 來進行下一圈，以及用 `break` 來跳離迴圈。
+
+#### For-each range loop
+
+```go
+for i := range 3 {  // i = 0, 1, 2
+    fmt.Println("range", i)
+}
+```
+
+用於 arrays、slices、maps、channels：
+
+```go
+strings := []string{"hello", "world"}
+for i, s := range strings {
+    fmt.Println(i, s)
+}
+```
+
+執行結果：
+
+```text
+0 hello
+1 world
+```
+
+上例中，若不在乎陣列的索引值，可使用 blank identifier `_` 取代 `i`：
+
+```go
+strings := []string{"hello", "world"}
+for _, s := range strings {
+    fmt.Println(s)
+}
+```
+
+執行結果：
+
+```text
+hello
+world
+```
+
+### If with a short statement {#if-with-statement}
 
 類似 `for` 迴圈，`if` 敘述也可以先有一個短敘述（short statement），然後才跟著判斷式。
 
