@@ -279,7 +279,7 @@ go get github.com/huanlin/learning-go@aa1ff21
 go get github.com/huanlin/learning-go@v0.0.1-beta
 ```
 
-### `go mod tidy` command
+### 命令：`go mod tidy` {#go-mod-tidy}
 
 `go mod tidy` 命令會找到專案的 `go.mod` 檔案，並針對模組依賴關係執行以下工作：
 
