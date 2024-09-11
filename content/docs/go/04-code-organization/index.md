@@ -339,6 +339,8 @@ github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 ...(略)
 ```
 
+參閱官方文件：[go mod tidy](https://go.dev/ref/mod#go-mod-tidy)
+
 ## Project layout
 
 GitHub 平台上面有一個用來展示 Go 專案結構的 repository 可以參考：[project-layout](https://github.com/golang-standards/project-layout)。
