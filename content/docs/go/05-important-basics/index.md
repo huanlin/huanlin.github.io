@@ -207,7 +207,7 @@ if (err != nil) {
 
 ### for 迴圈 {#for-loop}
 
-基本寫法：
+底下是幾種常見的寫法：
 
 ```go
 i := 1
@@ -228,13 +228,15 @@ for {  // 無限迴圈
 
 #### For-each range loop
 
+使用 `range` 關鍵字來指定索引值的範圍：
+
 ```go
 for i := range 3 {  // i = 0, 1, 2
     fmt.Println("range", i)
 }
 ```
 
-用於 arrays、slices、maps、channels：
+常用來處理 arrays、slices、maps、channels 等結構：
 
 ```go
 strings := []string{"hello", "world"}
