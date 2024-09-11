@@ -281,13 +281,13 @@ go get github.com/huanlin/learning-go@v0.0.1-beta
 
 ### 命令：`go mod tidy` {#go-mod-tidy}
 
-`go mod tidy` 命令會找到專案的 `go.mod` 檔案，並針對模組依賴關係執行以下工作：
+如果在編譯 go 程式時發生模組相關的錯誤（例如找不到某個模組），此時可以試試 `go mod tody` 命令。此命令會找到專案的 `go.mod` 檔案，並針對模組依賴關係執行以下工作：
 
 - 刪除沒用到的模組。
 - 下載需要的模組。
 - 更新 `go.mod` 和 `go.sum` 檔案。
 
-舉例來說，假設 go.mod 檔案內容是：
+舉例來說，假設 `go.mod` 檔案的內容如下：
 
 ```text
 module github.com/huanlin/learning-go
