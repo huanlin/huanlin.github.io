@@ -3,24 +3,11 @@ title: 04 Code organization
 tags: [Go]
 ---
 
-## 概述 {#introduction}
+## 簡介 {#intro}
 
-Go 的**模組（module）**與**套件（package）**是兩個重要觀念，因為它們決定了一個 Go 應用程式的組成結構以及依賴關係（dependencies）。
+Go 的 **模組（module）** 與 **套件（package）** 是兩個重要觀念，因為它們決定了 Go 應用程式的組成結構與依賴關係（dependencies）。
 
-一個 module 通常就是一個應用程式專案，而這個 module 裡面會有多個 packages。一個 package 在檔案系統中就是一個資料夾，而 package 資料夾裡面又可以有資料夾，於是形成 package 的命名空間（namespace）。我們可以觀察一個實際的專案來快速掌握剛才說的概念。
-
-以開源專案 gopsutil 為例，此專案的 GitHub 網址是：
-
-<https://github.com/shirou/gopsutil>
-
-首先，專案名稱 "gopsutil" 彰顯了 Go 對於模組和套件的命名建議：全部小寫的英文，而且盡量簡潔。
-
-接著要看的是此專案的根目錄底下有一個 `go.mod` 檔案，這個就是用來描述模組的檔案。根目錄底下還有一個 `go.sum` 檔案也是必須的，裡面包含該應用程式用到的所有外部模組的 checksum，但這個檔案內容會透過工具產生，不用自己編寫。
-
-
-*<TODO>*
-
-以下小節分別說明 package 和 module 的相關細節。
+一個 module 通常就是一個應用程式專案，而這個 module 裡面會有多個 packages。接著分別進一步說明 package 和 module 的相關細節。
 
 ## Packages
 
@@ -31,7 +18,7 @@ Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中�
 >
 > Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
 
-換言之，package 是一個邏輯切割單位，讓不同用途的程式碼之間得以適度隔離。
+換言之，package 是一個邏輯組成單位，讓我們把相關功能的程式檔案放在同一個套件裡。
 
 範例：
 
@@ -47,7 +34,7 @@ Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中�
         └─ token_test.go    -> token 相關功能的測試
 ```
 
-Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 裡面可能會宣告套件名稱為 `authentication`：
+Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 裡面可能會宣告套件名稱為 `auth`，也可能是 `authentication`：
 
 ```go
 package authentication
@@ -363,13 +350,99 @@ github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 - 官方文件：[go mod tidy](https://go.dev/ref/mod#go-mod-tidy)
 - Youtube 影片：[how to import Golang local package](https://youtu.be/Nv8J_Ruc280?si=g5-SBXY1VYh5q1ko) （這影片把模組路徑和 import 套件時的路徑寫法講解得很清楚）
 
-## Project layout
+## 實際案例 {#case-study}
 
-GitHub 平台上面有一個用來展示 Go 專案結構的 repository 可以參考：[project-layout](https://github.com/golang-standards/project-layout)。
+如果對 module 和 package 仍有不清楚的地方，不妨看一下別人的 Go 專案是如何組成的，包括 `go.mod` 檔案的內容、套件的階層結構、套件的命名等等。
+
+這裡拿開源專案 gopsutil 為例，此專案的 GitHub 網址是：
+
+<https://github.com/shirou/gopsutil>
+
+首先，專案名稱 "gopsutil" 蠻符合 Go 對於模組和套件的命名建議：全部小寫的英文，而且盡量簡潔。此名稱是由 "go" 加上 "ps"（process）再加上 "util"（utility）所組成。
+
+專案的根目錄底下有 `go.mod` 和 `go.sum` 檔案。`go.mod` 檔案描述模組的路徑以及用到哪些外部模組，`go.sum` 檔案則包含所有外部模組的 checksum，其內容由工具產生，不用自己編寫。
+
+接著查看[此專案的 `go.mod` 檔案](https://github.com/shirou/gopsutil/blob/master/go.mod)的內容：
+
+```text
+module github.com/shirou/gopsutil/v4
+
+go 1.18
+
+require (
+    github.com/google/go-cmp v0.6.0
+    github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0
+    github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c
+    github.com/shoenig/go-m1cpu v0.1.6
+    github.com/stretchr/testify v1.9.0
+    github.com/tklauser/go-sysconf v0.3.12
+    github.com/yusufpapurcu/wmi v1.2.4
+    golang.org/x/sys v0.24.0
+)
+
+require (
+    github.com/davecgh/go-spew v1.1.1 // indirect
+    github.com/go-ole/go-ole v1.2.6 // indirect
+    github.com/pmezard/go-difflib v1.0.0 // indirect
+    github.com/tklauser/numcpus v0.6.1 // indirect
+    gopkg.in/yaml.v3 v3.0.1 // indirect
+)
+```
+
+兩個 `require` 區塊都是在描述此專案會用到外部模組；第一個 `require` 區塊是有直接引用的外部模組，第二個 `require` 區塊則是間接（indirect）用到的模組，即某些直接引用的模組內部有用到其他模組。間接引用的模組清單可透過 `go mod tidy` 命令自動產生，無需人工編寫。
+
+從第一行可得知此專案的模組路徑是 `github.com/shirou/gopsutil/v4`。然後，在 GitHub 網站上查看[這個專案的 tags](https://github.com/shirou/gopsutil/tags) 可得知最新發布的版本，例如 `v4.24.8`。也就是說，當我們的程式需要使用 gopsutil 提供的套件時，我們的 Go 專案的 `go.mod` 檔案裡面要有底下的 `require` 宣告：
+
+```text
+require github.com/shirou/gopsutil/v4 v4.24.8
+```
+
+> 把 `require` 宣告寫好之後，在我們的 Go 專案目錄下執行 `go mod tidy` 命令，即可自動下載 `gopsutil` 模組以及它所依賴的其他模組。
+
+接著來看 gopsutil 專案的套件組成結構，如下圖：
+
+![](images/gopsutil-folders.png)
+
+其中的 `common`、`cpu`、`disk`、`internal/common` 等資料夾都是 packages。就如前面提過的，每一個 package 在磁碟檔案系統上面就是一個資料夾，而該資料夾底下的所有 Go 程式檔案都必須隸屬於同一個 package。
+
+以 `cpu` 資料夾為例，它底下有許多 .go 檔案，例如 `cpu.go`、`cpu_aix.go`、`cpu_linux.go` 等等，這些 .go 檔案裡面都有底下這行 `package` 宣告，表示它們所屬的套件名稱是 `cpu`：
+
+```go
+package cpu
+```
+
+接在 `package cpu` 之後的是 `import` 宣告：
+
+```go
+import (
+    "context"
+    "errors"
+    "fmt"
+    "path/filepath"
+    "strconv"
+    "strings"
+
+    "github.com/tklauser/go-sysconf"
+
+    "github.com/shirou/gopsutil/v4/internal/common"
+)
+```
+
+這裡有兩個地方值得注意。首先是套件的順序，建議寫法是先寫標準函式庫的套件，然後是其他套件。
+
+其次，引用其他套件時，套件的完整路徑名稱是這樣組成的：
+
+**`模組路徑名`** + **`套件路徑名`**
+
+以 `"github.com/shirou/gopsutil/v4/internal/common"` 為例，它表示要使用的套件是位於 `github.com/shirou/gopsutil/v4` 模組（專案）底下的 `/internal/common` 套件。
+
+順便提及，gopsutil 專案的資料夾命名與結構，似乎有遵循 [標準 Go 專案目錄結構](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)。此目錄結構並非 Go 開發團隊制定的官方標準，而是根據常見的作法所整理出來的通用結構。參考這個標準目錄結構時，應該以專案實際的規模和需要來決定要有哪些資料夾，而不是一蓋照單全收。
 
 ## Summary
 
-- Go 是以 package 來作為隔離的基本單位。
+- 一個 module 通常就是一個應用程式專案，而這個 module 裡面會有多個 packages。
+- 一個 package 在檔案系統中就是一個資料夾，該資料夾底下的 .go 程式檔案必然隸屬同一個 package（否則無法通過編譯）。
+- 模組路徑是模組的正式名稱（唯一識別名稱），宣告於模組的根目錄下的 `go.mod` 檔案；模組路徑要能表達該模組的用途，以及可以從何處找到它。
 - 隸屬同一個 package 的程式碼可以互相存取宣告於 package 層級的名稱，如變數、函式、型別等等。
 - 不同 package 的程式碼只能使用對方 export 出來的東西。
   - Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
