@@ -203,6 +203,38 @@ if (err != nil) {
 
 此範例所要表達的是：我不在乎 `ReadFile()` 執行成功時回傳的結果，而只看它是否返回錯誤。
 
+## `init` 函式 {#init-func}
+
+Go 有一個特殊用途的函式，名稱固定叫做 `init()`。此函式會在一個 package 載入時自動執行，故通常會把一些初始化的操作寫在此函式中。
+
+特性與用法：
+
+- `init` 函式不能有參數和回傳值。
+- 每個 package 可以有多個 `init` 函式，而各 packages 的 `init` 函式的執行順序便是按照 packages 之間的依賴關係來決定。換言之，先載入哪個 package，就會先執行那個 package 的 `init` 函式。
+- 每個 .go 檔案也可以有多個 `init` 函式，這些函式會按照它們在檔案中出現的順序執行。但一般來說，通常不會在一個 .go 檔案裡面寫多個 `init` 函式，以免讓程式碼更難理解和維護。
+- 避免在 `init` 函式中執行耗時工作。
+
+範例：
+
+```go
+var greeting string
+
+func init() {
+    fmt.Println("Hello")
+}
+
+func main() {
+    fmt.Println("world")
+}
+```
+
+執行結果：
+
+```text
+Hello
+world
+```
+
 ## 基本流程控制
 
 ### for 迴圈 {#for-loop}

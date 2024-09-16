@@ -25,7 +25,7 @@ Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中�
 ```text
 .                           -> 專案的根目錄
 ├─ go.mod                   -> 定義專案的名稱和 dependencies
-├─ hello.go                 -> 實作 package main
+├─ main.go                  -> 主程式（程式的進入點）
 └─ auth/                    -> auth 套件
     ├─ auth.go              -> auth 相關功能的實作
     ├─ auth_test            -> auth 相關功能的測試
@@ -133,9 +133,9 @@ func add(x, y int) int {
 
 ## Modules
 
-一個 Go 專案通常只包含一個模組（**module**），亦可能包含多個 modules，而每個 module 是由一個或多個 packages 所組成。
+一般來說，具實用價值的 Go 應用程式都會用到 **模組（module）**。一個 Go 專案可以有一個或多個 modules，每個 module 是由一個或多個 packages 所組成。
 
-專案的主模組會放在 repository 的根目錄，其名稱通常會跟專案的 repository 名稱相同。模組的根目錄之下需要一個 `go.mod` 檔案來設定專案的基本資訊（名稱、版本）以及管理它所依賴的外部模組。簡單來說，一個 module 通常代表一個應用程式專案。
+專案的主要模組通常會放在 repository 的根目錄，其名稱通常會跟專案的 repository 名稱相同。模組的根目錄之下需要一個 `go.mod` 檔案來設定專案的基本資訊（名稱、版本）並明確列出該專案所依賴的外部模組。
 
 > [!quote]
 > A repository contains one or more modules. A **module** is a collection of related Go packages that are released together. A Go repository typically contains only one module, located at the root of the repository.
@@ -174,7 +174,11 @@ module github.com/michael/todoapp
 go 1.23.0
 ```
 
-其中的 `github.com/michael/todoapp` 即此專案儲存於 GitHub 平台上的路徑，但本機的檔案系統不需要有這樣的路徑，例如它可能存放在 D:/work/todoapp/ 目錄下，有著類似底下的目錄結構：
+其中的 `github.com/michael/todoapp` 即此模組的路徑名稱。
+
+模組的路徑名稱的一個主要用途是作為該模組的唯一識別名稱，並不表示該路徑一定真的存在某個地方。如果這個專案實際上真的有放在 github.com 的指定路徑，那麼當其他應用程式要使用此模組時，Go 的模組管理工具就能自動找到並下載那個模組。此外，本機的檔案系統也不需要真的存在模組路徑，例如它可能存放在 D:/work/todoapp/ 目錄下。
+
+假設此專案有著類似底下的目錄結構：
 
 ```text
 todoapp/            -> 專案的根目錄

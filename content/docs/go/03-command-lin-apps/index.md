@@ -121,7 +121,9 @@ func main() {
 }
 ```
 
-執行 `go build` 命令來建置應用程式。
+其中的 `init()` 函式是 Go 語言的一個特殊函式，它會在一個 package 載入時自動執行，故通常會把一些初始化的操作寫在此函式中。詳見 [`init` 函式]({{< ref "../05-important-basics/index.md#init-func" >}}) 一節的說明。
+
+執行 `go build` 命令來建置剛才的範例程式。
 
 以下是執行程式時不帶任何命令列參數的輸出結果：
 
@@ -135,6 +137,30 @@ Flags:
   -l, --language string   用哪一種語言說 hello。 (default "en")
   -n, --name string       要跟誰說 hello。 (default "World")
 ```
+
+### 練習 {#cli-args-practice}
+
+將以下提示訊息丟給 ChatGPT 或 Copilot，讓它幫你寫一個函式，能夠尋找指定路徑下的所有子目錄中符合特定條件的檔案名稱，並將找到的檔案名稱放入陣列，回傳給呼叫端。
+
+> Generate a Go function that accepts a path parameter and a filename mask. This function will find the matched file names recursively and return the found files in an array.
+
+產生出來的函式應該會用到標準套件 `path/filepath` 的 `Walk` 函式，像這樣：
+
+```go
+package main
+
+import (
+    "fmt"
+    "os"
+    "path/filepath"
+)
+
+func findFiles(path string, fnameMask string) ([]string, error) {
+    // ...(略)
+}
+```
+
+然後修改前面的 Cobra 範例程式，增加一個命令列參數：`--path`，短參數名稱為 `-p`，然後把接收到的參數值傳遞給剛才產生的 `findFiles` 函式。`fnameMask` 可以隨意指定一個固定字串，例如 "*.txt"，或者也可以實作成命令列參數。
 
 ## 應用程式的組態 {#app-config}
 
