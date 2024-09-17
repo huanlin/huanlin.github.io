@@ -237,7 +237,7 @@ world
 
 ## 基本流程控制
 
-### for 迴圈 {#for-loop}
+### `for` loop {#for-loop}
 
 底下是幾種常見的寫法：
 
@@ -300,7 +300,23 @@ hello
 world
 ```
 
-### If with a short statement {#if-with-statement}
+### `if` statement
+
+Go 的 `if` 陳述式不需要使用小括弧 `()`，但必須使用大括號 `{}`。雖然某些簡單的表達式可以使用小括弧，例如 `if (j > 10) {}` 這樣的寫法可以通過編譯，但與常見的寫法不一致，而且多此一舉。
+
+> [!note]
+> 事實上，在 VS Code 中編寫 Go 程式的時候，即使在 `if` 陳述式中使用了小括弧，那些小括弧會在存檔時被 [gofmt](https://pkg.go.dev/cmd/gofmt) 工具自動消除。這是因為 Go 工具鍊在 VS Code 中的預設配置為存檔時自動格式化。
+
+`else` 敘述一定要跟在 `if` 區塊結尾的大括號後面，不能寫成單獨一行，像底下這樣的寫法將無法通過編譯：
+
+```go
+if j > 10 {
+}
+else { // 編譯錯誤! else 必須寫在 if 區塊結尾的同一行。
+}
+```
+
+#### If with a short statement {#if-with-a-statement}
 
 類似 `for` 迴圈，`if` 敘述也可以先有一個短敘述（short statement），然後才跟著判斷式。
 
