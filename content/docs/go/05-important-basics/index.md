@@ -235,6 +235,23 @@ Hello
 world
 ```
 
+### Using `init()` as side effects {#init-as-side-effects}
+
+有時候，我們的程式不會呼叫某個套件裡面的任何函式或變數，但是卻需要應用程式載入時執行那個套件的 `init()` 函式，以便完成某些預設的配置或初始化操作。碰到這種情形，就必須在 import 該套件時使用 blank identifier (`_`)，像這樣：
+
+```go
+import (
+    _ "github.com/lib/pq"
+    _ "image/png"
+    ...
+)
+```
+
+這種在引用套件的名稱前面加一個底線字元的寫法稱為 importing side effects。換言之，那些套件的 `init()` 函式便是我們的應用程式所需要的「副作用」。
+
+> [!note]
+> 如果應用程式沒有直接使用某個套件裡面的任何東西，該套件名稱就不能出現在 `import` 區塊裡，除非前面加上 `_` 字元來告訴 Go 編譯器：我需要這個套件載入時自動執行的 `init()`。
+
 ## 基本流程控制
 
 ### `for` loop {#for-loop}

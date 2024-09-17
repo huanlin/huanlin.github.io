@@ -207,9 +207,9 @@ import (
 
 模組路徑通常包含三個部分：
 
-- repository root path
-- repository 中的目錄名
-- 主要的版本編號（只有在主要版本編號為 2 或更高的版本才需要）
+- repository root path。
+- repository 中的目錄名。
+- 主要的版本編號：只有在主要版本編號為 2 或更高的版本才需要。換言之，當主要版號（major version number）晉升時，這個版號就必須成為 module path 的一部分。
 
 範例：
 
@@ -232,10 +232,12 @@ module example.com/mymodule/v2
 - Modules 可以直接從版本控制儲存庫下載，或者從 module proxy 伺服器下載。
 - 使用 `import` 來引用模組中的套件時，只能引用該模組 export 的（公開的）套件。
 
-建議閱讀 Go 官方文件以了解更多有關 modules 的細節：
+建議閱讀以下官方文件以了解更多有關 modules 的細節：
 
 - [Go Modules Reference](https://go.dev/ref/mod)
 - [go.mod file reference](https://go.dev/doc/modules/gomod-ref)
+- [Module release and versioning workflow](https://go.dev/doc/modules/release-workflow)
+- [Module version numbering](https://go.dev/doc/modules/version-numbers)
 
 ### Download a module
 
@@ -455,6 +457,10 @@ import (
 
 ## References
 
-- Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
+- [How to Write Go Code](https://go.dev/doc/code)
+- [Go Modules Reference](https://go.dev/ref/mod)
+- [go.mod file reference](https://go.dev/doc/modules/gomod-ref)
+- [Module release and versioning workflow](https://go.dev/doc/modules/release-workflow)
+- [Module version numbering](https://go.dev/doc/modules/version-numbers)
 
 [100-mistakes]: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
