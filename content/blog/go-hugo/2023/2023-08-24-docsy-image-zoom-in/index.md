@@ -5,7 +5,7 @@ slug: docsy-image-zoom-in
 tags: [hugo, docsy]
 ---
 
-I use [Medium Zoom](https://medium-zoom.francoischalifour.com/) in my Docsy website to make images clickable and zoomable. 
+I use [Medium Zoom](https://medium-zoom.francoischalifour.com/) in my Docsy website to make images clickable and zoomable.
 
 Simply add the following code in `/layouts/partials/hooks/body-end.html`:
 
@@ -24,7 +24,7 @@ images.forEach(img => {
 });
 </script>
 
-<script > 
+<script >
   /* */
   (function() {
     var a = document.querySelector("#td-section-nav");
@@ -35,7 +35,11 @@ images.forEach(img => {
 </script>
 ```
 
-That's it. Now the images are automatically clickable and zoomable.
+That's it. Now the images are automatically zoomed when they are clicked.
+
+Demo:
+
+![Taipei 101](images/taipei-101.jpg)
 
 Here is [another example](https://github.com/russmckendrick/blog/blob/428e00b236fd3fcf484190d1d32759b9a51643b6/layouts/partials/extend_footer.html#L1-L13) used in a Hugo website that does not use the Docsy theme.
 
