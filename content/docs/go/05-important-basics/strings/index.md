@@ -1,0 +1,87 @@
+---
+title: 5.7 字串
+---
+
+## 概要
+
+- Go 的字串內部不是字元陣列，而是代表每個 UTF-8 字元的 byte 陣列。
+- Go 的原始碼以及官方文件是以 rune（讀音近似「潤」）來指稱一個 UTF-8 字元的 code point。簡單起見，可以把它理解為一個 UTF-8 字元。
+- 使用 string 宣告變數若無指定初值，預設值為空字串 ""。
+- 比較兩個字串，可以用：
+  - `==`、`!=`、`<`、`>`、`<=`、`>=` 運算子。
+  - `strings.EqualFold()` 函式：用於不區分大小寫的比較。
+  - `strings.Compare()` 函式：應該只用於三向比較（three-way comparison）的場合。
+- Raw string 的寫法是以 backtick 字元 (`\``) 包住字串。
+
+## 字串長度 {#str-length}
+
+Go 的字串內部不是字元陣列，而是代表每個 UTF-8 字元的 byte 陣列。因此，若以內建函式 `len` 試圖取得字串長度，得到的不會是字元個數，而是其內部 byte 陣列的長度。
+
+範例：
+
+```go
+unicodeCharStr := "地鼠"
+fmt.Println(len(unicodeCharStr)) // output: 6
+```
+
+程式印出的結果是 6 而不是 2。
+
+## Rune
+
+如欲取出字串中的某個字元，不應使用陣列索引的語法，否則結果不會是我們想要的。
+
+範例：
+
+```go
+unicodeCharStr := "地鼠"
+for i := 0; i < len(unicodeCharStr); i++ {
+    fmt.Print(string(unicodeCharStr[i]) + " ")
+}
+fmt.Println() // 輸出:  å  ° é ¼
+```
+
+要取出字串中的字元，可以用 `range`：
+
+```go
+unicodeCharStr := "地鼠"
+for i, rune := range unicodeCharStr {
+    fmt.Printf("%d:%s ", i, string(rune))
+}
+fmt.Println() // 輸出: 0:地 3:鼠
+```
+
+在 Go 的原始碼以及官方文件中都是以 rune（讀音近似「潤」）來指稱一個 UTF-8 字元的 code point。簡單起見，可以把它理解為一個 UTF-8 字元。
+
+> [!quote]
+> "Code point" is a bit of a mouthful, so Go introduces a shorter term for the concept: rune. The term appears in the libraries and source code, and means exactly the same as "code point", with one interesting addition.
+>
+> The Go language defines the word rune as an alias for the type int32, so programs can be clear when an integer value represents a code point.
+>
+> -- The Go Blog: [Strings, bytes, runes and characters in Go](https://go.dev/blog/strings)
+
+## 字串比較 {#str-compare}
+
+一般的字串比較，建議使用 `==`、`!=`、`<`、和 `>` 運算子。
+
+如果比較時不區分英文大小寫，則使用 `strings.EqualFold()` 函式。另一種方法是把兩個字串先用 `strings.ToLower()` 轉成全部小寫，然後再用 `==` 比較。
+
+如果需要三向比較（three-way comparison），亦即需要判斷兩個字串是大於、小於、還是等於，則可以使用 `strings.Compare()`。基於效率考量，此函式應該只用於三向比較的場合。在 Go 原始碼裡面也有這樣的建議（參見 [src/strings/compare.go](https://go.dev/src/strings/compare.go)）：
+
+```go
+// Compare returns an integer comparing two strings lexicographically.
+// The result will be 0 if a == b, -1 if a < b, and +1 if a > b.
+//
+// Use Compare when you need to perform a three-way comparison (with
+// [slices.SortFunc], for example). It is usually clearer and always faster
+// to use the built-in string comparison operators ==, <, >, and so on.
+func Compare(a, b string) int {
+    return bytealg.CompareString(a, b)
+}
+```
+
+> [!note]
+> 這個 `strings.Compare()` 函式原本效率較差，直到 Go v1.23 終於有了改善。詳見：[strings: intrinsify and optimize Compare](https://github.com/golang/go/commit/fd999fda5941f215ef082c6ef70e44e648db5485)。
+
+## References
+
+- The Go Blog: [Strings, bytes, runes and characters in Go](https://go.dev/blog/strings) by Rob Pike (2013-10-23)

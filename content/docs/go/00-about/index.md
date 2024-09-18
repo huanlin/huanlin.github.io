@@ -27,13 +27,15 @@ tags: [Go]
 
 這個時代，免費資源超多，不怕沒得學，只怕難選擇。這裡只列出一些我有看的，也覺得不錯的：
 
-| Title                                                              | Level | Remark                                 |
-| ------------------------------------------------------------------ | ----- | -------------------------------------- |
-| [使用 Golang 打造 Web 應用程式](https://willh.gitbook.io/build-web-application-with-golang-zhtw) by 保哥 | 入門至實戰 | 最後一次更新似乎是 2021 年，仍有許多入門和通用知識值得參考。 |
-| [A Tour of Go](https://go.dev/tour/)                               | 入門  | 一小塊接著一小塊的學習方式，容易消化。 |
-| [Go by Example](https://gobyexample.com/)                          | 入門  | 有許多範例，每個範例都有解說。         |
-| [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) | 入門  | 以撰寫測試來學習 Go 語言。（我覺得是很棒的學習方式） |
-| [Effective Go](https://go.dev/doc/effective_go)                    | 進階  | 由 Golang core team 撰寫的技術文章。 |
+| Title                                                              | Remark                                 |
+| ------------------------------------------------------------------ | -------------------------------------- |
+| [使用 Golang 打造 Web 應用程式](https://willh.gitbook.io/build-web-application-with-golang-zhtw) by 保哥 | 最後一次更新似乎是 2021 年，仍有許多入門和通用知識值得參考。 |
+| [A Tour of Go](https://go.dev/tour/)                               | 一小塊接著一小塊的學習方式，容易消化。 |
+| [Go by Example](https://gobyexample.com/)                          | 有許多範例，每個範例都有解說。         |
+| [Go Tutorial](https://www.w3schools.com/go/index.php)              | Go 語法的分類編排很清楚、方便查找。 |
+| [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) | 以撰寫測試來學習 Go 語言。（我覺得是很棒的學習方式） |
+| [Effective Go](https://go.dev/doc/effective_go)                    | [進階] 由 Golang core team 撰寫的技術文章。 |
+| [The Go Programming Language Specification](https://go.dev/ref/spec) | 官方的語法規格。 |
 
 另外，我也會用一些零碎時間看 Youtube 教學影片。碰到想要更深入了解的部分，就針對特定議題來閱讀 Go 的官方文章，或者找書來讀。
 
