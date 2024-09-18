@@ -5,9 +5,9 @@ slug: docsy-image-zoom-in
 tags: [hugo, docsy]
 ---
 
-I use [Medium Zoom](https://medium-zoom.francoischalifour.com/) in my Docsy website to make images clickable and zoomable.
+I use [Medium Zoom](https://medium-zoom.francoischalifour.com/) in my Docsy website to make images show full size when they are clicked.
 
-Simply add the following code in `/layouts/partials/hooks/body-end.html`:
+First, add the following code in `/layouts/partials/hooks/body-end.html`:
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.7/medium-zoom.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -23,46 +23,28 @@ images.forEach(img => {
   });
 });
 </script>
+```
 
-<script >
-  /* */
-  (function() {
-    var a = document.querySelector("#td-section-nav");
-    addEventListener("beforeunload", function(b) {
-        localStorage.setItem("menu.scrollTop", a.scrollTop)
-    }), a.scrollTop = localStorage.getItem("menu.scrollTop")
-  })()
-</script>
+Then, add the following css to `/assets/scss/_styles_projects.scss`:
+
+```css
+/*
+  For MediumZoom.js to force the zoomed image to be displayed on top of everything.
+  Without these settings, the zoomed image will display under some elements on the page.
+
+  Ref: https://github.com/francoischalifour/medium-zoom#debugging
+*/
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
 ```
 
 That's it. Now the images are automatically zoomed when they are clicked.
 
 Demo:
 
-![Taipei 101](images/taipei-101.jpg)
-
-Here is [another example](https://github.com/russmckendrick/blog/blob/428e00b236fd3fcf484190d1d32759b9a51643b6/layouts/partials/extend_footer.html#L1-L13) used in a Hugo website that does not use the Docsy theme.
-
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S+Yti0U7QtuZvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script>
-const images = Array.from(document.querySelectorAll(".post-content img"));
-images.forEach(img => {
-  mediumZoom(img, {
-    margin: 0, /* The space outside the zoomed image */
-    scrollOffset: 40, /* The number of pixels to scroll to close the zoom */
-    container: null, /* The viewport to render the zoom in */
-    template: null /* The template element to display on zoom */
-  });
-});
-</script>
-
-<!-- https://ionic.io/ionicons -->
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-```
+![Taipei 101](images/taipei-101.jpg?width=600#center)
 
 ## Other Choices
 
