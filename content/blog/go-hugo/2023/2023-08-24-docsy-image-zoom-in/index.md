@@ -7,6 +7,14 @@ tags: [hugo, docsy]
 
 I use [Medium Zoom](https://medium-zoom.francoischalifour.com/) in my Docsy website to make images show full size when they are clicked.
 
+## Demo
+
+Click the following image to show it with full size:
+
+![Taipei 101](images/taipei-101.jpg?width=600#center)
+
+## Implementation
+
 First, add the following code in `/layouts/partials/hooks/body-end.html`:
 
 ```html
@@ -41,10 +49,6 @@ Then, add the following css to `/assets/scss/_styles_projects.scss`:
 ```
 
 That's it. Now the images are automatically zoomed when they are clicked.
-
-Demo:
-
-![Taipei 101](images/taipei-101.jpg?width=600#center)
 
 ## Other Choices
 
