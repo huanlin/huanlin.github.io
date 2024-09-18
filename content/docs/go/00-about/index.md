@@ -33,6 +33,7 @@ tags: [Go]
 | [A Tour of Go](https://go.dev/tour/)                               | 一小塊接著一小塊的學習方式，容易消化。 |
 | [Go by Example](https://gobyexample.com/)                          | 有許多範例，每個範例都有解說。         |
 | [Go Tutorial](https://www.w3schools.com/go/index.php)              | Go 語法的分類編排很清楚、方便查找。 |
+| [Go 101](https://go101.org/article/101.html)                       | 有[簡體中文版](https://gfw.go101.org/article/101.html)。 |
 | [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) | 以撰寫測試來學習 Go 語言。（我覺得是很棒的學習方式） |
 | [Effective Go](https://go.dev/doc/effective_go)                    | [進階] 由 Golang core team 撰寫的技術文章。 |
 | [The Go Programming Language Specification](https://go.dev/ref/spec) | 官方的語法規格。 |
