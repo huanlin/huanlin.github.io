@@ -126,3 +126,4 @@ Type of b: []int
 ## References
 
 - The Go Blog: [Go Slices: usage and internals](https://go.dev/blog/slices-intro)
+- [Slices in Go: Grow Big or Go Home](https://victoriametrics.com/blog/go-slice/)
