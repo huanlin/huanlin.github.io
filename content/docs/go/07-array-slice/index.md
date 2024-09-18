@@ -127,3 +127,4 @@ Type of b: []int
 
 - The Go Blog: [Go Slices: usage and internals](https://go.dev/blog/slices-intro)
 - [Slices in Go: Grow Big or Go Home](https://victoriametrics.com/blog/go-slice/)
+- commit: [runtime: make slice growth formula a bit smoother](https://go.googlesource.com/go/+/2dda92ff6f9f07eeb110ecbf0fc2d7a0ddd27f9d)
