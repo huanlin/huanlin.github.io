@@ -106,6 +106,8 @@ starting cap    growth factor
 
 ### 令人迷惑的寫法 {#confusing}
 
+有 `...` 和沒有的差別：
+
 ```go
 a := [...]int{ 1: 10, 2: 20 } // a 是一個陣列
 b := []int{ 1: 10, 2: 20 }    // b 是一個 slice
