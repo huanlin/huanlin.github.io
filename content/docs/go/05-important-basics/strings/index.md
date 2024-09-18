@@ -61,11 +61,11 @@ fmt.Println() // 輸出: 0:地 3:鼠
 
 ## 字串比較 {#str-compare}
 
-一般的字串比較，建議使用 `==`、`!=`、`<`、和 `>` 運算子。
+一般的字串比較，建議使用運算子：`==`、`!=`、`<`、`>`、`<=`、`>=`。
 
 如果比較時不區分英文大小寫，則使用 `strings.EqualFold()` 函式。另一種方法是把兩個字串先用 `strings.ToLower()` 轉成全部小寫，然後再用 `==` 比較。
 
-如果需要三向比較（three-way comparison），亦即需要判斷兩個字串是大於、小於、還是等於，則可以使用 `strings.Compare()`。基於效率考量，此函式應該只用於三向比較的場合。在 Go 原始碼裡面也有這樣的建議（參見 [src/strings/compare.go](https://go.dev/src/strings/compare.go)）：
+如果需要**三向比較**（three-way comparison），亦即需要判斷兩個字串是大於、小於、還是等於，則可以使用 `strings.Compare()`。基於效率考量，此函式應該只用於三向比較的場合。在 Go 原始碼裡面也有這樣的建議（參見 [src/strings/compare.go](https://go.dev/src/strings/compare.go)）：
 
 ```go
 // Compare returns an integer comparing two strings lexicographically.
