@@ -124,4 +124,3 @@ Type of b: []int
 ## References
 
 - The Go Blog: [Go Slices: usage and internals](https://go.dev/blog/slices-intro)
-- [Golang slice append 實作細節](https://yushuanhsieh.github.io/post/2021-12-29-golang-slice-append/) by Cherie Hsieh
