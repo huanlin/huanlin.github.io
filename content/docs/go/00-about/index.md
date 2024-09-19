@@ -5,11 +5,18 @@ tags: [Go]
 
 ## Why Golang?
 
+![](images/gopher03c.svg?width=80#float-left)
+
 我學習 Go 語言的原因是：需要用到，覺得不學不行了。
 
 無論是我的個人網站 [huanlin.cc](https://huanlin.cc/docs/) 還是其他場合所建立的文件網站，都是用 Hugo 搭建，而我逐漸發現需要一些強化的功能，要寫一些程式來實現才行。Hugo 是基於 Go 語言，故學習 Go 語言來自行開發文件網站的一些自訂或加強功能，應是最直截了當的選擇。這是我學習 Go 語言最主要的原因。
 
 至於能學到什麼程度，自己也沒把握，畢竟每個人一天都是 24 小時，生活中經常要分心去處理很多待辦事項，很難專精。而且，這個領域變化很快，明天會發生什麼事情都很難說。
+
+> [!note]
+> 圖片來源：[Go-gopher-Vector](https://github.com/keygx/Go-gopher-Vector)。還有一組地鼠圖片也很很棒：[Gophers](https://github.com/egonelbre/gophers)
+>
+> Go 的地鼠造型是由 Renee French 原創，採用 Creative Commons 3.0 授權協議。
 
 ## About this note
 
@@ -65,5 +72,6 @@ tags: [Go]
 
 | 日期        | 更新了什麼                                                 |
 |------------|-----------------------------------------------------------|
+| 2024-09-19 | 增加〈陣列與 Slice〉，其他章節的零星補充。 |
 | 2024-09-02 | 增加〈雜七雜八但是重要〉、〈結構〉。 |
 | 2024-08-31 | 初次發布：關於這個筆記、Get started、Hello world、命令列應用程式、Code organization。 |

@@ -24,7 +24,7 @@
 :root {
   --bs-body-font-family: Noto Sans TC, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  
+
   // for mark tag
   --line-yellow: url("data:image/svg+xml;charset=utf-8,%3Csvg preserveAspectRatio='none' width='120' height='6' viewBox='0 0 120 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M119 0.8C60 4 50-0.5 1 1.5' stroke='%23fc0' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
 }
@@ -39,13 +39,13 @@ pre {
 }
 
 h2 {
-  font-size: 1.9rem;  
+  font-size: 1.9rem;
   font-weight: 600;
 }
 
 h2.feedback--title {
   padding-top: 2rem;
-  font-size: 1.7rem;  
+  font-size: 1.7rem;
   font-weight: 500;
   color: var(--md-primary-fg-color);
 }
@@ -70,7 +70,7 @@ h2.feedback--title {
 
 .reading-time {
   margin-top: 20px;
-} 
+}
 
 .td-toc a {
   font-weight: 400;
@@ -169,13 +169,26 @@ nav.foldable-nav .with-child, nav.foldable-nav .without-child {
   }
 }
 
-// img[src$="#center"] 用來將圖片置中
+// 圖片置中
 img[src$="#center"] {
   display: block;
   margin: 1.0rem auto;
   max-width: 100%;
   height: auto;
 }
+
+// 文繞圖，圖片在左邊
+img[src$="#float-left"] {
+  margin: 0.5rem 2.0rem 0.8rem 2.0rem;
+  float: left;
+}
+
+// 文繞圖，圖片在右邊
+img[src$="#float-right"] {
+  margin: 0.5rem 2.0rem 0.8rem 2.0rem;
+  float: right;
+}
+
 
 mark {
   color: inherit;

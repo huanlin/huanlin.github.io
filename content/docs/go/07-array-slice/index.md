@@ -93,7 +93,7 @@ len(s2): 4 , cap(s2): 6
 
 至於 s1，由於在傳入 `test()` 之前的長度和容量都是 3，而 `test()` 函式加入一個元素時，便超出了既有容量，導致 slice 需要擴容。一旦 slice 發生擴容，便會配置新的記憶區塊來儲存內部的陣列元素，於是 `s` 的內部陣列便不再指向 `s1` 的內部陣列，而是一個新建立的陣列。既然是兩個不同的陣列，對 s 做任何的修改也就不會影響 s1 了。
 
-值得一提的是，slice 擴容的演算法並非每次都擴充為原本容量的 2 倍，而是有一個漸進的成長因素來決定。相關細節可參考這個 commit: [runtime: make slice growth formula a bit smoother](https://go.googlesource.com/go/+/2dda92ff6f9f07eeb110ecbf0fc2d7a0ddd27f9d)。底下僅摘錄一部分內容：
+值得一提的是，slice 擴容的演算法並非每次都擴充為原本容量的 2 倍，而是由一個平滑遞減的成長因素來決定。相關細節可參考這個 commit: [runtime: make slice growth formula a bit smoother](https://go.googlesource.com/go/+/2dda92ff6f9f07eeb110ecbf0fc2d7a0ddd27f9d)。底下僅摘錄一部分內容：
 
 ```text
 starting cap    growth factor
@@ -104,7 +104,7 @@ starting cap    growth factor
 4096            1.30
 ```
 
-### 令新手迷惑的寫法 {#confusing}
+## 令新手迷惑的寫法 {#confusing}
 
 底下兩種寫法，差別只在有沒有寫 `...`：
 
@@ -122,6 +122,11 @@ fmt.Printf("Type of b: %T\n", b)
 Type of a: [3]int
 Type of b: []int
 ```
+
+## 第三方套件
+
+Go 標準函式庫提供的容器類型有陣列、slice、map、channel、heap、list、ring 等等。如果需要處理其他類型的資料結構，例如樹狀結構，可以試試一個叫做
+Go Data Structures (GoDS) 的開源專案，網址是：<https://github.com/emirpasic/gods>。
 
 ## References
 
