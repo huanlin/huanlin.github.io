@@ -31,6 +31,55 @@ Go 的優點與強項：
 
 > 如果需要開發跨平台的 GUI 應用程式，可以試試開源專案 [Wails](https://wails.io/)。
 
+### Go Runtime
+
+每一個可執行的 Go 應用程式的內部結構大致如下圖：
+
+![Go Runtime](images/go-app-runtime.excalidraw.png)
+
+除了應用程式本身的機器碼和它依賴的外部套件（dependencies），還會包含一個叫做 **Go Runtime** 的東西，用來管理應用程式執行時的行為：
+
+- Go Scheduler: 管理併發的（concurrent）函式，即所謂的 **goroutines**。
+- Garbage Collector: 簡稱 GC，它會監看應用程式的記憶體使用情形，自動將沒有用到的記憶體回收。
+
+撰寫 Go 程式的時候不用擔心何時該回收記憶體，這都要歸功於 GC 在背後提供的服務。
+
+> 如欲了解 GC 的運作細節，可參考官方文件：[A Guide to the Go Garbage Collector](https://go.dev/doc/gc-guide)。
+
+### Goroutines
+
+Goroutines 是獨立執行的併發函式（concurrent functions）。
+
+> [!note] concurrent vs. parallel
+> 如果說「併行」或「並行」，很容易令人迷惑到底所指為何，故我選擇把 concurrent 翻譯為 「併發」，parallel 則為「平行」，以便容易區別。明確起見，有時甚至只寫英文，例如 concurrency（中文也許可用「併發能力」，但還是覺得英文最不易令人混淆）。
+
+Concurrency 是 Go 語言在設計之初就提供的特性，而不是後來想到才加入的。Go 的併發函式有一個專屬名稱：goroutine，其寫法相當直觀且簡單，跟循序執行的函式沒有太大差別。舉例來說，如果你有一個函式叫做 `parseFile()`：
+
+```go
+func parseFile(filename string) {
+  ...
+}
+```
+
+如果只需要循序執行，呼叫該函式的寫法為：
+
+```go
+parseFile("file1.dat")
+parseFile("file2.dat")
+```
+
+若需要併發執行，則呼叫的時候加上關鍵字 `go` 即可，像這樣：
+
+```go
+go parseFile("file1.dat")
+go parseFile("file2.dat")
+```
+
+有注意到嗎？無論是循序還是併發執行，改變的地方只有呼叫該函式的寫法，而函式本身的宣告完全不需要改動。這是 Go 語言的一個美妙之處。
+
+> ![note]
+> 有的程式語言在撰寫併發函式的時候，會要求必須在函式宣告的地方加上額外的關鍵字（例如 `async`），代表該函式必須以併發的方式呼叫。換言之，一旦函式宣告為併發函式，那麼它的上游（呼叫端）也必須是併發函式，如此一路沿著呼叫路徑往上層蔓延開來。
+
 ## 建立開發環境 {#setup-dev-env}
 
 ### 安裝 Go {#installing-go}
@@ -88,3 +137,12 @@ VS Code 官方文件有更詳細的介紹：[Go in Visual Studio Code](https://c
 **參閱：** [gopls 官方文件](https://pkg.go.dev/golang.org/x/tools/gopls#section-readme)
 
 順便提及，Go 提供的程式碼排版工具預設會使用 `tab` 來縮排，而不是插入空白字元，故剛才展示的預設選項中，`editor.insertSpace` 預設為 `false`。建議不要更改這個選項，以確保所有的 Go 程式碼維持同樣的風格。
+
+
+## References
+
+- [Go FAQ](https://go.dev/doc/faq)
+- [A Guide to the Go Garbage Collector](https://go.dev/doc/gc-guide)
+- [gopls 官方文件](https://pkg.go.dev/golang.org/x/tools/gopls#section-readme)
+- [Go in Visual Studio Code](https://code.visualstudio.com/docs/languages/go)
+ 
