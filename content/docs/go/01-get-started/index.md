@@ -5,6 +5,10 @@ tags: [Go]
 
 ## Go 語言簡介
 
+![](/images/gophers/gotham.svg?width=400px#center) 
+
+<p style="text-align: center; font-size: 0.85rem">圖片來源：<a href="https://github.com/egonelbre/gophers">Gophers</a></p>
+
 Go 於 2007 年誕生，由 Google 創建。
 
 Go 程式語言沒有以下語法或機制：
@@ -75,7 +79,7 @@ go parseFile("file1.dat")
 go parseFile("file2.dat")
 ```
 
-有注意到嗎？無論是循序還是併發執行，改變的地方只有呼叫該函式的寫法，而函式本身的宣告完全不需要改動。這是 Go 語言的一個美妙之處。
+其美妙之處在於，無論是循序還是併發執行，改變的地方只有呼叫該函式的寫法，而函式本身的宣告完全不需要改動。
 
 > ![note]
 > 有的程式語言在撰寫併發函式的時候，會要求必須在函式宣告的地方加上額外的關鍵字（例如 `async`），代表該函式必須以併發的方式呼叫。換言之，一旦函式宣告為併發函式，那麼它的上游（呼叫端）也必須是併發函式，如此一路沿著呼叫路徑往上層蔓延開來。
