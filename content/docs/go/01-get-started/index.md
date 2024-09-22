@@ -57,7 +57,7 @@ Goroutines 是獨立執行的併發函式（concurrent functions）。
 > [!note] concurrent vs. parallel
 > 如果說「併行」或「並行」，很容易令人迷惑到底所指為何，故我選擇把 concurrent 翻譯為 「併發」，parallel 則為「平行」，以便容易區別。明確起見，有時甚至只寫英文，例如 concurrency（中文也許可用「併發能力」，但還是覺得英文最不易令人混淆）。
 
-Concurrency 是 Go 語言在設計之初就提供的特性，而不是後來想到才加入的。Go 的併發函式有一個專屬名稱：goroutine，其寫法相當直觀且簡單，跟循序執行的函式沒有太大差別。舉例來說，如果你有一個函式叫做 `parseFile()`：
+Concurrency 是 Go 語言在設計之初就提供的特性，而不是後來想到才加入的。Go 的併發函式有一個專屬名稱：**goroutine**，其寫法相當直觀且簡單，跟循序執行的函式沒有太大差別。舉例來說，如果你有一個函式叫做 `parseFile()`：
 
 ```go
 func parseFile(filename string) {
@@ -81,8 +81,34 @@ go parseFile("file2.dat")
 
 其美妙之處在於，無論是循序還是併發執行，改變的地方只有呼叫該函式的寫法，而函式本身的宣告完全不需要改動。
 
-> ![note]
+> [!note]
 > 有的程式語言在撰寫併發函式的時候，會要求必須在函式宣告的地方加上額外的關鍵字（例如 `async`），代表該函式必須以併發的方式呼叫。換言之，一旦函式宣告為併發函式，那麼它的上游（呼叫端）也必須是併發函式，如此一路沿著呼叫路徑往上層蔓延開來。
+
+### Go Scheduler
+
+當一個應用程式執行起來的時候，是由作業系統將它載入至記憶體中，這個載入記憶體中運行的應用程式叫做 process，中文譯為「行程」或「處理序」。每一個 process 裡面有一條執行的主線（可簡化理解為主流程），即所謂的 main thread，而 thread 就是每個 process 當中最小的執行單元，中文譯為「執行緒」或「線程」。除了 main thread 之外，一個 process 裡面可以有其他 threads，經常稱為 worker threads。如果機器本身有多個 CPU 核心，便可能讓一個具有多執行緒的應用程式同時執行多項工作，從而提升效能或改善回應品質（responsiveness）。
+
+在多執行緒的情況下，作業系統會視需要進行執行緒切換，也就是讓 CPU 在不同的執行緒之間切來切去，這個過程叫做 **context switching**。這個切換執行緒的操作會有不少成本，因為 CPU 必須先保存當前執行緒的狀態資料，然後載入下一個執行緒的狀態並執行它。在僧多粥少的情況下，眾多執行緒都需要少數幾個 CPU 提供服務，便會導致大量且頻繁的執行緒切換，因而降低應用程式的效能。
+
+為了減少執行緒切換的成本，並簡化多執行緒應用程式設計的複雜性，Go 提出了以下對策：
+
+- 將作業系統的執行緒簡化（抽象化）為 goroutines。
+- 提供 goroutine 專用的排程器（scheduler）來簡化作業系統處理執行緒的排程工作。
+
+如下圖所示，Go 排程器的主要工作就是把 goroutines 分派給特定的執行緒。應用程式運行時，可能有成千上萬個 goroutines 在排隊等待自己被分派到一個執行緒。
+
+![](images/go-scheduler.excalidraw.png#center)
+
+在 Go 應用程式中，goroutines 之間的 context switching 成本比作業系統層級的執行緒切換成本更低，因為 Go Scheduler 是屬於應用程式層級（另一種常見說法是 user space）的處理，而未涉及作業系統核心層級（kernel space）的低階工作。
+
+當一個 goroutine 被阻斷而暫停工作時（例如可能正在等待某個磁碟或網路 I/O 操作），Go Schedular 就會暫時把它晾在一邊，並將它占用的執行緒分派去執行另一個需要執行的 goroutine。如此一來，同一個執行緒便得以重複使用，服務多個 goroutines。此外，一個 goroutine 占用的記憶體空間相當節省：剛開始只需要配置 2KB 的堆疊記憶空間，之後則會根據實際需要增加或縮減。
+
+> [!info]
+> 這裡的介紹比較簡略，若有興趣深入了解 Go Scheduler 的內部工作原理，可參考這個影片：[GopherCon 2018: The Scheduler Saga](https://www.youtube.com/watch?v=YHRO5WQGh0k)。
+
+### Channels
+
+*(TODO)*
 
 ## 建立開發環境 {#setup-dev-env}
 

@@ -1,6 +1,7 @@
 caution = 'Caution'
 important = 'Important'
 note = 'Note'
+info = 'Information'
 tip = 'Tip'
 warning = 'Warning'
 quote = "Quote"
