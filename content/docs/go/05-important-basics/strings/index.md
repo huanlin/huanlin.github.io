@@ -13,6 +13,10 @@ title: 5.7 字串
   - `strings.Compare()` 函式：應該只用於三向比較（three-way comparison）的場合。
 - Raw string 的寫法是以 backtick 字元 (`\``) 包住字串。
 
+## 格式化字串 {#fmt}
+
+格式化字串的相關函式與參數，可參閱官方文件: [fmt package](https://pkg.go.dev/fmt)。其中包括常用的字串格式化參數、如何建立錯誤訊息、以及掃描（scan）字串等等，都有詳細的說明。網路上也有一些整理好的小抄，例如：[GoLang fmt Printing Cheat Sheet](https://cheatography.com/gpascual/cheat-sheets/golang-fmt-printing/)。
+
 ## 字串長度 {#str-length}
 
 Go 的字串內部不是字元陣列，而是代表每個 UTF-8 字元的 byte 陣列。因此，若以內建函式 `len` 試圖取得字串長度，得到的不會是字元個數，而是其內部 byte 陣列的長度。

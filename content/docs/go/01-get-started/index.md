@@ -41,19 +41,17 @@ Go 的優點與強項：
 
 > 撰寫本文時，我安裝的 Go 版本是 v1.23.0。
 
-### IDE
+### VS Code
 
-比較常聽到建議使用的 IDE：
+比較常聽到建議使用的 IDE 有這幾個：
 
 - Visual Studio Code
 - GoLand by JetBrains
 - Neovim
 
-對鍵盤操控和 coding 效率極為講究的人可能會喜歡 Neovim 或 JetBrains。我是習慣用 VS Code。
+對鍵盤操控和 coding 效率極為講究的人可能會喜歡 Neovim 或 JetBrains。由於我用的是 VS Code，所以這裡只介紹它的相關設定。
 
-#### VS Code
-
-與 Go 有關的 extensions：
+與 Go 有關的 VS Code extensions：
 
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.go) by the Go Team at Google
 - [Go Test Explorer](https://marketplace.visualstudio.com/items?itemName=premparihar.gotestexplorer)
@@ -88,3 +86,27 @@ VS Code 官方文件有更詳細的介紹：[Go in Visual Studio Code](https://c
 **參閱：** [gopls 官方文件](https://pkg.go.dev/golang.org/x/tools/gopls#section-readme)
 
 順便提及，Go 提供的程式碼排版工具預設會使用 `tab` 來縮排，而不是插入空白字元，故剛才展示的預設選項中，`editor.insertSpace` 預設為 `false`。建議不要更改這個選項，以確保所有的 Go 程式碼維持同樣的風格。
+
+#### 除錯
+
+欲在 VS Code 中除錯 Go 程式，通常需要建立 **launch.json** 來提供一些必要的參數。
+
+舉例來說，如果命令列應用程式執行的過程中有用到 `fmt.Scanf()` 來獲取使用者輸入的字元，在預設情況下，VS Code 除錯應用程式的時候是以整合式終端機視窗（integrated terminal）來顯示應用程式的執行過程，而這個整合式終端機並沒有辦法接受使用者輸入的字元。像這種情況，就會需要告訴 VS Code：除錯我的應用程式時，請改用外部的終端機視窗（external terminal）。底下是一個 launch.json 範例：
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Package",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${fileDirname}",
+            "console": "externalTerminal"
+        }
+    ]
+}
+```
+
+有關建立 `launch.json` 的方法以及詳細的參數說明，請參閱 Go Wiki : [debugging](https://github.com/golang/vscode-go/wiki/debugging#configure)。
