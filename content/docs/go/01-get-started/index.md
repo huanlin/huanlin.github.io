@@ -166,8 +166,6 @@ VS Code 官方文件有更詳細的介紹：[Go in Visual Studio Code](https://c
 
 順便提及，Go 提供的程式碼排版工具預設會使用 `tab` 來縮排，而不是插入空白字元，故剛才展示的預設選項中，`editor.insertSpace` 預設為 `false`。建議不要更改這個選項，以確保所有的 Go 程式碼維持同樣的風格。
 
-
-
 #### 除錯
 
 欲在 VS Code 中除錯 Go 程式，通常需要建立 **launch.json** 來提供一些必要的參數。
