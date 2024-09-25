@@ -249,3 +249,16 @@ func main() {
 ```json
 {"animal_name":"cat","scientific_name":"Felis catus","animal_average_weight":10.5}
 ```
+
+## 比較兩個結構是否相同 {#cmp-structs}
+
+欲比較兩個結構的內容（所有欄位）是否相等，Go 標準函式庫有提供 [reflect.DeepEqual() 函式](https://pkg.go.dev/reflect#DeepEqual)。不過，使用上可能不夠彈性，例如：
+
+- 不允許浮點數的誤差。
+- 結構中的未公開欄位（unexported fields）也會一併比較。
+
+若碰到類似限制，可試試開源套件：[go-cmp](https://github.com/google/go-cmp)。
+
+## References
+
+- [Go 每日一庫之 go-cmp](https://darjun.github.io/2020/03/20/godailylib/go-cmp/)

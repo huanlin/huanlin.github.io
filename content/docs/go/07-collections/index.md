@@ -1,12 +1,14 @@
 ---
-title: 07 陣列與 slice
+title: 07 集合
 ---
+
+介紹三種集合類型：array、slice、map。
 
 ## 陣列 {#array}
 
 *(有空再寫)*
 
-## slice
+## Slice
 
 *(基礎語法和內部結構晚點寫，先整理一個隱藏陷阱)*
 
@@ -104,7 +106,13 @@ starting cap    growth factor
 4096            1.30
 ```
 
-## 令新手迷惑的寫法 {#confusing}
+## Map
+
+*(TODO)*
+
+## 其他補充 {#misc}
+
+### 令新手迷惑的寫法 {#confusing}
 
 底下兩種寫法，差別只在有沒有寫 `...`：
 
@@ -123,7 +131,7 @@ Type of a: [3]int
 Type of b: []int
 ```
 
-## 第三方套件
+### 第三方套件
 
 Go 標準函式庫提供的容器類型有陣列、slice、map、channel、heap、list、ring 等等。如果需要處理其他類型的資料結構，例如樹狀結構，可以試試一個叫做
 Go Data Structures (GoDS) 的開源專案，網址是：<https://github.com/emirpasic/gods>。
