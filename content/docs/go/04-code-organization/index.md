@@ -360,9 +360,6 @@ github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 
 如果對 module 和 package 仍有不清楚的地方，不妨看一下別人的 Go 專案是如何組成的，包括 `go.mod` 檔案的內容、套件的階層結構、套件的命名等等。
 
-> [!info] 尋找第三方套件
-> 一個尋找 Go 第三方套件的好地方：<https://pkg.go.dev>。
-
 這裡拿開源專案 gopsutil 為例，此專案的 GitHub 網址是：
 
 <https://github.com/shirou/gopsutil>
@@ -445,6 +442,16 @@ import (
 
 順便提及，gopsutil 專案的資料夾命名與結構，似乎有遵循 [標準 Go 專案目錄結構](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)。此目錄結構並非 Go 開發團隊制定的官方標準，而是根據常見的作法所整理出來的通用結構。參考這個標準目錄結構時，應該以專案實際的規模和需要來決定要有哪些資料夾，而不是一蓋照單全收。
 
+## 尋找第三方套件
+
+一個尋找 Go 第三方套件的好地方：<https://pkg.go.dev>。
+
+在此網站的搜尋框輸入關鍵字，它會列出相關的套件。例如輸入 "util"，搜尋結果如下圖：
+
+![](images/search-pkg.png#center)
+
+搜尋結果的套件名稱旁邊如果有標示 "standard library"，即代表那是 Go 標準函式庫提供的套件；無此標示者則為第三方套件。
+
 ## Summary
 
 - 一個 module 通常就是一個應用程式專案，而這個 module 裡面會有多個 packages。
@@ -465,5 +472,7 @@ import (
 - [go.mod file reference](https://go.dev/doc/modules/gomod-ref)
 - [Module release and versioning workflow](https://go.dev/doc/modules/release-workflow)
 - [Module version numbering](https://go.dev/doc/modules/version-numbers)
+- [標準 Go 專案目錄結構 (Standard Go Project Layout)](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)
+- <https://pkg.go.dev/>
 
 [100-mistakes]: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
