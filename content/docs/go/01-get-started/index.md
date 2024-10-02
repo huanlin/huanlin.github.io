@@ -39,7 +39,7 @@ Go 的優點與強項：
 
 每一個可執行的 Go 應用程式的內部結構大致如下圖：
 
-![Go Runtime](images/go-app-runtime.excalidraw.png)
+![Go Runtime](images/go-app-runtime.excalidraw.png#center)
 
 除了應用程式本身的機器碼和它依賴的外部套件（dependencies），還會包含一個叫做 **Go Runtime** 的東西，用來管理應用程式執行時的行為：
 

@@ -360,6 +360,9 @@ github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 
 如果對 module 和 package 仍有不清楚的地方，不妨看一下別人的 Go 專案是如何組成的，包括 `go.mod` 檔案的內容、套件的階層結構、套件的命名等等。
 
+> [!info] 尋找第三方套件
+> 一個尋找 Go 第三方套件的好地方：<https://pkg.go.dev>。
+
 這裡拿開源專案 gopsutil 為例，此專案的 GitHub 網址是：
 
 <https://github.com/shirou/gopsutil>
@@ -434,11 +437,9 @@ import (
 )
 ```
 
-這裡有兩個地方值得注意。首先是套件的順序，建議寫法是先寫標準函式庫的套件，然後是其他套件。
+這裡有兩個地方值得注意。首先是<mark>套件的順序，建議寫法是先寫標準函式庫的套件，然後是其他套件。</mark>
 
-其次，引用其他套件時，套件的完整路徑名稱是這樣組成的：
-
-**`模組路徑名`** + **`套件路徑名`**
+其次，<mark>Go 程式在引用（import）第三方套件時不能寫相對路徑，而必須寫出套件的完整路徑名稱。</mark>套件的完整路徑名稱是由 go.mod 中宣告的模組路徑名稱再加上套件所在相對路徑名稱。
 
 以 `"github.com/shirou/gopsutil/v4/internal/common"` 為例，它表示要使用的套件是位於 `github.com/shirou/gopsutil/v4` 模組（專案）底下的 `/internal/common` 套件。
 
@@ -449,6 +450,8 @@ import (
 - 一個 module 通常就是一個應用程式專案，而這個 module 裡面會有多個 packages。
 - 一個 package 在檔案系統中就是一個資料夾，該資料夾底下的 .go 程式檔案必然隸屬同一個 package（否則無法通過編譯）。
 - 模組路徑是模組的正式名稱（唯一識別名稱），宣告於模組的根目錄下的 `go.mod` 檔案；模組路徑要能表達該模組的用途，以及可以從何處找到它。
+- Go 程式在 import 套件時，套件名稱的順序是先寫標準函式庫的套件，然後是其他套件。
+- Go 程式在 import 第三方套件時不能寫相對路徑，而必須寫出套件的完整路徑名稱。套件的完整路徑名稱是由 go.mod 中宣告的模組路徑名稱再加上套件所在相對路徑名稱。
 - 隸屬同一個 package 的程式碼可以互相存取宣告於 package 層級的名稱，如變數、函式、型別等等。
 - 不同 package 的程式碼只能使用對方 export 出來的東西。
   - Go 語言沒有 `public`、`private` 或 `protected` 等識別字，而是根據變數名稱的第一個字母大小寫來判斷能否被外部引用。
