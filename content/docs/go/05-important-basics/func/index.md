@@ -2,7 +2,32 @@
 title: 5.5 函式
 ---
 
-## 具名函式  {#named-func}
+## 基礎語法 {#func-basic}
+
+- 呼叫同一套件的函式，只要寫函式名稱。
+- 呼叫其他套件提供的（exported）函式，則須使用 `<package>.<function>` 語法。
+
+範例：
+
+```go
+// 定義一個函式，名稱為 hello，沒有傳入參數，也沒有回傳值。
+func hello() {
+    fmt.Println("Hello, world!")
+}
+
+func main() {
+    hello() // 呼叫 hello 函式。
+}
+```
+
+## 函式與回傳值 {#writing-func}
+
+本節內容：
+
+- 撰寫具名函式。
+- 撰寫匿名函式。
+
+### 具名函式  {#named-func}
 
 以下兩種寫法都可以：
 
@@ -30,11 +55,13 @@ func foo(a int) (b int)
 }
 ```
 
-這種寫法叫做 naked return。
+這種寫法叫做 **naked return**。
 
-Naked return 的寫法應該只用於簡短的函式，因為 `return` 時沒有寫明回傳的參數，程式碼比較不好理解。
+<mark>Naked return 的寫法應該只用於簡短的函式，因為 `return` 時沒有寫明回傳的參數，程式碼比較不好理解。</mark>至於多簡短的函式才比較能讓人接受 naked return 的寫法，則沒有標準，大原則是以程式碼是否容易閱讀和維護來決定。
 
-### 具名回傳參數的副作用 {#side-effects-with-named-result-params}
+> 如果一定要有一個具體準則，這裡給出一個參考依據：當一個函式的程式碼超出編輯器的顯示區域，而必須上下捲動才能看到完整的程式碼，這種情況就不要使用 naked return 語法。久而久之，通常會養成習慣一開始就明確宣告回傳的型別。
+
+#### 具名回傳參數的副作用 {#side-effects-with-named-result-params}
 
 使用具名回傳參數時，可能一不留神就寫出類似底下的程式碼：
 
@@ -62,7 +89,7 @@ func parse(ctx AppContext) (title string, err error)
 }
 ```
 
-## 匿名函式 {#anonymous-func}
+### 匿名函式 {#anonymous-func}
 
 ```go
 func main() {
