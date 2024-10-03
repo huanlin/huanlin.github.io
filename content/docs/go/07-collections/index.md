@@ -4,6 +4,12 @@ title: 07 集合
 
 介紹三種集合類型：array、slice、map。
 
+Go 內建了三種集合類型：陣列、切片（slice）、map。
+
+- 陣列是固定長度的集合，所有元素都是相同型別。
+- 切片是動態長度的集合，可理解為動態陣列，長度可任意變大縮小。
+- Maps 是 key-value pairs，可透過 keys 來存取對應的 values。
+
 ## 陣列 {#array}
 
 *(有空再寫)*
