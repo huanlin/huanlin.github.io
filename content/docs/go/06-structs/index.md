@@ -3,11 +3,11 @@ title: 06 結構
 tags: [Go]
 ---
 
-Go 的設計者對物件導向程式設計（object-oriented programming）的看法跟一般認知的 OOP 不大相同。
+Go 的設計者對物件導向程式設計（OOP; object-oriented programming）的看法跟一般認知的 OOP 不大相同。
 
 Go 沒有類別和繼承機制，但是有結構（struct），而且：
 
-- 我們可以將任何函式附加（attach）至**同一個 package 中**的任何具象型別。換言之，如果函式和型別隸屬不同 package，那就不行。比如說，我們不能函式附加至 Go 標準函式庫的 `time.Duration`。
+- 我們可以將任何函式附加（attach）至**同一個 package 中**的任何具象型別。換言之，如果函式和型別隸屬不同 package，那就不行。比如說，我們無法將自己寫的函式附加至 Go 標準函式庫的 `time.Duration`。
 - 型別能夠隱含地實作介面（無需明白宣告欲實作哪個介面）。
 
 ## 範例一：宣告一個結構型別 {#ex1}
@@ -16,25 +16,25 @@ Go 沒有類別和繼承機制，但是有結構（struct），而且：
 
 ```go
 type Person struct {
-    name string
-    age  int
+    Name string
+    Age  int
 }
 
 func main() {
     fmt.Println("Hello, World!")
 
     james := Person{
-        name: "James",
-        age:  25,
+        Name: "James",
+        Age:  25,     // 最後一律要加逗號，方便!
     }
-    fmt.Println(james.name, james.age)
+    fmt.Println(james.Name, james.Age)
 }
 ```
 
 **注意：**
 
-- 給 `age` 成員賦值的時候，最後的逗號不可省略，否則編譯器會視為語法錯誤。這是 Go 設計者貼心的地方。
-- 這裡的結構型別 `Person` 是以英文大寫開頭，表示可以公開給其他套件使用。如果要限定同一套件才能使用，則名稱必須改為小寫開頭的 `person`。
+- 替結構成員賦值的時候，最後的逗號不可省略，否則編譯器會視為語法錯誤。這是 Go 設計者貼心的地方。
+- 這裡的結構型別 `Person` 以及結構成員（欄位）都是以英文大寫開頭，表示它們都會公開給其他套件使用。如果要限定同一套件才能使用，則名稱必須以英文小寫開頭來命名，例如 `person`。結構名稱與其成員欄位的名稱不見得採用一致的大小寫命名方式，例如結構型別可能以英文小寫開頭來命名（例如 `person`），亦即 unexported（不給其他套件使用），而結構成員以大寫英文開頭來命名（例如 `Age`）。
 
 如果使用 `new` 來建立結構，會得到一個指向結構的指標；而使用 `&` 運算子也同樣會得到指向結構的指標。參考下範例所示：
 
