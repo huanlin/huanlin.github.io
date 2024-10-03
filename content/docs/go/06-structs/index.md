@@ -137,20 +137,18 @@ false
 
 ```go
 func main() {
-    james := struct {
+    p1 := struct {
         name string
         age  int
     }{
-        name: "James",
+        name: "Michael",
         age:  25,
     }
-    fmt.Println(james.name, james.age)
+    fmt.Println(p1.name, p1.age)
 }
 ```
 
-顯然，如果同樣的結構要使用很多次，應該使用範例一的寫法，也就是預先定義結構型別。
-
-## 範例三：結構的欄位也可以是函式 {#ex3}
+## 結構的欄位也可以是函式 {#struct-func}
 
 ```go
 func main() {
@@ -168,9 +166,9 @@ func main() {
 }
 ```
 
-## 範例四：為結構附加方法 {#ex4}
+## 為結構附加方法 {#struct-method}
 
-範例三的寫法是把函式加入結構的成員，這裡要示範的寫法有點像是替既有結構額外附加（**擴充**）一個方法。
+上一節的範例是把函式加入結構的成員，這裡要示範的寫法有點像是替既有結構額外附加（**擴充**）一個方法。
 
 ```go
 type Animal struct {
@@ -226,7 +224,7 @@ func (a *Animal) speak() string {
 
 > 熟悉物件導向程式語言的人可以把 receiver 參數理解為 `this` 或 `self`，即「當前的物件本身」。
 
-## 範例五：結構成員可以匿名 {#nameless-field}
+## 結構成員可以匿名 {#nameless-field}
 
 ```go
 type Animal struct {
@@ -256,7 +254,7 @@ func main() {
 
 > 如果有給欄位命名，那麼即使只有一個欄位，也必須以名稱來存取該欄位，而不能用型別。
 
-## 範例六：結構中的 tags {#tags}
+## 結構中的 tags {#struct-tags}
 
 結構的欄位可以附加額外的描述資訊（metadata），稱為「標籤」（tags）。
 
@@ -292,7 +290,7 @@ func (a Animal) speak() string {
 
 這裡使用了 [Go 的 reflection 套件](https://pkg.go.dev/reflect)來取得結構的執行時期型別資訊，並以 `FieldByName` 來取得結構成員。取得結構成員之後，便可以透過它的 `Tag.Get("help")` 方法來取得 tag key 為 "help" 的內容。
 
-## 範例七：將 tags 用於 JSON 序列化
+### 範例：將 tags 用於 JSON 序列化 {#struct-tags-json}
 
 ```go
 package main
