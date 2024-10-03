@@ -35,7 +35,7 @@ func main() {
 }
 ```
 
-Try it: <https://go.dev/play/p/x-2GAFCIcG8>
+**Try it:** <https://go.dev/play/p/x-2GAFCIcG8>
 
 此範例展示了以 **struct literal** 語法來建立和初始化一個結構，共有三種寫法：
 
@@ -121,7 +121,7 @@ true
 false
 ```
 
-Try it: <https://go.dev/play/p/8srsvYtUflh>
+**Try it:** <https://go.dev/play/p/8srsvYtUflh>
 
 提醒：
 
