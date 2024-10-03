@@ -77,27 +77,56 @@ type Duration int64
 範例：
 
 ```go
-p1 := &Person{Name: "James", Age: 25}
-p2 := new Person{Name: "Bob", Age: 25}
+p1 := &Person{Name: "Michael", Age: 25}
+
+p2 := new(Person)
+p2.Name = "Michael"
+p2.Age = 25
 ```
 
-以上兩種寫法都會得到一個指標，指向新建立的結構。
+以上兩種寫法都會得到一個指標，指向新建立的結構。也就是說，`p1` 和 `p2` 這兩個變數的型別都是「指向 Person 結構的指標」。
 
-如果使用 `new` 來建立結構，會得到一個指向結構的指標；而使用 `&` 運算子也同樣會得到指向結構的指標。參考下範例所示：
+以下示範更多種寫法，並藉由執行結果來觀察變數的型別：
 
 ```go
-var p1 *Person = new(Person)
-p2 := new(Person)
-p3 := &Person{}
+p1 := Person{"Michael", 25}
 
-fmt.Printf("%T\n", p1)  // 輸出 p1 的型別名稱
-fmt.Printf("%T\n", p2)  // 輸出 p2 的型別名稱
-fmt.Printf("%T\n", p3)  // 輸出 p3 的型別名稱
+// p2, p3, p4, p5 全都是指向 Person 結構的指標，只是寫法不同。
+p2 := &Person{"Michael", 25}
+p3 := &Person{Name: "Michael", Age: 25}
+p4 := &Person{
+    Name: "Michael",
+    Age:  25,
+}
+p5 := new(Person)
+p5.Name = "Michael"
+p5.Age = 25
+
+fmt.Printf("p1: %v, type: %T\n", p1, p1)
+fmt.Printf("p2: %v, type: %T\n", p2, p2)
+fmt.Printf("p3: %v, type: %T\n", p3, p3)
+fmt.Printf("p4: %v, type: %T\n", p4, p4)
+fmt.Println(p1 == *p2)   // true
+fmt.Println(p2 == p5)    // false
 ```
 
-這裡的 `p1`、`p2` 和 `p3` 都是指向一個新建立的 `Person` 結構的指標，所以三次輸出的型別名稱都一樣是 `*main.Person`。
+執行結果：
 
-p0 := Person{}  // 建立一個 zeroed 結構（成員皆為 0 或空值）
+```text
+p1: {Michael 25}, type: main.Person
+p2: &{Michael 25}, type: *main.Person
+p3: &{Michael 25}, type: *main.Person
+p4: &{Michael 25}, type: *main.Person
+true
+false
+```
+
+Try it: <https://go.dev/play/p/8srsvYtUflh>
+
+提醒：
+
+- 倒數第二行的 `p1 == *p2` 是比較兩個結構實體的內容。注意這裡的 `p2` 前面要加 `*`，因為它本身只是個指標，必須用 `*` 來表示它指向的實體。
+- 最後一行程式碼輸出結果為 `false`，因為 `p2` 和 `p5` 都是指標，所以 `p2 == p5` 所比較的內容會是兩個變數的內容，亦即記憶體位址。`p2` 和 `p5` 分別指向不同的結構實體，故二者指向的記憶體位址當然不同，故二者不相等。
 
 ## 匿名結構 {#anonymous-struct}
 
