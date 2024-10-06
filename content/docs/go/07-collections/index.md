@@ -28,6 +28,8 @@ fmt.Printf("%T", rgb)  // 輸出型別
 
 結果會是 `[3]uint8`。
 
+*to be continued...*
+
 ## Slice
 
 *(基礎語法和內部結構晚點寫，先整理一個隱藏陷阱)*
