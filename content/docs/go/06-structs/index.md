@@ -50,7 +50,7 @@ func main() {
 
 ### 底層型別 {#underlying-type}
 
-宣告一個具名型別時，必須指定另一個型別作為其「底層型別」（underlying type）。例如前面範例在宣告 `Person` 結構時，其底層型別是匿名的 `struct` 型別：
+宣告一個具名型別時，必須指定另一個型別作為其「底層型別」（underlying type）。例如前面範例在宣告 `Person` 結構時，其底層型別是匿名的 `struct`：
 
 ```go
 type Person struct {
@@ -59,7 +59,7 @@ type Person struct {
 }
 ```
 
-這個底層型別也可以是具名型別，例如 Go 標準函式庫的 `Durarion` 型別是這麼宣告的：
+這個底層型別也可以是具名型別，例如 Go 標準函式庫的 `Duration` 型別是這麼宣告的：
 
 ```go
 type Duration int64
@@ -151,6 +151,8 @@ func main() {
 ```
 
 ## 結構的欄位也可以是函式 {#struct-func}
+
+範例：
 
 ```go
 func main() {
