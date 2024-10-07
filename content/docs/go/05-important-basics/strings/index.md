@@ -19,16 +19,24 @@ title: 5.7 字串
 
 ## 字串長度 {#str-length}
 
-Go 的字串內部不是字元陣列，而是代表每個 UTF-8 字元的 byte 陣列。因此，若以內建函式 `len` 試圖取得字串長度，得到的不會是字元個數，而是其內部 byte 陣列的長度。
+Go 的字串內部不是字元陣列，而是代表每個 UTF-8 字元的 byte 陣列。因此，若以內建函式 `len` 試圖取得字串長度，得到的不會是字元個數，而是其內部 byte 陣列的長度。如欲取得字串長度，應使用標準函式庫的 `utf8.RuneCountInString()`。
 
 範例：
 
 ```go
-unicodeCharStr := "地鼠"
-fmt.Println(len(unicodeCharStr)) // output: 6
+import (
+    "fmt"
+    "unicode/utf8"
+)
+
+func main() {
+    str := "地鼠"
+    fmt.Println(len(str))                    // 輸出: 6
+    fmt.Println(utf8.RuneCountInString(str)) // 輸出: 2
+}
 ```
 
-程式印出的結果是 6 而不是 2。
+Try it: <https://go.dev/play/p/365ZZEx2uGz>
 
 ## Rune
 
@@ -37,9 +45,9 @@ fmt.Println(len(unicodeCharStr)) // output: 6
 範例：
 
 ```go
-unicodeCharStr := "地鼠"
-for i := 0; i < len(unicodeCharStr); i++ {
-    fmt.Print(string(unicodeCharStr[i]) + " ")
+str := "地鼠"
+for i := 0; i < len(str); i++ {
+    fmt.Print(string(str[i]) + " ")
 }
 fmt.Println() // 輸出:  å  ° é ¼
 ```
