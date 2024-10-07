@@ -4,7 +4,7 @@ title: 5.7 字串
 
 ## 概要
 
-- Go 的字串內部不是字元陣列，而是代表每個 UTF-8 字元的 byte 陣列。
+- Go 的字串內部不是字元陣列，而是代表每個 UTF-8 字元的一串 bytes。
 - Go 的原始碼以及官方文件是以 rune（讀音近似「潤」）來指稱一個 UTF-8 字元的 code point。簡單起見，可以把它理解為一個 UTF-8 字元。
 - 使用 string 宣告變數若無指定初值，預設值為空字串 ""。
 - 比較兩個字串，可以用：
@@ -19,7 +19,7 @@ title: 5.7 字串
 
 ## 字串長度 {#str-length}
 
-Go 的字串內部不是字元陣列，而是代表每個 UTF-8 字元的 byte 陣列。因此，若以內建函式 `len` 試圖取得字串長度，得到的不會是字元個數，而是其內部 byte 陣列的長度。如欲取得字串長度，應使用標準函式庫的 `utf8.RuneCountInString()`。
+Go 的字串內部不是字元陣列，而是代表每個 UTF-8 字元的一串 bytes。因此，若以內建函式 `len` 試圖取得字串長度，得到的不會是字元個數，而是其內部 bytes 區塊的長度。如欲取得字串長度，應使用標準函式庫的 `utf8.RuneCountInString()`。
 
 範例：
 
@@ -37,6 +37,11 @@ func main() {
 ```
 
 Try it: <https://go.dev/play/p/365ZZEx2uGz>
+
+> [!quote]
+> In Go, a string is in effect a read-only slice of bytes.
+>
+> -- The Go Blog: [Strings, bytes, runes and characters in Go](https://go.dev/blog/strings)
 
 ## Rune
 
