@@ -32,7 +32,7 @@ fmt.Println(len(unicodeCharStr)) // output: 6
 
 ## Rune
 
-如欲取出字串中的某個字元，不應使用陣列索引的語法，否則結果不會是我們想要的。
+如欲存取字串中的個別字元，應使用 `rune` 型別，而且不能使用陣列索引的語法，否則結果不會是我們想要的。
 
 範例：
 
@@ -44,7 +44,7 @@ for i := 0; i < len(unicodeCharStr); i++ {
 fmt.Println() // 輸出:  å  ° é ¼
 ```
 
-要取出字串中的字元，可以用 `range`：
+要取出字串中的字元，可以用 `range` 來取出型別為 `rune` 的字元：
 
 ```go
 unicodeCharStr := "地鼠"
@@ -54,7 +54,7 @@ for i, rune := range unicodeCharStr {
 fmt.Println() // 輸出: 0:地 3:鼠
 ```
 
-在 Go 的原始碼以及官方文件中都是以 rune（讀音近似「潤」）來指稱一個 UTF-8 字元的 code point。簡單起見，可以把它理解為一個 UTF-8 字元。
+在 Go 的原始碼以及官方文件中都是以 rune（讀音近似「潤」）來指稱一個 UTF-8 字元的 code point。型別 `rune` 只是 `int32` 的別名，換言之，一個 rune 就是一個 32 位元的整數，其數值範圍已足夠容納所有的 [Unicode](https://home.unicode.org/) code point。
 
 > [!quote]
 > "Code point" is a bit of a mouthful, so Go introduces a shorter term for the concept: rune. The term appears in the libraries and source code, and means exactly the same as "code point", with one interesting addition.

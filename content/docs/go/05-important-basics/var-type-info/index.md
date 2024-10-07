@@ -15,6 +15,12 @@ var y int = 100
 
 沒有設定初始值的變數，都會有一個預設值。對 `int` 型別而言，這個預設值是 0，故此範例的 x 初始值為 0。
 
+一次宣告多個變數：
+
+```go
+var x, y, z int
+```
+
 ### Short declaration syntax
 
 另一種更簡潔的語法是用 `:=` 運算子來一次完成兩件事：宣告變數且賦值，而且不用寫 `var`。此寫法稱為 short declaration syntax。
@@ -24,7 +30,7 @@ var y int = 100
 ```go
 sum := 100       // sum 是一個整數。
 str := "hello"   // str 是一個字串。
-v1, v2, v3 := 10, sum, str // 一次宣告且設定多個變數。
+x, y, z := true, sum, str // 一次宣告且設定多個變數。
 ```
 
 使用 short declaration syntax 時，`:=` 的左側如果有多個變數，只要其中一個變數是新的（未曾宣告過的）即合法，否則編譯器會報錯。
