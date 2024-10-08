@@ -28,7 +28,47 @@ fmt.Printf("%T", rgb)  // 輸出型別
 
 結果會是 `[3]uint8`。
 
-*to be continued...*
+### 傳遞陣列至函式 {#passing-arrays-to-func}
+
+假設有一個解析度為 8K 畫質的圖片要保存於一個陣列。8K 的解析度是 7680 x 4320 個像素（pixels），也就是總共有 33,177,600 個像素。每個像素都是以 RGB 三原色的數值來表示，故用來保存該圖片的陣列所需要的空間為 7680 * 4320 * 3，將近 100 MB。然後，我們要把這個陣列傳遞給一個函式，將每個像素的顏色反轉。
+
+```go
+const resolution8K = 7_680 * 4_320 * 3           
+
+func main() {
+    image := [resolution8K]byte{ /* 顏色資料（略） */ }   
+    invertColors(image)
+}
+
+func invertColors(colors [resolution8K]byte) {       
+    for i := range colors {               
+        colors[i] = 255 - colors[i]           
+    }
+}
+```
+
+這種寫法會傳遞整個陣列到函式，亦即要複製出另一個將近 100 MB 的陣列，實在太沒效率了。這種情況可以改為傳遞陣列的指標。
+
+### 傳遞陣列的指標給函式 {#passing-array-pointers}
+
+把上一節的範例改成傳遞陣列的指標：
+
+```go
+const resolution8K = 7_680 * 4_320 * 3
+
+func main() {
+    image := [resolution8K]byte{ /* 顏色資料（略） */ }   
+    invertColors(&image)                   
+}
+
+func invertColors(colors *[resolution8K]byte) {       
+    for i := range colors {
+        colors[i] = 255 - colors[i]           
+    }
+}
+```
+
+如此一來，呼叫 `invertColors()` 函式的時候就只需要複製 8 bytes（在 64 位元的機器上，指標都是占 8 bytes）。
 
 ## Slice
 
@@ -163,3 +203,4 @@ Go Data Structures (GoDS) 的開源專案，網址是：<https://github.com/emir
 - The Go Blog: [Go Slices: usage and internals](https://go.dev/blog/slices-intro)
 - [Slices in Go: Grow Big or Go Home](https://victoriametrics.com/blog/go-slice/)
 - commit: [runtime: make slice growth formula a bit smoother](https://go.googlesource.com/go/+/2dda92ff6f9f07eeb110ecbf0fc2d7a0ddd27f9d)
+- "[Go by Example](https://www.manning.com/books/go-by-example)" by Inanc Gumus (Manning)
