@@ -122,7 +122,7 @@ go parseFile("file2.dat")
 
 ### VS Code
 
-比較常聽到建議使用的 IDE 有這幾個：
+比較常聽到建議使用的 IDE：
 
 - Visual Studio Code
 - GoLand by JetBrains
@@ -132,16 +132,18 @@ go parseFile("file2.dat")
 
 與 Go 有關的 VS Code extensions：
 
-- [Go](https://marketplace.visualstudio.com/items?itemName=golang.go) by the Go Team at Google
+- [Go for VS Code](https://marketplace.visualstudio.com/items?itemName=golang.go) by the Go Team at Google
 - [Go Test Explorer](https://marketplace.visualstudio.com/items?itemName=premparihar.gotestexplorer)
 
-底下截圖展示了我撰寫本文時的 VS Code 工作環境：
+### 安裝 Go tools {#install-go-tools}
 
-![](images/vscode-go.png)
+安裝好 Go for VS Code 之後，接著安裝 Go 工具鍊。步驟為：按 Ctrl+Shift+P 或 F1 開啟 Command Palette，然後在搜尋框輸入 `Go: Install/Update tools`，接著會出現下拉清單顯示建議安裝的 Go tools，全選之後按 OK 即可。參考下圖：
+
+![](images/vscode-go-tools.png)
 
 左下角的 Go 面板可以查看 Go 環境變數以及安裝了哪些 Go tools。
 
-VS Code 官方文件有更詳細的介紹：[Go in Visual Studio Code](https://code.visualstudio.com/docs/languages/go)。
+亦可參閱：[Install and configure Visual Studio Code for Go development](https://learn.microsoft.com/en-us/azure/developer/go/configure-visual-studio-code#4-update-the-go-tools)。
 
 如果已經有正確安裝 Go 工具鍊的相關工具，在預設情況下，按 Ctrl+S 存檔時會自動重新排版程式碼，可輕鬆維持一致的程式碼風格。如欲查看預設的自動排版選項，可以按 `F1` 或 `Crtl+Shift+P` 開啟命令面板，輸入 `Preferences: Open Default Settings (JSON)`，便可以找到所有跟 Go 有關的預設選項。底下僅摘錄其中一部份：
 
