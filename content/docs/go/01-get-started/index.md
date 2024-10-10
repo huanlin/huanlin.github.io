@@ -135,7 +135,7 @@ go parseFile("file2.dat")
 - [Go for VS Code](https://marketplace.visualstudio.com/items?itemName=golang.go) by the Go Team at Google
 - [Go Test Explorer](https://marketplace.visualstudio.com/items?itemName=premparihar.gotestexplorer)
 
-### 安裝 Go tools {#install-go-tools}
+#### 安裝 Go tools {#install-go-tools}
 
 安裝好 Go for VS Code 之後，接著安裝 Go 工具鍊。步驟為：按 Ctrl+Shift+P 或 F1 開啟 Command Palette，然後在搜尋框輸入 `Go: Install/Update tools`，接著會出現下拉清單顯示建議安裝的 Go tools，全選之後按 OK 即可。參考下圖：
 
@@ -191,6 +191,10 @@ go parseFile("file2.dat")
 ```
 
 有關建立 `launch.json` 的方法以及詳細的參數說明，請參閱 Go Wiki : [debugging](https://github.com/golang/vscode-go/wiki/debugging#configure)。
+
+#### VS Code 其他設定 {#vscode-settings}
+
+我覺得 VS Code 預設的 Explorer view 在顯示資料夾和檔案的樹狀階層時，內縮的距離太小，以至於階層區分不明顯。欲修改預設值，可按 F1 或 Ctrl+Shift+P 開啟 Command Palette，然後在搜尋框輸入 `Preferences: Open User Settings`，接著在 Settings 的搜尋框輸入 `Workbench tree indent`，便可找到對應的選項。我通常將此選項的數值設定成 14 或 16（單位是 pixels）。
 
 ## References
 
