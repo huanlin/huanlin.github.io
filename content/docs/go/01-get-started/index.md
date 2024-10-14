@@ -203,8 +203,6 @@ go parseFile("file2.dat")
 
 ![Dark Modern theme](images/theme-dark-modern.png)
 
-偶爾想要換個氣氛時，會切換到 [Bearded Theme](https://github.com/BeardedBear/bearded-theme) 找個順眼的來用。
-
 #### VS Code 其他設定 {#vscode-settings}
 
 我覺得 VS Code 預設的 Explorer view 在顯示資料夾和檔案的樹狀階層時，內縮的距離太小，以至於階層區分不明顯。欲修改預設值，可按 F1 或 Ctrl+Shift+P 開啟 Command Palette，然後在搜尋框輸入 `Preferences: Open User Settings`，接著在 Settings 的搜尋框輸入 `Workbench tree indent`，便可找到對應的選項。我通常將此選項的數值設定成 14 或 16（單位是 pixels）。
