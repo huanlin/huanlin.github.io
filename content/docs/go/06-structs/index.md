@@ -216,7 +216,9 @@ func main() {
 
 **A method is a function with a receiver.**
 
-> 參見 The Go Programming Language Specification: [Method declarations](https://go.dev/ref/spec#Method_declarations)。
+參見 The Go Programming Language Specification: [Method declarations](https://go.dev/ref/spec#Method_declarations)。
+
+> 熟悉物件導向程式語言的人可以把 receiver 參數理解為 `this` 或 `self`，即「當前的物件本身」。
 
 剛才的範例中，每次呼叫 `a.speak()` 時傳入的參數 `a` 都是一個新副本。如果想要讓 `speak()` 方法中修改原始傳入的 `a` 結構的內容，就要宣告成指標，像這樣：
 
