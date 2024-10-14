@@ -53,7 +53,7 @@ package authentication
 
 ### Package 名稱 {#package-names}
 
-<mark>套件的名稱應簡潔明白，通常是名詞，而且按照慣例全都用小寫英文字母。雖然可以使用底線字元 `_`，但最好盡量避免。減號字元 `-` 則不能用於套件名稱。</mark>
+<mark>套件的名稱應簡潔明白，通常是名詞，而且按照慣例全都用小寫英文字母。雖然可以使用底線字元 '`_`'，但最好盡量避免。減號字元 '`-`' 則不能用於套件名稱。</mark>
 
 詳見〈[附錄一：Go 程式風格指南]({{< ref "../a1-style-guide/index.md#package-naming" >}})〉或官方部落格：[Package names](https://go.dev/blog/package-names)。
 
