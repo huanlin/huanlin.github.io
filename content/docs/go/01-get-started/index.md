@@ -201,7 +201,7 @@ go parseFile("file2.dat")
 
 如下圖所示：
 
-![Dark Modern theme](images/theme-dark-modern.png)
+![Dark Modern theme](images/theme-dark-modern.png#center)
 
 #### VS Code 其他設定 {#vscode-settings}
 
