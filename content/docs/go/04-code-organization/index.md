@@ -18,7 +18,7 @@ Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中�
 >
 > Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
 
-換言之，package 是一個邏輯組成單位，讓我們把相關功能的程式檔案放在同一個套件裡。
+換言之，package 是一個邏輯組成單位，讓我們把相關功能的程式檔案放在一起。
 
 範例：
 
@@ -53,17 +53,9 @@ package authentication
 
 ### Package 名稱 {#package-names}
 
-<mark>套件名稱應簡潔明白，通常是名詞，而且全都是用英文小寫。注意不可以用底線（snake case）或大小寫混和（mixedCaps）。</mark>
+<mark>套件的名稱應簡潔明白，通常是名詞，而且按照慣例全都用小寫英文字母。雖然可以使用底線字元 `_`，但最好盡量避免。減號字元 `-` 則不能用於套件名稱。</mark>
 
-範例：
-
-- `list`
-- `http`
-- `strconv` （兩個單字的縮寫組合: string conversion）
-- `syscall` （兩個單字的縮寫組合：system call）
-- `fmt` （format 的縮寫）
-
-詳見 Go 官方部落格：[Package names](https://go.dev/blog/package-names)。
+詳見〈[附錄一：Go 程式風格指南]({{< ref "../a1-style-guide/index.md#package-naming" >}})〉或官方部落格：[Package names](https://go.dev/blog/package-names)。
 
 ### Scope
 

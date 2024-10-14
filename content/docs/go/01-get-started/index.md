@@ -128,7 +128,7 @@ go parseFile("file2.dat")
 - GoLand by JetBrains
 - Neovim
 
-對鍵盤操控和 coding 效率極為講究的人可能會喜歡 Neovim 或 JetBrains。由於我用的是 VS Code，所以這裡只介紹它的相關設定。
+對鍵盤操控和 coding 效率極為講究的人可能會喜歡 Neovim 或 JetBrains。我使用 VS Code，所以這裡只介紹它的相關設定。
 
 與 Go 有關的 VS Code extensions：
 
@@ -191,6 +191,19 @@ go parseFile("file2.dat")
 ```
 
 有關建立 `launch.json` 的方法以及詳細的參數說明，請參閱 Go Wiki : [debugging](https://github.com/golang/vscode-go/wiki/debugging#configure)。
+
+#### Color Theme
+
+我慣用的 [Color Theme](https://code.visualstudio.com/docs/getstarted/themes) 是 `Dark Modern`，主要是因為：
+
+- 編輯區容易辨認目前正在編輯的 tab 是哪一個。
+- 在 Explorer 面板中顯示 Git ignored 檔案時，顏色不會過於昏暗而導致難以辨識。
+
+如下圖所示：
+
+![Dark Modern theme](images/theme-dark-modern.png)
+
+偶爾想要換個氣氛時，會切換到 [Bearded Theme](https://github.com/BeardedBear/bearded-theme) 找個順眼的來用。
 
 #### VS Code 其他設定 {#vscode-settings}
 
