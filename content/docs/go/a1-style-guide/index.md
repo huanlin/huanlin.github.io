@@ -50,7 +50,11 @@ title: 附錄一：Go 程式風格指南
 
 ## Interface naming
 
-根據[官方文件](https://go.dev/doc/effective_go#interface-names)，如果介面只包含一個方法，則該介面的慣例命名方式為"方法名稱+er"。例如： `Reader`、`Writer`、`Formatter` 等等。
+### 使用 "er" 後綴 {#er-suffix}
+
+根據[官方文件](https://go.dev/doc/effective_go#interface-names)，如果介面只包含一個方法，則該介面的慣例命名方式為"方法名稱+er"，例如： `Reader`、`Writer`、`Formatter` 等等。除此之外，便沒有進一步說明命名規則。也許我們可以延伸解讀為：只要能適當反映介面的行為，無論介面當中包含幾個方法，都可以用這種 "er" 後綴的命名方式。
+
+### 使用 "I" 前綴 {#i-prefix}
 
 許多物件導向語言建議使用大寫字母 `I` 前綴來命名介面（例如 `IWriter`），好處是能讓開發者更容易辨認哪些是介面，哪些是具象型別。Go 的官方風格則是強調根據介面的行為來命名，而不使用 `I` 前綴。不過，Go 官方文件並未禁止或反對使用 `I` 前綴來命名介面（至少我沒有看到），所以這種命名方式應該也可以納入選項。
 
