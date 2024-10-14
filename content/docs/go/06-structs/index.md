@@ -228,6 +228,35 @@ func (a *Animal) speak() string {
 
 這裡只需要修改一行程式碼而已，其他地方不變。
 
+請注意：只能替自訂型別增加方法，而不能替內建型別（例如 `string`）增加方法。例如以下寫法將無法通過編譯：
+
+```go
+func (s string) Shuffle() { // 編譯錯誤!
+   // ...
+}
+```
+
+Go 編譯器會報錯：cannot define new methods on non-local type string。
+
+一種可能的解決方法是定義一個基於 `string` 的新型別，像這樣：
+
+```go
+type MyString string
+
+func (s MyString) Shuffle() {
+    fmt.Println(s)
+}
+
+func main() {
+    var s MyString = "hello"
+    s.Shuffle()
+}
+```
+
+透過這種方法，便可以替內建型別或外部（第三方）型別增加方法。
+
+**See also:** The Go Programming Language Specification: [Type definitions](https://go.dev/ref/spec#Type_definitions)
+
 **重點整理：**
 
 - 方法（methods）是帶有一個 *receiver* 的函式，而 receiver 是寫在函式名稱前面的一個特殊參數，該參數的型別則表明了這是哪個型別的方法。

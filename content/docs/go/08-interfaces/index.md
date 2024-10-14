@@ -12,7 +12,7 @@ Go 的介面跟其他程式語言的介面都是用來定義共同行為，但�
 
 ### 先實作具象型別 {#concrete-first}
 
-以下範例摘自《Go by Example》第 2 章：
+假設有兩個結構：`slackNotifier` 和 `smsNotifier`，分別代表兩種通知方式。程式碼如下：
 
 ```go
 type slackNotifier struct {           
@@ -39,27 +39,25 @@ func (s *smsNotifier) notify(msg string) {       
 }
 ```
 
-`slackNotifier` 和 `smsNotifier` 都是具象型別，分別代表兩種通知方式。
-
 - `slackNotifier` 結構有兩個方法：`notify` 和 `disconnect`。
 - `smsNotifier` 結構只有一個方法：`notify`。
 
-於是，我們發現這兩個結構有一個共同點：它們的 `notify` 方法長得一模一樣。
+我們發現這兩個結構有一個共同點：它們的 `notify` 方法長得一模一樣。
 
 ### 發現介面 {#discover-interface}
 
-發現具象型別的共同行為之後，便可以為這個行為定義一個介面。在前面的範例中，兩個結構的共同點是 `notify` 方法，故我們可以為它定義一個叫做 `notifier` 的介面：
+發現具象型別的共同行為之後，便可以為這個行為定義一個介面。在前面的範例中，兩個結構的共同點是 `notify` 方法，故我們可以為它定義一個叫做 `Notifier` 的介面：
 
 ```go
-type notifier interface {
+type Notifier interface {
     notify(message string)   
 }
 ```
 
-然後實作此介面的方法：
+然後撰寫一個通用的函式來處理所有支援 `Notifier` 介面的型別：
 
 ```go
-func notify(s *server, n notifier) {   
+func notifyServerSlow(s *server, n Notifier) {   
     if !s.slow() {
         return
     }
@@ -79,11 +77,11 @@ func main() {
         url: "auth",
         responseTime: time.Minute
     }
-    slack := &slackNotifier { /* Slack specific configuration */ }
-    sms   := &smsNotifier   { /* SMS specific configuration   */ }
+    slack := &slackNotifier { /* Slack 相關設定 */ }
+    sms   := &smsNotifier   { /* 簡訊相關設定 */ }
 
-    notify(authServer, slack)
-    notify(authServer, sms)
+    notifyServerSlow(authServer, slack)
+    notifyServerSlow(authServer, sms)
 }
 ```
 
@@ -96,6 +94,14 @@ sms: auth server is slow: 1m0s
 ```
 
 **延伸閱讀：** [Go Data Structures: Interfaces](https://research.swtch.com/interfaces)
+
+## 替型別增加方法
+
+上一節的範例的 `notifyServerSlow` 函式接受一個 `Notifier` 介面，於是任何具象型別只要有提供一個長得像 `notify(message string)` 的函式，便自動實作了 `Notifier` 介面，也就可以傳入 `notifyServerSlow` 函式。這只是介面的一種用法。
+
+在這一節，我們要了解的是如何利用介面來替我們的自訂型別加上一些限制。我們將會看到介面的另一個功用：強制某型別必須提供特定方法（否則編譯器會報錯）。
+
+
 
 ## 小心誤用介面 {#interface-pollution}
 
