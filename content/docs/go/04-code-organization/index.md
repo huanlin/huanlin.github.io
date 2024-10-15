@@ -348,6 +348,10 @@ github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 - 官方文件：[go mod tidy](https://go.dev/ref/mod#go-mod-tidy)
 - Youtube 影片：[how to import Golang local package](https://youtu.be/Nv8J_Ruc280?si=g5-SBXY1VYh5q1ko) （這影片把模組路徑和 import 套件時的路徑寫法講解得很清楚）
 
+## 標準 Go 專案目錄結構 {#std-project-layout}
+
+在安排 Go 專案的目錄結構時，可以參考[標準 Go 專案目錄結構](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)。它不是 Go 開發團隊制定的官方標準，而是根據常見作法所整理出來的通用結構。參考這個標準目錄結構時，還是應該以專案實際的規模和需要來決定要有哪些資料夾，而不是一蓋照單全收。
+
 ## 實際案例 {#case-study}
 
 如果對 module 和 package 仍有不清楚的地方，不妨看一下別人的 Go 專案是如何組成的，包括 `go.mod` 檔案的內容、套件的階層結構、套件的命名等等。
@@ -431,8 +435,6 @@ import (
 其次，<mark>Go 程式在引用（import）第三方套件時不能寫相對路徑，而必須寫出套件的完整路徑名稱。</mark>套件的完整路徑名稱是由 go.mod 中宣告的模組路徑名稱再加上套件所在相對路徑名稱。
 
 以 `"github.com/shirou/gopsutil/v4/internal/common"` 為例，它表示要使用的套件是位於 `github.com/shirou/gopsutil/v4` 模組（專案）底下的 `/internal/common` 套件。
-
-順便提及，gopsutil 專案的資料夾命名與結構，似乎有遵循 [標準 Go 專案目錄結構](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)。此目錄結構並非 Go 開發團隊制定的官方標準，而是根據常見的作法所整理出來的通用結構。參考這個標準目錄結構時，應該以專案實際的規模和需要來決定要有哪些資料夾，而不是一蓋照單全收。
 
 ## 尋找第三方套件
 
