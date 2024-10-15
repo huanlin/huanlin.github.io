@@ -2,7 +2,12 @@
 title: 5.2 常數
 ---
 
-定義常數時，經常會用到關鍵字 `iota` 來產生特定運算規則的常數值。直接看範例會更容易理解。
+建議閱讀官方文件：
+
+- [Constant expressions](https://go.dev/ref/spec#Constant_expressions)
+- [Constant declarations](https://go.dev/ref/spec#Constant_declarations)
+
+特別值得留意的是關鍵字 `iota`，它能夠讓編譯器產生特定運算規則的常數值。以下是一些範例。
 
 ## Example 1
 
