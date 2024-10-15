@@ -355,7 +355,7 @@ github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 - **扁平結構：** 目前看起來大多數的 Go 專案是採用扁平結構，即主要的 Go 程式檔案會直接放在專案的根目錄下。
 - **套件組織：** 如果專案規模較大，通常會將程式碼組織成多個套件，每個套件放在專案根目錄下的單獨目錄中。
 
-可以參考[標準 Go 專案目錄結構](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)。它不是 Go 開發團隊制定的官方標準，而是根據常見作法所整理出來的通用結構。參考這個標準目錄結構時，還是應該以專案實際的規模和需要來決定要有哪些資料夾，而不是一蓋照單全收。
+可以參考[標準 Go 專案目錄結構](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)。它不是 Go 開發團隊制定的官方標準，而是根據常見作法所整理出來的通用結構。故參考這個標準目錄結構時，應該以專案實際的規模和需要來決定要有哪些資料夾，而不是照單全收。
 
 範例：
 
