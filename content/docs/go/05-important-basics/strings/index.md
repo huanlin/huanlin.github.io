@@ -99,6 +99,101 @@ func Compare(a, b string) int {
 > [!note]
 > 這個 `strings.Compare()` 函式原本效率較差，直到 Go v1.23 終於有了改善。詳見：[strings: intrinsify and optimize Compare](https://github.com/golang/go/commit/fd999fda5941f215ef082c6ef70e44e648db5485)。
 
+## 練習：打亂字串內容 {#string-shuffle}
+
+練習內容：
+
+1. 寫一個函式將傳入的字串內容打亂（shuffle），將此函式命名為 `shuffle1`。
+2. 再寫一個函式 `shuffle2`，作用與 `shuffle1` 相同，只是用不同的做法來達成相同目的。
+3. 撰寫效能測試來觀察 `shuffle1` 和 `shuffle2` 的效能差異。
+
+此練習的目的如下：
+
+- 處理字串中的字元（`rune`）。
+- 產生隨機數字（使用 `math/rand` 套件）。
+- 撰寫和執行效能測試。
+
+### 兩個打亂字串的函式 {#shuffle-functions}
+
+```go
+package main
+
+import (
+    "fmt"
+    "math/rand"
+    "strings"
+    "testing"
+)
+
+func main() {
+    s := "0123456789"
+    s1 := shuffle1(s)
+    fmt.Println(s1)
+
+    s2 := shuffle2(s)
+    fmt.Println(s2)
+}
+
+func shuffle1(s string) string {
+    runes := []rune(s)
+    for i := range runes {
+        j := rand.Intn(len(runes))
+        runes[i], runes[j] = runes[j], runes[i]
+    }
+
+    return string(runes)
+}
+
+func shuffle2(s string) string {
+    sSlice := strings.Split(s, "")
+    for i := range sSlice {
+        j := rand.Intn(len(sSlice))
+        sSlice[i], sSlice[j] = sSlice[j], sSlice[i]
+    }
+    return strings.Join(sSlice, "")
+}
+```
+
+**Try it:** <https://go.dev/play/p/6r0H7l-ktAB>
+
+將以上程式碼儲存為 `main.go`。
+
+### 撰寫效能測試 {#benchmark-code}
+
+接著要撰寫效能測試來了解兩個函式的效能表現。首先，新增一個 Go 程式檔案，命名為 `main_test.go`。程式碼如下：
+
+```go
+func BenchmarkShuffle1(b *testing.B) {
+    for i := 0; i < b.N; i++ {
+        shuffle1("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    }
+}
+
+func BenchmarkShuffle2(b *testing.B) {
+    for i := 0; i < b.N; i++ {
+        shuffle2("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    }
+}
+```
+
+接著用 `go test` 命令來執行效能測試：
+
+```shell
+go test -bench .
+```
+
+加上 `-bench` 選項即表示要執行效能測試。Go 測試工具會尋找 `*_test.go` 檔案中所有以 `Benchmark` 開頭的函式，並且對這些函式發出好幾輪的的呼叫；每一輪測試都會傳入一個型別為 `*testing.B` 的參數 `b`，而 `b.N` 就是測試工具對測試函式的指示：「請執行你的工作 `b.N` 次。」
+
+> [!note]
+> 單元測試的函式名稱是以 `Test` 開頭，效能測試的函式名稱則是以 `Benchmark` 開頭。這兩種測試函式都是寫在 `*_test.go` 檔案中。
+
+每一輪測試完成後，測試工具會根據那一輪測試所耗費的時間來決定下一輪的 `b.N` 要增加至多少。越到後面，`b.N` 數值增加得越快。比如說，可能會以 1, 2, 3, 5, 10, 20, 30, 50, 100 這樣的速度遞增（只是舉例，方便了解）。
+
+參考資料：
+
+- [Go by Example: Testing and Benchmarking](https://gobyexample.com/testing-and-benchmarking)
+- [Benchmarking in Golang: Improving function performance](https://blog.logrocket.com/benchmarking-golang-improve-function-performance/)
+
 ## References
 
 - The Go Blog: [Strings, bytes, runes and characters in Go](https://go.dev/blog/strings) by Rob Pike (2013-10-23)
