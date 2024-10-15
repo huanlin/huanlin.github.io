@@ -1,5 +1,5 @@
 ---
-title: 5.3 特殊表示法
+title: 5.4 特殊表示法
 ---
 
 ## Blank identifier ( `_` ) {#blank-identifier}
