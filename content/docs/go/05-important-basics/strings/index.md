@@ -198,15 +198,18 @@ func BenchmarkShuffle2(b *testing.B) {
 接著用 `go test` 命令來執行效能測試：
 
 ```shell
-go test -bench .
+go test -bench . -benchmem
 ```
+
+加上 `-bench` 選項即表示要執行效能測試，而 `-benchmem` 選項表示要一併觀察記憶體的使用情況。
 
 > [!note] 備註
 > 許多文件寫的測試命令是 `go test -bench=.`，也就是 `-bench` 選項後面是等於符號 '`=`'，而非空白字元。在我的 Windows 機器上使用 `-bench=.` 來執行測試，結果會說找不到任何測試："no tests to run"。
 
-加上 `-bench` 選項即表示要執行效能測試。Go 測試工具會尋找 `*_test.go` 檔案中所有以 `Benchmark` 開頭的函式，並且對這些函式發出好幾輪的的呼叫；每一輪測試都會傳入一個型別為 `*testing.B` 的參數 `b`，而 `b.N` 就是測試工具對測試函式的指示：「請執行你的工作 `b.N` 次。」
+執行上述命令時，Go 測試工具會尋找 `*_test.go` 檔案中所有以 `Benchmark` 開頭的函式，並且對這些函式發出好幾輪的的呼叫；每一輪測試都會傳入一個型別為 `*testing.B` 的參數 `b`，而 `b.N` 就是測試工具對測試函式的指示：「請執行你的工作 `b.N` 次。」
 
-> [!note]
+> **重點整理**
+>
 > 單元測試的函式名稱是以 `Test` 開頭，效能測試的函式名稱則是以 `Benchmark` 開頭。這兩種測試函式都是寫在 `*_test.go` 檔案中。
 
 每一輪測試完成後，測試工具會根據那一輪測試所耗費的時間來決定下一輪的 `b.N` 要增加至多少。越到後面，`b.N` 數值增加得越快。比如說，可能會以 1, 2, 3, 5, 10, 20, 30, 50, 100 這樣的速度遞增（只是舉例，方便了解）。
@@ -218,16 +221,15 @@ goos: windows
 goarch: amd64
 pkg: demostring
 cpu: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
-BenchmarkShuffle1-8      1685395               711.7 ns/op
-BenchmarkShuffle2-8      1000000              1026 ns/op
+BenchmarkShuffle1-8   1758118   638.2 ns/op   192 B/op   2 allocs/op
+BenchmarkShuffle2-8   1226618   999.8 ns/op   688 B/op   2 allocs/op
 PASS
-ok      demostring       3.097s
+ok      demostring    3.097s
 ```
 
 ## References
 
 - The Go Blog: [Strings, bytes, runes and characters in Go](https://go.dev/blog/strings) by Rob Pike (2013-10-23)
 - <https://pkg.go.dev/testing>
-- [Go by Example: Testing and Benchmarking](https://gobyexample.com/testing-and-benchmarking)
 - [Benchmarking in Golang: Improving function performance](https://blog.logrocket.com/benchmarking-golang-improve-function-performance/)
 - [Go 语言高性能编程 - benchmark 基准测试](https://geektutu.com/post/hpg-benchmark.html)
