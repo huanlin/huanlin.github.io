@@ -350,9 +350,53 @@ github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 
 ## 標準 Go 專案目錄結構 {#std-project-layout}
 
-在安排 Go 專案的目錄結構時，可以參考[標準 Go 專案目錄結構](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)。它不是 Go 開發團隊制定的官方標準，而是根據常見作法所整理出來的通用結構。參考這個標準目錄結構時，還是應該以專案實際的規模和需要來決定要有哪些資料夾，而不是一蓋照單全收。
+在安排 Go 專案的目錄結構時，有兩種常見做法：
 
-## 實際案例 {#case-study}
+- **扁平結構：** 目前看起來大多數的 Go 專案是採用扁平結構，即主要的 Go 程式檔案會直接放在專案的根目錄下。
+- **套件組織：** 如果專案規模較大，通常會將程式碼組織成多個套件，每個套件放在專案根目錄下的單獨目錄中。
+
+可以參考[標準 Go 專案目錄結構](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)。它不是 Go 開發團隊制定的官方標準，而是根據常見作法所整理出來的通用結構。參考這個標準目錄結構時，還是應該以專案實際的規模和需要來決定要有哪些資料夾，而不是一蓋照單全收。
+
+範例：
+
+```text
+myproject/
+    ├── cmd/
+    │   └── myapp/
+    │       └── main.go
+    ├── pkg/
+    │   └── mypackage/
+    │       └── mypackage.go
+    ├── internal/
+    │   └── myinternalpackage/
+    │       └── myinternalpackage.go
+    ├── api/
+    │   └── v1/
+    │       └── api.go
+    ├── configs/
+    │   └── config.yaml
+    ├── scripts/
+    │   └── build.sh
+    ├── web/
+    │   ├── static/
+    │   └── templates/
+    ├── go.mod
+    └── go.sum
+```
+
+說明：
+
+| 資料夾 | 用途說明 |
+| ----- | --------|
+| **cmd** | 每個子目錄代表一個應用程式的入口點（例如 myapp），包含 main.go 文件。 |
+| **pkg** | 對外公開的套件，可讓其他專案使用。 |
+| **internal** | 僅限專案內部使用的套件（Go 編譯器會確保這點）。 |
+| **api** | API 程式碼。 |
+| **configs** | 組態檔，例如 YAML、JSON。 |
+| **scripts** | 腳本，用於建構、部署、生成等等。 |
+| **web** | Web 相關資源，包括靜態文件和模板。 |
+
+## 案例研究 {#case-study}
 
 如果對 module 和 package 仍有不清楚的地方，不妨看一下別人的 Go 專案是如何組成的，包括 `go.mod` 檔案的內容、套件的階層結構、套件的命名等等。
 
