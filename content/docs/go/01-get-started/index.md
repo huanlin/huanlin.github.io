@@ -162,7 +162,7 @@ go parseFile("file2.dat")
   "go.useLanguageServer": true,
 ```
 
-其中提到的 "gopls"（讀作 "go please"）是官方提供的、用於 VS Code 的 Language Server。只要有安裝 gopls，在 VS Code 中撰寫程式就會有許多方便的編輯功能，像是 intellisense、重構、排版程式碼等等。下圖展示了 gopls 的一個貼心功能：當程式中使用了 Deprecated 函式或套件時，VS Code 編輯器會自動顯示刪除線，以提醒它們已經被棄用了。
+其中提到的 "gopls"（讀作 "go please"）是官方提供的、用於 VS Code 的 Language Server。只要有安裝 gopls，在 VS Code 中撰寫程式就會有許多方便的編輯功能，像是 intellisense、重構、排版程式碼等等。下圖展示了 gopls 的一個貼心功能：當程式中使用了 [Deprecated 函式或套件](https://go.dev/wiki/Deprecated)時，VS Code 編輯器會自動顯示刪除線，以提醒它們已經被棄用了。
 
 ![](images/go-deprecated-strikethrough.png)
 
