@@ -35,7 +35,7 @@ Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中�
         └─ token_test.go    -> token 相關功能的測試
 ```
 
-Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 檔案裡的第一行通常會宣告套件名稱為 `auth`，但也可以是別的名稱，例如 `authentication`：
+Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 裡的第一行通常會宣告套件名稱為 `auth`，但也可以是別的名稱，例如 `authentication`：
 
 ```go
 package authentication
