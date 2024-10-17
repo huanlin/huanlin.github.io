@@ -18,7 +18,7 @@ Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中�
 >
 > Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
 
-換言之，package 是一個邏輯組成單位，讓我們把相關功能的程式檔案放在一起。
+換言之，package 是一個邏輯組成單位，讓我們把相關功能的程式檔案放在一起，也方便讓其他應用程式匯入使用。
 
 範例：
 
@@ -34,7 +34,7 @@ Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中�
         └─ token_test.go    -> token 相關功能的測試
 ```
 
-Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 裡面可能會宣告套件名稱為 `auth`，也可能是 `authentication`：
+Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 檔案裡的第一行通常會宣告套件名稱為 `auth`，但也可以是別的名稱，例如 `authentication`：
 
 ```go
 package authentication
@@ -42,14 +42,31 @@ package authentication
 ....
 ```
 
-那樣的話，`auth_test.go` 的套件名稱也必須是 `authentication`，因為同一個資料夾底下的 .go 檔案必須隸屬同一個套件。
+那樣的話，`auth_test.go` 的套件名稱也必須是 `authentication`，因為同一個資料夾底下的 .go 檔案必須隸屬同一個套件（否則無法通過編譯）。
+
+### 匯入套件 {#import-packages}
+
+在一個 Go 程式檔案中欲使用其他套件的識別字時，包括變數、函式、型別等等，必須使用 `import` 陳述句。比如說，要使用剛才提到的 `authentication` 套件，會在程式中這樣寫：
+
+```
+package mypkg
+
+import "mycompany.com/myapp/auth"
+```
+
+其中的 `mycompany.com/myapp` 是所謂的模組路徑（module path），後面接著的 `/auth` 則是 `authentication` 套件所在的相對路徑名（相對於模組路徑）。至於什麼是模組路徑，稍後會進一步說明。
+
+> [!note]
+> 這裡要強調 `import` 套件時寫的是套件所在的實體資料夾名稱，而不是邏輯的「套件名稱」。當我剛開始學習 Golang 時，就在這個地方迷糊了一陣子。如果不確定是否理解，最好的辦法就是實際寫點程式碼來驗證看看。稍後也會有更多範例說明。
+
+### Package 有兩種 {#two-package-types}
 
 另外要知道的是，Go 的 package 有兩種：
 
 - 可執行套件：套件名稱一定是 `main`，而且不能被其他套件引用。
 - 函式庫套件：套件名稱不是 `main` 的都是函式庫套件，可供其他套件引用。
 
-至於不同的 package 之間要如何開放或隱藏某些資源或服務，稍後會再說明。
+至於不同的 package 之間要如何開放或隱藏某些變數、函式、或型別、或或服務，稍後會再說明。
 
 ### Package 名稱 {#package-names}
 
