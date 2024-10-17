@@ -48,7 +48,7 @@ package authentication
 
 在一個 Go 程式檔案中欲使用其他套件的識別字時，包括變數、函式、型別等等，必須使用 `import` 陳述句。比如說，要使用剛才提到的 `authentication` 套件，會在程式中這樣寫：
 
-```
+```go
 package mypkg
 
 import "mycompany.com/myapp/auth"
