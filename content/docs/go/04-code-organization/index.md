@@ -49,15 +49,35 @@ package authentication
 在一個 Go 程式檔案中欲使用其他套件的識別字時，包括變數、函式、型別等等，必須使用 `import` 陳述句。比如說，要使用剛才提到的 `authentication` 套件，會在程式中這樣寫：
 
 ```go
-package mypkg
-
 import "mycompany.com/myapp/auth"
 ```
 
-其中的 `mycompany.com/myapp` 是所謂的模組路徑（module path），後面接著的 `/auth` 則是 `authentication` 套件所在的相對路徑名（相對於模組路徑）。至於什麼是模組路徑，稍後會進一步說明。
+匯入套件時，套件的完整路徑名稱包含兩個部分：
+
+- **模組路徑：** 套件路徑的開頭部分是模組路徑（module path），通常是模組的根 URL 或根目錄。如剛才範例中的 `mycompany.com/myapp` 即是模組路徑。
+- **相對路徑：** 模組路徑後面接的是套件在模組中的相對路徑（相對於模組路徑），例如範例中的 `/auth` 即是 `authentication` 套件所在的相對路徑名。
 
 > [!note]
-> 這裡要強調 `import` 套件時寫的是套件所在的實體資料夾名稱，而不是邏輯的「套件名稱」。當我剛開始學習 Golang 時，就在這個地方迷糊了一陣子。如果不確定是否理解，最好的辦法就是實際寫點程式碼來驗證看看。稍後也會有更多範例說明。
+> 稍後還會進一步說明模組路徑，這裡要再強調的是 `import` 套件時寫的是套件所在的實體路徑名稱，而不是邏輯的「套件名稱」。Golang 的初學者可能很容易在這個地方搞混。如果不確定是否理解，最好的辦法就是實際寫點程式碼來驗證看看。
+
+如果要匯入多個套件，可以使用多行 `import` 語法，例如：
+
+```go
+import (
+    "fmt"
+    "mycompany.com/myapp/auth"
+    "mycompany.com/myapp/db"
+)
+```
+
+匯入套件時還可以指定套件的別名，以避免名稱衝突或提高程式碼的可讀性。例如：
+
+```go
+import (
+    auth "mycompany.com/myapp/auth"
+    database "mycompany.com/myapp/db"
+)
+```
 
 ### Package 有兩種 {#two-package-types}
 
