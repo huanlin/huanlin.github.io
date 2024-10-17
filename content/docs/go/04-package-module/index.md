@@ -1,6 +1,7 @@
 ---
-title: 04 Code organization
+title: 04 套件與模組
 tags: [Go]
+aliases: ["04-code-organization"]
 ---
 
 ## 簡介 {#intro}
