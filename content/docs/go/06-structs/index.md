@@ -77,14 +77,21 @@ type Duration int64
 範例：
 
 ```go
+p1 := new(Person)
+p2 := &Person{}
+```
+
+以上兩種寫法都會得到一個指標，指向新建立的結構。也就是說，`p1` 和 `p2` 這兩個變數的型別都是「指向 Person 結構的指標」。
+
+以下示範如何在建立結構時一併初始化：
+
+```go
 p1 := &Person{Name: "Michael", Age: 25}
 
 p2 := new(Person)
 p2.Name = "Michael"
 p2.Age = 25
 ```
-
-以上兩種寫法都會得到一個指標，指向新建立的結構。也就是說，`p1` 和 `p2` 這兩個變數的型別都是「指向 Person 結構的指標」。
 
 **注意：** 使用 `new` 來建立結構時，不能在同一行程式碼完成欄位的初始設定，而必須分開寫。
 
@@ -209,7 +216,9 @@ func main() {
 
 **A method is a function with a receiver.**
 
-> 參見 The Go Programming Language Specification: [Method declarations](https://go.dev/ref/spec#Method_declarations)。
+參見 The Go Programming Language Specification: [Method declarations](https://go.dev/ref/spec#Method_declarations)。
+
+> 熟悉物件導向程式語言的人可以把 receiver 參數理解為 `this` 或 `self`，即「當前的物件本身」。
 
 剛才的範例中，每次呼叫 `a.speak()` 時傳入的參數 `a` 都是一個新副本。如果想要讓 `speak()` 方法中修改原始傳入的 `a` 結構的內容，就要宣告成指標，像這樣：
 
@@ -221,12 +230,42 @@ func (a *Animal) speak() string {
 
 這裡只需要修改一行程式碼而已，其他地方不變。
 
+### 僅限自訂型別 {#custom-types-only}
+
+請注意：只能替自訂型別增加方法，而不能替內建型別（例如 `string`）增加方法。例如以下寫法將無法通過編譯：
+
+```go
+func (s string) Shuffle() { // 編譯錯誤!
+   // ...
+}
+```
+
+Go 編譯器會報錯：cannot define new methods on non-local type string。
+
+一種可能的解決方法是定義一個基於 `string` 的新型別，像這樣：
+
+```go
+type MyString string
+
+func (s MyString) Shuffle() {
+    fmt.Println(s)
+}
+
+func main() {
+    var s MyString = "hello"
+    s.Shuffle()
+}
+```
+
+透過這種方法，便可以替內建型別或外部（第三方）型別增加方法。
+
+**See also:** The Go Programming Language Specification: [Type definitions](https://go.dev/ref/spec#Type_definitions)
+
 **重點整理：**
 
 - 方法（methods）是帶有一個 *receiver* 的函式，而 receiver 是寫在函式名稱前面的一個特殊參數，該參數的型別則表明了這是哪個型別的方法。
 - Receiver 有兩種：pointer receiver 和 value receiver。前者可以修改傳入物件的內容，後者不行。
-
-> 熟悉物件導向程式語言的人可以把 receiver 參數理解為 `this` 或 `self`，即「當前的物件本身」。
+- 只有自訂型別才能透過 receiver 語法來增加方法；內建型別則不行。
 
 ## 結構成員可以匿名 {#nameless-field}
 

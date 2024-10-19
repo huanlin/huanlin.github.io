@@ -56,6 +56,8 @@ num = 3.1416      // 編譯錯誤。
 num = int(3.1416) // OK! num 的數值為 3。
 ```
 
+更多語法和範例，建議參考官方文件：[Conversions](https://go.dev/ref/spec#Conversions)。
+
 ## 取得型別資訊 {#get-type}
 
 這裡示範三種方法來取得變數的型別資訊：

@@ -1,6 +1,7 @@
 ---
-title: 04 Code organization
+title: 04 套件與模組
 tags: [Go]
+aliases: ["04-code-organization"]
 ---
 
 ## 簡介 {#intro}
@@ -18,7 +19,7 @@ Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中�
 >
 > Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
 
-換言之，package 是一個邏輯組成單位，讓我們把相關功能的程式檔案放在同一個套件裡。
+換言之，package 是一個邏輯組成單位，讓我們把相關功能的程式檔案放在一起，也方便讓其他應用程式匯入使用。
 
 範例：
 
@@ -34,7 +35,7 @@ Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中�
         └─ token_test.go    -> token 相關功能的測試
 ```
 
-Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 裡面可能會宣告套件名稱為 `auth`，也可能是 `authentication`：
+Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 裡的第一行通常會宣告套件名稱為 `auth`，但也可以是別的名稱，例如 `authentication`：
 
 ```go
 package authentication
@@ -42,28 +43,57 @@ package authentication
 ....
 ```
 
-那樣的話，`auth_test.go` 的套件名稱也必須是 `authentication`，因為同一個資料夾底下的 .go 檔案必須隸屬同一個套件。
+那樣的話，`auth_test.go` 的套件名稱也必須是 `authentication`，因為同一個資料夾底下的 .go 檔案必須隸屬同一個套件（否則無法通過編譯）。
+
+### 匯入套件 {#import-packages}
+
+在一個 Go 程式檔案中欲使用其他套件的識別字時，包括變數、函式、型別等等，必須使用 `import` 陳述句。比如說，要使用剛才提到的 `authentication` 套件，會在程式中這樣寫：
+
+```go
+import "mycompany.com/myapp/auth"
+```
+
+匯入套件時，套件的完整路徑名稱包含兩個部分：
+
+- **模組路徑：** 套件路徑的開頭部分是模組路徑（module path），通常是模組的根 URL 或根目錄。如剛才範例中的 `mycompany.com/myapp` 即是模組路徑。
+- **相對路徑：** 模組路徑後面接的是套件在模組中的相對路徑（相對於模組路徑），例如範例中的 `/auth` 即是 `authentication` 套件所在的相對路徑名。
+
+> [!note]
+> 稍後還會進一步說明模組路徑，這裡要再強調的是 `import` 套件時寫的是套件所在的實體路徑名稱，而不是邏輯的「套件名稱」。Golang 的初學者可能很容易在這個地方搞混。如果不確定是否理解，最好的辦法就是實際寫點程式碼來驗證看看。
+
+如果要匯入多個套件，可以使用多行 `import` 語法，例如：
+
+```go
+import (
+    "fmt"
+    "mycompany.com/myapp/auth"
+    "mycompany.com/myapp/db"
+)
+```
+
+匯入套件時還可以指定套件的別名，以避免名稱衝突或提高程式碼的可讀性。例如：
+
+```go
+import (
+    auth "mycompany.com/myapp/auth"
+    database "mycompany.com/myapp/db"
+)
+```
+
+### Package 有兩種 {#two-package-types}
 
 另外要知道的是，Go 的 package 有兩種：
 
 - 可執行套件：套件名稱一定是 `main`，而且不能被其他套件引用。
 - 函式庫套件：套件名稱不是 `main` 的都是函式庫套件，可供其他套件引用。
 
-至於不同的 package 之間要如何開放或隱藏某些資源或服務，稍後會再說明。
+至於不同的 package 之間要如何開放或隱藏某些變數、函式、或型別、或或服務，稍後會再說明。
 
 ### Package 名稱 {#package-names}
 
-<mark>套件名稱應簡潔明白，通常是名詞，而且全都是用英文小寫。注意不可以用底線（snake case）或大小寫混和（mixedCaps）。</mark>
+<mark>套件的名稱應簡潔明白，通常是名詞，而且按照慣例全都用小寫英文字母。雖然可以使用底線字元 '`_`'，但最好盡量避免。減號字元 '`-`' 則不能用於套件名稱。</mark>
 
-範例：
-
-- `list`
-- `http`
-- `strconv` （兩個單字的縮寫組合: string conversion）
-- `syscall` （兩個單字的縮寫組合：system call）
-- `fmt` （format 的縮寫）
-
-詳見 Go 官方部落格：[Package names](https://go.dev/blog/package-names)。
+詳見〈[附錄一：Go 程式風格指南]({{< ref "../a1-style-guide/index.md#package-naming" >}})〉或官方部落格：[Package names](https://go.dev/blog/package-names)。
 
 ### Scope
 
@@ -356,7 +386,55 @@ github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 - 官方文件：[go mod tidy](https://go.dev/ref/mod#go-mod-tidy)
 - Youtube 影片：[how to import Golang local package](https://youtu.be/Nv8J_Ruc280?si=g5-SBXY1VYh5q1ko) （這影片把模組路徑和 import 套件時的路徑寫法講解得很清楚）
 
-## 實際案例 {#case-study}
+## 標準 Go 專案目錄結構 {#std-project-layout}
+
+在安排 Go 專案的目錄結構時，有兩種常見做法：
+
+- **扁平結構：** 目前看起來大多數的 Go 專案是採用扁平結構，即主要的 Go 程式檔案會直接放在專案的根目錄下。
+- **套件組織：** 如果專案規模較大，通常會將程式碼組織成多個套件，每個套件放在專案根目錄下的單獨目錄中。
+
+可以參考[標準 Go 專案目錄結構](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)。它不是 Go 開發團隊制定的官方標準，而是根據常見作法所整理出來的通用結構。故參考這個標準目錄結構時，應該以專案實際的規模和需要來決定要有哪些資料夾，而不是照單全收，也不是資料夾拆分得越多就越好。
+
+範例：
+
+```text
+myproject/
+    ├── cmd/
+    │   └── myapp/
+    │       └── main.go
+    ├── pkg/
+    │   └── mypackage/
+    │       └── mypackage.go
+    ├── internal/
+    │   └── myinternalpackage/
+    │       └── myinternalpackage.go
+    ├── api/
+    │   └── v1/
+    │       └── api.go
+    ├── configs/
+    │   └── config.yaml
+    ├── scripts/
+    │   └── build.sh
+    ├── web/
+    │   ├── static/
+    │   └── templates/
+    ├── go.mod
+    └── go.sum
+```
+
+說明：
+
+| 資料夾 | 用途說明 |
+| ----- | --------|
+| **cmd** | 每個子目錄代表一個應用程式的入口點（例如 myapp），包含 main.go 文件。 |
+| **pkg** | 對外公開的套件，可讓其他專案使用。 |
+| **internal** | 僅限專案內部使用的套件（Go 編譯器會確保這點）。 |
+| **api** | API 程式碼。 |
+| **configs** | 組態檔，例如 YAML、JSON。 |
+| **scripts** | 腳本，用於建構、部署、生成等等。 |
+| **web** | Web 相關資源，包括靜態文件和模板。 |
+
+## 案例研究 {#case-study}
 
 如果對 module 和 package 仍有不清楚的地方，不妨看一下別人的 Go 專案是如何組成的，包括 `go.mod` 檔案的內容、套件的階層結構、套件的命名等等。
 
@@ -439,8 +517,6 @@ import (
 其次，<mark>Go 程式在引用（import）第三方套件時不能寫相對路徑，而必須寫出套件的完整路徑名稱。</mark>套件的完整路徑名稱是由 go.mod 中宣告的模組路徑名稱再加上套件所在相對路徑名稱。
 
 以 `"github.com/shirou/gopsutil/v4/internal/common"` 為例，它表示要使用的套件是位於 `github.com/shirou/gopsutil/v4` 模組（專案）底下的 `/internal/common` 套件。
-
-順便提及，gopsutil 專案的資料夾命名與結構，似乎有遵循 [標準 Go 專案目錄結構](https://github.com/golang-standards/project-layout/blob/master/README_zh-TW.md)。此目錄結構並非 Go 開發團隊制定的官方標準，而是根據常見的作法所整理出來的通用結構。參考這個標準目錄結構時，應該以專案實際的規模和需要來決定要有哪些資料夾，而不是一蓋照單全收。
 
 ## 尋找第三方套件
 

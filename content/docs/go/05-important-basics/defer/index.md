@@ -1,5 +1,5 @@
 ---
-title: 5.6 defer 陳述式
+title: 5.7 defer 陳述式
 ---
 
 Go 的 `defer` 關鍵字可用來將一個函式呼叫的執行時機延後至包覆函式（surrounding function）結束之前才執行，常用於清理資源（例如確保關閉資料庫連線）。

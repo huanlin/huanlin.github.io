@@ -1,5 +1,5 @@
 ---
-title: 5.5 函式
+title: 5.6 函式
 ---
 
 ## 基礎語法 {#func-basic}

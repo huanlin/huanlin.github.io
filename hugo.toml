@@ -89,6 +89,10 @@ id = "G-S83RZSBDVH" # This ID is specific for https://huanlin.cc
     time_format_blog = "2006-01-02"
 
 [markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
 [markup.goldmark]
 [markup.goldmark.parser.attribute]
 block = true

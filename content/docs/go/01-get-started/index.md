@@ -128,7 +128,7 @@ go parseFile("file2.dat")
 - GoLand by JetBrains
 - Neovim
 
-對鍵盤操控和 coding 效率極為講究的人可能會喜歡 Neovim 或 JetBrains。由於我用的是 VS Code，所以這裡只介紹它的相關設定。
+對鍵盤操控和 coding 效率極為講究的人可能會喜歡 Neovim 或 JetBrains。我使用 VS Code，所以這裡只介紹它的相關設定。
 
 與 Go 有關的 VS Code extensions：
 
@@ -162,7 +162,11 @@ go parseFile("file2.dat")
   "go.useLanguageServer": true,
 ```
 
-其中提到的 "gopls"（讀作 "go please"）是官方提供的、用於 VS Code 的 Language Server。只要有安裝 gopls，在 VS Code 中撰寫程式就會有許多方便的編輯功能，像是 intellisense、重構、排版程式碼等等。
+其中提到的 "gopls"（讀作 "go please"）是官方提供的、用於 VS Code 的 Language Server。只要有安裝 gopls，在 VS Code 中撰寫程式就會有許多方便的編輯功能，像是 intellisense、重構、排版程式碼等等。下圖展示了 gopls 的一個貼心功能：當程式中使用了 [Deprecated 函式或套件](https://go.dev/wiki/Deprecated)時，VS Code 編輯器會自動顯示刪除線，以提醒它們已經被棄用了。
+
+![](images/go-deprecated-strikethrough.png)
+
+備註：如果專案目錄下沒有 go.mod 檔案，gopls 仍然可以發揮作用，但其功能會受到限制，例如上圖中的刪除線不會出現。
 
 **參閱：** [gopls 官方文件](https://pkg.go.dev/golang.org/x/tools/gopls#section-readme)
 
@@ -191,6 +195,17 @@ go parseFile("file2.dat")
 ```
 
 有關建立 `launch.json` 的方法以及詳細的參數說明，請參閱 Go Wiki : [debugging](https://github.com/golang/vscode-go/wiki/debugging#configure)。
+
+#### Color Theme
+
+我慣用的 [Color Theme](https://code.visualstudio.com/docs/getstarted/themes) 是 `Dark Modern`，主要是因為：
+
+- 編輯區容易辨認目前正在編輯的 tab 是哪一個。
+- 在 Explorer 面板中顯示 Git ignored 檔案時，顏色不會過於昏暗而導致難以辨識。
+
+如下圖所示：
+
+![Dark Modern theme](images/theme-dark-modern.png#center)
 
 #### VS Code 其他設定 {#vscode-settings}
 
