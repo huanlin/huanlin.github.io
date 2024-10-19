@@ -122,13 +122,7 @@ go parseFile("file2.dat")
 
 ### VS Code
 
-比較常聽到建議使用的 IDE：
-
-- Visual Studio Code
-- GoLand by JetBrains
-- Neovim
-
-對鍵盤操控和 coding 效率極為講究的人可能會喜歡 Neovim 或 JetBrains。我使用 VS Code，所以這裡只介紹它的相關設定。
+我慣用的程式碼編輯器是 VS Code，所以這裡只介紹它的相關設定。
 
 與 Go 有關的 VS Code extensions：
 
