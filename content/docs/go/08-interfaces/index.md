@@ -159,9 +159,7 @@ type customersGetter interface {
 
 ## 避免回傳介面 {#avoid-returning-interfaces}
 
-returning an interface is, in many cases, considered a bad practice in Go.
-
-in general, returning an interface restricts flexibility because we force all the clients to use one particular type of abstraction.
+常見的物件導向程式語言的最佳實務做法建議提供服務的元件與其用戶端之間透過介面來綁定，而不要綁特定實作。然而在 Go 語言，回傳介面在許多情況下卻不是個好主意。
 
 建議的做法是：
 
