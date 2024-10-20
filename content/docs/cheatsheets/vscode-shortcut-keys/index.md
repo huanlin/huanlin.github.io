@@ -1,5 +1,5 @@
 ---
-title: "小抄：Visual Studio Code 快捷鍵"
+title: "Visual Studio Code 快捷鍵"
 tags: ["VS Code"]
 ---
 
