@@ -11,7 +11,7 @@ tags: ["VS Code"]
 
 底下是我自己常用的快捷鍵（for Windows），有些按鍵因為已經熟記而未列出，例如除錯相關按鍵（F9、F10、F11 等等）。
 
-![](images/vscode-shortcut-keys.png)
+![](images/vscode-shortcut-keys.png#center)
 
 ## General and files
 
@@ -87,7 +87,6 @@ tags: ["VS Code"]
 |-------------------------|----------------------|
 | Ctrl+` | 顯示 integrated terminal |
 | Ctrl+Shift+` | 開一個新的 terminal |
-
 
 ## See also
 
