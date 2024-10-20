@@ -1,6 +1,6 @@
 ---
-title: [Cheat sheet] Visual Studio Code Keyboard shortcuts
-draft: true
+title: "小抄：Visual Studio Code 快捷鍵"
+tags: ["VS Code"]
 ---
 
 底下是官方提供的各作業系統平台的 VS Code 快捷鍵速查表：
@@ -9,7 +9,7 @@ draft: true
 - [macOS](https://go.microsoft.com/fwlink/?linkid=832143)
 - [Linux](https://go.microsoft.com/fwlink/?linkid=832144)
 
-底下是我自己常用的快捷鍵（for Windows）。
+底下是我自己常用的快捷鍵（for Windows），有些按鍵因為已經熟記而未列出，例如除錯相關按鍵（F9、F10、F11 等等）。
 
 ## General and files
 
@@ -28,10 +28,10 @@ draft: true
 |-------------------------|----------------------|
 | Ctrl+X | 在沒有選取文字的情況下直接剪下一列 |
 | Ctrl+C | 在沒有選取文字的情況下直接複製一列 |
-| Alt+ ↑ / ↓ | 把當前所在列往上／往下移動 |
-| Shift+Alt + ↓ / ↑ | 把當前所在列往上／往下複製 |
+| Alt+ `↑` / `↓` | 把當前所在列往上／往下移動 |
+| Shift+Alt + `↓` / `↑` | 把當前所在列往上／往下複製 |
 | Ctrl+Enter | 往下插入一列 |
-| Ctrl+↑ / ↓ | 上下捲動 |
+| Ctrl+ `↑` / `↓` | 上下捲動 |
 
 ## Navigation
 
@@ -43,19 +43,29 @@ draft: true
 | Ctrl+Shift+O | 顯示 Problems 面板 |
 | F8 | 到下一個錯誤或警告 |
 | Shift+F8 | 到上一個錯誤或警告 |
-| Alt+ ← / → | 回上一頁／到下一頁 |
+| Alt+ `←` / `→` | 回上一頁／到下一頁 |
 
 ## Multi-cursor and selection
 
 | 快捷鍵                  | 用途說明 |
 |-------------------------|----------------------|
-| Ctrl+Alt+ ↑ / ↓ | 往上／往下增加游標 |
+| Ctrl+Alt+ `↑` / `↓` | 往上／往下增加游標 |
 | Ctrl+Shift+L | 選取文字之後再用此按鍵一次選取檔案內所有相同的文字 |
-| Ctrl+F2 | 把游標停在欲選取的字詞然後用此按鍵一次選取檔案內所有相同的字詞 |
-| Shift+Alt+→ | 擴大選取範圍 |
-| Shift+Alt+← | 縮小選取範圍 |
+| Ctrl+F2 | 一次選取檔案內所有「跟游標所在位置之字詞」相同的文字 |
+| Shift+Alt+`→` | 擴大選取範圍 |
+| Shift+Alt+`←` | 縮小選取範圍 |
 | Shift+Alt+滑鼠拖曳 | 垂直選取（方塊選取） |
 | Ctrl+Shift+Alt+方向鍵 | 垂直選取（方塊選取） |
+
+## Display
+
+| 快捷鍵                  | 用途說明 |
+|-------------------------|----------------------|
+| Ctrl+ `=` / `-` | Zoom in/out（用九宮格的 `+` 和 `-` 也行） |
+| Ctrl+Shift+E | 到 Explorer 面板 |
+| Ctrl+Shift+F | 到 Search 面板 |
+| Ctrl+Shift+H | 對全部檔案進行搜尋並替換 |
+| Ctrl+K V     | 在側邊面板顯示 Markdown 預覽結果 |
 
 ## Rich languages editing
 
@@ -68,6 +78,13 @@ draft: true
 | Shift+Alt+. | 顯示修改建議 (quick fix) |
 | Shift+F12 | 顯示所有參考（誰用到這個變數／函式？） |
 | F2 | 更改符號名稱（變數、函式等等） |
+
+## Integrated terminal
+
+| 快捷鍵                  | 用途說明 |
+|-------------------------|----------------------|
+| Ctrl+` | 顯示 integrated terminal |
+| Ctrl+Shift+` | 開一個新的 terminal |
 
 
 ## See also
