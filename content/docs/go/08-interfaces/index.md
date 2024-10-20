@@ -4,11 +4,11 @@ tags: [Go]
 draft: true
 ---
 
+介面（interface）的主要功用之一：強制某個場合的型別一定要提供特定方法。
+
 ## 隱含的介面實作 {#implicit-interfaces}
 
-Go 的介面跟其他程式語言的介面都是用來定義共同行為，但是在 Go 語言中，介面的實作是隱含的、由編譯器自動識別的，亦即無須明白宣告某個型別實作了那些介面。也因為這個緣故，撰寫 Go 程式的時候大多是先寫具象（concrete）型別的程式碼，然後從幾個具有相似行為的具象類別當中找出介面。
-
-> 其他物件導向語言則通常是先定義介面，然後才撰寫具象類別來實作該介面。
+一般而言，物件導向語言當中的介面（interface）是用來定義一份抽象規格，且通常是先定義介面，然後撰寫具象類別來實作介面。但是在 Go 語言中，介面的實作是隱含的、由編譯器自動識別的，亦即無須明白宣告某個型別實作了那些介面——也就是所謂的 duck typing。因為這個緣故，撰寫 Go 程式的時候大多是先寫具象（concrete）型別的程式碼，而不是預先定義介面。
 
 ### 先實作具象型別 {#concrete-first}
 
@@ -167,9 +167,7 @@ type customersGetter interface {
 
 ## 避免回傳介面 {#avoid-returning-interfaces}
 
-returning an interface is, in many cases, considered a bad practice in Go.
-
-in general, returning an interface restricts flexibility because we force all the clients to use one particular type of abstraction.
+常見的物件導向程式語言的最佳實務做法建議提供服務的元件與其用戶端之間透過介面來綁定，而不要綁特定實作。然而在 Go 語言，回傳介面在許多情況下卻不是個好主意。
 
 建議的做法是：
 
