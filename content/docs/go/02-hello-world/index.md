@@ -235,6 +235,11 @@ PASS
 ok      hellogo 0.116s
 ```
 
+`go test` 命令的其他常用選項：
+
+- `-v`：Verbose output，即輸出詳細訊息。
+- `failfast`：只要碰到一個失敗的測試就立即停止，不再往下執行其餘測試。使用此選項可以讓我們一次專注處理一個失敗的測試。
+
 > [!info] See also
 > 除了單元測試，`go test` 還可以執行效能測試。在後面介紹字串處理的時候有示範如何撰寫和執行效能測試，詳見[練習：打亂字串內容]({{< ref "../05-important-basics/strings/index.md#string-shuffle" >}})。
 
