@@ -235,6 +235,9 @@ PASS
 ok      hellogo 0.116s
 ```
 
+> [!info] See also
+> 除了單元測試，`go test` 還可以執行效能測試。在後面介紹字串處理的時候有示範如何撰寫和執行效能測試，詳見[練習：打亂字串內容]({{< ref "../05-important-basics/strings/index.md#string-shuffle" >}})。
+
 ## 用 godoc 產生文件 {#godoc}
 
 Go 工具組當中有一個 `godoc` 可以用來產生應用程式的文件。我們可以用前面的範例程式來簡單體驗一下。
