@@ -11,13 +11,16 @@ draft: true
 
 底下是我自己常用的快捷鍵（for Windows）。
 
-## General
+## General and files
 
 | 快捷鍵                  | 用途說明 |
 |-------------------------|----------------------|
 | Ctrl+Shift+P, F1        | 顯示 Command Palette |
-| Ctrl+P                  | 切換至檔案... |
 | Ctrl+K Ctrl+S           | 顯示快捷鍵列表 |
+| Ctrl+P                  | 切換至檔案... |
+| Ctrl+K P | 把目前檔案的所在路徑複製到剪貼簿 |
+| Ctrl+K R | 在檔案總管中顯示目前檔案 |
+| Ctrl+K S | 儲存全部檔案 |
 
 ## Basic editing
 
@@ -47,8 +50,8 @@ draft: true
 | 快捷鍵                  | 用途說明 |
 |-------------------------|----------------------|
 | Ctrl+Alt+ ↑ / ↓ | 往上／往下增加游標 |
-| Ctrl+Shift+L | 在檔案中找出目前選取的文字並全部選取 |
-| Ctrl+F2 | 在檔案中找出目前游標所在位置的字詞並全部選取 |
+| Ctrl+Shift+L | 選取文字之後再用此按鍵一次選取檔案內所有相同的文字 |
+| Ctrl+F2 | 把游標停在欲選取的字詞然後用此按鍵一次選取檔案內所有相同的字詞 |
 | Shift+Alt+→ | 擴大選取範圍 |
 | Shift+Alt+← | 縮小選取範圍 |
 | Shift+Alt+滑鼠拖曳 | 垂直選取（方塊選取） |
@@ -63,5 +66,10 @@ draft: true
 | F12 | 跳至定義（變數、函式宣告處） |
 | Alt+F12 | 查看定義 |
 | Shift+Alt+. | 顯示修改建議 (quick fix) |
-| Shift+F12 | 顯示參考（誰用到這個變數／函式？） |
+| Shift+F12 | 顯示所有參考（誰用到這個變數／函式？） |
 | F2 | 更改符號名稱（變數、函式等等） |
+
+
+## See also
+
+- [官方 Visual Studio Code 快速鍵一覽表](https://blog.poychang.net/vscode-shortcuts/) by Poy Chang
