@@ -91,3 +91,4 @@ tags: ["VS Code"]
 ## See also
 
 - [官方 Visual Studio Code 快速鍵一覽表](https://blog.poychang.net/vscode-shortcuts/) by Poy Chang
+- [Visual Studio Code 常用的快捷鍵](https://wyatthoho.medium.com/visual-studio-code-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%8D%B5-894ff940a2c1) by wyatthoho
