@@ -81,6 +81,8 @@ tags: ["VS Code"]
 | Shift+F12 | 顯示所有參考（誰用到這個變數／函式？） |
 | F2 | 更改符號名稱（變數、函式等等） |
 
+**註：** 顯示 quick fix 的預設按鍵是 `Ctrl+.`，但此按鍵與微軟注音輸入法衝突，故我把它改成 `Shift+Alt+.`。
+
 ## Integrated terminal
 
 | 快捷鍵                  | 用途說明 |
