@@ -77,11 +77,12 @@ tags: ["VS Code"]
 | Ctrl+K Ctrl+F | 格式化選取的文字 |
 | F12 | 跳至定義（變數、函式宣告處） |
 | Alt+F12 | 查看定義 |
-| Shift+Alt+. | 顯示修改建議 (quick fix) |
+| Shift+Alt+. | 自動修正 (`Auto Fix...`) |
+| Ctrl+Alt+. | 顯示修改建議 (`Quick Fix...`) |
 | Shift+F12 | 顯示所有參考（誰用到這個變數／函式？） |
 | F2 | 更改符號名稱（變數、函式等等） |
 
-**註：** 顯示 quick fix 的預設按鍵是 `Ctrl+.`，但此按鍵與微軟注音輸入法衝突，故我把它改成 `Shift+Alt+.`。
+> **註：** 顯示修改建議（`Quick Fix...`）的預設按鍵是 `Ctrl+.`，但此按鍵與微軟注音輸入法衝突，故我把它改成 `Ctrl+Alt+.`。我更常用 Shift+Alt+.（`Auto Fix...`），因為此功能也經常會跟 `Quick Fix...` 一樣顯示修改建議。
 
 ## Integrated terminal
 
