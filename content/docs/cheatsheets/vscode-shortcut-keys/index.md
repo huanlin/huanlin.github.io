@@ -94,6 +94,14 @@ tags: ["VS Code"]
 | Ctrl+` | 顯示 integrated terminal |
 | Ctrl+Shift+` | 開一個新的 terminal |
 
+## More
+
+其他常用熱鍵：
+
+| 快捷鍵                  | 用途說明 |
+|-------------------------|----------------------|
+| Ctrl+Alt+I | 開啟 CoPilot（於 secondary side bar） |
+
 ## See also
 
 - [官方 Visual Studio Code 快速鍵一覽表](https://blog.poychang.net/vscode-shortcuts/) by Poy Chang
