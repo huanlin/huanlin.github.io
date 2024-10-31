@@ -65,6 +65,7 @@ tags: ["VS Code"]
 |-------------------------|----------------------|
 | Ctrl+ `=` / `-` | Zoom in/out（用九宮格的 `+` 和 `-` 也行） |
 | Ctrl+Shift+E | 到 Explorer 面板 |
+| Ctrl+Alt+F   | 在 Explorer 面板中搜尋檔案名（不含資料夾名） |
 | Ctrl+Shift+F | 到 Search 面板 |
 | Ctrl+Shift+H | 對全部檔案進行搜尋並替換 |
 | Ctrl+K V     | 在側邊面板顯示 Markdown 預覽結果 |
