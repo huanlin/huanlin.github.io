@@ -70,6 +70,8 @@ tags: ["VS Code"]
 | Ctrl+Shift+H | 對全部檔案進行搜尋並替換 |
 | Ctrl+K V     | 在側邊面板顯示 Markdown 預覽結果 |
 
+註：`Ctrl+Alt+F` 的用法是先按 `Ctrl+Shift+E` 確保焦點切至 Explorer 面板，然後按 `Ctrl+Alt+F` 輸入關鍵字搜尋檔名。只搜檔名，不搜資料夾名。
+
 ## Rich languages editing
 
 | 快捷鍵                  | 用途說明 |
