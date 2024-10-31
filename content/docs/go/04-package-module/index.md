@@ -485,9 +485,9 @@ require github.com/shirou/gopsutil/v4 v4.24.8
 
 接著來看 gopsutil 專案的套件組成結構，如下圖：
 
-![](images/gopsutil-folders.png)
+![](images/gopsutil-folders.png#center)
 
-其中的 `common`、`cpu`、`disk`、`internal/common` 等資料夾都是 packages。就如前面提過的，每一個 package 在磁碟檔案系統上面就是一個資料夾，而該資料夾底下的所有 Go 程式檔案都必須隸屬於同一個 package。
+其中的 `common`、`cpu`、`disk`、`internal/common` 等資料夾都是 packages。就如前面提過的，每一個 package 在磁碟檔案系統上面就是一個資料夾，而該資料夾底下的所有 Go 程式檔案都必須隸屬於同一個 package（不包含子目錄，因為子目錄也會成為一個 package）。
 
 以 `cpu` 資料夾為例，它底下有許多 .go 檔案，例如 `cpu.go`、`cpu_aix.go`、`cpu_linux.go` 等等，這些 .go 檔案裡面都有底下這行 `package` 宣告，表示它們所屬的套件名稱是 `cpu`：
 
