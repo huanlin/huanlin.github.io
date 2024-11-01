@@ -65,9 +65,12 @@ tags: ["VS Code"]
 |-------------------------|----------------------|
 | Ctrl+ `=` / `-` | Zoom in/out（用九宮格的 `+` 和 `-` 也行） |
 | Ctrl+Shift+E | 到 Explorer 面板 |
+| Ctrl+Alt+F   | 在 Explorer 面板中搜尋檔案名（不含資料夾名） |
 | Ctrl+Shift+F | 到 Search 面板 |
 | Ctrl+Shift+H | 對全部檔案進行搜尋並替換 |
 | Ctrl+K V     | 在側邊面板顯示 Markdown 預覽結果 |
+
+註：`Ctrl+Alt+F` 的用法是先按 `Ctrl+Shift+E` 確保焦點切至 Explorer 面板，然後按 `Ctrl+Alt+F` 輸入關鍵字搜尋檔名。只搜檔名，不搜資料夾名。
 
 ## Rich languages editing
 
@@ -90,6 +93,14 @@ tags: ["VS Code"]
 |-------------------------|----------------------|
 | Ctrl+` | 顯示 integrated terminal |
 | Ctrl+Shift+` | 開一個新的 terminal |
+
+## More
+
+其他常用熱鍵：
+
+| 快捷鍵                  | 用途說明 |
+|-------------------------|----------------------|
+| Ctrl+Alt+I | 開啟 CoPilot（於 secondary side bar） |
 
 ## See also
 

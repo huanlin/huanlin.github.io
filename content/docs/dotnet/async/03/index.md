@@ -3,7 +3,8 @@ title: 03 async 與 await 基礎
 draft: true
 ---
 
-讀過上一章所概略介紹的&nbsp;.NET 平台從過去到現在的幾種非同步程式設計模型之後，相信你對非同步工作（task）已經有了一些基礎概念。你應該也知道了，現行&nbsp;.NET 平台上面所建議使用的非同步程式設計模型 **TAP**（Task-based Asynchronous Programming）是基於 **TPL**（Task Parallel Library）這組 API，而它們的最重要核心則是用來代表非同步工作的 `Task` 類別（及其子類別 `Task<TResult>`）。至於 C# 的 `async` 與 `await` 關鍵字，則可以說是讓非同步程式更容易撰寫與閱讀的語法糖。
+讀過上一章所概略介紹的&nbsp;.NET 平台從過去到現在的幾種非同步程式設計模型之後，相信你對非同步工作已經有了一些基礎概念。你應該也知道了，現行&nbsp;.NET 平台上面所建議使用的非同步程式設計模型 **TAP**（Task-based Asynchronous Programming）是基於 **TPL**（Task Parallel Library）這組 API，而它們的最重要核心則是用來代表非同步工作的 `Task` 類別（及其子類別 `Task<TResult>`）。至於 C# 的 `async` 與 `await` 關鍵字，則是讓非同步程式更容易撰寫與閱讀的語法——有了這些語法，我們才能
+夠以比較接近同步呼叫的語法來撰寫和呼叫非同步方法。
 
 由於 `Task` 很重要，本章一開始仍要延續這個議題，介紹非同步工作的**延續**（continuation），然後再進入 `async` 與 `await` 語法。
 

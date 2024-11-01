@@ -325,9 +325,9 @@ go get github.com/huanlin/learning-go@v0.0.1-beta
 
 如果在編譯 go 程式時發生模組相關的錯誤（例如找不到某個模組），此時可以試試 `go mod tody` 命令。此命令會找到專案的 `go.mod` 檔案，並針對模組依賴關係執行以下工作：
 
-- 刪除沒用到的模組。
-- 下載需要的模組。
-- 更新 `go.mod` 和 `go.sum` 檔案。
+- 下載專案有用到的外部模組。
+- 更新 `go.mod` 檔案：在 `require` 區塊中加入必要的依賴，並刪除沒用到的依賴。
+- 更新 `go.sum` 檔案。
 
 舉例來說，假設 `go.mod` 檔案的內容如下：
 
@@ -454,14 +454,14 @@ module github.com/shirou/gopsutil/v4
 go 1.18
 
 require (
+    github.com/ebitengine/purego v0.8.1
     github.com/google/go-cmp v0.6.0
     github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0
     github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c
-    github.com/shoenig/go-m1cpu v0.1.6
     github.com/stretchr/testify v1.9.0
     github.com/tklauser/go-sysconf v0.3.12
     github.com/yusufpapurcu/wmi v1.2.4
-    golang.org/x/sys v0.24.0
+    golang.org/x/sys v0.26.0
 )
 
 require (
@@ -473,21 +473,21 @@ require (
 )
 ```
 
-兩個 `require` 區塊都是在描述此專案會用到外部模組；第一個 `require` 區塊是有直接引用的外部模組，第二個 `require` 區塊則是間接（indirect）用到的模組，即某些直接引用的模組內部有用到其他模組。間接引用的模組清單可透過 `go mod tidy` 命令自動產生，無需人工編寫。
-
-從第一行可得知此專案的模組路徑是 `github.com/shirou/gopsutil/v4`。然後，在 GitHub 網站上查看[這個專案的 tags](https://github.com/shirou/gopsutil/tags) 可得知最新發布的版本，例如 `v4.24.8`。也就是說，當我們的程式需要使用 gopsutil 提供的套件時，我們的 Go 專案的 `go.mod` 檔案裡面要有底下的 `require` 宣告：
+從第一行可得知此專案的模組路徑是 `github.com/shirou/gopsutil/v4`。然後，在 GitHub 網站上查看[這個專案的 tags](https://github.com/shirou/gopsutil/tags) 可得知最新發布的版本，例如 `v4.24.8`。也就是說，如果應用程式需要用到 gopsutil 套件，我們的 Go 專案的 `go.mod` 檔案裡面要有底下的 `require` 宣告：
 
 ```text
 require github.com/shirou/gopsutil/v4 v4.24.8
 ```
 
-> 把 `require` 宣告寫好之後，在我們的 Go 專案目錄下執行 `go mod tidy` 命令，即可自動下載 `gopsutil` 模組以及它所依賴的其他模組。
+檔案 `go.mod` 裡面有兩個 `require` 區塊，其作用都是在描述此專案會用到外部模組。第一個 `require` 區塊是有直接引用的外部模組，第二個 `require` 區塊則是間接（indirect）用到的模組，即某些直接引用的模組內部有用到其他模組。在專案目錄下執行 `go mod tidy` 命令即可透過工具自動下載專案所依賴的外部模組，並自動更新這兩個 `require` 區塊的內容，包括移除沒用到的依賴，以及加入必要的依賴。
+
+> 官方文件：[go mod tidy](https://go.dev/ref/mod#go-mod-tidy)
 
 接著來看 gopsutil 專案的套件組成結構，如下圖：
 
-![](images/gopsutil-folders.png)
+![](images/gopsutil-folders.png#center)
 
-其中的 `common`、`cpu`、`disk`、`internal/common` 等資料夾都是 packages。就如前面提過的，每一個 package 在磁碟檔案系統上面就是一個資料夾，而該資料夾底下的所有 Go 程式檔案都必須隸屬於同一個 package。
+其中的 `common`、`cpu`、`disk`、`internal/common` 等資料夾都是 packages。就如前面提過的，每一個 package 在磁碟檔案系統上面就是一個資料夾，而該資料夾底下的所有 Go 程式檔案都必須隸屬於同一個 package（不包含子目錄，因為子目錄也會成為一個 package）。
 
 以 `cpu` 資料夾為例，它底下有許多 .go 檔案，例如 `cpu.go`、`cpu_aix.go`、`cpu_linux.go` 等等，這些 .go 檔案裡面都有底下這行 `package` 宣告，表示它們所屬的套件名稱是 `cpu`：
 
