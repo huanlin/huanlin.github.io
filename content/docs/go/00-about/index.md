@@ -55,16 +55,16 @@ tags: [Go]
 
 | Title <div style="width: 140px;"></div>| Level<div style="width: 80px;"></div> | Rate | Description |
 |-----------------------|------------------------|---------|------------------------------------|
-| [Go in Practice, 2nd Edition](https://www.manning.com/books/go-in-practice-second-edition) | 中高階 | 4/5 | 著重實戰所需的知識與技術，不會詳細介紹基礎語法，例如變數如何宣告與賦值、如何寫迴圈等等，但重要的語言特性都有涵蓋，像是介面、泛型、concurrency、錯誤處理等等。後面幾章還介紹了單元測試、Web API、雲端應用程式設計等議題。|
 | [Go by Example](https://www.manning.com/books/go-by-example) | 中高階 | 5/5 | 適合 Go 語言的初學者，但必須具備其他程式語言的開發經驗。 |
 | [100 Go Mistakes and How to Avoid Them](https://100go.co/book/) | 中高階 | 5/5 | Go 專業開發人員必讀。 |
 | [Go in Action, 2nd Edition](https://www.manning.com/books/go-in-action-second-edition) | 入門至中階 | 3/5 | 可以當作語法參考手冊，需要時再查閱。最後一章介紹單元測試。未包含 web 程式設計相關議題。|
+| [Go in Practice, 2nd Edition](https://www.manning.com/books/go-in-practice-second-edition) | 中高階 | 4/5 | 著重實戰所需的知識與技術，不會詳細介紹基礎語法，例如變數如何宣告與賦值、如何寫迴圈等等，但重要的語言特性都有涵蓋，像是介面、泛型、concurrency、錯誤處理等等。後面幾章還介紹了單元測試、Web API、雲端應用程式設計等議題。|
 | [Learning Go 2nd Edition](https://www.amazon.com/Learning-Go-Jon-Bodner-ebook/dp/B0CS5DY1VN) | 入門至進階 |  |
 | [Let's Go](https://lets-go.alexedwards.net/) | 入門至實戰 |  | 從 Hello World 到開發 Web 應用程式。 |
 
 ### Courses
 
-從缺，因為我沒有購買線上課程。
+從缺，我沒有購買線上課程。
 
 ## 版本歷史
 
@@ -74,5 +74,4 @@ tags: [Go]
 |------------|-----------------------------------------------------------|
 | 2024-10-03 | 〈結構〉大抵完成。 |
 | 2024-09-19 | 增加〈集合〉，打算寫陣列、slice、和 map。 |
-| 2024-09-02 | 增加〈雜七雜八但是重要〉、〈結構〉。 |
 | 2024-08-31 | 初次發布：關於這個筆記、Get started、Hello world、命令列應用程式、Code organization。 |
