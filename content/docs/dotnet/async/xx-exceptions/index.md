@@ -18,37 +18,135 @@ draft: true
 在進一步解釋之前，先提一個重點：**一個非同步方法可以拋出一般的異常，也能透過 `Task` 物件來回報錯誤。** 接著請看以下範例和解說來嘗試理解這句話的意思。
 
 ```cs
-public void MyMethod()
+public static void Main()
+{
+    Console.WriteLine("Main thread ID: " + Thread.CurrentThread.ManagedThreadId);
+
+    MyMethod();
+
+    Thread.Sleep(500); // 確保來得及輸出 Worker thread ID。
+}
+
+static void MyMethod()
 {
     try
     {
-        Task.Run(()=>
+        var task = Task.Run(() =>
         {
+            Console.WriteLine("Worker thread ID: " + Thread.CurrentThread.ManagedThreadId);
             throw new NotImplementedException();
         });
+
+        // 將以下程式碼取消註解，再觀察執行結果。
+        // task.Wait();
     }
-    catch
+    catch (Exception ex)
     {
-        Console.WriteLine("被 catch 捕捉到");
+        Console.WriteLine("捕捉到異常! " + ex.GetType().FullName);
     }
 }
 ```
 
-在這段程式碼中，雖然 `throw` 語句位於 `try` 區塊內，但它並不是執行於 `MyMethod` 方法的同一條控制流。這是因為傳遞給 `Task.Run` 方法的 lambda 表達式會被編譯器拆成一個完全不同的方法，而且在不同的執行緒中運行。因此，這裡拋出的異常並不會被我們的 `catch` 區塊捕捉到。
+執行結果：
+
+```text
+Main thread ID: 1
+Worker thread ID: 4
+```
+
+執行結果並沒有出現「捕捉到異常!」。但如果把範例程式中的 `// task.Wait();` 取消註解，再執行一次程式，則輸出結果會變成：
+
+```text
+Main thread ID: 1
+Worker thread ID: 4
+捕捉到異常! System.AggregateException
+```
+
+> [Try it on .NET Fiddle](https://dotnetfiddle.net/qgn2VI)
+
+**解釋：**
+
+- 雖然 `throw` 語句位於 `try` 區塊內，但此程式碼並非執行於主執行緒，而是執行於另一條執行緒。這是因為傳遞給 `Task.Run` 方法的 lambda 表達式會被編譯器拆成一個完全不同的方法，並且由另一條執行緒來執行。因此，這裡拋出的異常並不會被我們的 `catch` 區塊捕捉到。
+- 一旦使用了 `Task.Wait` 方法（無論是靜態方法還是 instance 方法），異常就會被傳遞至呼叫端的執行緒，於是能夠被我們的 `try-catch` 區塊捕捉到。當程式中同時運行多個非同步工作，便可能拋出多個異常，故 .NET 將這些非同步工作產生的異常全都蒐集放到一個 `AggregateException` 物件中（即使只有一個異常也是這樣）。
+
+### AggregateException
+
+以下程式碼展示了如何從 `AggregateException` 物件中取出所有內部的異常：
+
+```cs
+    try
+    {
+        var task = Task.Run(() =>  { ....(略) });
+        task.Wait();
+    }
+    catch (AggregateException ae)
+    {
+        foreach (var ex in ae.InnerExceptions)
+        {
+            // 處理自訂異常。
+            if (ex is CustomException)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            // 若是其他異常類型，便再次拋出。
+            else
+            {
+                throw ex;
+            }
+        }
+    }
+```
+
+如果不想呼叫 `Task.Wait` 方法來傳遞非同步工作的異常，另一種做法是透過 `Task` 物件的 `Exception` 屬性來取得 `AggregateException` 及其相關資訊。範例：
+
+```cs
+    var task = Task.Run(() =>  { ....(略) });
+
+    while (!task.IsCompleted) { } // 僅作為示範，不建議這麼寫！
+
+    if (task.Status == TaskStatus.Faulted)
+    {
+        foreach (var ex in task.Exception?.InnerExceptions ?? new(Array.Empty<Exception>()))
+        {
+            // 處理自訂異常。
+            if (ex is CustomException)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            // 若是其他異常類型，便再次拋出。
+            else
+            {
+                throw ex;
+            }
+        }
+    }
+```
+
+如果你沒有存取 `Task` 物件的狀態（例如 `Exception` 屬性、`Result` 屬性），也不使用 `await` 或 `Task.Wait` 來等待非同步工作——換言之，呼叫端程式從未捕捉這些非同步工作的異常，那麼這些異常就會靜靜地藏在 `Task` 物件內部，就像什麼事都沒發生一樣（應用程式也不會異常終止）。
+
+> 參閱微軟文件：[Exception handling (Task Parallel Library)](https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/exception-handling-task-parallel-library)
+
 
 非同步（async）方法也有同樣的情形，因為 `await` 等同於呼叫 `ContinueWith`，所以如果我們寫一個簡單的 `async` 方法並拋出異常，像這樣：
 
 ```cs
-try
+static async Task MyMethod()
 {
-    await File.ReadAllBytesAsync("file.txt");
-    throw new NotImplementedException();
-}
-catch
-{
-    Console.WriteLine("被 catch 捕捉到");
+    try
+    {
+        await new HttpClient().GetStringAsync("https://microsoft.com");
+        throw new NotImplementedException();
+    }
+    catch
+    {
+        Console.WriteLine("捕捉到異常!");
+    }
 }
 ```
+
+執行結果跟上一個範例一樣不會出現「捕捉到異常!」。
+
+> [Try it on .NET Fiddle](https://dotnetfiddle.net/F9fy4k)
 
 此範例在呼叫 `File.ReadAllBytesAsync` 之後便立刻拋出異常。若以 `ContinueWith` 來改寫 `await`，程式碼會變成：
 
@@ -62,11 +160,13 @@ try
 }
 catch
 {
-    Console.WriteLine("被 catch 捕捉到");
+    Console.WriteLine("捕捉到異常!");
 }
 ```
 
-這寫法跟稍早的 `Task.Run` 範例有同樣的問題：`throw` 語句寫在一個 lambda 函式中，而該匿名函式會由 `ContinueWith` 執行，而不是在 `try` 區塊的同一條控制流上面執行，故這裡拋出的異常並不會由 `catch` 區塊捕捉到。於是，編譯器會替這段程式碼產生一段重複的 `try-catch` 敘述：
+> 以上程式碼可通過編譯，但會有編譯警告。
+
+這寫法跟稍早的 `Task.Run` 範例有同樣的問題：`throw` 語句寫在一個 lambda 函式中，而該匿名函式會由 `ContinueWith` 執行，而不是在 `try` 區塊的同一條執行緒上面執行，故這裡拋出的異常並不會由 `catch` 區塊捕捉到。於是，編譯器會替這段程式碼產生一段重複的 `try-catch` 敘述，類似這樣：
 
 ```cs
 try
