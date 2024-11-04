@@ -67,7 +67,9 @@ Worker thread ID: 4
 **解釋：**
 
 - 雖然 `throw` 語句位於 `try` 區塊內，但此程式碼並非執行於主執行緒，而是執行於另一條執行緒。這是因為傳遞給 `Task.Run` 方法的 lambda 表達式會被編譯器拆成一個完全不同的方法，並且由另一條執行緒來執行。因此，這裡拋出的異常並不會被我們的 `catch` 區塊捕捉到。
-- 一旦使用了 `Task.Wait` 方法（無論是靜態方法還是 instance 方法），異常就會被傳遞至呼叫端的執行緒，於是能夠被我們的 `try-catch` 區塊捕捉到。當程式中同時運行多個非同步工作，便可能拋出多個異常，故 .NET 將這些非同步工作產生的異常全都蒐集放到一個 `AggregateException` 物件中（即使只有一個異常也是這樣）。
+- 一旦使用了 `Task.Wait` 方法（無論是靜態方法還是 instance 方法），異常就會被傳遞至呼叫端的執行緒，於是能夠被我們的 `try-catch` 區塊捕捉到。一個 `Task` 物件可能涉及多個非同步工作（例如把多個非同步工作傳入 `Task.WhereAll` 方法），亦即可能拋出多個異常，故 .NET 用一個 `AggregateException` 物件來保存相關的非同步工作所拋出的異常（即使只有一個異常也是如此）。
+
+> 參閱微軟文件：[AggregateException 類別](https://learn.microsoft.com/zh-tw/dotnet/api/system.aggregateexception)
 
 ### AggregateException
 
@@ -122,41 +124,78 @@ Worker thread ID: 4
     }
 ```
 
-如果你沒有存取 `Task` 物件的狀態（例如 `Exception` 屬性、`Result` 屬性），也不使用 `await` 或 `Task.Wait` 來等待非同步工作——換言之，呼叫端程式從未捕捉這些非同步工作的異常，那麼這些異常就會靜靜地藏在 `Task` 物件內部，就像什麼事都沒發生一樣（應用程式也不會異常終止）。
+如果你沒有存取 `Task` 物件的狀態（例如 `Exception` 屬性、`Result` 屬性），也不使用 `await` 或 `Task.Wait` 來等待非同步工作——換言之，呼叫端程式從未捕捉這些非同步工作的異常，那麼這些異常就會靜靜地藏在 `Task` 物件內部，就像什麼事都沒發生過（應用程式也不會異常終止）。
 
 > 參閱微軟文件：[Exception handling (Task Parallel Library)](https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/exception-handling-task-parallel-library)
 
-再來看一個例子：
+現在我們知道 .NET 會把非同步工作拋出的異常（一個或多個）集中保存於 `Task.Exception` 屬性，其型別為 `AggregateException`。那麼底下這段程式碼是否也是如此呢？
 
 ```cs
 public async Task<int> MyMethod()
 {
-    DoSomething();
     throw new NotImplementedException();
 }
 ```
 
-對此寫法，編譯器可以說幾乎沒有對程式碼動任何手腳，而且會產生編譯警告："This async method lacks 'await' operators and will run synchronously."。請記住：**把一個方法加上 `async` 關鍵字不代表它一定會以非同步的方式執行；它只是一個旗號，告訴編譯器必須為 `await` 敘述產生必要的程式碼。** 如果 `async` 方法裡面沒有任何 `await` 敘述，編譯器就只是單純把回傳值包在一個 `Task` 物件，而這裡的 `throw` 敘述經過編譯之後也沒有額外處理，就只是跟一般（同步的）方法一樣拋出一個普通的異常。
+此範例雖然會產生編譯警告：「This async method lacks 'await' operators and will run synchronously.」但的確是可以通過編譯且可以執行的。然而，程式執行時就只是拋出一般的異常，背後不會有「把異常從工作執行緒傳遞至呼叫端執行緒」的動作，因為編譯器不會對這種寫法產生非同步處理的程式碼。
 
-那麼，如果有加上 `await` 呢？
+請記住：**把一個方法加上 `async` 關鍵字不代表它一定會以非同步的方式執行；它只是一個旗號，告訴編譯器必須為 `await` 敘述產生必要的程式碼。** 既然這裡的 `async` 方法並沒有用到 `await` 關鍵字，編譯器就只會單純把方法的回傳值包在 `Task` 物件，而這裡的 `throw` 敘述經過編譯之後也沒有產生額外的程式碼，就只是跟一般（同步的）方法一樣拋出一個普通的異常。
+
+那麼，如果有加上 `await` 呢？如以範例。
 
 ```cs
 public async Task<int> MyMethod()
 {
-    DoSomething();
     await File.ReadAllBytesAsync("file.txt");
     throw new NotImplementedException();
 }
 ```
 
-此方法會以非同步方式呼叫 `ReadAllBytesAsync` 並等待其執行結果。待非同步工作完成後，便緊接著拋出異常。對此情況，編譯器會替我們加入一個 `try-catch` 區塊，並將捕捉到的異常保存於回傳的 `Task` 物件中。類似以下程式碼：
+就如稍早提過的， 只要有使用 `await` 或者 `Task.Wait` 方法（無論是靜態方法還是 instance 方法），非同步工作引發的異常就會被傳遞至呼叫端的執行緒，於是能夠被呼叫端的 `try-catch` 區塊捕捉到。
+
+換言之，只要使用了正確的 `async/await` 語法，在多數比較單純的場景都以使用我們熟悉的 `try/catch` 語法來捕捉和處理非同步工作所引發的異常，如以下範例所示。
 
 ```cs
-public async Task<int> MyMethod()
+static async Task Main()
+{
+    try
+    {
+        await MyMethod();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("捕捉到異常! " + ex.GetType().FullName);
+    }
+}
+
+static async Task<int> MyMethod()
 {
     DoSomething();
+
+    await File.ReadAllBytesAsync("file.txt");
+    throw new NotImplementedException();
+}
+```
+
+此方法會以非同步方式呼叫 `File.ReadAllBytesAsync` 並等待其執行結果。待非同步工作完成後，便緊接著拋出異常。若檔案 "file.txt" 不存在，程式執行時的輸出結果會是：
+
+```text
+捕捉到異常! System.IO.FileNotFoundException
+```
+
+> [Try it on .NET Fiddle](https://dotnetfiddle.net/F9fy4k)
+
+如果你想要了解編譯器對程式碼做了什麼事，請繼續閱讀。但如果你覺得不需要了解這些細節（有時可能反而令腦袋混亂），亦可直接跳到下一節。
+
+剛才的程式碼，編譯器會替我們加入一個 `try/catch` 區塊，並將捕捉到的異常保存於回傳的 `Task` 物件中。類似以下程式碼：
+
+```cs
+static async Task<int> MyMethod()
+{
+    DoSomething();
+
     var result = new TaskCompletionSource<int>();
-    File.ReadAllBytesAsync("file.txt").ContinueWith(t=>
+    File.ReadAllBytesAsync("file.txt").ContinueWith(t =>
     {
         try
         {
@@ -170,16 +209,15 @@ public async Task<int> MyMethod()
 }
 ```
 
-請注意編譯器額外產生的 `try` 區塊不是加在呼叫非同步方法 `ReadAllBytesAsync` 之前，而是放在傳入 `ContinueWith` 方法的 lambda 函式中。當程式執行時，考慮兩種情況：
+請注意編譯器額外產生的 `try` 區塊不是加在呼叫非同步方法 `ReadAllBytesAsync` 之前，而是放在傳入 `ContinueWith` 方法的 lambda 函式中。當程式執行時，有兩種拋出異常的情況：
 
-- 情況一：在呼叫非同步方法 `ReadAllBytesAsync` 之前就發生錯誤（例如 `DoSomething` 拋出異常），則 `MyMethod` 方法就只是拋出一般的異常。
-- 情況二：執行非同步方法 `ReadAllBytesAsync` 的時候出錯，則該異常會被包在 `Task` 物件中一並回傳給呼叫端。
+- 情況一：在呼叫非同步方法 `ReadAllBytesAsync` 之前就發生錯誤（例如呼叫 `DoSomething` 時出錯），則 `MyMethod` 方法就只是拋出一般的異常。
+- 情況二：執行非同步方法 `ReadAllBytesAsync` 的時候出錯，則該異常會被包在 `Task` 物件中，以便呼叫端稍後處理。
 
-如果在呼叫非同步方法時使用 `await` 來等待非同步工作執行完畢，錯誤處理的程式碼寫法都一樣，故無須在意上述兩種情形有何區別。但如果不是使用 `await`，例如使用 `Task.WhenAny` 或 `Task.WhenAll` 來蒐集多個工作的結果，那就必須了解上述兩種情形的細節差異。
+如果本章到目前為止的內容你都已經理解，那麼你一定很清楚：這裡在呼叫非同步方法時使用了 `await`，所以呼叫端的錯誤處理無需特別的程式碼寫法；使用一般的 `try/catch` 語法即可涵蓋情況一和情況二。但如果沒有使用 `await`，例如使用 `Task.WhenAny` 或 `Task.WhenAll` 來蒐集多個非同步工作的結果，那就必須了解稍早介紹的 `AggregateException` 的用法。
 
 > [!note]
 > 另外要提醒的是，「延續」（continuation）操作通常在方法返回之後才開始執行，故如果其中的操作會拋出異常，從非同步方法（即此例的 `MyMethod`）回傳的 `Task` 物件的狀態通常會是 `Created`、`WaitingForActivation` 或 `Running`，並且在稍後才會變成 `Faulted` 狀態。
-
 
 使用 `await` 來重新拋出異常和使用 `Task.Exception` 屬性之間只有一個區別，那就是它們如何使用 `AggregateException`。
 
