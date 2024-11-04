@@ -9,13 +9,16 @@ draft: true
 
 關於非同步呼叫的異常處理，在微軟文件中有這麼一段：
 
-> 非同步方法應該只在回應用法錯誤（usage error）時才拋出異常。使用錯誤不應該出現在生產環境的程式碼中。舉例來說，如果在呼叫非同步方法時傳入 `null` 給某個參數而導致錯誤（通常以 `ArgumentNullException` 異常表示），你可以修改呼叫端的程式碼以確保永遠不會傳入 `null`。對於所有其他錯誤，非同步方法執行時發生的異常應該被指派給回傳的工作（task），即使非同步方法在工作回傳之前就已同步完成也一樣。通常一個工作僅包含一個異常。然而，如果該工作涉及多項操作（例如 `WhenAll`），則該工作可能會關聯多個異常。
+> [!quote] 引述
+> 非同步方法應該只在回應用法錯誤（usage error）時才拋出異常。使用錯誤不應該出現在正式環境（production）的程式碼中。舉例來說，如果在呼叫非同步方法時傳入 `null` 給某個參數而導致錯誤（通常以 `ArgumentNullException` 異常表示），你可以修改呼叫端的程式碼以確保永遠不會傳入 `null`。對於所有其他錯誤，非同步方法執行時發生的異常應該被指派給回傳的工作（task），即使非同步方法在工作回傳之前就已同步完成也一樣。通常一個工作僅包含一個異常。然而，如果該工作涉及多項操作（例如使用了 `WhenAll` 方法），則該工作可能會關聯多個異常。
 >
 > 來源：[Task-based asynchronous pattern (TAP) in .NET: Introduction and overview](https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
 
-最後一句話：「通常一個工作僅包含一個異常。然而，如果該工作涉及多項操作（例如 `WhenAll`），則該工作可能會關聯多個異常。」這是什意思呢？
+最後一句話：「通常一個工作僅包含一個異常。然而，如果該工作涉及多項操作（例如使用了 `WhenAll` 方法），則該工作可能會關聯多個異常。」這是什意思呢？
 
-在進一步解釋之前，先提一個重點：**一個非同步方法可以拋出一般的異常，也能透過 `Task` 物件來回報錯誤。** 接著請看以下範例和解說來嘗試理解這句話的意思。
+在進一步解釋之前，先提一個重點：**一個非同步方法可以拋出一般的異常，也能透過 `Task` 物件來回報錯誤。** 以下小節將詳細說明這句話的涵義。
+
+先來看一個範例：
 
 ```cs
 public static void Main()
@@ -219,7 +222,8 @@ static async Task<int> MyMethod()
 > [!note]
 > 另外要提醒的是，「延續」（continuation）操作通常在方法返回之後才開始執行，故如果其中的操作會拋出異常，從非同步方法（即此例的 `MyMethod`）回傳的 `Task` 物件的狀態通常會是 `Created`、`WaitingForActivation` 或 `Running`，並且在稍後才會變成 `Faulted` 狀態。
 
-使用 `await` 來重新拋出異常和使用 `Task.Exception` 屬性之間只有一個區別，那就是它們如何使用 `AggregateException`。
+到目前為止，可以說詳細解釋了本章開頭提到的一個重點：「一個非同步方法可以拋出一般的異常，也能透過 `Task` 物件來回報錯誤。」
 
 ## await 與 AggregateException
 
+使用 `await` 來重新拋出異常和使用 `Task.Exception` 屬性之間只有一個區別，那就是它們如何使用 `AggregateException`。
