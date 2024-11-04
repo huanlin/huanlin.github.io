@@ -173,8 +173,6 @@ static async Task Main()
 
 static async Task<int> MyMethod()
 {
-    DoSomething();
-
     await File.ReadAllBytesAsync("file.txt");
     throw new NotImplementedException();
 }
@@ -188,42 +186,22 @@ static async Task<int> MyMethod()
 
 > [Try it on .NET Fiddle](https://dotnetfiddle.net/F9fy4k)
 
-如果你想要了解編譯器對程式碼做了什麼事，請繼續閱讀。但如果你覺得不需要了解這些細節（有時可能反而令腦袋混亂），亦可直接跳到下一節。
+---
 
-剛才的程式碼，編譯器會替我們加入一個 `try/catch` 區塊，並將捕捉到的異常保存於回傳的 `Task` 物件中。類似以下程式碼：
-
-```cs
-static async Task<int> MyMethod()
-{
-    DoSomething();
-
-    var result = new TaskCompletionSource<int>();
-    File.ReadAllBytesAsync("file.txt").ContinueWith(t =>
-    {
-        try
-        {
-            throw new NotImplementedException();
-        }
-        catch(Exception ex)
-        {
-            result.TrySetException(new AggregateException(ex));
-        }
-    });
-}
-```
-
-請注意編譯器額外產生的 `try` 區塊不是加在呼叫非同步方法 `ReadAllBytesAsync` 之前，而是放在傳入 `ContinueWith` 方法的 lambda 函式中。當程式執行時，有兩種拋出異常的情況：
-
-- 情況一：在呼叫非同步方法 `ReadAllBytesAsync` 之前就發生錯誤（例如呼叫 `DoSomething` 時出錯），則 `MyMethod` 方法就只是拋出一般的異常。
-- 情況二：執行非同步方法 `ReadAllBytesAsync` 的時候出錯，則該異常會被包在 `Task` 物件中，以便呼叫端稍後處理。
-
-如果本章到目前為止的內容你都已經理解，那麼你一定很清楚：這裡在呼叫非同步方法時使用了 `await`，所以呼叫端的錯誤處理無需特別的程式碼寫法；使用一般的 `try/catch` 語法即可涵蓋情況一和情況二。但如果沒有使用 `await`，例如使用 `Task.WhenAny` 或 `Task.WhenAll` 來蒐集多個非同步工作的結果，那就必須了解稍早介紹的 `AggregateException` 的用法。
-
-> [!note]
-> 另外要提醒的是，「延續」（continuation）操作通常在方法返回之後才開始執行，故如果其中的操作會拋出異常，從非同步方法（即此例的 `MyMethod`）回傳的 `Task` 物件的狀態通常會是 `Created`、`WaitingForActivation` 或 `Running`，並且在稍後才會變成 `Faulted` 狀態。
+> [!note] 重點整理
+> 只要在呼叫非同步方法時使用 `await`，呼叫端便可以使用一般的 `try/catch` 語法來應付大多數的錯誤處理。如果沒有使用 `await`，例如使用 `Task.WhenAny` 或 `Task.WhenAll` 來蒐集多個非同步工作的結果，那就必須了解稍早介紹的 `AggregateException` 的用法。
 
 到目前為止，可以說詳細解釋了本章開頭提到的一個重點：「一個非同步方法可以拋出一般的異常，也能透過 `Task` 物件來回報錯誤。」
 
 ## await 與 AggregateException
 
 使用 `await` 來重新拋出異常和使用 `Task.Exception` 屬性之間只有一個區別，那就是它們如何使用 `AggregateException`。
+
+
+
+---
+
+stubs 待整理
+
+> [!note]
+> 另外要提醒的是，「延續」（continuation）操作通常在方法返回之後才開始執行，故如果其中的操作會拋出異常，從非同步方法（即此例的 `MyMethod`）回傳的 `Task` 物件的狀態通常會是 `Created`、`WaitingForActivation` 或 `Running`，並且在稍後才會變成 `Faulted` 狀態。
