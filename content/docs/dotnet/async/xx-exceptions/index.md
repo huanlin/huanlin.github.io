@@ -102,7 +102,7 @@ Worker thread ID: 4
     }
 ```
 
-如果不想呼叫 `Task.Wait` 方法來傳遞非同步工作的異常，另一種做法是透過 `Task` 物件的 `Exception` 屬性來取得 `AggregateException` 及其相關資訊。範例：
+如果不想呼叫 `Task.Wait` 方法來將非同步工作的異常傳遞至呼叫端執行緒，另一種做法是透過 `Task` 物件的 `Exception` 屬性來取得 `AggregateException` 及其相關資訊。範例：
 
 ```cs
     var task = Task.Run(() =>  { ....(略) });
@@ -127,7 +127,7 @@ Worker thread ID: 4
     }
 ```
 
-如果你沒有存取 `Task` 物件的狀態（例如 `Exception` 屬性、`Result` 屬性），也不使用 `await` 或 `Task.Wait` 來等待非同步工作——換言之，呼叫端程式從未捕捉這些非同步工作的異常，那麼這些異常就會靜靜地藏在 `Task` 物件內部，就像什麼事都沒發生過（應用程式也不會異常終止）。
+如果沒有存取 `Task` 物件的狀態（例如 `Exception` 屬性、`Result` 屬性），也不使用 `await` 或 `Task.Wait` 來等待非同步工作——換言之，呼叫端程式從未捕捉這些非同步工作的異常，那麼這些異常就會靜靜地藏在 `Task` 物件內部，就像什麼事都沒發生過（應用程式也不會異常終止）。
 
 > 參閱微軟文件：[Exception handling (Task Parallel Library)](https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/exception-handling-task-parallel-library)
 
