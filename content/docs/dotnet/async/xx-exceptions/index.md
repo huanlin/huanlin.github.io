@@ -156,7 +156,7 @@ public async Task<int> MyMethod()
 
 就如稍早提過的， 只要有使用 `await` 或者 `Task.Wait` 方法（無論是靜態方法還是 instance 方法），非同步工作引發的異常就會被傳遞至呼叫端的執行緒，於是能夠被呼叫端的 `try/catch` 區塊捕捉到。
 
-換言之，只要使用了正確的 `async/await` 語法，在多數比較單純的場景都以使用我們熟悉的 `try/catch` 語法來捕捉和處理非同步工作所引發的異常，如以下範例所示。
+換言之，只要使用了正確的 `async/await` 語法，在多數比較單純的場景都可以用我們熟悉的 `try/catch` 語法來捕捉和處理非同步工作所引發的異常，如以下範例所示。
 
 ```cs
 static async Task Main()
