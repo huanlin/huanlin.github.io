@@ -70,7 +70,7 @@ Worker thread ID: 4
 **解釋：**
 
 - 雖然 `throw` 語句位於 `try` 區塊內，但此程式碼並非執行於主執行緒，而是執行於另一條執行緒。這是因為傳遞給 `Task.Run` 方法的 lambda 表達式會被編譯器拆成一個完全不同的方法，並且由另一條執行緒來執行。因此，這裡拋出的異常並不會被我們的 `catch` 區塊捕捉到。
-- 一旦使用了 `Task.Wait` 方法（無論是靜態方法還是 instance 方法），異常就會被傳遞至呼叫端的執行緒，於是能夠被我們的 `try-catch` 區塊捕捉到。一個 `Task` 物件可能涉及多個非同步工作（例如把多個非同步工作傳入 `Task.WhereAll` 方法），亦即可能拋出多個異常，故 .NET 用一個 `AggregateException` 物件來保存相關的非同步工作所拋出的異常（即使只有一個異常也是如此）。
+- 一旦使用了 `Task.Wait` 方法（無論是靜態方法還是 instance 方法），異常就會被傳遞至呼叫端的執行緒，於是能夠被我們的 `try/catch` 區塊捕捉到。一個 `Task` 物件可能涉及多個非同步工作（例如把多個非同步工作傳入 `Task.WhereAll` 方法），亦即可能拋出多個異常，故 .NET 用一個 `AggregateException` 物件來保存相關的非同步工作所拋出的異常（即使只有一個異常也是如此）。
 
 > 參閱微軟文件：[AggregateException 類別](https://learn.microsoft.com/zh-tw/dotnet/api/system.aggregateexception)
 
@@ -154,7 +154,7 @@ public async Task<int> MyMethod()
 }
 ```
 
-就如稍早提過的， 只要有使用 `await` 或者 `Task.Wait` 方法（無論是靜態方法還是 instance 方法），非同步工作引發的異常就會被傳遞至呼叫端的執行緒，於是能夠被呼叫端的 `try-catch` 區塊捕捉到。
+就如稍早提過的， 只要有使用 `await` 或者 `Task.Wait` 方法（無論是靜態方法還是 instance 方法），非同步工作引發的異常就會被傳遞至呼叫端的執行緒，於是能夠被呼叫端的 `try/catch` 區塊捕捉到。
 
 換言之，只要使用了正確的 `async/await` 語法，在多數比較單純的場景都以使用我們熟悉的 `try/catch` 語法來捕捉和處理非同步工作所引發的異常，如以下範例所示。
 
