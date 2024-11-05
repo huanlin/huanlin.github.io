@@ -45,7 +45,7 @@ static void MyMethod()
     }
     catch (Exception ex)
     {
-        Console.WriteLine("捕捉到異常! " + ex.GetType().FullName);
+        Console.WriteLine("捕捉到異常! " + ex.GetType());
     }
 }
 ```
@@ -75,6 +75,19 @@ Worker thread ID: 4
 > 參閱微軟文件：[AggregateException 類別](https://learn.microsoft.com/zh-tw/dotnet/api/system.aggregateexception)
 
 ### AggregateException
+
+`Task.Exception` 屬性的定義如下：
+
+```cs
+public AggregateException? Exception { get; }
+```
+
+`AggregateException` 類別就如其名稱所揭示的，是一個能夠保存多個 exceptions 的 exception 類別。如果某個 `Task` 順利執行完畢，過程中沒有拋出任何異常，那麼它的 `Exception` 屬性便會傳回 `null`。
+
+然而，這個屬性實際上很少用到，以至於如果你用 `await` 來等待一個非同步工作，而那個 `Task` 失敗了，`await` 將會拋出 `AggregateException` 內的第一個異常，而不是整個 `AggregateException` 物件。也就是說，如果 `AggregateException` 內有多個異常，`await` 仍然只會拋出第一個異常並忽略其餘的異常。除了第一個異常之外的所有異常及其內部儲存的任何資訊都將遺失。以下程式碼展示了 `await` 如何拋出存儲的異常。
+
+// TODO
+
 
 以下程式碼展示了如何從 `AggregateException` 物件中取出所有內部的異常：
 
@@ -167,7 +180,7 @@ static async Task Main()
     }
     catch (Exception ex)
     {
-        Console.WriteLine("捕捉到異常! " + ex.GetType().FullName);
+        Console.WriteLine("捕捉到異常! " + ex.GetType());
     }
 }
 
