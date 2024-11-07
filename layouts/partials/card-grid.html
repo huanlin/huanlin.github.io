@@ -28,7 +28,7 @@
 {{- end }}
 {{- $data := partialCached "base/functions/data" (dict "key" $key "page" .Page) .Page $key }}
 {{- with $data }}
-  <div class="bs-icon-grid row g-{{ $gap }} row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mb-5 justify-content-center">
+  <div class="bs-icon-grid row g-{{ $gap }} row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-{{ $maxColumns }} mb-5 justify-content-center">
     {{- range sort . "weight" }}
       <div class="col">
         {{- $icon := "" }}
@@ -78,7 +78,7 @@
               {{- $icon -}}{{- .title -}}
               <ul class="list-unstyled" style="font-size: 0.95rem">
                 {{- range $item := .items }}
-                    <li class="pt-2" style="padding-left: 2px">
+                    <li class="pt-1" style="padding-left: 2px">
                         {{- $itemUrl := "" }}
                         {{- $itemLink := "" }}
                         {{- if $item.url }}
@@ -88,7 +88,7 @@
                                 {{- with site.GetPage $item.url }}
                                     {{- $itemLink = .RelPermalink }}
                                 {{- else }}
-                                    {{- $ItemLink = relURL $item.url }}
+                                    {{- $itemLink = relURL $item.url }}
                                 {{- end }}
                             {{- end }}
                         {{- end }}
