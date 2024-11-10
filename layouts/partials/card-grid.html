@@ -98,7 +98,7 @@
                                 href="{{ $itemLink }}"
                                 title="{{ $item.description }}"
                                 {{ with $itemAttrs }}{{ delimit . " " | safeHTMLAttr }}{{ end }}
-                                {{ if $url.Scheme }}target="_blank" rel="external"{{ end }}>
+                                {{ if $itemUrl.Scheme }}target="_blank" rel="external"{{ end }}>
                                 {{ .title }}
                             </a>
                         {{ else }}

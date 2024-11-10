@@ -2,9 +2,9 @@
 {{- $key := "" }}
 {{- $linkText := i18n "learn_more" }}
 {{- $linkIcon := partial "icons/icon" (dict
-  "vendor" "bootstrap"
-  "name" "arrow-right"
-  "className" "ms-1")
+    "vendor" "bootstrap"
+    "name" "arrow-right"
+    "className" "ms-1")
 }}
 {{- $border := true }}
 {{- $alignment := "start" }}
@@ -39,11 +39,11 @@
           {{- $icon = partial "icons/icon" $iconOpts }}
         {{- end }}
         {{- $link := "" }}
-        {{- $url := "" }}
+        {{- $urlObj := "" }}
         {{- if .url }}
           {{- $link = .url }}
-          {{- $url = urls.Parse .url }}
-          {{- if not $url.Scheme }}
+          {{- $urlObj = urls.Parse .url }}
+          {{- if not $urlObj.Scheme }}
             {{- with site.GetPage .url }}
               {{- $link = .RelPermalink }}
             {{- else }}
@@ -56,7 +56,7 @@
             class="bs-icon-grid-item d-flex flex-column rounded h-100 w-100 p-4 text-decoration-none{{ cond $border ` border shadow` `` }} text-{{ $alignment }}"
             href="{{ $link }}"
             {{ with $itemAttrs }}{{ delimit . " " | safeHTMLAttr }}{{ end }}
-            {{ if $url.Scheme }}target="_blank" rel="external"{{ end }}>
+            {{ if $urlObj.Scheme }}target="_blank" rel="external"{{ end }}>
             <div class="bs-icon-grid-item-title fw-bold mb-3 fs-4 d-flex align-items-center justify-content-{{ $alignment }}">
               {{- $icon -}}{{- .title -}}
             </div>
@@ -92,7 +92,7 @@
                                 href="{{ $itemLink }}"
                                 title="{{ $item.description }}"
                                 {{ with $itemAttrs }}{{ delimit . " " | safeHTMLAttr }}{{ end }}
-                                {{ if $url.Scheme }}target="_blank" rel="external"{{ end }}>
+                                {{ if $urlObj.Scheme }}target="_blank" rel="external"{{ end }}>
                                 {{ .title }}
                             </a>
                         {{ else }}
@@ -102,16 +102,16 @@
                     {{- end }}
               </ul>
             </div>
-            {{- with $link }}
-              <p class="mt-auto pt-3 mb-0">
-                <a
-                  class="text-decoration-none"
-                  href="{{ . }}"
-                  {{ if $url.Scheme }}target="_blank" rel="external"{{ end }}>
-                  {{- $linkText -}}{{- $linkIcon -}}
-                </a>
-              </p>
-            {{- end }}
+              {{- if and $link $urlObj }}
+                <p class="mt-auto pt-3 mb-0">
+                  <a
+                    class="text-decoration-none"
+                    href="{{ $link }}"
+                    {{ if $urlObj.Scheme }}target="_blank" rel="external"{{ end }}>
+                    {{- $linkText -}}{{- $linkIcon -}}
+                  </a>
+                </p>
+              {{- end }}
           </div>
         {{- end }}
       </div>
