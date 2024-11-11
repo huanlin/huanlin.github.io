@@ -1,11 +1,61 @@
 dotnet:
   title: ".NET"
+  weight: 1
   url: ""
+  description: ""
   icon:
-    name: "braces"
+    vendor: "fas"
+    name: "code"
     color: "black"
   items:
-    - title: "C#"
-      url: "/"
-    - title: "Async Programming"
-      url: "/"
+    - title: "C# 筆記"
+      url: "/docs/dotnet/csharp/"
+    - title: ".NET 非同步程式設計"
+      url: "/docs/dotnet/async/"
+golang:
+  title: "Golang"
+  weight: 2
+  url: ""
+  description: ""
+  icon:
+    vendor: "fas"
+    name: "code"
+    color: "black"
+  items:
+    - title: "關於這個筆記"
+      url: "/docs/go/00-about/"
+    - title: "開始學習"
+      url: "/docs/go/01-get-started/"
+    - title: "附錄一：Go 程式風格指南"
+      url: "/docs/go/a1-style-guide/"
+books:
+  title: "我的電子書"
+  weight: 3
+  icon:
+    vendor: "fas"
+    name: "book"
+    color: "black"
+  items:
+    - title: "Leanpub 書店"
+      url: "https://leanpub.com/u/michaeltsai"
+    - title: "Google Play 圖書"
+      url: "https://play.google.com/store/books/author?id=%E8%94%A1%E7%85%A5%E9%BA%9F"
+    - title: "Readmoo 讀墨"
+      url: "https://readmoo.com/contributor/20072"
+    - title: "樂天 Kobo"
+      url: "https://www.kobo.com/tw/zh/search?query=michael+tsai&ac=1&ac.morein=true&fcsearchfield=author&ac.author=michael+tsai&fclanguages=zh"
+social-links:
+  title: "社群連結"
+  weight: 4
+  icon:
+    vendor: "fas"
+    name: "link"
+    color: "black"
+  items:
+    - title: "部落格"
+      description: "Huanlin 學習筆記（部落格）"
+      url: "https://www.huanlintalk.com/"
+    - title: "Facebook 專頁"
+      url: "https://www.facebook.com/huanlin.notes"
+    - title: "Youtube 頻道"
+      url: "https://www.youtube.com/@michael-tsai"

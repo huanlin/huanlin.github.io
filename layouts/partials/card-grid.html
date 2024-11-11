@@ -76,6 +76,8 @@
             {{ with $itemAttrs }}{{ delimit . " " | safeHTMLAttr }}{{ end }}>
             <div class="bs-icon-grid-item-title fw-bold mb-3 fs-4 d-flex align-items-center justify-content-{{ $alignment }}">
               {{- $icon -}}{{- .title -}}
+            </div>
+            <div class="pt-0 mb-0 text-normal">
               <ul class="list-unstyled" style="font-size: 0.95rem">
                 {{- range $item := .items }}
                     <li class="pt-1" style="padding-left: 2px">
@@ -105,11 +107,12 @@
                             {{ $item.description | markdownify }}
                         {{- end }}
                     </li>
-                    {{- end }}
+                {{- end }}
               </ul>
             </div>
+
             {{- with $link }}
-              <p class="mt-auto pt-3 mb-0">
+              <p class="mt-auto pt-1 mb-0">
                 <a
                   class="text-decoration-none"
                   href="{{ . }}"

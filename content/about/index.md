@@ -1,7 +1,7 @@
 ---
 title: 關於我
 linkTitle: 關於我
-menu: {main: {weight: 10}}
+#menu: {main: {weight: 10}}
 draft: true
 ---
 

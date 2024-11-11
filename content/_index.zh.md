@@ -1,16 +1,19 @@
 ---
-title: Huan-Lin 學習筆記
+title: Huanlin 學習筆記
+type: portal
 ---
 
-<div style="margin-top: 8rem; width:80%; left: 10%; position: relative; padding-bottom: 60px;">
-{{< bs/icon-grid data=features linkText="" >}}
+{{% blocks/section color="white" type="row" %}}
+<p></p>
+{{% /blocks/section %}}
+
+{{% blocks/section color="white" type="row" %}}
+Huanlin 學習筆記
+{.h2 .text-center}
+My notes about software development, .NET, Golang..., etc.
+{.text-center}
+{{% /blocks/section %}}
+
+<div style="margin-left: 15%; margin-right: 10%;">
+    {{< card-grid data="cards.yaml" linkText="Lean more" border=false maxColumns=4 >}}
 </div>
-
-{{% blocks/lead %}}
-
-<div style="text-align: center; margin-top: 20px;">
-<p class="lead mt-1">轉載請註明出處，並提供連結至此網站的首頁。</p>
-<p class="lead mt-1">如欲查看舊版的筆記網站，請至：<a href="https://huanlintalk.com">Blogger 平台的 Huanlin 學習筆記</a>。</p>
-</div>
-
-{{% /blocks/lead %}}
