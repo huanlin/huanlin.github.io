@@ -1,5 +1,5 @@
 ---
-title: Huan-Lin's Notes
+title: HuanLin Docs
 type: portal
 ---
 
@@ -8,9 +8,9 @@ type: portal
 {{% /blocks/section %}}
 
 {{% blocks/section color="white" type="row" %}}
-Huanlin 學習筆記
+Software development & Technical writing
 {.h2 .text-center}
-My notes about software development, .NET, Golang..., etc.
+<!--My notes about software development, .NET, Golang..., etc.-->
 {.text-center}
 {{% /blocks/section %}}
 
