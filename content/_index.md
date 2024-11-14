@@ -4,7 +4,7 @@ type: portal
 ---
 
 {{% blocks/section color="white" type="row" %}}
-<p></p>
+<p> </p>
 {{% /blocks/section %}}
 
 {{% blocks/section color="white" type="row" %}}
