@@ -1,5 +1,6 @@
 ---
 title: Appendix A - 術語
+weight: 900
 ---
 
 ## C

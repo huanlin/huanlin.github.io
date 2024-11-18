@@ -1,6 +1,7 @@
 ---
 title: 02 .NET 非同步 API 概覽
 draft: true
+weight: 12
 ---
 
 如上一章結束前提到的，直接操控執行緒並不是非同步程式設計的唯一方法 ，甚至不是最佳方法 。打從&nbsp;.NET 1.x 開始就已經提供非同步 API，此後持續演進，在底層框架、模式、和語法方面都有逐步改進，並衍生出新的 API。本章將介紹&nbsp;.NET 非同步 API 的各種模式與寫法，包括直接建立執行緒（又稱為「建立專屬執行緒」）、執行緒集區（thread pool）、以及 **APM (Asynchronous Programming Model)** 和 **EAP（Event-based Asynchronous Pattern）**。當然，還有後來出現的、也是目前建議使用的 **TAP（Task-based Asynchronous Pattern）** 以及 C# 為了支援 **TAP** 所增加的 `async` 和 `await` 關鍵字的用法。

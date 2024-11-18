@@ -2,6 +2,7 @@
 title: .NET Async FAQ
 linkTitle: FAQ
 draft: true
+weight: 90
 ---
 
 ## To async or not? {#to-async-or-not}
@@ -30,7 +31,7 @@ public async Task<int> DoSomethingAsync()
 
 兩種寫法的效能差異其實不大，通常不會是效能瓶頸之所在。故這裡推薦讀者採用 Fowler 的建議作法，也就是優先選擇採用 `async/await` 寫法來回傳非同步呼叫的結果。
 
-如果你好奇直接回傳 `Task` 是否可能導致什麼比較嚴重的後果，可以參考底下的範例。
+如果你好奇直接回傳 `Task` 是否可能導致什麼比較嚴重的後果，以下範例展示了其中一種可能的狀況。
 
 ```csharp
 public Task<string> GetWebPageTask()
@@ -60,11 +61,14 @@ public Task<string> GetWebPageTask()
 }
 ```
 
-由於 `httpClient.GetStringAsync` 呼叫很可能尚未執行完畢，程式流程就進入了 `finally` 區塊而將 `httpClient` 物件回收，這將導致程式執行時發生 `TaskCanceledException`。這或許就是 David Fowler 在其文章說這種寫法將造成程式的「行為改變」的原因之一。
+由於 `httpClient.GetStringAsync()` 呼叫很可能尚未執行完畢，程式流程就進入了 `finally` 區塊而將 `httpClient` 物件回收，這將導致程式執行時發生 `TaskCanceledException`。這或許是 David Fowler 在其文章裡面說這種寫法將造成程式的「行為改變」的原因之一。
 
 > Try it: <https://dotnetfiddle.net/NRXmfr>
 
 **結論：** 多數情況下，直接回傳 `Task` 的好處抵不過它帶來的問題，故建議在回傳非同步呼叫的結果時優先選擇 `async/await` 寫法。
+
+> [!note]
+> 有一種見解是，當函式呼叫層層套疊很多層的時候，便應該傾向直接回傳 `Task` 物件。但我想還是應該基於是否真的足以產生「有實質意義上的效能差異」來決定，而不是有比較快就好。而且，直接回傳 `Task` 物件還可能造成一些潛在問題和陷阱（如前面舉的例子），而增加了日後維護程式的麻煩。
 
 ## See also
 
