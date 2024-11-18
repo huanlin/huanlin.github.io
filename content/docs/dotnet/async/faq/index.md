@@ -28,7 +28,7 @@ public async Task<int> DoSomethingAsync()
 
 以上範例取自 David Fowler 撰寫的 Async Guidance 文件的其中一節：[Prefer async/await over directly returning Task](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios/blob/master/AsyncGuidance.md#prefer-asyncawait-over-directly-returning-task)。Fowler 的建議是採用寫法二，也就是盡量使用 `async/await`，而不要直接回傳 `Task` 物件。他也在文中提到，直接回傳 `Task` 雖然能獲得稍微快一點的執行速度（因為它不用處理 async 狀態機的相關工作），但也失去了 async 狀態機帶來的一些好處，而且可能導致函式行為的改變。
 
-兩種寫法的效能差異其實不大，通常不會是效能瓶頸之所在。故這裡推薦讀者採用 Fowler 的建議作法，也就是一律 `async/await` 寫法來回傳非同步呼叫的結果。
+兩種寫法的效能差異其實不大，通常不會是效能瓶頸之所在。故這裡推薦讀者採用 Fowler 的建議作法，也就是優先選擇採用 `async/await` 寫法來回傳非同步呼叫的結果。
 
 如果你好奇直接回傳 `Task` 是否可能導致什麼比較嚴重的後果，可以參考底下的範例。
 
@@ -64,4 +64,9 @@ public Task<string> GetWebPageTask()
 
 > Try it: <https://dotnetfiddle.net/NRXmfr>
 
-**結論：** 直接回傳 `Task` 的好處明顯抵不過它帶來的問題，故建議在回傳非同步呼叫的結果時，一律使用 `async/await`。
+**結論：** 多數情況下，直接回傳 `Task` 的好處抵不過它帶來的問題，故建議在回傳非同步呼叫的結果時優先選擇 `async/await` 寫法。
+
+## See also
+
+- [Async Guidance](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios/blob/master/AsyncGuidance.md) by David Fowler
+- [Async/Await - Best Practices in Asynchronous Programming](https://learn.microsoft.com/en-us/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming) by Stephen Cleary
