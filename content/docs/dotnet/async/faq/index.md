@@ -65,7 +65,7 @@ public Task<string> GetWebPageTask()
 
 > Try it: <https://dotnetfiddle.net/NRXmfr>
 
-採用 `async/await` 不只可以避免上述陷阱，還有其他好處，在 [David Fowler 的原文](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios/blob/master/AsyncGuidance.md#prefer-asyncawait-over-directly-returning-task)裡面都有提到。完整起見，這裡用截圖的方式標示出來：
+採用 `async/await` 不只可以避免上述陷阱，還有其他好處。比如說，萬一非同步呼叫的過程發生錯誤，exception 物件的 stack trace 資訊會更完整詳細，能夠顯示真正發生錯誤的程式碼位置；相較之下，直接回傳 `Task` 的寫法，其 exception 的 stack trace 會不完整，可能不會提供正確的出錯位置。有關 `async/await` 寫法的優點，在 [David Fowler 的原文](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios/blob/master/AsyncGuidance.md#prefer-asyncawait-over-directly-returning-task)裡面都有提到。完整起見，這裡用截圖的方式標示出來：
 
 ![Prefer async/await](images/fowler-prefer-async.png#center)
 
@@ -76,7 +76,7 @@ public Task<string> GetWebPageTask()
 多數情況下，直接回傳 `Task` 的好處抵不過它帶來的問題，故建議在回傳非同步呼叫的結果時優先選擇 `async/await` 寫法。
 
 > [!note]
-> 有一種見解是，當函式呼叫層層套疊很多層的時候，便應該傾向直接回傳 `Task` 物件。但我想還是應該基於是否真的足以產生「有實質意義上的效能差異」來決定，而不是有比較快就好。而且，直接回傳 `Task` 物件還可能造成一些潛在問題和陷阱（如前面舉的例子），而增加了日後維護程式的麻煩。
+> 有一種見解是，當函式呼叫層層套疊很多層的時候，便應該傾向直接回傳 `Task` 物件。但我想還是應該基於是否真的足以產生「有實質意義上的效能差異」來決定，而不是有比較快就好。而且，直接回傳 `Task` 物件還有一些潛在問題和缺點（如前面提提過的），可能增加日後維護程式的麻煩，最好也納入考量。
 
 ### See also
 
