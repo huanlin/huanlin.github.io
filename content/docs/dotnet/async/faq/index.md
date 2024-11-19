@@ -132,3 +132,36 @@ public Task<string> GetWebPageTask()
 
 - [Async Guidance](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios/blob/master/AsyncGuidance.md) by David Fowler
 - [Async/Await - Best Practices in Asynchronous Programming](https://learn.microsoft.com/en-us/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming) by Stephen Cleary
+
+## I/O 操作 vs. CPU 密集操作 {#io-vs-cpu-bound}
+
+```csharp
+// I/O 操作：使用原生的非同步方法
+await File.ReadAllTextAsync("file.txt");
+
+// CPU 密集操作：使用 Task.Run
+await Task.Run(() => ComputeHash());
+```
+
+## 最佳實踐 {#best-practices}
+
+- 使用非同步方法時全程保持異步。
+- 正確處理異常。
+- 適當使用取消權杖（`CancellationToken`）。
+- 避免阻斷式操作，例如 `task.Result`, `task.Wait()`。
+
+```csharp
+// 可能導致鎖死的寫法
+public void DoWork()
+{
+    var task = DoWorkAsync();
+    task.Wait(); // 危險：可能造成鎖死
+}
+
+
+// 正確做法
+public async Task DoWorkAsync()
+{
+    await DoWorkAsync();
+}
+```
