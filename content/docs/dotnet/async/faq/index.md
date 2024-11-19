@@ -5,7 +5,7 @@ draft: true
 weight: 90
 ---
 
-## 非同步呼叫即表示函式將執行於新的執行緒？ {#async-thread}
+## 非同步呼叫會建立新執行緒嗎？ {#async-thread}
 
 不一定。
 
