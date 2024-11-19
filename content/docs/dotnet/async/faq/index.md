@@ -5,6 +5,56 @@ draft: true
 weight: 90
 ---
 
+## 非同步呼叫即表示函式將執行於新的執行緒？ {#async-thread}
+
+不一定。
+
+在 async 方法中使用 `await` 關鍵字等待的非同步呼叫不一定會在另一條執行緒上執行；這取決於被等待的非同步操作的具體實現。請參考接下來的三個範例。
+
+### 範例一：閒置等待 {#ex1-idle}
+
+單純的閒置等待不會動用新的執行緒：
+
+```csharp
+// 不會使用新執行緒。
+async Task DelayAsync()
+{
+    await Task.Delay(1000);
+}
+```
+
+### 範例二：I/O 操作 {#ex2-io-bound}
+
+非同步的 I/O 操作通常不涉及執行緒。例如檔案讀寫操作，底層作業系統是透過所謂的 I/O completion port 來達成，其中的操作並不需要動用新的執行緒。
+
+```csharp
+// 不會使用新執行緒，而是使用 I/O completion port。
+async Task ReadFileAsync()
+{
+    var s = await File.ReadAllTextAsync("file.txt");
+}
+```
+
+### 範例三：CPU 密集操作 {#ex3-cpu-bound}
+
+如果是 CPU 密集操作，則通常會由另一條執行緒來執行非同步方法：
+
+```csharp
+// 會在另一條執行緒執行
+async Task DoHeavyWorkAsync()
+{
+    await Task.Run(() => {
+        // CPU 密集運算
+    });
+}
+```
+
+重點整理：
+
+- I/O 相關的非同步操作通常不需要建立新的執行緒。
+- CPU 密集的操作才需要由新執行緒來執行。
+- `await` 的主要作用是非阻斷（non-blocking），而不是創建新執行緒。
+
 ## To async or not? {#to-async-or-not}
 
 這裡要討論的議題是：函式該直接回傳 `Task` 物件就好，還是一律使用 `async/await`？底下分別示範兩種寫法。
