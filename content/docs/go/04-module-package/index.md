@@ -26,6 +26,8 @@ Go 模組通常位於 repository 的根目錄，由一個名為 `go.mod` 的檔�
 > - 一個 repository 應只包含一個 module。
 > - 將不同功能拆分到不同的 repository。
 > - 使用 packages 來組織相關程式碼。
+>
+> 這樣不僅可以簡化 dependencies 的管理、程式碼更好維護，也符合 Go 的設計哲學。
 
 建立 `go.mod` 檔案的方式，是在專案根目錄底下執行 `go mod init` 命令。比如說，專案名稱是 `todoapp`，便可使用以下命令來建立 `go.mod` 檔案：
 
