@@ -4,22 +4,28 @@ tags: [Go]
 aliases: ["04-code-organization"]
 ---
 
-## 簡介 {#intro}
-
-Go 的 **模組（module）** 與 **套件（package）** 是兩個重要觀念，因為它們決定了 Go 應用程式的組成結構與依賴關係（dependencies）。
-
-一個 module 通常就是一個應用程式專案，而這個 module 裡面會有多個 packages。接著分別進一步說明 package 和 module 的相關細節。
+Go 的 **模組（module）** 與 **套件（package）** 是兩個重要觀念，因為它們決定了 Go 應用程式的組成結構與依賴關係（dependencies）。本章將介紹模組與套件的用法與相關細節。
 
 ## Modules
 
-一般而言，具實用價值的 Go 應用程式都會用到 **模組（module）**。一個 Go 專案可以有一個或多個 modules，每個 module 是由一個或多個 packages 所組成。
-
-專案的主要模組通常會放在 repository 的根目錄，其名稱通常會跟專案的 repository 名稱相同。模組的根目錄之下需要一個 `go.mod` 檔案來設定專案的基本資訊（名稱、版本）並明確列出該專案所依賴的外部模組。
+模組（module）是 Go 程式的基本派發（distribution）單位。一個 Go 專案——或者說一個 Git repository——通常只包含一個 module，而一個 module 是由一個或多個相關的 packages 組成（稍後會說明 package）。
 
 > [!quote]
 > A repository contains one or more modules. A **module** is a collection of related Go packages that are released together. A Go repository typically contains only one module, located at the root of the repository.
 >
 > Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
+
+Go 模組通常位於 repository 的根目錄，由一個名為 `go.mod` 的檔案來定義一個模組。換言之，一個 `go.mod` 檔案定義一個模組。此檔案的內容包括：
+
+- 模組路徑。
+- Go 版本的最低要求。
+- 依賴哪些外部模組。
+
+> [!note] 建議作法
+>
+> - 一個 repository 應只包含一個 module。
+> - 將不同功能拆分到不同的 repository。
+> - 使用 packages 來組織相關程式碼。
 
 建立 `go.mod` 檔案的方式，是在專案根目錄底下執行 `go mod init` 命令。比如說，專案名稱是 `todoapp`，便可使用以下命令來建立 `go.mod` 檔案：
 
@@ -313,7 +319,12 @@ import (
 
 ### Package 名稱 {#package-names}
 
-<mark>套件的名稱應簡潔明白，通常是名詞，而且按照慣例全都用小寫英文字母。雖然可以使用底線字元 '`_`'，但最好盡量避免。減號字元 '`-`' 則不能用於套件名稱。</mark>
+套件的命名慣例：
+
+- 應簡潔明白，通常是名詞。
+- 全部使用小寫英文字母。
+- 雖然可以使用底線（`_`），但應盡量避免。
+- 不可使用減號（`-`）。
 
 詳見〈[附錄一：Go 程式風格指南]({{< ref "../a1-style-guide/index.md#package-naming" >}})〉或官方部落格：[Package names](https://go.dev/blog/package-names)。
 
