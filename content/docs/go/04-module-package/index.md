@@ -1,5 +1,5 @@
 ---
-title: 04 套件與模組
+title: 04 模組與套件
 tags: [Go]
 aliases: ["04-code-organization"]
 ---
@@ -10,160 +10,9 @@ Go 的 **模組（module）** 與 **套件（package）** 是兩個重要觀念�
 
 一個 module 通常就是一個應用程式專案，而這個 module 裡面會有多個 packages。接著分別進一步說明 package 和 module 的相關細節。
 
-## Packages
-
-Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中就是一個資料夾，該資料夾底下的 .go 程式檔案必然隸屬同一個 package（否則無法通過編譯）。
-
-> [!quote]
-> A **package** is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package.
->
-> Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
-
-換言之，package 是一個邏輯組成單位，讓我們把相關功能的程式檔案放在一起，也方便讓其他應用程式匯入使用。
-
-範例：
-
-```text
-.                           -> 專案的根目錄
-├─ go.mod                   -> 定義專案的名稱和 dependencies
-├─ main.go                  -> 主程式（程式的進入點）
-└─ auth/                    -> auth 套件
-    ├─ auth.go              -> auth 相關功能的實作
-    ├─ auth_test            -> auth 相關功能的測試
-    └─ token/               -> token 套件
-        ├─ token.go         -> token 相關功能的實作
-        └─ token_test.go    -> token 相關功能的測試
-```
-
-Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 裡的第一行通常會宣告套件名稱為 `auth`，但也可以是別的名稱，例如 `authentication`：
-
-```go
-package authentication
-
-....
-```
-
-那樣的話，`auth_test.go` 的套件名稱也必須是 `authentication`，因為同一個資料夾底下的 .go 檔案必須隸屬同一個套件（否則無法通過編譯）。
-
-### 匯入套件 {#import-packages}
-
-在一個 Go 程式檔案中欲使用其他套件的識別字時，包括變數、函式、型別等等，必須使用 `import` 陳述句。比如說，要使用剛才提到的 `authentication` 套件，會在程式中這樣寫：
-
-```go
-import "mycompany.com/myapp/auth"
-```
-
-匯入套件時，套件的完整路徑名稱包含兩個部分：
-
-- **模組路徑：** 套件路徑的開頭部分是模組路徑（module path），通常是模組的根 URL 或根目錄。如剛才範例中的 `mycompany.com/myapp` 即是模組路徑。
-- **相對路徑：** 模組路徑後面接的是套件在模組中的相對路徑（相對於模組路徑），例如範例中的 `/auth` 即是 `authentication` 套件所在的相對路徑名。
-
-> [!note]
-> 稍後還會進一步說明模組路徑，這裡要再強調的是 `import` 套件時寫的是套件所在的實體路徑名稱，而不是邏輯的「套件名稱」。Golang 的初學者可能很容易在這個地方搞混。如果不確定是否理解，最好的辦法就是實際寫點程式碼來驗證看看。
-
-如果要匯入多個套件，可以使用多行 `import` 語法，例如：
-
-```go
-import (
-    "fmt"
-    "mycompany.com/myapp/auth"
-    "mycompany.com/myapp/db"
-)
-```
-
-匯入套件時還可以指定套件的別名，以避免名稱衝突或提高程式碼的可讀性。例如：
-
-```go
-import (
-    auth "mycompany.com/myapp/auth"
-    database "mycompany.com/myapp/db"
-)
-```
-
-### Package 有兩種 {#two-package-types}
-
-另外要知道的是，Go 的 package 有兩種：
-
-- 可執行套件：套件名稱一定是 `main`，而且不能被其他套件引用。
-- 函式庫套件：套件名稱不是 `main` 的都是函式庫套件，可供其他套件引用。
-
-至於不同的 package 之間要如何開放或隱藏某些變數、函式、或型別、或或服務，稍後會再說明。
-
-### Package 名稱 {#package-names}
-
-<mark>套件的名稱應簡潔明白，通常是名詞，而且按照慣例全都用小寫英文字母。雖然可以使用底線字元 '`_`'，但最好盡量避免。減號字元 '`-`' 則不能用於套件名稱。</mark>
-
-詳見〈[附錄一：Go 程式風格指南]({{< ref "../a1-style-guide/index.md#package-naming" >}})〉或官方部落格：[Package names](https://go.dev/blog/package-names)。
-
-### Scope
-
-程式裡面的識別字（identifiers），像是變數、函式、型別等等，依照它們宣告時的所在位置和寫法，分為三種可見範圍：
-
-| 範圍 | 說明 |
-|-----|------|
-| block | 宣告在 `{...}` 區塊裡面的識別字只有該區塊的程式碼可存取。 |
-| package | 同一個 package 內的 .go 程式檔案皆可存取。 |
-| global | 任何程式碼皆可存取。 |
-
-有兩種情況會是 global 範圍：
-
-- Go 的內建函式，例如 `panic()`。
-- 在 package 層級宣告的識別字，名稱以英文大寫字母開頭來命名，就會被編譯器視為 **exported**，亦即公開的。
-
-參考以下範例：
-
-```go
-package config
-
-var ConfigFileName string = "d:/work/config.yaml" // 任何套件皆可存取。
-var encoding string = "UTF-8" // 僅相同 package 的程式碼可以存取。
-
-func createConfig() { // 僅相同 package 的程式碼可以存取。
-    num := 100 // 只在此函式內可見。
-}
-```
-
-那麼，如果有兩個 .go 程式檔案放在同一個 package 裡面，有辦法讓其中一個 .go 程式檔案中的全域變數隱藏起來，不讓另一個 .go 程式檔案存取嗎？
-
-答案是不行。（這裡的全域變數指的是沒有包在任何 `{...}` 區塊中的變數）
-
-這是因為，同一套件裡面的任何東西只要沒有被 `{...}` 包起來，在同一個套件範圍內都是共享的。這是 Go 語言賦予 package 的特性和規則。
-
-> [!note]
-> 也許有人會覺得這是 Go 語言的一個限制或缺點，但從另一個角度來看，寫程式的時候不用老是費心去考慮某些變數或函式到底要隱藏到什麼程度，也能讓事情變得簡單一點。
-
-### Variable shadowing
-
-以下範例程式可以編譯和執行，但寫法容易令人 confuse：
-
-```go
-var case1 bool = true
-var sum int = 100
-
-func main() {
-    if case1 {
-        sum := add(5, 5) // 區域變數
-        fmt.Println(sum)
-    } else {
-        m := add(10, 10) // 區域變數
-        fmt.Println(sum)
-    }
-
-    fmt.Println(sum) // 使用全域變數
-}
-
-func add(x, y int) int {
-    return x + y
-}
-```
-
-程式中有幾處 `sum` 變數，有的是全域變數，有的是區域變數。雖然能通過編譯，但人眼容易誤讀，因為 `:=` 運算子可以同時宣告變數且賦值，使其左側的變數成為區域變數。如果使用 `=` 運算子，則會使用先前宣告過的變數，在此範例便是全域的 `sum`。
-
-參見：[100 Go Mistakes and How to Avoid Them][100-mistakes] 的第 1 條：Unintended variable shadowing。
-
 ## Modules
 
-一般來說，具實用價值的 Go 應用程式都會用到 **模組（module）**。一個 Go 專案可以有一個或多個 modules，每個 module 是由一個或多個 packages 所組成。
+一般而言，具實用價值的 Go 應用程式都會用到 **模組（module）**。一個 Go 專案可以有一個或多個 modules，每個 module 是由一個或多個 packages 所組成。
 
 專案的主要模組通常會放在 repository 的根目錄，其名稱通常會跟專案的 repository 名稱相同。模組的根目錄之下需要一個 `go.mod` 檔案來設定專案的基本資訊（名稱、版本）並明確列出該專案所依賴的外部模組。
 
@@ -385,6 +234,154 @@ github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 
 - 官方文件：[go mod tidy](https://go.dev/ref/mod#go-mod-tidy)
 - Youtube 影片：[how to import Golang local package](https://youtu.be/Nv8J_Ruc280?si=g5-SBXY1VYh5q1ko) （這影片把模組路徑和 import 套件時的路徑寫法講解得很清楚）
+
+## Packages
+
+Go 應用程式是由多個 packages 組成，一個 package 在檔案系統中就是一個資料夾，該資料夾底下的 .go 程式檔案必然隸屬同一個 package（否則無法通過編譯）。
+
+> [!quote]
+> A **package** is a collection of source files in the same directory that are compiled together. Functions, types, variables, and constants defined in one source file are visible to all other source files within the same package.
+>
+> Go 官方部落格：[How to Write Go Code](https://go.dev/doc/code)
+
+換言之，package 是一個邏輯組成單位，讓我們把相關功能的程式檔案放在一起，也方便讓其他應用程式匯入使用。
+
+範例：
+
+```text
+.                           -> 專案的根目錄
+├─ go.mod                   -> 定義專案的名稱和 dependencies
+├─ main.go                  -> 主程式（程式的進入點）
+└─ auth/                    -> auth 套件
+    ├─ auth.go              -> auth 相關功能的實作
+    ├─ auth_test            -> auth 相關功能的測試
+    └─ token/               -> token 套件
+        ├─ token.go         -> token 相關功能的實作
+        └─ token_test.go    -> token 相關功能的測試
+```
+
+Package 的名稱通常會跟它所在的資料夾名稱相同，但也可以不同。例如檔案 `auth.go` 裡的第一行通常會宣告套件名稱為 `auth`，但也可以是別的名稱，例如 `authentication`：
+
+```go
+package authentication
+
+....
+```
+
+那樣的話，`auth_test.go` 的套件名稱也必須是 `authentication`，因為同一個資料夾底下的 .go 檔案必須隸屬同一個套件（否則無法通過編譯）。
+
+### 匯入套件 {#import-packages}
+
+在一個 Go 程式檔案中欲使用其他套件的識別字時，包括變數、函式、型別等等，必須使用 `import` 陳述句。比如說，要使用剛才提到的 `authentication` 套件，會在程式中這樣寫：
+
+```go
+import "mycompany.com/myapp/auth"
+```
+
+匯入套件時，套件的完整路徑名稱包含兩個部分：
+
+- **模組路徑：** 套件路徑的開頭部分是模組路徑（module path），通常是模組的根 URL 或根目錄。如剛才範例中的 `mycompany.com/myapp` 即是模組路徑。
+- **相對路徑：** 模組路徑後面接的是套件在模組中的相對路徑（相對於模組路徑），例如範例中的 `/auth` 即是 `authentication` 套件所在的相對路徑名。
+
+如果要匯入多個套件，可以使用多行 `import` 語法，例如：
+
+```go
+import (
+    "fmt"
+    "mycompany.com/myapp/auth"
+    "mycompany.com/myapp/db"
+)
+```
+
+匯入套件時還可以指定套件的別名，以避免名稱衝突或提高程式碼的可讀性。例如：
+
+```go
+import (
+    auth "mycompany.com/myapp/auth"
+    database "mycompany.com/myapp/db"
+)
+```
+
+### Package 有兩種 {#two-package-types}
+
+另外要知道的是，Go 的 package 有兩種：
+
+- 可執行套件：套件名稱一定是 `main`，而且不能被其他套件引用。
+- 函式庫套件：套件名稱不是 `main` 的都是函式庫套件，可供其他套件引用。
+
+至於不同的 package 之間要如何開放或隱藏某些變數、函式、或型別、或或服務，稍後會再說明。
+
+### Package 名稱 {#package-names}
+
+<mark>套件的名稱應簡潔明白，通常是名詞，而且按照慣例全都用小寫英文字母。雖然可以使用底線字元 '`_`'，但最好盡量避免。減號字元 '`-`' 則不能用於套件名稱。</mark>
+
+詳見〈[附錄一：Go 程式風格指南]({{< ref "../a1-style-guide/index.md#package-naming" >}})〉或官方部落格：[Package names](https://go.dev/blog/package-names)。
+
+### Scope
+
+程式裡面的識別字（identifiers），像是變數、函式、型別等等，依照它們宣告時的所在位置和寫法，分為三種可見範圍：
+
+| 範圍 | 說明 |
+|-----|------|
+| block | 宣告在 `{...}` 區塊裡面的識別字只有該區塊的程式碼可存取。 |
+| package | 同一個 package 內的 .go 程式檔案皆可存取。 |
+| global | 任何程式碼皆可存取。 |
+
+有兩種情況會是 global 範圍：
+
+- Go 的內建函式，例如 `panic()`。
+- 在 package 層級宣告的識別字，名稱以英文大寫字母開頭來命名，就會被編譯器視為 **exported**，亦即公開的。
+
+參考以下範例：
+
+```go
+package config
+
+var ConfigFileName string = "d:/work/config.yaml" // 任何套件皆可存取。
+var encoding string = "UTF-8" // 僅相同 package 的程式碼可以存取。
+
+func createConfig() { // 僅相同 package 的程式碼可以存取。
+    num := 100 // 只在此函式內可見。
+}
+```
+
+那麼，如果有兩個 .go 程式檔案放在同一個 package 裡面，有辦法讓其中一個 .go 程式檔案中的全域變數隱藏起來，不讓另一個 .go 程式檔案存取嗎？
+
+答案是不行。（這裡的全域變數指的是沒有包在任何 `{...}` 區塊中的變數）
+
+這是因為，同一套件裡面的任何東西只要沒有被 `{...}` 包起來，在同一個套件範圍內都是共享的。這是 Go 語言賦予 package 的特性和規則。
+
+> [!note]
+> 也許有人會覺得這是 Go 語言的一個限制或缺點，但從另一個角度來看，寫程式的時候不用老是費心去考慮某些變數或函式到底要隱藏到什麼程度，也能讓事情變得簡單一點。
+
+### Variable shadowing
+
+以下範例程式可以編譯和執行，但寫法容易令人 confuse：
+
+```go
+var case1 bool = true
+var sum int = 100
+
+func main() {
+    if case1 {
+        sum := add(5, 5) // 區域變數
+        fmt.Println(sum)
+    } else {
+        m := add(10, 10) // 區域變數
+        fmt.Println(sum)
+    }
+
+    fmt.Println(sum) // 使用全域變數
+}
+
+func add(x, y int) int {
+    return x + y
+}
+```
+
+程式中有幾處 `sum` 變數，有的是全域變數，有的是區域變數。雖然能通過編譯，但人眼容易誤讀，因為 `:=` 運算子可以同時宣告變數且賦值，使其左側的變數成為區域變數。如果使用 `=` 運算子，則會使用先前宣告過的變數，在此範例便是全域的 `sum`。
+
+參見：[100 Go Mistakes and How to Avoid Them][100-mistakes] 的第 1 條：Unintended variable shadowing。
 
 ## 標準 Go 專案目錄結構 {#std-project-layout}
 
