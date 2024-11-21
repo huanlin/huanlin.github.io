@@ -42,6 +42,72 @@ x, y := 1, 2       // 編譯錯誤! 因為 x 和 y 都已經宣告過。必須�
 x, y, z := 1, 2, 3 // OK! 因為 z 是新宣告的變數。
 ```
 
+## Scope
+
+程式裡面的識別字（identifiers），像是變數、函式、型別等等，依照它們宣告時的所在位置和寫法，分為三種可見範圍：
+
+| 範圍 | 說明 |
+|-----|------|
+| block | 宣告在 `{...}` 區塊裡面的識別字只有該區塊的程式碼可存取。 |
+| package | 同一個 package 內的 .go 程式檔案皆可存取。 |
+| global | 任何程式碼皆可存取。 |
+
+有兩種情況會是 global 範圍：
+
+- Go 的內建函式，例如 `panic()`。
+- 在 package 層級宣告的識別字，名稱以英文大寫字母開頭來命名，就會被編譯器視為 **exported**，亦即公開的。
+
+參考以下範例：
+
+```go
+package config
+
+var ConfigFileName string = "d:/work/config.yaml" // 任何套件皆可存取。
+var encoding string = "UTF-8" // 僅相同 package 的程式碼可以存取。
+
+func createConfig() { // 僅相同 package 的程式碼可以存取。
+    num := 100 // 只在此函式內可見。
+}
+```
+
+那麼，如果有兩個 .go 程式檔案放在同一個 package 裡面，有辦法讓其中一個 .go 程式檔案中的全域變數隱藏起來，不讓另一個 .go 程式檔案存取嗎？
+
+答案是不行。（這裡的全域變數指的是沒有包在任何 `{...}` 區塊中的變數）
+
+這是因為，同一套件裡面的任何東西只要沒有被 `{...}` 包起來，在同一個套件範圍內都是共享的。這是 Go 語言賦予 package 的特性和規則。
+
+> [!note]
+> 也許有人會覺得這是 Go 語言的一個限制或缺點，但從另一個角度來看，寫程式的時候不用老是費心去考慮某些變數或函式到底要隱藏到什麼程度，也能讓事情變得簡單一點。
+
+### Variable shadowing
+
+以下範例程式可以編譯和執行，但寫法容易令人 confuse：
+
+```go
+var case1 bool = true
+var sum int = 100
+
+func main() {
+    if case1 {
+        sum := add(5, 5) // 區域變數
+        fmt.Println(sum)
+    } else {
+        m := add(10, 10) // 區域變數
+        fmt.Println(sum)
+    }
+
+    fmt.Println(sum) // 使用全域變數
+}
+
+func add(x, y int) int {
+    return x + y
+}
+```
+
+程式中有幾處 `sum` 變數，有的是全域變數，有的是區域變數。雖然能通過編譯，但人眼容易誤讀，因為 `:=` 運算子可以同時宣告變數且賦值，使其左側的變數成為區域變數。如果使用 `=` 運算子，則會使用先前宣告過的變數，在此範例便是全域的 `sum`。
+
+參見：[100 Go Mistakes and How to Avoid Them][100-mistakes] 的第 1 條：Unintended variable shadowing。
+
 ## 型別轉換 {#type-casting}
 
 Go 是靜態型別語言，編譯器會自動推測型別，也會判斷型別是否相容。指派變數值的時候，若來源型別和目的型別不相容，便需要手動轉型，否則編譯器會報錯。
