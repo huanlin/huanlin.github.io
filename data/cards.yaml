@@ -30,7 +30,7 @@ golang:
       url: "/docs/go/a1-style-guide/"
 books:
   title: "我的電子書"
-  weight: 3
+  weight: 4
   icon:
     vendor: "fas"
     name: "book"
@@ -46,7 +46,7 @@ books:
       url: "https://www.kobo.com/tw/zh/search?query=michael+tsai&ac=1&ac.morein=true&fcsearchfield=author&ac.author=michael+tsai&fclanguages=zh"
 social-links:
   title: "社群連結"
-  weight: 4
+  weight: 5
   icon:
     vendor: "fas"
     name: "link"
@@ -59,3 +59,17 @@ social-links:
       url: "https://www.facebook.com/huanlin.notes"
     - title: "Youtube 頻道"
       url: "https://www.youtube.com/@michael-tsai"
+tech-writing:
+  title: "Tech Writing"
+  weight: 10
+  icon:
+    vendor: "fas"
+    name: "pen"
+    color: "black"
+  items:
+    - title: "Google Courses"
+      description: "Technical writing courses (Google)"
+      url: "https://developers.google.com/tech-writing/overview"
+    - title: "Google Resources"
+      description: "Technical writing resources (Google)"
+      url: "https://developers.google.com/tech-writing/resources"

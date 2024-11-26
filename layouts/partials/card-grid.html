@@ -28,7 +28,7 @@
 {{- end }}
 {{- $data := partialCached "base/functions/data" (dict "key" $key "page" .Page) .Page $key }}
 {{- with $data }}
-  <div class="bs-icon-grid row g-{{ $gap }} row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-{{ $maxColumns }} mb-5 justify-content-center">
+  <div class="bs-icon-grid row g-{{ $gap }} row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-{{ $maxColumns }} mb-5 justify-content-start">
     {{- range sort . "weight" }}
       <div class="col">
         {{- $icon := "" }}
@@ -72,7 +72,7 @@
           </a>
         {{ else }}
           <div
-            class="bs-icon-grid-item d-flex flex-column rounded h-100 w-100 p-4{{ cond $border ` border shadow` `` }} text-{{ $alignment }}"
+            class="bs-icon-grid-item d-flex flex-column rounded h-100 w-100 p-4 {{ cond $border ` border shadow` `` }} text-{{ $alignment }}"
             {{ with $itemAttrs }}{{ delimit . " " | safeHTMLAttr }}{{ end }}>
             <div class="bs-icon-grid-item-title fw-bold mb-3 fs-4 d-flex align-items-center justify-content-{{ $alignment }}">
               {{- $icon -}}{{- .title -}}

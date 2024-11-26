@@ -15,5 +15,5 @@ Software development & Technical writing
 {{% /blocks/section %}}
 
 <div style="margin-left: 15%; margin-right: 10%;">
-    {{< card-grid data="cards.yaml" linkText="Lean more" border=false maxColumns=4 >}}
+    {{< card-grid data="cards.yaml" linkText="Lean more" border=false maxColumns=4 alignment="start" >}}
 </div>
