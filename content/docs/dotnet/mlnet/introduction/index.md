@@ -31,3 +31,6 @@ ChatGPT 和 GitHub Copilot 都是機器學習（以下簡稱 ML）的典型應�
 
 
 
+## Reference
+
+- "Machine Learning for C# Developers" by Fiodar Sazanavets
