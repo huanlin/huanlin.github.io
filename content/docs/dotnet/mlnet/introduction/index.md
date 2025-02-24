@@ -1,5 +1,6 @@
 ---
 title: ML.NET 簡介
+linkTitle: ML.NET 簡介
 ---
 
 ## 什麼是 ML.NET
