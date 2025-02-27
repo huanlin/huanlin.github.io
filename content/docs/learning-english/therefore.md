@@ -2,21 +2,52 @@
 title: 「因此、因而、所以」的各種英文用法
 ---
 
+用英文寫作時，每當需要表示「因此、因而」，經常會想一下，不確定用哪個詞彙或片語比較適合。故整理出來，方便自己日後參考。
 
+| 詞彙               | 詞性  | 語氣        | 使用頻率  | 適用場合            | 是否適合正式寫作 |
+|------------------|-----|-----------|-------|-----------------|----------|
+| so               | 連接詞 | 口語，簡單直接   | ⭐⭐⭐⭐⭐ | 口語、日常寫作         | ❌ 不適合    |
+| therefore        | 副詞  | 正式，邏輯性強   | ⭐⭐⭐⭐⭐ | 學術寫作、正式報告、論文    | ✅ 適合     |
+| as a result      | 片語  | 半正式，常見    | ⭐⭐⭐⭐⭐ | 口語、新聞報導、學術寫作    | ✅ 適合     |
+| thus             | 副詞  | 正式，嚴謹     | ⭐⭐⭐⭐  | 學術寫作、商業報告、法律文件  | ✅ 適合     |
+| consequently     | 副詞  | 正式，因果明確   | ⭐⭐⭐⭐  | 學術、商業報告、正式文件    | ✅ 適合     |
+| that is why      | 連接詞 | 口語，強調因果   | ⭐⭐⭐⭐  | 口語、敘述、非正式寫作     | ❌ 不適合    |
+| hence            | 副詞  | 正式，書面語    | ⭐⭐⭐   | 學術、正式寫作、技術性討論   | ✅ 適合     |
+| thereby          | 副詞  | 正式，強調過程   | ⭐⭐⭐   | 正式寫作，強調手段與結果的關聯 | ✅ 適合   |
+| accordingly      | 副詞  | 正式，結果導向   | ⭐⭐⭐   | 商業、法律、正式報告      | ✅ 適合     |
+| because of that  | 片語  | 口語，強調特定結果 | ⭐⭐⭐   | 口語、日常寫作         | ❌ 不適合    |
+| as a consequence | 片語  | 正式，書面語    | ⭐⭐⭐   | 學術、正式報告、法律文件    | ✅ 適合     |
+| in consequence   | 片語  | 正式，較少使用   | ⭐⭐    | 法律、學術寫作         | ✅ 適合     |
+| as an effect     | 片語  | 正式，較罕見    | ⭐     | 學術寫作、科學報告       | ✅ 適合     |
+| ergo             | 副詞  | 古典、文學性強  | ⭐     | 文學、哲學討論，帶點幽默或戲劇性  | ❌ 不適合 |
 
 ## 例句
 
-**寫作時注意：** 只要是副詞，後面都會加逗號。
+底下是一些例句。
 
 ### So
 
-So 是最常見的因果連接詞，適合口語和非正式寫作。
+So 是最常見的因果連接詞，適合口語和非正式寫作。比較不適合用於學術寫作。
 
 - It was raining, so we stayed inside.
   下雨了，所以我們待在室內。
 
 - I was hungry, so I made a sandwich.
   我餓了，所以做了個三明治。
+
+類似詞：therefore、thus、that's why。
+
+### Accordingly
+
+常用於表示「根據前述事實採取相應行動」。語氣比 so、that is why 更正式，但不如 therefore 嚴謹。
+
+- The data indicates a decline in sales; accordingly, we will revise our marketing strategy.
+ 數據顯示銷售下滑，因此我們將調整行銷策略。
+
+- The weather forecast predicted a storm; accordingly, the event was postponed.
+  天氣預報顯示暴風雨，因此活動被推遲。
+
+相似詞：therefore, thus, consequently。
 
 ### As a result
 
@@ -83,9 +114,11 @@ So 是最常見的因果連接詞，適合口語和非正式寫作。
 - He completed the training, thereby improving his skills.
   他完成了訓練，從而提升了技能。
 
-相似詞：by that means、by doing so。
+相似：by that means、by doing so。
 
 ### That is Why
+
+口語，強調原因。
 
 - I was feeling sick. That is why I didn't go to the party.
   我身體不舒服，所以沒去派對。
@@ -93,7 +126,19 @@ So 是最常見的因果連接詞，適合口語和非正式寫作。
 - She loves animals. That is why she became a vet.
   她熱愛動物，所以成為一名獸醫。
 
-類似詞：So, for this reason, that's the reason why。
+相似：so, for this/that reason, that's the reason why。
+
+### Because of that
+
+語氣接近口語，強調「前述事件導致的結果」，比 "so" 更具強調性。較不適合學術寫作。
+
+- I was sick yesterday. Because of that, I couldn't go to work.
+  我昨天生病了，因此無法去上班。
+
+- She didn't study for the exam. Because of that, she failed.
+  她沒有準備考試，因此考試不及格。
+
+相似：for that reason, due to that, that's why。
 
 ### Thus
 
@@ -103,22 +148,6 @@ So 是最常見的因果連接詞，適合口語和非正式寫作。
 - He was the only candidate; thus, he got the job.
   他是唯一的候選人，因此得到了這份工作。
 
-## 比一比
+---
 
-下表比較了三個相似詞彙：consequently、as a consequence、in consequence。
-
-| 詞彙               | 詞性   | 語氣         | 使用頻率 | 適用場合         | 位置           | 類似詞                           |
-|------------------|------|------------|------|--------------|--------------|-------------------------------|
-| consequently     | 副詞   | 正式但常用      | 最常見  | 學術、報告、正式文章   | 句首、句中（通常接逗號） | therefore, thus, hence        |
-| as a consequence | 介詞片語 | 更正式，強調負面影響 | 中等   | 正式寫作、政策報告    | 句首較常見        | as a result, as an effect     |
-| in consequence   | 介詞片語 | 極正式，較少見    | 較少見  | 法律、政府文件、歷史文獻 | 句首較常見        | as a consequence, as a result |
-
-下表整理的詞彙是：hence、thereby、therefore、thus、that is why。
-
-| 詞彙          | 詞性  | 語氣      | 使用頻率 | 適用場合             | 後面是否加逗號 |
-|-------------|-----|---------|------|------------------|---------|
-| hence       | 副詞  | 正式，偏學術  | 較少   | 科技、數學、邏輯推論       | 通常不用    |
-| thereby     | 副詞  | 正式，強調手段 | 較少   | 學術、科技，與 V-ing 連用 | 通常不用    |
-| therefore   | 副詞  | 正式但常用   | 高    | 學術、報告、正式寫作       | 通常要     |
-| thus        | 副詞  | 正式，偏推理  | 中等   | 學術、科技、歷史文本       | 通常要     |
-| that is why | 連接詞 | 非正式，偏口語 | 最常用  | 口語、對話、故事         | 不用      |
+Hope this helps!
