@@ -4,6 +4,9 @@ title: 「因此、因而、所以」的各種英文用法
 
 用英文寫作時，每當需要表示「因此、因而」，經常會想一下，不確定用哪個詞彙或片語比較適合。故整理出來，方便自己日後參考。
 
+下表以使用頻率排序，越常用的排越前面。
+
+
 | 詞彙               | 詞性  | 語氣        | 使用頻率  | 適用場合            | 是否適合正式寫作 |
 |------------------|-----|-----------|-------|-----------------|----------|
 | so               | 連接詞 | 口語，簡單直接   | ⭐⭐⭐⭐⭐ | 口語、日常寫作         | ❌ 不適合    |
@@ -35,7 +38,7 @@ So 是最常見的因果連接詞，適合口語和非正式寫作。比較不�
 - I was hungry, so I made a sandwich.
   我餓了，所以做了個三明治。
 
-類似詞：therefore、thus、that's why。
+相似：therefore、thus、that's why。
 
 ### Accordingly
 
@@ -47,7 +50,7 @@ So 是最常見的因果連接詞，適合口語和非正式寫作。比較不�
 - The weather forecast predicted a storm; accordingly, the event was postponed.
   天氣預報顯示暴風雨，因此活動被推遲。
 
-相似詞：therefore, thus, consequently。
+相似：therefore, thus, consequently。
 
 ### As a result
 
@@ -141,6 +144,8 @@ So 是最常見的因果連接詞，適合口語和非正式寫作。比較不�
 相似：for that reason, due to that, that's why。
 
 ### Thus
+
+帶有推理意味，可用於學術論文、歷史文本，或強調「邏輯上的必然性」。
 
 - The experiment was flawed; thus, the results are invalid.
   實驗有缺陷，因此結果無效。
