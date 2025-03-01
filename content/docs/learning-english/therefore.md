@@ -116,6 +116,9 @@ So 是最常見的因果連接詞，適合口語和非正式寫作。比較不�
 - He completed the training, thereby improving his skills.
   他完成了訓練，從而提升了技能。
 
+- As a reminder, we should use this property judiciously and only when required. Not only does it increase the number of tokens generated and, hence, the cost of the API call, but it also takes time and adds time to the API call, thereby increasing overall latency.
+  提醒一下，我們應該謹慎使用這個屬性，並且僅在必要時使用。它不僅會增加生成的 token 數量，因而提高調用 API 的費用成本，還得花時間去調用 API 以及增加調用 API 的次數，從而增加整體延遲。（來源："Generative AI in Action" by Amit Bahree. Manning publishing, 2024）
+
 相似：by that means、by doing so。
 
 ### That is Why
