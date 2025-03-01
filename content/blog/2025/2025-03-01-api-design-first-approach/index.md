@@ -41,6 +41,8 @@ tags: ["API", "Git"]
 - Stakeholders 主動發現 API spec 的版本變動差異。
   說明：有些 stakeholders 不見得會經常參與 Pull Request 的 review 和 approvals 程序（例如負責撰寫使用者手冊的 technical writers）。像這種情形，他們可以從 API spec repository 建立一個自己的 branch，然後在需要比對 API spec 版本差異時，透過 git pull 操作來獲取更新，並利用 git 工具來比對 API spec 的版本差異。如此便可得知從上一次檢視 API spec 之後多了哪些改動。（僅靠開發團隊主動通知 stakeholder 相關的 API spec 變動是不大實際的，很容易遺漏和忘記）
 
+> **掉書袋：** 根據 Conway 定律，軟體系統的結構會反映組織的內部溝通結構。
+
 ## Workflow
 
 Design-first approach 的工作流程包含這幾個工作項目：
