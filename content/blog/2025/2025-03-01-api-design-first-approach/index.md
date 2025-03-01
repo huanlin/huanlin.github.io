@@ -5,7 +5,7 @@ date: 2025-03-01
 tags: ["API", "Git"]
 ---
 
-有機會近距離接觸 API design-first approach 的工作現場，這是我的一些觀察筆記再加上一點讀書心得。
+有機會近距離接觸 API design-first approach 的工作現場，這是我的一點觀察筆記和讀書心得。
 
 ![](images/banner.png)
 
