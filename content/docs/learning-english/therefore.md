@@ -155,3 +155,9 @@ So 是最常見的因果連接詞，適合口語和非正式寫作。比較不�
 ---
 
 Hope this helps!
+
+## References
+
+- [Thus 和 Therefore 有什麼不同](https://m99.nthu.edu.tw/~s9922110/eng/thus_therefore/)
+- [「因此、所以」英文是？ So、Therefore、Thus、Hence 等用法！](https://english.cool/so-therefore-thus-hence/)
+
