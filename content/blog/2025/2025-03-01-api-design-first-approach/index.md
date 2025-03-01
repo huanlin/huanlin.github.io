@@ -30,17 +30,16 @@ tags: ["API", "Git"]
 欲落實 API spec 是 SSoT，需仰賴團隊成員彼此的溝通與反饋：
 
 - 當程式按照 API spec 來實作的時候碰到問題，必須將此問題反饋給 API designer，以便根據實際需要來更新 spec，並與實作保持一致。
-
 - 一旦 API spec 有變動，必須有一個流程能夠確保相關人員（stakeholders）知道 API 有哪些變動，以便採取相應的行動。例如：負責寫教學文件和使用手冊的人可得知哪些文件需要一併更新。
-Stakeholders 最好也能有某種固定管道或程序來提交對 API spec 的變動需求。
+- Stakeholders 最好也能有某種固定管道或程序來提交對 API spec 的變動需求。
 
 欲滿足上述需求，一個常見的做法是以 Git repository 來作為 API spec 的儲存空間，並利用 GitHub（或 GitLab、BitBucket 等等）的 Pull Request（又稱為 Merge Request）功能來提交變更。這通常需要一些配套措施：
 
 - 開發團隊成員與 stakeholders 皆可提交 Pull Request，且每一個 PR 必須至少有另一位成員的 review/approve 才能將變更合併至主要分支。
-  依專案和團隊規模而定，approval 的人數有時會規定得更多，例如至少三個人 vote 同意才能合併。PR 與 approval 的用意在於盡量讓相關人員能夠得知 API spec 即將有變動。
+  說明：依專案和團隊規模而定，approval 的人數有時會規定得更多，例如至少三個人 vote 同意才能合併。PR 與 approval 的用意在於盡量讓相關人員能夠得知 API spec 即將有變動。
 
 - Stakeholders 主動發現 API spec 的版本變動差異。
-  有些 stakeholders 不見得會經常參與 Pull Request 的 review 和 approvals 程序（例如負責撰寫使用者手冊的 technical writers）。像這種情形，他們可以從 API spec repository 建立一個自己的 branch，然後在需要比對 API spec 版本差異時，透過 git pull 操作來獲取更新，並利用 git 工具來比對 API spec 的版本差異。如此便可得知從上一次檢視 API spec 之後多了哪些改動。（僅靠開發團隊主動通知 stakeholder 相關的 API spec 變動是不大實際的，很容易遺漏和忘記）
+  說明：有些 stakeholders 不見得會經常參與 Pull Request 的 review 和 approvals 程序（例如負責撰寫使用者手冊的 technical writers）。像這種情形，他們可以從 API spec repository 建立一個自己的 branch，然後在需要比對 API spec 版本差異時，透過 git pull 操作來獲取更新，並利用 git 工具來比對 API spec 的版本差異。如此便可得知從上一次檢視 API spec 之後多了哪些改動。（僅靠開發團隊主動通知 stakeholder 相關的 API spec 變動是不大實際的，很容易遺漏和忘記）
 
 ## Workflow
 
@@ -87,7 +86,7 @@ Design-first approach 的工作流程包含這幾個工作項目：
 
 也就是說，technical writer 要如何跟上 API spec 的變動，以確保文件的內容與目前的 API 規格與實作一致？若只是依賴開發團隊告知，總是難保遺漏和遺忘，故仍需要 technical writer 去主動發現和跟進 API 的演進。實際上要怎麼做呢？以下僅提供一點個人心得：
 
-- 開發團隊若有任何針對 end user 舉辦的新版本功能展示會議，都要盡量參與，因為這些會議的內容往往有很棒的文件參考資料。
+- 開發團隊若有任何針對 end user 舉辦的新版本功能展示會議，都要盡量參與，因為這些會議的內容往往有很棒的文件素材。
 - 如前面提過的，從 API spec 的 git repository 開一個 branch，透過 git 差異比對來得知 API spec 的變動。
 - 建立一組自己的 API 測試。這些測試主要目的是為了文件的編寫工作，故不需要是完整的測試。除了可以確認自己對 API 的理解，也能透過重複執行測試來發現某些 API 規格有了變動（例如原先寫好的測試突然有一天不能正常執行了）。
 - 諮詢開發團隊，經常與他們保持密切聯繫。不確定的地方，別不好意思提問和確認。（提問之前也要自行做好各種檢查，以免頻繁提出「小白」等級的問題。）
