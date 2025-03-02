@@ -19,7 +19,7 @@ tags: ["API", "Git"]
 
 ## 簡介
 
-如果 API spec 是直接寫在程式碼檔案裡（通常需要在程式碼當中額外寫一些 annotations），通常不會有實作和設計規格不一致的問題，因為 API spec 隨時可用工具自動生成。換言之，code-first approach 大致不會有 API spec 跟實作不匹配的問題，故這裡不討論。
+如果 API spec 是直接寫在程式碼檔案裡（需要在程式碼當中額外寫一些 annotations），通常不會有實作和設計規格不一致的問題，因為 API spec 隨時可用工具自動生成。換言之，code-first approach 大致不會有 API spec 跟實作不匹配的問題，故這裡不討論。
 
 比較會有問題是 design-first approach，因為程式碼的實作很容易跟 API spec 不一致，以至於經常有這類疑義：到底哪那個才是對的？誰才應該是 the single source of truth？
 
