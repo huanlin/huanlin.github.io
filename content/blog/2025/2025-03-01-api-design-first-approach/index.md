@@ -7,7 +7,7 @@ tags: ["API", "Git"]
 
 有機會近距離接觸 API design-first approach 的工作現場，這是我的一點觀察筆記和讀書心得。
 
-![](images/banner.png)
+![](images/banner.png#center)
 
 ## 專有名詞
 
@@ -102,7 +102,7 @@ Design-first approach 的工作流程包含這幾個工作項目：
 
 最後附上一張由 AI 工具生成（[Mapify](https://mapify.so/)）、再手工修改的 mind map：
 
-![本文摘要心智圖](images/mindmap.png)
+![本文摘要心智圖](images/mindmap.png#center)
 
 ## 參考資料
 
