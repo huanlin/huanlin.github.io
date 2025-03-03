@@ -51,7 +51,7 @@ Design-first approach 的工作流程包含這幾個工作項目：
 - 建議變更
 - Review 與接受變更
 - 比較版本差異
-- 
+-
 以下分別說明。
 
 ### 查看最新的 API spec
@@ -65,7 +65,7 @@ Design-first approach 的工作流程包含這幾個工作項目：
 1. 開立工作單（例如 Jira ticket），建立新的 branch，然後在此分支進行變更。
 2. 建立 Pull Request 來將變更合併至主分支。
 3. 把相關人員加入此 PR 的 reviewers。
- 
+
 ### Review 與接受變更
 
 步驟：
@@ -99,6 +99,10 @@ Design-first approach 的工作流程包含這幾個工作項目：
 跟 code-first approach 相比，design-first approach 的溝通成本明顯高出許多，不易落實和長期堅持下去，因為此作法至少牽涉三個階段的作業：API 設計、程式開發、和文件撰寫。換言之，至少有三種角色之間需要同步，以確保各方產出一致且正確，實非易事。
 
 相較之下，code-first approach 基本上把 API spec 和程式碼放在一起寫，故設計與實作通常不會出現分歧。剩下的，就只是想辦法讓使用者文件的編寫與發佈能夠跟上 API 的變動，這部分僅涉及文件作者和開發團隊之間的溝通，實施起來相對容易些。
+
+最後附上一張由 AI 工具生成（[Mapify](https://mapify.so/)）、再手工修改的 mind map：
+
+![本文摘要心智圖](images/mindmap.png)
 
 ## 參考資料
 
