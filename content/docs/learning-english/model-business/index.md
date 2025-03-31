@@ -58,7 +58,7 @@ It was great to see you last week, and thanks for your hospitality.<br/>
 
 - [錯] We have removed clause 9, this is because of current market conditions
 - [對] We have removed clause 9 because of current market conditions.
-- [對] We have removed clause 9. This is because of current market conditions
+- [對] We have removed clause 9. This is because of current market conditions<br/>
   鑑於目前的市場狀況，我們移除了第九條款。
 
 例四：
@@ -69,23 +69,25 @@ It was great to see you last week, and thanks for your hospitality.<br/>
 例五：
 
 - [錯] Mary is responsible for this convention. She will be in touch with you soon.
-- [對] Mary is responsible for this convention, she will be in touch with you soon.
+- [對] Mary is responsible for this convention, she will be in touch with you soon.<br/>
   瑪麗負責這項會議，她會盡早和您聯繫。
 
 例六：
 
 - [錯] Sales have been very good this year, the figures are higher than last year.
-- [對] Sales have been very good this year. The figures are higher than last year.
+- [對] Sales have been very good this year. The figures are higher than last year.<br/>
   今年銷售情况良好，業績比去年高。
 
 例七：
 
 - [錯] I love your ideas for this project, however, I'd like to discuss some issues with you.
-- [對] I love your ideas for this project. However, I'd like to discuss some issues with you.
+- [對] I love your ideas for this project. However, I'd like to discuss some issues with you.<br/>
   我喜歡您在這項專案上的構想，但我想和您討論一些問題。
 
-- [錯] I will see you next week, meanwhile I will see you next week. Meanwhile, please let me see some samples soon.
-- [對] I will see you next week, meanwhile I will see you next week. Meanwhile, please let me see some samples soon.
+例八：
+
+- [錯] I will see you next week, meanwhile, please let me see some samples soon.
+- [對] I will see you next week. Meanwhile, please let me see some samples soon.<br/>
   我會在下週和您會面，並請盡快讓我看一些樣品。
 
 ## 生硬、多餘的老套用語
