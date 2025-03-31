@@ -71,24 +71,56 @@ title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
 - [對] We have removed clause 9. This is because of current market conditions
   鑑於目前的市場狀況，我們移除了第九條款。
 
+例四：
+
+- [錯] Thanks for your email, it was good to hear from you.
+- [對] Thanks for your email. It was good to hear from you.
+
+例五：
+
+- [錯] Mary is responsible for this convention. She will be in touch with you soon.
+- [對] Mary is responsible for this convention, she will be in touch with you soon.
+  瑪麗負責這項會議，她會盡早和您聯繫。
+
+例六：
+
+- [錯] Sales have been very good this year, the figures are higher than last year.
+- [對] Sales have been very good this year. The figures are higher than last year.
+  今年銷售情况良好，業績比去年高。
+
+例七：
+
+- [錯] I love your ideas for this project, however, I'd like to discuss some issues with you.
+- [對] I love your ideas for this project. However, I'd like to discuss some issues with you.
+  我喜歡您在這項專案上的構想，但我想和您討論一些問題。
+
+- [錯] I will see you next week, meanwhile I will see you next week. Meanwhile, please let me see some samples soon.
+- [對] I will see you next week, meanwhile I will see you next week. Meanwhile, please let me see some samples soon.
+  我會在下週和您會面，並請盡快讓我看一些樣品。
+
 ## 多餘的老套用語
 
-別再使用底下這些沉悶、過時的用語：
+別再使用底下這些沉悶、多餘、和過時的用語：
 
 - Please be informed (請知悉/在此告知)
 - Kindly be advised (在此通知)
 - I would like to bring to your attention (我想請您注意)
-- I am writing to advise you (我寫信通知您)
+- I am writing to advise you (我寫信通知您/這封信是要讓您知道)
 - Enclosed please find our catalogue for your reference (請見隨附之產品型錄，供您參考)
 - Kindly furnish me with this information soon (勞煩盡速提供我這項資訊)
 
-| 不要這麼說 | 改成這麼說 |
+| 不要這麼說 | 建議這麼說 |
 |----------|-----------|
 | Please be advised that our next meeting will be held on Monday 14 June. | Our next meeting will be held on Monday 14 June. |
 | Kindly be informed that the fire alarms will be tested at 9 am tomorrow. | The fire alarms will be tested at 9 am tomorrow. |
+| Kindly advise... (煩請告知) | Please let us know... (請讓我們知道) |
 | I am writing to let you know that Mr John Lim is no longer with our company. | Mr John Lim is no longer with our company. |
 | We refer to your letter of 21st October...<br />關於您 10 月 21 的信件...| Thank you for your letter dated 21 October.<br />感謝您 10 月 21 日的來信。|
+| Should you have any questions please do not hesitate to contact me. | Please give me a call if you have any questions. |
+
+> 以上例句，右邊的不見得永遠都是最合適的。有時候，某些正式的文書可能適合比較嚴肅甚至老套的語氣。
 
 ## 被動語態
 
-一般建議：盡量使用主動語態，這樣語氣會更生動、意思更清楚。
+一般建議是盡量使用主動語態，這樣語氣會更生動、意思更清楚。但有些場合更適合採用被動語態，則還是該用。
+
