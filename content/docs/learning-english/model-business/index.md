@@ -121,31 +121,28 @@ It was great to see you last week, and thanks for your hospitality.<br/>
 
 例句：
 
-> Our restaurant has been recommended by all the leading hotels in Singapore.
->
-> 我們的餐廳被新加坡所有的頂級飯店推薦。
+Our restaurant has been recommended by all the leading hotels in Singapore.<br/>
+我們的餐廳被新加坡所有的頂級飯店推薦。
 
 這句話強調了「我們的餐廳」。
 
 下面這句則不然:
 
-> All the leading hotels in Singapore recommend our restaurant.
->
-> 新加坡所有的頂級飯店都推薦我們的餐廳。
+All the leading hotels in Singapore recommend our restaurant.<br/>
+新加坡所有的頂級飯店都推薦我們的餐廳。
 
 或者，如果你要將焦點放在動作上，而非做動作者時，也會用被動語態。例如:
 
-> The noise was heard all over the island.
->
-> 全島到處都能聽到這個噪音。
+The noise was heard all over the island.<br/>
+全島到處都能聽到這個噪音。
 
 這裡要強調的是噪音本身，而不是製造噪音的人。
 
 當你要隱藏某事，或者需要圓滑一點時，可以使用被動語態。例如:
 
-- An unfortunate mistake was made.
+- An unfortunate mistake was made.<br/>
   一個遺憾的錯誤已經造成。
-- This bill has not been paid.
+- This bill has not been paid.<br/>
   這份帳單尚未有人支付。
 
 ## 謝謝和問候
@@ -164,29 +161,29 @@ It was great to see you last week, and thanks for your hospitality.<br/>
 
 以下是一些避免在商業寫作中使用的措詞:
 
-- Your failure to reply
+- Your failure to reply<br/>
   您沒有回覆
-- You did not see...
+- You did not see...<br/>
   您沒有看到…
-- We must insist...
+- We must insist...<br/>
   我們必須堅持…
-- You should not expect to...
+- You should not expect to...<br/>
   您不應該期望…
-- Your refusal to co-operate...
+- Your refusal to co-operate...<br/>
   您的拒絕合作....
-- You have ignored...
+- You have ignored...<br/>
   您忽視了…
-- This is not our fault...
+- This is not our fault...<br/>
   這不是我們的過失…
-- I can assure you
+- I can assure you...<br/>
   我可以向您保證…
-- You failed to...
+- You failed to...<br/>
   您沒有…
-- I have received your complaint
+- I have received your complaint<br/>
   我已收到您的申訴 …...
-- I have noticed that...
+- I have noticed that...<br/>
   我已注意到…
-- It has come to my attention that...
+- It has come to my attention that...<br/>
   我已留意到…
 
 與其說：We cannot do anything about your problem.
