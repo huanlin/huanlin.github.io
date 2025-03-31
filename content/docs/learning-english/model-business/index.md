@@ -98,9 +98,9 @@ title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
 - [對] I will see you next week, meanwhile I will see you next week. Meanwhile, please let me see some samples soon.
   我會在下週和您會面，並請盡快讓我看一些樣品。
 
-## 多餘的老套用語
+## 生硬、多餘的老套用語
 
-別再使用底下這些沉悶、多餘、和過時的用語：
+別再使用底下這些生硬、沉悶、多餘、和過時的用語：
 
 - Please be informed （請知悉/在此告知）
 - Kindly be advised （在此通知）
@@ -114,6 +114,7 @@ title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
 | Please be advised that our next meeting will be held on Monday 14 June. | Our next meeting will be held on Monday 14 June. |
 | Kindly be informed that the fire alarms will be tested at 9 am tomorrow. | The fire alarms will be tested at 9 am tomorrow. |
 | Kindly advise... （煩請告知） | Please let us know... （請讓我們知道） |
+| Kindly see attached on my performance report for last year. | Here is my performance report for last year. |
 | I am writing to let you know that Mr John Lim is no longer with our company. | Mr John Lim is no longer with our company. |
 | We refer to your letter of 21st October...<br />關於您 10 月 21 的信件...| Thank you for your letter dated 21 October.<br />感謝您 10 月 21 日的來信。|
 | Should you have any questions please do not hesitate to contact me. | Please give me a call if you have any questions. |
@@ -133,3 +134,34 @@ title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
 至於 Regards（問候），我建議直接刪除。它真的必要嗎？我們也看到一 些替代語，像是 Best regards（誠摯問候）或 Warm regards（溫馨問候）。我個人覺得這些話全都相當冷淡，我會建議你撰寫書信時，在訊息中加入自己的個性，然後在結尾處只放自己的名字。你可以用一些優美的小句子結尾， 像是 See you soon （希望很快會再見到您）、Have a great weekend （祝週末 愉快），或是 Good luck with the meeting （祝開會順利）。再不然，用 Many thanks（多謝）如何？在這句最終的評論之後，寫上你的名字，以非常友善、建立關係的方式結束訊息。
 
 > 運用自然、輕鬆、友善的風格，就好像你是在進行一項對話，藉此為你的商業寫作注入一些生命。不要使用舊式術語，要使用主動、激勵性和有趣的風格，你的寫作反映了你的個性。
+
+## 使用適當的語氣
+
+你可以堅定、友善、有說服力或是溫和,完全取決於你所要傳達給對方的印象。重要的是語氣要正確,不當的語氣可能會引起讀者的反感。
+
+以下是一些避免在商業寫作中使用的措詞:
+
+- Your failure to reply
+  您沒有回覆
+- You did not see...
+  您沒有看到…
+- We must insist...
+  我們必須堅持…
+- You should not expect to...
+  您不應該期望…
+- Your refusal to co-operate...
+  您的拒絕合作....
+- You have ignored...
+  您忽視了…
+- This is not our fault...
+  這不是我們的過失…
+- I can assure you
+  我可以向您保證…
+- You failed to...
+  您沒有…
+- I have received your complaint
+  我已收到您的申訴 …...
+
+## References
+
+- 簡明英語運動 (Plain English Campaign): www.plainenglish.co.uk
