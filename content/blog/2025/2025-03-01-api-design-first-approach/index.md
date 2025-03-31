@@ -100,6 +100,26 @@ Design-first approach 的工作流程包含這幾個工作項目：
 
 相較之下，code-first approach 基本上把 API spec 和程式碼放在一起寫，故設計與實作通常不會出現分歧。剩下的，就只是想辦法讓使用者文件的編寫與發佈能夠跟上 API 的變動，這部分僅涉及文件作者和開發團隊之間的溝通，實施起來相對容易些。
 
+```yaml
+components:
+  schemas:
+    Job:
+      type: object
+      properties:
+        #...
+        dog:
+          allOf:
+          - $ref: '#/components/schemas/Dog'
+          - description: |
+              This is deprecated, prefer to use pets.
+              If both exist, dog will be ignored and pets will be used.
+            deprecated: true
+        pets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Pet'
+```
+
 最後附上一張由 AI 工具生成（[Mapify](https://mapify.so/)）、再手工修改的 mind map：
 
 ![本文摘要心智圖](images/mindmap.png#center)
