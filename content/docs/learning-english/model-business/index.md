@@ -102,18 +102,18 @@ title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
 
 別再使用底下這些沉悶、多餘、和過時的用語：
 
-- Please be informed (請知悉/在此告知)
-- Kindly be advised (在此通知)
-- I would like to bring to your attention (我想請您注意)
-- I am writing to advise you (我寫信通知您/這封信是要讓您知道)
-- Enclosed please find our catalogue for your reference (請見隨附之產品型錄，供您參考)
-- Kindly furnish me with this information soon (勞煩盡速提供我這項資訊)
+- Please be informed （請知悉/在此告知）
+- Kindly be advised （在此通知）
+- I would like to bring to your attention （我想請您注意）
+- I am writing to advise you （我寫信通知您/這封信是要讓您知道）
+- Enclosed please find our catalogue for your reference （請見隨附之產品型錄，供您參考）
+- Kindly furnish me with this information soon （勞煩盡速提供我這項資訊）
 
 | 不要這麼說 | 建議這麼說 |
 |----------|-----------|
 | Please be advised that our next meeting will be held on Monday 14 June. | Our next meeting will be held on Monday 14 June. |
 | Kindly be informed that the fire alarms will be tested at 9 am tomorrow. | The fire alarms will be tested at 9 am tomorrow. |
-| Kindly advise... (煩請告知) | Please let us know... (請讓我們知道) |
+| Kindly advise... （煩請告知） | Please let us know... （請讓我們知道） |
 | I am writing to let you know that Mr John Lim is no longer with our company. | Mr John Lim is no longer with our company. |
 | We refer to your letter of 21st October...<br />關於您 10 月 21 的信件...| Thank you for your letter dated 21 October.<br />感謝您 10 月 21 日的來信。|
 | Should you have any questions please do not hesitate to contact me. | Please give me a call if you have any questions. |
@@ -124,3 +124,12 @@ title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
 
 一般建議是盡量使用主動語態，這樣語氣會更生動、意思更清楚。但有些場合更適合採用被動語態，則還是該用。
 
+## 謝謝和問候
+
+為什麼有這麼多人要在書信的結尾寫上 Regards（問候） 或 Thank you（謝謝您）？
+
+謝什麼呢？謝謝您讀我的電子郵件嗎？如果你的信件自始至終都很有禮貌（讓我們面對現實，不論在何種情況下，你都應該有禮貌），就沒有必要因為有人讀你的信或電子郵件而不斷說「謝謝您」。如果你有什麼事要謝謝讀者，你可以考慮在結尾寫上 Thank you for your help（感謝您 的協助）、Thank you for your patience（感謝您的耐心）、 Thank you for your understanding（感謝您的諒解）或諸如此類的話。
+
+至於 Regards（問候），我建議直接刪除。它真的必要嗎？我們也看到一 些替代語，像是 Best regards（誠摯問候）或 Warm regards（溫馨問候）。我個人覺得這些話全都相當冷淡，我會建議你撰寫書信時，在訊息中加入自己的個性，然後在結尾處只放自己的名字。你可以用一些優美的小句子結尾， 像是 See you soon （希望很快會再見到您）、Have a great weekend （祝週末 愉快），或是 Good luck with the meeting （祝開會順利）。再不然，用 Many thanks（多謝）如何？在這句最終的評論之後，寫上你的名字，以非常友善、建立關係的方式結束訊息。
+
+> 運用自然、輕鬆、友善的風格，就好像你是在進行一項對話，藉此為你的商業寫作注入一些生命。不要使用舊式術語，要使用主動、激勵性和有趣的風格，你的寫作反映了你的個性。
