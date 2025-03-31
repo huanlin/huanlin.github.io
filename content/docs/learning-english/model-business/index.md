@@ -115,6 +115,8 @@ title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
 | Kindly be informed that the fire alarms will be tested at 9 am tomorrow. | The fire alarms will be tested at 9 am tomorrow. |
 | Kindly advise... （煩請告知） | Please let us know... （請讓我們知道） |
 | Kindly see attached on my performance report for last year. | Here is my performance report for last year. |
+| Please find attached... （隨信附上） | Attached is... / I am attaching... |
+| Please be reminded... （在此提醒您） | Please remember... |
 | I am writing to let you know that Mr John Lim is no longer with our company. | Mr John Lim is no longer with our company. |
 | We refer to your letter of 21st October...<br />關於您 10 月 21 的信件...| Thank you for your letter dated 21 October.<br />感謝您 10 月 21 日的來信。|
 | Should you have any questions please do not hesitate to contact me. | Please give me a call if you have any questions. |
@@ -123,7 +125,36 @@ title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
 
 ## 被動語態
 
-一般建議是盡量使用主動語態，這樣語氣會更生動、意思更清楚。但有些場合更適合採用被動語態，則還是該用。
+一般建議是盡量使用主動語態，這樣語氣會更生動、意思更清楚。但有些場合可能更適合採用被動語態，例如句子的主詞是一個特別重要的名詞,為了特別強調該主詞,使用被動語態會比較好。
+
+例句：
+
+> Our restaurant has been recommended by all the leading hotels in Singapore.
+>
+> 我們的餐廳被新加坡所有的頂級飯店推薦。
+
+這句話強調了「我們的餐廳」。
+
+下面這句則不然:
+
+> All the leading hotels in Singapore recommend our restaurant.
+>
+> 新加坡所有的頂級飯店都推薦我們的餐廳。
+
+或者，如果你要將焦點放在動作上,而非做動作者時，也會用被動語態。例如:
+
+> The noise was heard all over the island.
+>
+> 全島到處都能聽到這個噪音。
+
+這裡要強調的是噪音本身,而不是製造噪音的人。
+
+當你要隱藏某事,或者需要圓滑一點時,可以使用被動語態。例如:
+
+- An unfortunate mistake was made.
+  一個遺憾的錯誤已經造成。
+- This bill has not been paid.
+  這份帳單尚未有人支付。
 
 ## 謝謝和問候
 
@@ -137,7 +168,7 @@ title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
 
 ## 使用適當的語氣
 
-你可以堅定、友善、有說服力或是溫和,完全取決於你所要傳達給對方的印象。重要的是語氣要正確,不當的語氣可能會引起讀者的反感。
+你可以堅定、友善、有說服力或是溫和，完全取決於你所要傳達給對方的印象。重要的是語氣要正確，不當的語氣可能會引起讀者的反感。
 
 以下是一些避免在商業寫作中使用的措詞:
 
@@ -161,6 +192,25 @@ title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
   您沒有…
 - I have received your complaint
   我已收到您的申訴 …...
+- I have noticed that...
+  我已注意到…
+- It has come to my attention that...
+  我已留意到…
+
+與其說：We cannot do anything about your problem.
+
+不如說：Unfortunately, we are unable to help you on this occasion.
+
+## 保持簡單
+
+| 與其說 | 不如說 |
+| ----- | ----- |
+| in the very near future | soon |
+| We would like to ask you to... | Please... |
+| conduct an investigation | investigate |
+| in spite of the fact that | despite |
+| with regard to | about |
+
 
 ## References
 
