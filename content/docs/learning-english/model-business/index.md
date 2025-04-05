@@ -1,5 +1,5 @@
 ---
-title: 朗文英文商業書信 & 電子郵件寫作技巧與範例
+title: 商業書信寫作技巧與範例
 date: 2025-04-05
 ---
 
@@ -52,50 +52,50 @@ date: 2025-04-05
 
 例一：
 
-- [錯] I ordered more disks, they will be delivered next week.
-- [對] I ordered more disks, and they will be delivered next week.
-- [對] I ordered more disks. They will be delivered next week.
+- [❌] I ordered more disks, they will be delivered next week.
+- [⭕] I ordered more disks, and they will be delivered next week.
+- [⭕] I ordered more disks. They will be delivered next week.
 
 例二：
 
-- [錯] Please look into this immediately, I need your report by 28 November.
-- [對] Please look into this immediately. I need your report by 28 November.
-- [對] Please look into this immediately and let me have your report by 28 November.
+- [❌] Please look into this immediately, I need your report by 28 November.
+- [⭕] Please look into this immediately. I need your report by 28 November.
+- [⭕] Please look into this immediately and let me have your report by 28 November.
 
 例三：
 
-- [錯] We have removed clause 9, this is because of current market conditions
-- [對] We have removed clause 9 because of current market conditions.
-- [對] We have removed clause 9. This is because of current market conditions<br/>
+- [❌] We have removed clause 9, this is because of current market conditions
+- [⭕] We have removed clause 9 because of current market conditions.
+- [⭕] We have removed clause 9. This is because of current market conditions<br/>
   (鑑於目前的市場狀況，我們移除了第九條款。)
 
 例四：
 
-- [錯] Thanks for your email, it was good to hear from you.
-- [對] Thanks for your email. It was good to hear from you.
+- [❌] Thanks for your email, it was good to hear from you.
+- [⭕] Thanks for your email. It was good to hear from you.
 
 例五：
 
-- [錯] Mary is responsible for this convention, She will be in touch with you soon.
-- [對] Mary is responsible for this convention. She will be in touch with you soon.<br/>
+- [❌] Mary is responsible for this convention, She will be in touch with you soon.
+- [⭕] Mary is responsible for this convention. She will be in touch with you soon.<br/>
   (瑪麗負責這項會議，她會盡早和您聯繫。)
 
 例六：
 
-- [錯] Sales have been very good this year, the figures are higher than last year.
-- [對] Sales have been very good this year. The figures are higher than last year.<br/>
+- [❌] Sales have been very good this year, the figures are higher than last year.
+- [⭕] Sales have been very good this year. The figures are higher than last year.<br/>
   (今年銷售情况良好，業績比去年高。)
 
 例七：
 
-- [錯] I love your ideas for this project, however, I'd like to discuss some issues with you.
-- [對] I love your ideas for this project. However, I'd like to discuss some issues with you.<br/>
+- [❌] I love your ideas for this project, however, I'd like to discuss some issues with you.
+- [⭕] I love your ideas for this project. However, I'd like to discuss some issues with you.<br/>
   我喜歡您在這項專案上的構想，但我想和您討論一些問題。
 
 例八：
 
-- [錯] I will see you next week, meanwhile, please let me see some samples soon.
-- [對] I will see you next week. Meanwhile, please let me see some samples soon.<br/>
+- [❌] I will see you next week, meanwhile, please let me see some samples soon.
+- [⭕] I will see you next week. Meanwhile, please let me see some samples soon.<br/>
   我會在下週和您會面，並請盡快讓我看一些樣品。
 
 ## 生硬、多餘、老套
