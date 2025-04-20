@@ -6,7 +6,7 @@ title: Paternalist syndrome
 >
 > 僅只是摘錄一些重點，不是完整翻譯。
 
-家長式綜合症（paternalist syndrome）這個名稱源自某一群體對其他人採取類似父母般的支配關係。家長式綜合症依賴把關者（gatekeepers）來決定工作該如何以及何時完成。這種權力的集中一開始看起來像是審慎的決策，但很快就可能演變成妨礙生產力的負擔。
+**家長式綜合症**（paternalist syndrome）這個名稱源自某一群體對其他人採取類似父母般的支配關係。家長式綜合症依賴把關者（gatekeepers）來決定工作該如何以及何時完成。這種權力的集中一開始看起來像是審慎的決策，但很快就可能演變成妨礙生產力的負擔。
 
 ## 2.1 Creating barriers instead of safeguards
 
