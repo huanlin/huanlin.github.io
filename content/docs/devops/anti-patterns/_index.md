@@ -1,6 +1,6 @@
 ---
 title: DevOps Anti-patterns
-weight: 3
+weight: 2
 hide_feedback: true
 ---
 
