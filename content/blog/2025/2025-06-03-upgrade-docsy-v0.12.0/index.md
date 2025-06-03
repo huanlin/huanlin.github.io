@@ -12,6 +12,8 @@ tags: ["hugo", "docsy"]
 - Docsy 從 v0.11.0 升級至 v0.12.0。詳見 [Docsy changelog 0.12.0](https://www.docsy.dev/project/changelog/#0120)。
 - Hugo 從 v0.138.0 升級至 v0.147.7。詳見 [Hugo News](https://gohugo.io/news/)，需特別注意的是 [v0.146.0](https://github.com/gohugoio/hugo/releases/tag/v0.146.0)，因為此版本有重大更新，而且是 breaking changes。
 
+> See also: [Adapt to new template system in Hugo v0.146.0](https://github.com/google/docsy/issues/2243)
+
 ## 更新細節
 
 底下是升級過程中，對個別檔案和資料夾進行的的修改。
