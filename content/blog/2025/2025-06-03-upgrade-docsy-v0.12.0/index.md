@@ -16,6 +16,19 @@ tags: ["hugo", "docsy"]
 
 底下是升級過程中，對個別檔案和資料夾進行的的修改。
 
+### go.mod
+
+網站根目錄下的 go.mod 檔案，在執行 `go mod tidy` 命令之後，自動更新了相關套件：
+
+```go
+require (
+	github.com/google/docsy v0.12.0 // indirect
+	github.com/hugomods/bootstrap v0.23.0 // indirect
+	github.com/hugomods/icons/vendors/bootstrap v0.5.11 // indirect
+	github.com/hugomods/icons/vendors/font-awesome v0.6.12 // indirect
+)
+```
+
 ### CI/CD Pipeline
 
 檔案：`/.github/workflows/gh-pages.yaml`
