@@ -1,7 +1,7 @@
 ---
 title: Customizing Hugomods Icon Grid
 date: 2024-11-10
-tags: ["Hugo"]
+tags: ["hugo"]
 ---
 
 ## References

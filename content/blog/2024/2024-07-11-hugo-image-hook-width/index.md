@@ -3,7 +3,7 @@ title: "A Hugo image render hook that supports width parameter"
 linkTitle: Image hook
 date: "2024-07-10"
 slug: hugo-image-render-hook-width-param
-tags: ["Hugo"]
+tags: ["hugo"]
 ---
 
 This post shows how I support image width with the URL query parameter `width`.
