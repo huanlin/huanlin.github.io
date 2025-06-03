@@ -4,6 +4,8 @@ node_modules/
 package-lock.json
 .hugo_build.lock
 
+*.tmp
+
 # For Visual Studio projects
 *.suo
 *.user
