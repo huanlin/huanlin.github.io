@@ -2,7 +2,7 @@
 title: "[Hugo] Implementing contributors"
 linkTitle: "Implementing contributors"
 date: "2024-05-11"
-tags: ["Hugo", "Docsy"]
+tags: ["hugo", "docsy"]
 contributors: ["Michael Tsai", "蔡煥麟"]
 ---
 

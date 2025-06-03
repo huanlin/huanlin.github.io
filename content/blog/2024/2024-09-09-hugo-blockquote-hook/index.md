@@ -1,7 +1,7 @@
 ---
 title: Hugo Blockquote Render Hook
 date: 2024-09-09
-tags: ["Hugo"]
+tags: ["hugo"]
 ---
 
 Hugo supports [blockquote render hooks](https://gohugo.io/render-hooks/blockquotes/) since v0.132.0, which makes it easy to create beautiful alert boxes with the simple blockquote syntax. This is great because I don't need to use shortcodes for creating alert boxes anymore.

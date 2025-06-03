@@ -3,7 +3,7 @@ title: "Hugo - Multilingual with language fall back"
 linkTitle: "Multilingual with language fall back"
 date: 2024-05-22
 slug: "hugo-multilingual-fall-back-to-default-language"
-tags: ["Hugo", "Docsy"]
+tags: ["hugo", "docsy"]
 ---
 
 See discussion: [How to automatically fallback to the default language when a requested page doesn't have a translation?](https://github.com/google/docsy/discussions/1998)

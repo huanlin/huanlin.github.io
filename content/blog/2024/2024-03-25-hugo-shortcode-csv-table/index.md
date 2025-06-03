@@ -2,7 +2,7 @@
 title: A Hugo Shortcode for rendering a CSV file as an HTML table
 slug: hugo-shortcode-csv-table
 date: 2024-03-25
-tags: ["Hugo"]
+tags: ["hugo"]
 ---
 
 In this post, I share my Hugo shortcode that can render a .CSV file as an HTML table.
@@ -105,8 +105,8 @@ A03, Mary, Taoyuan City
 Note that the value of the third column `Address` cannot be enclosed with double quotation marks. For example, `"New Taipei City"` is incorrect and will cause the following error while Hugo builds the site:
 
 ```text
-execute of template failed at <transform.Unmarshal>: 
-    error calling Unmarshal: 
+execute of template failed at <transform.Unmarshal>:
+    error calling Unmarshal:
         parse error on line 2, column 15: bare " in non-quoted-field
 ```
 
