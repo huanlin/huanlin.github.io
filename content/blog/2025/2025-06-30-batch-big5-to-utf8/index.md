@@ -4,7 +4,10 @@ slug: "batch-convert-file-encoding"
 date: 2025-06-30
 ---
 
-**摘要：** 在利用 Gemini CLI 幫我整理舊專案的程式時，我發現有些被 Gemini CLI 改過的檔案，裡面的中文字會變成亂碼。這才知道它目前並未支援檔案編碼的偵測，而是一律把修改過的檔案以 UTF-8 編碼來儲存，因而導致某些原先以 Big5 編碼的檔案內的中文字變成亂碼。若要手動一個個轉檔，太耗時費力了，也容易遺漏。本文將介紹如何以 PowerShell 和 Python 寫成的自動化腳本來解決這個問題。
+
+## 前言
+
+在利用 Gemini CLI 幫我整理舊專案的程式時，我發現有些被 Gemini CLI 改過的檔案，裡面的中文字會變成亂碼。這才知道它目前並未支援檔案編碼的偵測，而是一律把修改過的檔案以 UTF-8 編碼來儲存，因而導致某些原先以 Big5 編碼的檔案內的中文字變成亂碼。若要手動一個個轉檔，太耗時費力了，也容易遺漏。於是，我透過 ChatGPT 的幫助產生了兩個指令腳本來解決這個問題。
 
 ---
 
@@ -24,7 +27,7 @@ date: 2025-06-30
 
 ### Step 1. 安裝 chardet
 
-首先要在電腦上安裝 `chardet`：
+首先要在電腦上安裝 [chardet](https://github.com/chardet/chardet)：
 
 ```bash
 pip install chardet
@@ -52,11 +55,11 @@ if __name__ == "__main__":
         detect_encoding(sys.argv[1])
 ```
 
-假設將此檔案儲存於 d:/work/ 目錄下。下一個步驟的 PowerShell 指令也會放在此目錄下。
+假設將此檔案儲存於 **`d:/work/`** 目錄下。下一個步驟的 PowerShell 指令也會放在此目錄下。
 
 ### Step 3. 建立 PowerShell 批次轉檔腳本
 
-以下 PowerShell 指令會搜尋當前目錄及其所有子目錄下所有符合指定類型的檔案（*.txt、*.cs、*.md），然後將編碼為 Big5 的檔案轉換成 UTF-8。
+以下 PowerShell 指令會搜尋當前目錄及其所有子目錄下所有符合指定類型的檔案（`*.txt`、`*.cs`、`*.md`），然後將編碼為 Big5 的檔案轉換成 UTF-8。
 
 ```powershell
 # 設定 Python 路徑與偵測編碼的 Python 腳本路徑
