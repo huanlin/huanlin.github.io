@@ -8,7 +8,7 @@ date: 2025-06-30
 
 在利用 [Gemini CLI](https://blog.google/intl/zh-tw/products/cloud/gemini-cli-your-open-source-ai-agent/) 幫我整理舊專案的程式時，我發現有些被 Gemini CLI 改過的檔案，裡面的中文字會變成亂碼。這才知道它目前並未支援檔案編碼的偵測，而是一律把修改過的檔案以 UTF-8 編碼來儲存，因而導致某些原先以 Big5 編碼的檔案內的中文字變成亂碼。若要手動一個個轉檔，太耗時費力了，也容易遺漏。於是，我透過 ChatGPT 的幫助產生了兩個指令腳本來解決這個問題。
 
-![](images/banner-big5-utf8.png)
+![](images/banner-big5-utf8.png#center)
 
 **目標：** 批次轉換檔案的編碼，從 Big5 轉換成 UTF-8。（稍加修改之後也能用來處理其他編碼的轉換）
 
