@@ -2,6 +2,7 @@
 title: Batch-convert file encoding
 slug: "batch-convert-file-encoding"
 date: 2025-06-30
+image: "images/banner-big5-to-utf8.svg"
 ---
 
 
