@@ -122,4 +122,4 @@ d:\work\big5-to-utf8.ps1
 
 ---
 
-Job done! Keep learning with AI.
+Job done! Keep learning with AI. 😊
