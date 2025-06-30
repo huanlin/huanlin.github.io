@@ -20,11 +20,9 @@ date: 2025-06-30
 2. 從 GitHub 上面找到一個開源工具 [chardet](https://github.com/chardet/chardet) 有支援偵測 Big5 編碼，而且準確率是足夠可靠的。
 3. 請 ChatGPT 修改步驟 1 生成的 PowerShell 指令，在將檔案編碼轉換成 UTF-8 之前，先調用 chardet 的編碼偵測結果來判斷檔案是否為 Big5，是的話才執行轉換。若檔案不是 Big5 編碼則略過。
 
-## 執行過程
+接著是完整的步驟和指令腳本。
 
-執行過程的細節也是 ChatGPT 提供的。
-
-### Step 1. 安裝 chardet
+## Step 1. 安裝 chardet
 
 首先要在電腦上安裝 [chardet](https://github.com/chardet/chardet)：
 
@@ -32,7 +30,7 @@ date: 2025-06-30
 pip install chardet
 ```
 
-### Step 2. 用來偵測檔案編碼的 Python 腳本
+## Step 2. 用來偵測檔案編碼的 Python 腳本
 
 將以下 Python 程式碼儲存為 `detect_encoding.py`：
 
@@ -56,7 +54,7 @@ if __name__ == "__main__":
 
 假設將此檔案儲存於 **`d:/work/`** 目錄下。下一個步驟的 PowerShell 指令也會放在此目錄下。
 
-### Step 3. 建立 PowerShell 批次轉檔腳本
+## Step 3. 建立 PowerShell 批次轉檔腳本
 
 以下 PowerShell 指令會搜尋當前目錄及其所有子目錄下所有符合指定類型的檔案（`*.txt`、`*.cs`、`*.md`），然後將編碼為 Big5 的檔案轉換成 UTF-8。
 
@@ -107,7 +105,7 @@ foreach ($ext in $extensions) {
 > [!CAUTION]
 > 此指令會直接覆蓋原始檔案！如果你覺得這樣不保險，請務必先備份檔案，放自行修改指令，將轉換過的檔案存放至其他資料夾。
 
-### Step 4. 執行
+## Step 4. 執行
 
 執行時，先切換當前路徑至需要轉換編碼的檔案所在的目錄，然後執行上一個步驟的 PowerShell 指令。
 
@@ -121,5 +119,7 @@ d:\work\big5-to-utf8.ps1
 ![](images/result.png)
 
 從圖中可以看到，不是 Big5 編碼的檔案會略過。因此，如果在同一個目錄下重複執行這個腳本，那麼第二次執行的結果應該是全部的檔案都被略過，因為第一次執行時就已經把需要轉換的檔案都轉成 UTF-8 編碼了。
+
+---
 
 Job done! Keep learning with AI.
