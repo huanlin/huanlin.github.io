@@ -17,7 +17,7 @@ date: 2025-06-30
 此解法是問 ChatGPT 得到的。過程大致如下：
 
 1. 詢問 ChatGPT 解法，條件是要能一次大量轉換指定目錄下的所有檔案（包含子目錄）。ChatGPT 提供的幾個解法當中，有一個是 PowerShell 命令，可一次將多個檔案的編碼一律轉換成 UTF-8。
-2. 從 GitHub 上面找到一個開源工具 [chardet](https://github.com/chardet/chardet) 有支援偵測 Big5 編碼，而且準確率是足夠可靠的。
+2. 從 GitHub 上面找到一個開源工具 [chardet](https://github.com/chardet/chardet) 有支援偵測 Big5 編碼，而且準確率看起來是可用的（誤判率低）。
 3. 請 ChatGPT 修改步驟 1 生成的 PowerShell 指令，在將檔案編碼轉換成 UTF-8 之前，先調用 chardet 的編碼偵測結果來判斷檔案是否為 Big5，是的話才執行轉換。若檔案不是 Big5 編碼則略過。
 
 接著是完整的步驟和指令腳本。
