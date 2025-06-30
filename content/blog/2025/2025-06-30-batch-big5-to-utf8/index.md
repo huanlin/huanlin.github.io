@@ -1,12 +1,13 @@
 ---
-title: Batch-convert file encoding from Big5 to UTF-8
+title: Batch-convert file encoding
+slug: "batch-convert-file-encoding"
 date: 2025-06-30
 ---
 
 > 在利用 Gemini CLI 幫我整理舊專案的程式時，我發現有些被 Gemini CLI 改過的檔案，裡面的中文字會變成亂碼。這才知道它目前並未支援檔案編碼的偵測，而是一律把修改過的檔案以 UTF-8 編碼來儲存，因而導致某些原先以 Big5 編碼的檔案內的中文字變成亂碼。若要手動一個個轉檔，太耗時費力了，也容易遺漏。本文將介紹如何以 PowerShell 和 Python 寫成的自動化腳本來解決這個問題。
 
 
-**目標：** 批次轉換檔案的編碼，從 Big5 轉換成 UTF-8。
+**目標：** 批次轉換檔案的編碼，從 Big5 轉換成 UTF-8。（稍加修改之後也能用來處理其他編碼的轉換）
 
 **前提：** 必須先偵測檔案的編碼是否為 Big5，是的話才能轉換成 UTF-8 編碼。不能任何檔案拿來就直接轉成 UTF-8，否則檔案裏面的中文字（或其他語言的字元）可能會變成亂碼。
 
