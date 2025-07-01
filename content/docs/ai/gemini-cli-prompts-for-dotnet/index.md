@@ -18,6 +18,8 @@ tags: ["AI", ".NET"]
 > [!IMPORTANT]
 > 由 AI 工具改動的程式碼一定要逐一 review 其修改結果。例如以 Git Diff 逐一查看修改前後的差異。
 
+以下各節為提示詞。使用前，請先將當前路徑切換至你的 .NET 專案或 repository 的所在目錄，然後再啟動 Gemini CLI。
+
 ## 第一步：總結專案
 
 先用以下提示來讓 AI agent 替你的專案進行程式架構的分析與總結：
