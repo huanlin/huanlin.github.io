@@ -7,7 +7,10 @@ tags: ["AI", ".NET"]
 
 ## 背景知識
 
-- [什麼是 Gemini CLI](https://blog.google/intl/zh-tw/products/cloud/gemini-cli-your-open-source-ai-agent/)，以及[快速入門](https://github.com/google-gemini/gemini-cli?tab=readme-ov-file#quickstart)。
+您需要先了解[什麼是 Gemini CLI](https://blog.google/intl/zh-tw/products/cloud/gemini-cli-your-open-source-ai-agent/)，而且知道[如何安裝和啟動它](https://github.com/google-gemini/gemini-cli?tab=readme-ov-file#quickstart)。
+
+> [!NOTE]
+> 雖然本文是針對 Gemini CLI 而寫，但提示詞應該也適用於其他具備相似能力的 AI agents。
 
 ## 限制與注意事項
 
