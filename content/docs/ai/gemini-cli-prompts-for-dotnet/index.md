@@ -5,6 +5,10 @@ tags: ["AI", ".NET"]
 
 **摘要：** 此筆記整理了幾個我用來重構和改進 .NET 專案的 Gemini CLI 提示詞。
 
+## 背景知識
+
+- [什麼是 Gemini CLI](https://blog.google/intl/zh-tw/products/cloud/gemini-cli-your-open-source-ai-agent/)，以及[快速入門](https://github.com/google-gemini/gemini-cli?tab=readme-ov-file#quickstart)。
+
 ## 限制與注意事項
 
 寫作此文時，Gemini CLI 並未具備偵測檔案字元編碼且自動「**無損**」轉換成 UTF-8 編碼的能力。它會將修改過的檔案都一律儲存成 UTF-8 編碼，這可能造成某些非 UTF-8 編碼的檔案中的字元變成亂碼。
@@ -131,3 +135,9 @@ tags: ["AI", ".NET"]
 ```text
 在 [專案檔.csproj] 中啟用可為 Null 參考型別 (Nullable Reference Types)，然後修復因此產生的編譯警告。
 ```
+
+---
+
+先這樣，有新的再補上。
+
+Keep coding with AI!
