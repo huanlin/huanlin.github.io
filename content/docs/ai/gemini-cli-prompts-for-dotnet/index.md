@@ -12,11 +12,13 @@ tags: ["AI", ".NET"]
 > [!NOTE]
 > 雖然本文是針對 Gemini CLI 而寫，但提示詞應該也適用於其他具備相似能力的 AI agents。
 
+![](images/ip-man.png#center)
+
 ## 限制與注意事項
 
-寫作此文時，Gemini CLI 並未具備偵測檔案字元編碼且自動「**無損**」轉換成 UTF-8 編碼的能力。它會將修改過的檔案都一律儲存成 UTF-8 編碼，這可能造成某些非 UTF-8 編碼的檔案中的字元變成亂碼。
+寫作此文時，Gemini CLI 並**未具備**偵測檔案字元編碼且自動「**無損**」轉換成 UTF-8 編碼的能力。它會將修改過的檔案都一律儲存成 UTF-8 編碼，<mark>這可能造成某些非 UTF-8 編碼的檔案中的字元變成亂碼。</mark>
 
-因此，在給 Gemini CLI 改造程式碼之前，請務必先那些檔案的字元編碼改為 UTF-8。具體做法可參考這篇文章：[批次轉換檔案編碼（Big5 至 UTF-8）](https://www.huanlintalk.com/2025/06/batch-convert-file-encoding.html)。
+因此，在給 Gemini CLI 改造程式碼之前，請務必先把那些檔案的字元編碼改為 UTF-8。具體做法可參考這篇文章：[批次轉換檔案編碼（Big5 至 UTF-8）](https://www.huanlintalk.com/2025/06/batch-convert-file-encoding.html)。
 
 > [!IMPORTANT]
 > 由 AI 工具改動的程式碼一定要逐一 review 其修改結果。例如以 Git Diff 逐一查看修改前後的差異。
