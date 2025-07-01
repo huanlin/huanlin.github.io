@@ -78,6 +78,8 @@ tags: ["AI", ".NET"]
 
 ## Code readability
 
+本節包含程式碼可讀性相關的提示。
+
 ### File-scoped namespaces
 
 ```text
@@ -140,4 +142,4 @@ tags: ["AI", ".NET"]
 
 先這樣，有新的再補上。
 
-Keep coding with AI!
+Keep coding with AI 😊
