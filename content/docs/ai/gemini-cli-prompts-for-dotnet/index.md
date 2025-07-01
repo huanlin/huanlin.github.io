@@ -24,20 +24,6 @@ tags: ["AI", ".NET"]
 
 然後，從 AI 總結的輸出結果當中，再逐條針對個別改善建議對 AI agent 提出具體的問題。或者，您也可以參考以下個小節的常用提示，直接複製或稍加修改後餵給 AI agent。
 
-幫我看看 GitHub Actions workflow 配置檔案有沒有不恰當之處，例如打包 package 的時候不應該包含測試專案。
-
-## CI/CD
-
-```text
-建立 GitHub Actions workflow 來建置和發布此專案。
-```
-
-### 使用 MinVer
-
-```text
-使用 MinVer 套件來自動管理此專案的建置與發布時的版本編號，並且視需要修改 GitHub Actions workflow。
-```
-
 ## Project and package
 
 ### 使用 Central Package Management
@@ -68,6 +54,22 @@ tags: ["AI", ".NET"]
 
 ```text
 分析此專案，找出可能未被使用到的 NuGet 套件並列出清單。
+```
+
+## CI/CD
+
+```text
+建立 GitHub Actions workflow 來建置和發布此專案。
+```
+
+```text
+檢查 GitHub Actions workflow，看看有沒有不恰當的地方，例如打包 package 時不應該連同測試專案的 DLL 也一併打包和發布。
+```
+
+### 使用 MinVer
+
+```text
+使用 MinVer 套件來自動管理此專案的建置與發布時的版本編號，並且視需要修改 GitHub Actions workflow。
 ```
 
 ## Code readability
