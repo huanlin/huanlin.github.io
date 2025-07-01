@@ -11,6 +11,9 @@ tags: ["AI", ".NET"]
 
 因此，在給 Gemini CLI 改造程式碼之前，請務必先那些檔案的字元編碼改為 UTF-8。具體做法可參考這篇文章：[批次轉換檔案編碼（Big5 至 UTF-8）](https://www.huanlintalk.com/2025/06/batch-convert-file-encoding.html)。
 
+> [!IMPORTANT]
+> 由 AI 工具改動的程式碼一定要逐一 review 其修改結果。例如以 Git Diff 逐一查看修改前後的差異。
+
 ## 第一步：總結專案
 
 先用以下提示來讓 AI agent 替你的專案進行程式架構的分析與總結：
