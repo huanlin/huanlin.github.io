@@ -125,6 +125,8 @@ tags: ["AI", ".NET"]
 
 ## Optimizations
 
+本節包含程式效能優化相關的提示。
+
 ### 使用 `async/await`
 
 ```text
@@ -138,6 +140,8 @@ tags: ["AI", ".NET"]
 ```
 
 ## Best practices
+
+本節包含最佳實踐的提示。
 
 ### 啟用 Nullable 參考型別
 
