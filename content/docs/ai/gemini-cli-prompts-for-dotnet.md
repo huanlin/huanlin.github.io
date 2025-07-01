@@ -3,6 +3,8 @@ title: Gemini CLI 提示詞 for .NET projects
 tags: ["AI", ".NET"]
 ---
 
+**摘要：** 此筆記整理了幾個我用來重構和改進 .NET 專案的 Gemini CLI 提示詞。
+
 ## 限制與注意事項
 
 寫作此文時，Gemini CLI 並未具備偵測檔案字元編碼且自動「**無損**」轉換成 UTF-8 編碼的能力。它會將修改過的檔案都一律儲存成 UTF-8 編碼，這可能造成某些非 UTF-8 編碼的檔案中的字元變成亂碼。
@@ -35,13 +37,7 @@ tags: ["AI", ".NET"]
 
 ### Project and package
 
-Target framework:
-
-```text
-更新目標框架為 net9.0，並修正不相容的 API。
-```
-
-使用 Central Package Management：
+#### 使用 Central Package Management
 
 ```text
 使用 Central Package Management (CPM) 來統一管理相依套件的版本。
@@ -53,7 +49,19 @@ Target framework:
 
 ![](images/gemini-cli-cpm.png)
 
-找出未使用的 NuGet 套件：
+最後，Gemini CLI 會問你是否可以真的開始修改你的檔案：
+
+![](images/gemini-cli-cpm-2.png)
+
+放心的話，可以選擇 "Yes, allow always"，即一路開綠燈讓 Gemini CLI 一口氣把工作全部執行完畢。
+
+#### Target framework
+
+```text
+更新目標框架為 net9.0，並修正不相容的 API。
+```
+
+#### 找出未使用的 NuGet 套件
 
 ```text
 分析此專案，找出可能未被使用到的 NuGet 套件並列出清單。
