@@ -26,9 +26,11 @@ tags: ["AI", ".NET"]
 分析此 solution 的程式架構，列出可改進之處。
 ```
 
-然後，從 AI 總結的輸出結果當中，再逐條針對個別改善建議對 AI agent 提出具體的問題。或者，您也可以參考以下個小節的常用提示，直接複製或稍加修改後餵給 AI agent。
+然後，從 AI 總結的輸出結果當中，再逐條針對個別改善建議對 AI agent 提出具體的問題。或者，您也可以參考以下各小節的常用提示，直接複製或稍加修改後餵給 AI agent。
 
 ## Project and package
+
+本節包含專案與套件管理相關的提示。
 
 ### 使用 Central Package Management
 
