@@ -124,16 +124,16 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 
 (1) 代名詞 they 可能指：
 
-  * Aparna 和 Phil
-  * Maysam 和 Karan
-  * Aparna、Phil、Maysam 和 Karan（全部）
-  * 任一個人，作為單數中性的「they」 <br>
+* Aparna 和 Phil
+* Maysam 和 Karan
+* Aparna、Phil、Maysam 和 Karan（全部）
+* 任一個人，作為單數中性的「they」 <br>
 
 (2) 代名詞 this 可能指：
 
-  * 透過設定檔進行匯入
-  * 在執行階段動態匯入
-  * 兩者皆是
+* 透過設定檔進行匯入
+* 在執行階段動態匯入
+* 兩者皆是
 
 {{< /bs/collapse >}}
 
