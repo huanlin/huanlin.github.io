@@ -67,9 +67,6 @@ tech-writing:
     name: "pen"
     color: "black"
   items:
-    - title: "Google Courses"
+    - title: "Google 技術寫作課程（中文版）"
       description: "Technical writing courses (Google)"
-      url: "https://developers.google.com/tech-writing/overview"
-    - title: "Google Resources"
-      description: "Technical writing resources (Google)"
-      url: "https://developers.google.com/tech-writing/resources"
+      url: "/docs/tech-writing-courses/"

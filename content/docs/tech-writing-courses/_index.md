@@ -1,5 +1,5 @@
 ---
-title: Google 技術寫作課程
+title: Google 技術寫作課程（中文版）
 weight: 91
 ---
 
@@ -45,4 +45,4 @@ weight: 91
 
 ## 聯繫譯者
 
-如對此中文版有任何建議或指正，歡迎透過 Facebook 聯繫譯者：<https://www.facebook.com/huanlin.notes>。
+如對此中文版有任何建議或指正，歡迎透過 Facebook 聯繫我：<https://www.facebook.com/huanlin.notes>。
