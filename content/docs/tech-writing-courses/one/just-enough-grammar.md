@@ -43,9 +43,9 @@ weight: 2
 
 <br>
 
-{{< details summary="**點我看答案**" open=false >}}
+{{< bs/collapse heading="點我看答案" expand=false >}}
 <br>**C** enables **programmers** to control **pointers** and **memory**. Great **power** brings great **responsibility**.
-{{< /details >}}
+{{< /bs/collapse >}}
 
 <br>
 
@@ -83,9 +83,9 @@ weight: 2
 
 <br />
 
-{{< details summary="**點我看答案**" open=false >}}
-<br>The cafeteria featured peanut butter and plum jam on rye toast. Employees found **it** awesome and wished **they** could eat **this** every day.
-{{< /details >}}
+{{< bs/collapse heading="點我看答案" expand=false >}}
+The cafeteria featured peanut butter and plum jam on rye toast. Employees found **it** awesome and wished **they** could eat **this** every day.
+{{< /bs/collapse >}}
 
 <br>
 
@@ -121,9 +121,9 @@ weight: 2
 
 <br>
 
-{{< details summary="**點我看答案**" open=false >}}
-<br>Samantha **is coding** Operation Bullwinkle in C++. This project currently **consumes** over 80,000 lines of code. She previously **used** Python, but recently **gravitated** to C++. Samantha **leads** a team of four software engineers, which will **grow** to six software engineers next quarter.
-{{< /details >}}
+{{< bs/collapse heading="點我看答案" expand=false >}}
+Samantha **is coding** Operation Bullwinkle in C++. This project currently **consumes** over 80,000 lines of code. She previously **used** Python, but recently **gravitated** to C++. Samantha **leads** a team of four software engineers, which will **grow** to six software engineers next quarter.
+{{< /bs/collapse >}}
 
 <br>
 
@@ -155,9 +155,9 @@ weight: 2
 
 <br>
 
-{{< details summary="**點我看答案**" open=false >}}
-<br>Engineering is a **great** career for a **brilliant** mind. I know a **clever** engineer who could excel at any **intellectual** task.
-{{< /details >}}
+{{< bs/collapse heading="點我看答案" expand=false >}}
+Engineering is a **great** career for a **brilliant** mind. I know a **clever** engineer who could excel at any **intellectual** task.
+{{< /bs/collapse >}}
 
 <br>
 
@@ -191,9 +191,9 @@ weight: 2
 
 <br>
 
-{{< details summary="**點我看答案**" open=false >}}
-<br>Parameters may optionally appear within a URL, after the path.
-{{< /details >}}
+{{< bs/collapse heading="點我看答案" expand=false >}}
+Parameters may optionally appear **within** a URL, **after** the path.
+{{< /bs/collapse >}}
 
 <br>
 
@@ -235,10 +235,10 @@ weight: 2
 
 <br>
 
-{{< details summary="**點我看答案**" open=false >}}
-<br>這種情況下最好的轉折語如下：
+{{< bs/collapse heading="點我看答案" expand=false >}}
+這種情況下最好的轉折語如下：
 
 **However** (然而)
-{{< /details >}}
+{{< /bs/collapse >}}
 
 <br>
