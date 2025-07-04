@@ -1,0 +1,2638 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  
+<!-- Mirrored from developers.google.com/tech-writing/two/sample-code by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Jul 2025 00:14:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#fff"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="https://developers.google.com/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="http://www.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="http://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="http://fonts.googleapis.com/" crossorigin>
+    <link rel="preconnect" href="http://apis.google.com/" crossorigin>
+    <link rel="preconnect" href="http://www.google-analytics.com/" crossorigin><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&amp;display=swap">
+      <link rel="stylesheet"
+            href="http://fonts.googleapis.com/css2?family=Material+Icons&amp;family=Material+Symbols+Outlined&amp;display=block"><link rel="stylesheet" href="../../../www.gstatic.com/devrel-devsite/prod/v46d043083f27fa7361aea8506dabbd161e0b84f5a7c6df8d5e3cfad447dd4376/developers/css/app.css">
+      <link rel="shortcut icon" href="../../../www.gstatic.com/devrel-devsite/prod/v46d043083f27fa7361aea8506dabbd161e0b84f5a7c6df8d5e3cfad447dd4376/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="../../../www.gstatic.com/devrel-devsite/prod/v46d043083f27fa7361aea8506dabbd161e0b84f5a7c6df8d5e3cfad447dd4376/developers/images/touchicon-180-new.png"><link rel="canonical" href="sample-code.html"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google for Developers" href="https://developers.google.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="sample-code.html" /><link rel="alternate" hreflang="x-default" href="sample-code.html" /><title>Creating sample code &nbsp;|&nbsp; Technical Writing &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="Creating sample code &nbsp;|&nbsp; Technical Writing &nbsp;|&nbsp; Google for Developers"><meta property="og:url" content="sample-code.html"><meta property="og:image" content="../../../www.gstatic.com/devrel-devsite/prod/v46d043083f27fa7361aea8506dabbd161e0b84f5a7c6df8d5e3cfad447dd4376/developers/images/opengraph/white.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": "Creating sample code"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Technical Writing",
+      "item": "https://developers.google.com/tech-writing"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Creating sample code",
+      "item": "https://developers.google.com/tech-writing/two/sample-code"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="../../extras.css"></head>
+  <body class=""
+        template="page"
+        theme="white"
+        type="article"
+        
+        
+        
+        
+        layout="docs"
+        
+        
+          
+        
+        
+        
+          
+            concierge='closed'
+          
+        
+        display-toc
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar><devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/tech-writing">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-product-logo"
+           alt="Technical Writing"
+           src="../../static/tech-writing/images/TechWritingLogo.png"
+           srcset="https://developers.google.com/static/tech-writing/images/TechWritingLogo_36.png 36w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_48.png 48w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_72.png 72w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_96.png 96w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_480.png 480w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_720.png 720w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_856.png 856w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_960.png 960w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_1440.png 1440w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_1920.png 1920w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/tech-writing"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Technical Writing"
+      
+    >
+    
+          Technical Writing
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="../overview.html"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tech-writing/overview"
+    
+       track-type="nav"
+       track-metadata-position="nav - for students"
+       track-metadata-module="primary nav"
+       aria-label="For Students, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: For Students"
+         
+           track-name="for students"
+         
+       >
+    For Students
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="../for-instructors.html"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tech-writing/for-instructors"
+    
+       track-type="nav"
+       track-metadata-position="nav - for facilitators"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: For Facilitators"
+         
+           track-name="for facilitators"
+         
+       >
+    For Facilitators
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="../resources.html"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tech-writing/resources"
+    
+       track-type="nav"
+       track-metadata-position="nav - doc resources"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Doc Resources"
+         
+           track-name="doc resources"
+         
+       >
+    Doc Resources
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="../becoming.html"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tech-writing/becoming"
+    
+       track-type="nav"
+       track-metadata-position="nav - the profession"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: The Profession"
+         
+           track-name="the profession"
+         
+       >
+    The Profession
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="../announcements.html"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tech-writing/announcements"
+    
+       track-type="nav"
+       track-metadata-position="nav - announcements"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Announcements"
+         
+           track-name="announcements"
+         
+       >
+    Announcements
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    
+    project-name="Technical Writing"
+    tenant-name="Google for Developers"
+    project-scope="/tech-writing"
+    url-scoped="https://developers.google.com/s/results/tech-writing"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+        </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                <div class="devsite-product-id">
+                  
+                  
+                  
+                    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="../overview.html"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        For Students
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+                </div>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Lower tabs">
+      
+        
+          <tab  >
+            
+    <a href="../overview.html"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tech-writing/overview"
+    
+       track-type="nav"
+       track-metadata-position="nav - overview"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Overview"
+         
+           track-name="overview"
+         
+       >
+    Overview
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="../one.html"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tech-writing/one"
+    
+       track-type="nav"
+       track-metadata-position="nav - technical writing one"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Technical Writing One"
+         
+           track-name="technical writing one"
+         
+       >
+    Technical Writing One
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="../two.html"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tech-writing/two"
+    
+       track-type="nav"
+       track-metadata-position="nav - technical writing two"
+       track-metadata-module="primary nav"
+       aria-label="Technical Writing Two, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Technical Writing Two"
+         
+           track-name="technical writing two"
+         
+       >
+    Technical Writing Two
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="../accessibility.html"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tech-writing/accessibility"
+    
+       track-type="nav"
+       track-metadata-position="nav - accessibility"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Accessibility"
+         
+           track-name="accessibility"
+         
+       >
+    Accessibility
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="../error-messages.html"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/tech-writing/error-messages"
+    
+       track-type="nav"
+       track-metadata-position="nav - error messages"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Error Messages"
+         
+           track-name="error messages"
+         
+       >
+    Error Messages
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars >
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/tech-writing">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-product-logo"
+           alt="Technical Writing"
+           src="../../static/tech-writing/images/TechWritingLogo.png"
+           srcset="https://developers.google.com/static/tech-writing/images/TechWritingLogo_36.png 36w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_48.png 48w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_72.png 72w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_96.png 96w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_480.png 480w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_720.png 720w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_856.png 856w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_960.png 960w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_1440.png 1440w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_1920.png 1920w, https://developers.google.com/static/tech-writing/images/TechWritingLogo_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/tech-writing"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Technical Writing"
+      
+    >
+    
+          Technical Writing
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="../overview.html"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: For Students"
+      
+        track-name="for students"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: For Students"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      For Students
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+                <ul class="devsite-nav-responsive-tabs">
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="../overview.html"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Overview"
+      
+        track-name="overview"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Overview"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Overview
+   </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="../one.html"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Technical Writing One"
+      
+        track-name="technical writing one"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Technical Writing One"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Technical Writing One
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="../two.html"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Technical Writing Two"
+      
+        track-name="technical writing two"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Technical Writing Two"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip menu="_book">
+      Technical Writing Two
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="_book">
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="../accessibility.html"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Accessibility"
+      
+        track-name="accessibility"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Accessibility"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Accessibility
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                    
+                    
+                    
+                    <li class="devsite-nav-item">
+                      
+  
+  <a href="../error-messages.html"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Error Messages"
+      
+        track-name="error messages"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Error Messages"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Error Messages
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+                    </li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="../for-instructors.html"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: For Facilitators"
+      
+        track-name="for facilitators"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: For Facilitators"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      For Facilitators
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="../resources.html"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Doc Resources"
+      
+        track-name="doc resources"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Doc Resources"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Doc Resources
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="../becoming.html"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: The Profession"
+      
+        track-name="the profession"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: The Profession"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      The Profession
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="../announcements.html"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Announcements"
+      
+        track-name="announcements"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Announcements"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Announcements
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Pre-Class material</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="../two.html"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /tech-writing/two"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/tech-writing/two"
+      ><span class="devsite-nav-text" tooltip>Introduction (2 min)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="editing.html"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /tech-writing/two/editing"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/tech-writing/two/editing"
+      ><span class="devsite-nav-text" tooltip>Self-editing (10 min)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="large-docs.html"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /tech-writing/two/large-docs"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/tech-writing/two/large-docs"
+      ><span class="devsite-nav-text" tooltip>Organizing large docs (20 min)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="illustrations.html"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /tech-writing/two/illustrations"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/tech-writing/two/illustrations"
+      ><span class="devsite-nav-text" tooltip>Illustrating (10 min)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="sample-code.html"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /tech-writing/two/sample-code"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/tech-writing/two/sample-code"
+      ><span class="devsite-nav-text" tooltip>Creating sample code (10 min)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="summary.html"
+        class="devsite-nav-title gc-analytics-event"
+        data-category="Site-Wide Custom Events"
+        data-label="Book nav link, pathname: /tech-writing/two/summary"
+        track-type="bookNav"
+        track-name="click"
+        track-metadata-eventdetail="/tech-writing/two/summary"
+      ><span class="devsite-nav-text" tooltip>Summary (1 min)</span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav">
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article"><style>
+      /* Styles inlined from /tech-writing/tw.css */
+/* Hide breadcrumb/description in top nav */
+.devsite-header-background .devsite-product-id-row {
+  display: none;
+}
+
+blockquote {
+  font-style: normal;
+}
+
+/*
+ * The following classes control text highlighting in the course. Wrap your text
+ * in a span tag, add the highlight class, and the <color>-span class of your
+ * choice.
+ */
+
+.highlight {
+  padding: 2px;
+}
+
+.good-example-span {
+  background-color: #DCEDC8;
+  color: #33691E;
+}
+
+.bad-example-span {
+  background-color: #FFCDD2;
+  color: #B71C1C;
+}
+
+.what-span::before {
+  font-weight: bold;
+  content: '<Start of What> ';
+}
+.what-span::after {
+  font-weight: bold;
+  content: ' <End of What>';
+}
+.what-span {
+  background-color: #DCEDC8;
+  color: #33691E;
+}
+
+.main-image {
+  height: 300px;
+}
+
+.yellow-span {
+  background-color: #FFF9C4;
+  color: #984A06;
+}
+
+h1.center {
+  text-align: center;
+  color: #984A06;
+}
+
+h3.exercise {
+  font-style: italic;
+  font-color: #984F3F;
+  font-size: 20px;
+}
+
+th.center {
+  text-align: center;
+  border-left: 1px solid black;
+}
+
+th.date {
+  width: 15%;
+}
+
+h3.qanda {
+  color: #984F3F;
+  font-size: 14pt;
+}
+
+div.container1 {
+  height: 400px;
+}
+
+.why-span::before {
+  font-weight: bold;
+  content: '<Start of Why> ';
+}
+.why-span::after {
+  font-weight: bold;
+  content: ' <End of Why>';
+}
+.why-span {
+  background-color: #FFF9C4;
+  color: #984A06;
+}
+
+.blue-span {
+  background-color: #B3E5FC;
+  color: #01579B;
+}
+
+.how-span::before {
+  font-weight: bold;
+  content: '<Start of How> ';
+}
+.how-span::after {
+  font-weight: bold;
+  content: ' <End of How> ';
+}
+.how-span {
+  background-color: #B3E5FC;
+  color: #01579B;
+}
+
+.red-span {
+  background-color: #FFCDD2;
+  color: #B71C1C;
+}
+
+img.tw-profile-img {
+  max-height:300px;
+}
+
+img.main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 400px;
+}
+
+h2.main {
+  text-align: center;
+}
+
+hr.examples {
+  margin-top: 25px;
+  margin-bottom: 28px;
+}
+
+p.next-unit {
+  margin-top: 35px;
+}
+
+blockquote.ending-example {
+  margin-bottom: 40px;
+}
+
+.internal-only {
+  background-color: #fff4e6;
+  padding: 4px 15px;
+  border: 1px solid black;
+}
+
+section.internal-only aside, div.internal-only aside {
+  padding-top: 15px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+      </style>
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developers.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Home
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.com/tech-writing"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail="Technical Writing"
+      
+    >
+    
+        Technical Writing
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="../overview.html"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        For Students
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="../two.html"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        Technical Writing Two
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Technical Writing"
+  product-id="5144150"
+  bucket="Documentation"
+  context=""
+  version="t-devsite-webserver-20250626-r00-rc01.470124196238700247"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/tech-writing/images/TechWritingLogo.png"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      Creating sample code<div class="devsite-actions" hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Dismiss"
+
+      
+      close-button-text="Got it">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      Stay organized with collections
+    </span>
+    <span slot="popout-contents">
+      
+      Save and categorize content based on your preferences.
+    </span>
+  </devsite-feature-tooltip><devsite-key-takeaways></devsite-key-takeaways></div>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+<p></p>
+
+<p><devsite-engedu-telemetry program="TW_EDU"></devsite-engedu-telemetry></p>
+
+
+
+<aside class="note time"><strong>Estimated Time:</strong> 10 minutes</aside>
+
+
+
+<p>Good sample code is often the best documentation.  Even if your paragraphs and
+lists are as clear as blue water, programmers still prefer good sample code.
+After all, text and code are different languages, and it is code that the
+reader ultimately cares about.  Trying to describe code with text is like
+trying to explain an Italian poem in English.</p>
+
+<p>Good samples are <strong>correct</strong> and <strong>concise</strong> code that your readers can
+<strong>quickly understand</strong> and <strong>easily reuse</strong> with <strong>minimal side effects</strong>.</p>
+
+<h2 id="correct" data-text="Correct" tabindex="-1">Correct</h2>
+
+<p>Sample code should meet the following criteria:</p>
+
+<ul>
+<li>Build without errors.</li>
+<li>Perform the task it claims to perform.</li>
+<li>Be as production-ready as possible. For example, the code shouldn&#39;t
+contain any security vulnerabilities.</li>
+<li>Follow language-specific conventions.
+</li>
+</ul>
+
+<p>Sample code is an opportunity to directly influence how your users write code.
+Therefore, sample code should set the best way to use your product. If
+there is more than one way to code the task, code it in the manner
+that your team has decided is best. If your team hasn&#39;t considered
+the pros and cons of each approach, take time to do so.</p>
+
+<p>Always test your sample code. Over time, systems change and your sample
+code may break. Be prepared to test and maintain sample code as you would
+any other code.</p>
+
+<p>Many teams reuse their unit tests as sample programs, which is sometimes a
+bad idea.  The primary goal of a unit test is to test; the only goal of a
+sample program is to educate.</p>
+
+<p>A <strong>snippet</strong> is a piece of a sample program, possibly only one or a few
+lines long.  Snippet-heavy documentation often degrades over time because
+teams tend not to test snippets as rigorously as full sample programs.</p>
+
+</span></aside>
+<h3 id="running_sample_code" data-text="Running sample code" tabindex="-1">Running sample code</h3>
+
+<p>Good documents explain how to run sample code.  For example, your document might
+need to tell users to perform activities such as the following prior to running
+the samples:</p>
+
+<ul>
+<li>Install a certain library.</li>
+<li>Adjust the values assigned to certain environment variables.</li>
+<li>Adjust something in the integrated development environment (IDE).</li>
+</ul>
+
+<p>Users don&#39;t always perform the preceding activities properly.  In some
+situations, users prefer to run or (experiment with) sample code directly
+in the documentation. (&quot;Click here to run this code.&quot;)</p>
+
+<p>Writers should consider describing the expected output or result of sample code,
+especially for sample code that is difficult to run.</p>
+
+<h2 id="concise" data-text="Concise" tabindex="-1">Concise</h2>
+
+<p>Sample code should be short, including only essential components.  When
+a novice C programmer wants to learn how to call the <code translate="no" dir="ltr">malloc</code> function,
+give that programmer a brief snippet, not the entire Linux source tree.
+Irrelevant code can distract and confuse your audience.  That said, never
+use bad practices to shorten your code; always prefer correctness over
+conciseness.</p>
+
+<h2 id="understandable" data-text="Understandable" tabindex="-1">Understandable</h2>
+
+<p>Follow these recommendations to create clear sample code:</p>
+
+<ul>
+<li>Pick descriptive class, method, and variable names.</li>
+<li>Avoid confusing your readers with hard-to-decipher programming tricks.</li>
+<li>Avoid deeply nested code.</li>
+<li>Optional: Use bold or colored font to draw the reader&#39;s attention
+to a specific section of your sample code. However, use highlighting
+judiciously—too much highlighting means the reader won&#39;t focus on
+anything in particular.</li>
+</ul>
+
+<h3 id="exercise" data-text="Exercise" tabindex="-1">Exercise</h3>
+
+<p>Which of the following would be a more helpful line of code in a
+sample program? Assume that the target audience consists of
+software engineers new to the <code translate="no" dir="ltr">go.so</code> API.</p>
+
+<ol>
+<li><code translate="no" dir="ltr">MyLevel = go.so.Level(5, 28, 48)</code></li>
+<li><code translate="no" dir="ltr">MyLevel = go.so.Level(rank=5, 28, 48)</code></li>
+<li><code translate="no" dir="ltr">MyLevel = go.so.Level(rank=5, dimension=28, opacity=48)</code></li>
+</ol>
+
+<section class="expandable">
+
+<h4 class="showalways" id="click-the-icon-to-see-the-answer." data-text=" Click the icon to see the answer. " tabindex="-1">
+Click the icon to see the answer.
+</h4>
+
+<div class="expand-background">
+Answer <b>3</b> is the best choice here. Although it is tempting to keep sample
+code as short as possible, omitting parameter names makes it harder for novices
+to learn.
+</div>
+
+<hr />
+</section>
+
+<h2 id="commented" data-text="Commented" tabindex="-1">Commented</h2>
+
+<p>Consider the following recommendations about comments in sample code:</p>
+
+<ul>
+<li>Keep comments short, but always prefer clarity over brevity.</li>
+<li>Avoid writing comments about <em>obvious</em> code, but remember that what
+is obvious to you (the expert) might not be obvious to newcomers.</li>
+<li>Focus your commenting energy on anything non-intuitive in the code.</li>
+<li>When your readers are very experienced with a technology, don&#39;t explain
+<em>what</em> the code is doing, explain <em>why</em> the code is doing it.</li>
+</ul>
+
+<p>Should you place descriptions of code inside code comments or in
+text (paragraphs or lists) outside of the sample code?  Note that readers
+who copy-and-paste a snippet gather not only the code but also any embedded
+comments. So, put any descriptions that belong in the pasted code into the code
+comments.  By contrast, when you must explain a lengthy or tricky concept,
+you should typically place the text before the sample program.</p>
+<aside class="note"><strong>Note:</strong><span> If you must sacrifice production readiness in order to make the
+code shorter and easier to understand, explain your decisions in the comments.</span></aside>
+<h3 id="exercise_2" data-text="Exercise" tabindex="-1">Exercise</h3>
+
+<p>What problems do you see in the comments within the following snippet?
+Assume that the code is aimed at programmers who are new to the <code translate="no" dir="ltr">br</code> API
+but who have some experience with the concept of streams:</p>
+
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Scilab"><span class="devsite-syntax-o">/*</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">Create</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">a</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">stream</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">from</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">the</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">text</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">file</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">at</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">pathname</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">/</span><span class="devsite-syntax-n">tmp</span><span class="devsite-syntax-o">/</span><span class="devsite-syntax-n">myfile</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">*/</span>
+<span class="devsite-syntax-n">mystream</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">br</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-n">openstream</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">pathname</span><span class="devsite-syntax-p">=</span><span class="devsite-syntax-s">"/tmp/myfile"</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nb">mode</span><span class="devsite-syntax-p">=</span><span class="devsite-syntax-s">"z"</span><span class="devsite-syntax-p">)</span></pre></devsite-code>
+
+<section class="expandable">
+
+<h4 class="showalways" id="click-the-icon-to-see-the-answer._1" data-text=" Click the icon to see the answer. " tabindex="-1">
+Click the icon to see the answer.
+</h4>
+
+<div class="expand-background">
+The comments contain the following flaws:
+
+<ul>
+<li>The comment elaborates on a fairly obvious part of the code.</li>
+<li>The snippet doesn't explain the non-obvious portion of the code. Namely,
+    what is the <tt>mode</tt> parameter and what does a value of <tt>z</tt>
+    mean?</li>
+</ul>
+</div>
+
+<hr />
+</section>
+
+<h2 id="reusable" data-text="Reusable" tabindex="-1">Reusable</h2>
+
+<p>For your reader to easily reuse your sample code, provide the following:</p>
+
+<ul>
+<li>All information necessary to run the sample code, including any
+dependencies and setup.</li>
+<li>Code that can be extended or customized in useful ways.</li>
+</ul>
+
+<p>Having easy-to-understand sample code that&#39;s concise and compiles is
+a great start. If it blows up your reader&#39;s app, though, they won&#39;t
+be happy. Therefore, when writing sample code, consider any potential
+side effects caused by your code being integrated into another program.
+Nobody wants insecure or grossly inefficient code.</p>
+
+<h2 id="the_example_and_the_anti-example" data-text="The example and the anti-example" tabindex="-1">The example and the anti-example</h2>
+
+<p>In addition to showing readers <em>what to do</em>, it is sometimes wise to show
+readers <em>what not to do</em>.  For example, many programming languages
+permit programmers to place white space on either side of the equals sign.
+Now suppose that you were writing a tutorial on a language (such as bash)
+that does not permit white space on either side of the equals sign. In this
+case, showing both a good example and an anti-example will benefit the reader.
+For example:</p>
+
+<p><span class="compare-better"></span></p>
+
+<div></div><devsite-code><pre class="bash" translate="no" dir="ltr" is-upgraded>
+# A valid string assignment.
+s="The rain in Maine."
+</pre></devsite-code>
+
+<p><span class="compare-worse"></span></p>
+
+<div></div><devsite-code><pre class="bash" translate="no" dir="ltr" is-upgraded>
+# An invalid string assignment because of the white space on either side of the
+# equals sign.
+s = "The rain in Maine."
+</pre></devsite-code>
+
+
+
+<h2 id="sequenced" data-text="Sequenced" tabindex="-1">Sequenced</h2>
+
+<p>A good sample code set demonstrates <strong>a range of complexity</strong>.</p>
+
+<p>Readers completely unfamiliar with a certain technology typically
+crave simple examples to get started.  The first and most basic
+example in a sample code set is usually termed a
+<a href="https://wikipedia.org/wiki/%22Hello,_World!%22_program" 
+class="external" target="T">Hello World program</a>.  After mastering the basics, engineers
+want more complex programs. A good set of sample code provides a healthy
+range of simple, moderate, and complex sample programs.</p>
+
+<h3 id="exercise_3" data-text="Exercise" tabindex="-1">Exercise</h3>
+
+<p>Which of the following would be a good set of sample functions to support
+a tutorial introducing newcomers to the concept of functions?</p>
+
+<ol>
+<li>The following set of functions:
+<ol>
+<li>A function that takes no parameters and doesn&#39;t return anything.</li>
+<li>A function that takes one parameter but doesn&#39;t return anything.</li>
+<li>A function that takes one parameter and returns one value.</li>
+<li>A function that takes three parameters and returns one value.</li>
+</ol></li>
+<li>The following set of functions:
+<ol>
+<li>A function that takes three parameters and returns one value.</li>
+</ol></li>
+<li>The following set of functions:
+<ol>
+<li>A function that takes one parameter and returns one value.</li>
+<li>A function that takes three parameters and returns one value.</li>
+</ol></li>
+</ol>
+
+<section class="expandable">
+
+<h4 class="showalways" id="click-the-icon-to-see-the-answer._2" data-text=" Click the icon to see the answer. " tabindex="-1">
+Click the icon to see the answer.
+</h4>
+
+<div class="expand-background">
+The best answer is <b>1</b>. Providing samples that cover a range of complexity
+is usually the wisest choice—particularly for newcomers. Resist the
+temptation to <i>rush</i> towards very complex sample programs, bypassing
+the beginner and intermediate sample programs that newcomers crave.
+</div>
+
+<hr />
+</section>
+
+<h2 id="whats_next" data-text="What's next?" tabindex="-1">What's next?</h2>
+
+<p>Congratulations: you&#39;ve completed the pre-class work for Technical Writing Two.</p>
+
+
+
+<p>If the in-class portion of Technical Writing Two is available in your
+organization, please take it. If you&#39;d like to facilitate the in-class portion
+of Technical Writing Two, see the
+<a href="../for-instructors/two/instructors-guide.html">facilitator&#39;s guide</a>.</p>
+
+
+
+<p>A quick compilation of the topics covered in Technical Writing Two
+is available on the <a href="summary.html">Summary</a> page.</p>
+  
+
+  
+</div>
+
+  
+    
+      <devsite-recommendations display="in-page" hidden yield>
+      </devsite-recommendations>
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="Technical Writing"
+  product-id="5144150"
+  bucket="Documentation"
+  context=""
+  version="t-devsite-webserver-20250626-r00-rc01.470124196238700247"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/tech-writing/images/TechWritingLogo.png"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+      <devsite-recommendations id="recommendations-link" yield></devsite-recommendations>
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2025-03-31 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="Technical Writing"
+  product-id="5144150"
+  bucket="Documentation"
+  context=""
+  version="t-devsite-webserver-20250626-r00-rc01.470124196238700247"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/tech-writing/images/TechWritingLogo.png"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-03-31 UTC."],[[["Good sample code is correct, concise, understandable, reusable, and potentially sequenced to demonstrate a range of complexity for users."],["Sample code should be treated like production code, built without errors, perform its intended task, be secure, and follow language-specific conventions."],["Comments within sample code should be concise, focus on non-intuitive parts, and explain the *why* more than the *what* for experienced users."],["Documentation for sample code should clearly explain how to run it, including setup instructions, dependencies, and expected outputs or results."],["Sample code sets ideally provide a range of complexity, from basic \"Hello World\" examples to more advanced use cases, to cater to different user skill levels."]]],["Good sample code should be correct, concise, understandable, and reusable. Correct code builds without errors, performs its task, is production-ready, and follows conventions. Concise code is short and includes only essential components. Understandable code uses descriptive names, avoids tricks, and limits nesting. Reusable code includes necessary dependencies and setup, and minimizes side effects.  Sample sets should demonstrate a range of complexity, starting simple and progressing to more complex examples. Comments should be short, focused on non-intuitive aspects, and explain why rather than what when the audience is experienced.\n"]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="Footer links">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Courses</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="../overview.html"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Technical writing courses
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="../for-instructors.html"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            Facilitator guides
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Resources</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="../resources.html"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+              
+              
+            
+          
+            Additional resources
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">The Profession</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="../becoming.html"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Becoming a technical writer
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="../becoming/meet.html"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+              
+              
+            
+          
+            Meet some technical writers
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/v46d043083f27fa7361aea8506dabbd161e0b84f5a7c6df8d5e3cfad447dd4376/developers/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="http://developer.android.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="http://developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="http://firebase.google.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="http://cloud.google.com/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="http://ai.google.dev/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google AI Link"
+         
+         >
+          Google AI
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developers.google.com/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="https://developers.google.com/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="http://policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+        
+        <span class="devsite-footer-utility-description">Sign up for the Google for Developers newsletter</span>
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="https://developers.google.com/newsletter/subscribe"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          Subscribe
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+          <devsite-concierge
+  
+  
+    data-info-panel
+  
+  
+    data-ai-panel
+  
+  
+  
+  
+    data-api-explorer-panel
+  >
+</devsite-concierge>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension4&#34;: &#34;Technical Writing&#34;, &#34;dimension5&#34;: &#34;en&#34;, &#34;dimension3&#34;: false, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension6&#34;: &#34;en&#34;, &#34;dimension11&#34;: false}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}, &#34;purpose&#34;: 1}]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}, {&#34;id&#34;: &#34;G-BXQZC8EJGC&#34;, &#34;purpose&#34;: 0}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;gtm&#34;: [], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Technical Writing&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+<script nonce="MEsipTwoKl9B3Sf8DEDipzD7ilx0oJ">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    '../../../www.gstatic.com/devrel-devsite/prod/v46d043083f27fa7361aea8506dabbd161e0b84f5a7c6df8d5e3cfad447dd4376/developers/js/app_loader.js', '[1,"en",null,"../../js/devsite_app_module.html","https://www.gstatic.com/devrel-devsite/prod/v46d043083f27fa7361aea8506dabbd161e0b84f5a7c6df8d5e3cfad447dd4376","https://www.gstatic.com/devrel-devsite/prod/v46d043083f27fa7361aea8506dabbd161e0b84f5a7c6df8d5e3cfad447dd4376/developers","https://developers-dot-devsite-v2-prod.appspot.com/",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v46d043083f27fa7361aea8506dabbd161e0b84f5a7c6df8d5e3cfad447dd4376/images/video-placeholder.svg","../../../www.gstatic.com/devrel-devsite/prod/v46d043083f27fa7361aea8506dabbd161e0b84f5a7c6df8d5e3cfad447dd4376/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["DevPro__enable_enterprise","Significatio__enable_by_tenant","MiscFeatureFlags__enable_explain_this_code","MiscFeatureFlags__gdp_dashboard_reskin_enabled","DevPro__enable_google_payments_buyflow","Profiles__require_profile_eligibility_for_signin","Search__enable_page_map","Cloud__enable_llm_concierge_chat","CloudShell__cloud_code_overflow_menu","MiscFeatureFlags__enable_variable_operator_index_yaml","MiscFeatureFlags__developers_footer_dark_image","Concierge__enable_concierge_restricted","MiscFeatureFlags__enable_variable_operator","Profiles__enable_completecodelab_endpoint","Profiles__enable_developer_profiles_callout","Cloud__enable_cloud_dlp_service","DevPro__enable_cloud_innovators_plus","DevPro__enable_vertex_credit_card","EngEduTelemetry__enable_engedu_telemetry","CloudShell__cloud_shell_button","DevPro__enable_developer_subscriptions","Concierge__enable_pushui","DevPro__enable_devpro_offers","DevPro__enable_firebase_workspaces_card","Search__enable_ai_eligibility_checks","Concierge__enable_actions_menu","MiscFeatureFlags__enable_project_variables","Cloud__enable_cloud_shell_fte_user_flow","Concierge__enable_concierge","Profiles__enable_release_notes_notifications","Cloud__enable_free_trial_server_call","Profiles__enable_dashboard_curated_recommendations","Profiles__enable_completequiz_endpoint","MiscFeatureFlags__enable_view_transitions","Cloud__enable_legacy_calculator_redirect","Profiles__enable_profile_collections","Profiles__enable_purchase_prompts","Experiments__reqs_query_experiments","Analytics__enable_clearcut_logging","BookNav__enable_tenant_cache_key","Profiles__enable_stripe_subscription_management","Search__enable_ai_search_summaries","MiscFeatureFlags__enable_framebox_badge_methods","DevPro__enable_code_assist","MiscFeatureFlags__developers_footer_image","MiscFeatureFlags__enable_firebase_utm","Cloud__enable_cloudx_experiment_ids","Cloud__enable_cloud_shell","Profiles__enable_complete_playlist_endpoint","DevPro__enable_google_one_card","TpcFeatures__enable_unmirrored_page_left_nav","Concierge__enable_key_takeaways","Cloud__fast_free_trial","Search__enable_ai_search_summaries_restricted","MiscFeatureFlags__emergency_css","Profiles__enable_page_saving","Profiles__enable_awarding_url","Search__enable_suggestions_from_borg","Profiles__enable_public_developer_profiles","Profiles__enable_recognition_badges","Search__enable_dynamic_content_confidential_banner","Profiles__enable_join_program_group_endpoint"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com/","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com/",1,4,null,"https://developerprofiles-pa.clients6.google.com/",[1,"developers","Google for Developers","developers.google.com",null,"developers-dot-devsite-v2-prod.appspot.com",null,null,[1,1,[1],null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],[1,null,null,[1,20],"/recommendations/information"],null,null,null,[1,1,1],[1,1,null,1,1]],null,[null,null,null,null,null,null,"https://developers.google.com/images/lockup-new.svg","../../images/touchicon-180-new.html",null,null,null,null,1,null,null,null,null,null,null,null,null,1,null,null,null,"https://developers.google.com/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[6,1,14,15,20,22,23,29,32,36],null,[[null,null,null,[3,7,10,2,39,17,4,32,24,11,12,13,34,15,25],null,null,[1,[["docType","Choose a content type",[["Tutorial",null,null,null,null,null,null,null,null,"Tutorial"],["Guide",null,null,null,null,null,null,null,null,"Guide"],["Sample",null,null,null,null,null,null,null,null,"Sample"]]],["product","Choose a product",[["Android",null,null,null,null,null,null,null,null,"Android"],["ARCore",null,null,null,null,null,null,null,null,"ARCore"],["ChromeOS",null,null,null,null,null,null,null,null,"ChromeOS"],["Firebase",null,null,null,null,null,null,null,null,"Firebase"],["Flutter",null,null,null,null,null,null,null,null,"Flutter"],["Assistant",null,null,null,null,null,null,null,null,"Google Assistant"],["GoogleCloud",null,null,null,null,null,null,null,null,"Google Cloud"],["GoogleMapsPlatform",null,null,null,null,null,null,null,null,"Google Maps Platform"],["GooglePay",null,null,null,null,null,null,null,null,"Google Pay & Google Wallet"],["GooglePlay",null,null,null,null,null,null,null,null,"Google Play"],["Tensorflow",null,null,null,null,null,null,null,null,"TensorFlow"]]],["category","Choose a topic",[["AiAndMachineLearning",null,null,null,null,null,null,null,null,"AI and Machine Learning"],["Data",null,null,null,null,null,null,null,null,"Data"],["Enterprise",null,null,null,null,null,null,null,null,"Enterprise"],["Gaming",null,null,null,null,null,null,null,null,"Gaming"],["Mobile",null,null,null,null,null,null,null,null,"Mobile"],["Web",null,null,null,null,null,null,null,null,"Web"]]]]]],[1,1],null,1],[[["UA-24532603-1"],["UA-22084204-5"],null,null,["UA-24532603-5"],null,null,[["G-272J68FCRF"],null,null,[["G-272J68FCRF",2]]],[["UA-24532603-1",2]],null,[["UA-24532603-5",2]],null,1],[[3,2],[14,11],[5,4],[4,3],[15,12],[13,10],[11,8],[6,5],[16,13],[1,1],[12,9]],[[1,1],[2,2]]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,"developers.devsite.google",null,null,null,null,null,[]],null,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",1,null,"https://developerscontentinsights-pa.clients6.google.com/","AIzaSyCg-ZUslalsEbXMfIo9ZP8qufZgo3LSBDU","AIzaSyDxT0vkxnY_KeINtA4LSePJO-4MAZPMRsE","https://developers.clients6.google.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+
+<!-- Mirrored from developers.google.com/tech-writing/two/sample-code by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Jul 2025 00:14:19 GMT -->
+</html>
