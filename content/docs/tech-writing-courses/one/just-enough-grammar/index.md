@@ -45,9 +45,6 @@ weight: 2
 
 {{< bs/collapse heading="點我看答案" expand=false >}}
 <br>**C** enables **programmers** to control **pointers** and **memory**. Great **power** brings great **responsibility**.
-{{< /bs/collapse >}}
-
-<br>
 
 現在假設第二個句子如下：
 
@@ -56,6 +53,9 @@ weight: 2
 這裡的「control」是動詞還是名詞？
 
 在這種情況下，「control」是名詞，即使在第一個句子中「to control」是動詞。英語中的許多單字在某些情況下是名詞，在其他情況下是動詞。
+{{< /bs/collapse >}}
+
+<br>
 
 ## 代名詞
 
@@ -241,4 +241,12 @@ Parameters may optionally appear **within** a URL, **after** the path.
 **However** (然而)
 {{< /bs/collapse >}}
 
-<br>
+<br/><br/>
+
+**下一個單元：** [單詞]({{< relref "../words/index.md" >}})
+
+<br/>
+
+---
+
+{{% readfile "../../_include/license.md" %}}

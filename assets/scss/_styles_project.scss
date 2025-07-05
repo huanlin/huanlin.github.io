@@ -169,6 +169,12 @@ nav.foldable-nav .with-child, nav.foldable-nav .without-child {
   }
 }
 
+// 項目清單的間隔
+.td-content ul li, .td-content ol li {
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+
 // 圖片置中
 img[src$="#center"] {
   display: block;
@@ -201,11 +207,12 @@ mark {
 div.youtube  {
   position: relative;
   overflow: hidden;
-  padding-bottom: 41.25%;
+  padding-bottom: 39.25%;
   height: 0;
-  width: 70%; /* 將影片框縮小一半 */
+  width: 55%; /* 將影片框縮小 */
   margin: 0 auto; /* 可選：置中 */
-  margin-top: 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;  
 }
 .youtube iframe {
   position: absolute;

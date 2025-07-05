@@ -79,13 +79,17 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 * It
 * They, them, and their
 
-例如，在下面的句子中，`It` 是指 Python 還是 C++？
+例如，在下面的句子中，**It** 是指 Python 還是 C++？
 
-> Python 是直譯式的，而 C++ 是編譯式的。它擁有一批近乎狂熱的追隨者。
+> Python is interpreted, while C++ is compiled. **It** has an almost cult-like following.
+> 
+> Python 是直譯式的，而 C++ 是編譯式的。**它**擁有一批近乎狂熱的追隨者。
 
-再舉一個例子，下面句子中的 `their` 是指什麼？
+再舉一個例子，下面句子中的 **their** 是指什麼？
 
-> 當使用 Frambus 或 Carambola 搭配 HoobyScooby 或 BoiseFram 時要小心，因為它們核心中的一個錯誤可能會導致意外的大規模解除好友關係。
+> Be careful when using Frambus or Carambola with HoobyScooby or BoiseFram because a bug in **their** core may cause accidental mass unfriending.
+> 
+> 當使用 Frambus 或 Carambola 搭配 HoobyScooby 或 BoiseFram 時要小心，因為**它們的**核心中的一個錯誤可能會導致意外的大規模解除好友關係。
 
 ### This 和 that
 
@@ -94,14 +98,16 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 * This
 * That
 
-例如，在下面這個模稜兩可的句子中，`This` 可能指使用者 ID、執行該過程，或所有這些：
+例如，在下面這個模稜兩可的句子中，**This** 可能指使用者 ID、執行該過程，或所有這些：
 
-> 執行該過程會設定權限並產生一個使用者 ID。這讓使用者可以向應用程式進行身份驗證。
+> Running the process configures permissions and generates a user ID. **This** lets users authenticate to the app.
+> 
+> 執行該過程會設定權限並產生一個使用者 ID。**這**讓使用者可以向應用程式進行身份驗證。
 
-為了幫助讀者，請避免以不清楚其所指的方式使用 `this` 或 `that`。使用以下任一策略來闡明 `this` 和 `that` 的模糊用法：
+為了幫助讀者，請避免以不清楚其所指的方式使用 **this** 或 **that**。使用以下任一策略來闡明 **this** 和 **that** 的模糊用法：
 
-* 將 `this` 或 `that` 替換為適當的名詞。
-* 在 `this` 或 `that` 之後立即放置一個名詞。
+* 將 **this** 或 **that** 替換為適當的名詞。
+* 在 **this** 或 **that** 之後立即放置一個名詞。
 
 根據需要替換或補充明確的詞語，如以下對範例第二句的改寫：
 
@@ -115,21 +121,23 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 
 請找出下列段落中所有可能的模糊代名詞所指為何。
 
-1. Aparna and Phil share responsibilities with Maysam and Karan and they are next on call.
-2. You may import Carambola data via your configuration file or dynamically at run time. This may be a security risk.
+1. Aparna and Phil share responsibilities with Maysam and Karan and they are next on call.<br/>
+  （Aparna 和 Phil 與 Maysam 及 Karan 共同分擔責任，而他們是下一個待命的人。）
+2. You may import Carambola data via your configuration file or dynamically at run time. This may be a security risk. <br/>
+  （您可以透過設定檔匯入 Carambola 資料，或在執行時動態匯入。這可能會帶來安全風險。）
 
 <br>
 
 {{< bs/collapse heading="點我看答案" expand=false >}}
 
-(1) 代名詞 they 可能指：
+(1) 代名詞 **they** 可能指：
 
 * Aparna 和 Phil
 * Maysam 和 Karan
 * Aparna、Phil、Maysam 和 Karan（全部）
 * 任一個人，作為單數中性的「they」 <br>
 
-(2) 代名詞 this 可能指：
+(2) 代名詞 **this** 可能指：
 
 * 透過設定檔進行匯入
 * 在執行階段動態匯入
@@ -137,4 +145,12 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 
 {{< /bs/collapse >}}
 
-<br>
+<br/><br/>
+
+**下一個單元：** [主動語態 vs. 被動語態]({{< relref "active-voice.md" >}})
+
+<br/>
+
+---
+
+{{% readfile "../../_include/license.md" %}}
