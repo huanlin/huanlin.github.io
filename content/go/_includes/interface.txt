@@ -1,0 +1,11 @@
+Rob Pike 說：
+
+"The bigger the interface, the weaker the abstraction."
+
+又說：
+
+"Don't design with interfaces, discover them."
+
+後面這句可能更需要我們留意。
+
+只有當我們發現這裡或那裡需要一個介面會比較好的時候，才去定義介面。這可以避免我們太早傷腦筋去設計「想像中的」介面，也能避免過度設計。

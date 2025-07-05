@@ -9,9 +9,9 @@ dotnet:
     color: "black"
   items:
     - title: "C# 筆記"
-      url: "/docs/dotnet/csharp/"
+      url: "/dotnet/csharp/"
     - title: ".NET 非同步程式設計"
-      url: "/docs/dotnet/async/"
+      url: "/dotnet/async/"
 golang:
   title: "Golang"
   weight: 2
@@ -23,11 +23,22 @@ golang:
     color: "black"
   items:
     - title: "關於這個筆記"
-      url: "/docs/go/00-about/"
+      url: "/go/00-about/"
     - title: "開始學習"
-      url: "/docs/go/01-get-started/"
+      url: "/go/01-get-started/"
     - title: "附錄一：Go 程式風格指南"
-      url: "/docs/go/a1-style-guide/"
+      url: "/go/a1-style-guide/"
+tech-writing:
+  title: "Tech Writing"
+  weight: 3
+  icon:
+    vendor: "fas"
+    name: "pen"
+    color: "black"
+  items:
+    - title: "Google 技術寫作課程（中文版）"
+      description: "Technical writing courses (Google)"
+      url: "/google-tech-writing/"
 books:
   title: "我的電子書"
   weight: 4
@@ -59,14 +70,3 @@ social-links:
       url: "https://www.facebook.com/huanlin.notes"
     - title: "Youtube 頻道"
       url: "https://www.youtube.com/@michael-tsai"
-tech-writing:
-  title: "Tech Writing"
-  weight: 10
-  icon:
-    vendor: "fas"
-    name: "pen"
-    color: "black"
-  items:
-    - title: "Google 技術寫作課程（中文版）"
-      description: "Technical writing courses (Google)"
-      url: "/docs/tech-writing-courses/"

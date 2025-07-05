@@ -3,7 +3,7 @@ title = "Huanlin Docs"
 
 # If you add a mounts section you should remove the old contentDir, staticDir, etc. settings.
 # See: https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts
-contentDir = "content"
+contentDir = "content/"
 
 # Language settings
 defaultContentLanguage = "en"

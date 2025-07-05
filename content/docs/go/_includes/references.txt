@@ -1,4 +1,0 @@
-[100-mistakes]: https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them
-[go-in-action]: https://www.manning.com/books/go-in-action-second-edition
-[go-in-practice]: https://www.manning.com/books/go-in-practice-second-edition
-[go-by-example]: https://www.manning.com/books/go-by-example
