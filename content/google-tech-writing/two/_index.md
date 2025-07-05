@@ -1,5 +1,5 @@
 ---
-title: Technical Writing Two
+title: 技術寫作（二）
 weight: 2
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Technical Writing One
+title: 技術寫作（一）
 weight: 1
 ---
 
