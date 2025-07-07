@@ -12,6 +12,9 @@ other = "Last update"
 [post_byline_by]
 other = "作者："
 
+[post_create_issue]
+other = "提交改善建議"
+
 [post_posts_in]
 other = "張貼於"
 

@@ -12,6 +12,18 @@
   z-index: 999;
 }
 
+// Hide some repository links. See: https://www.docsy.dev/docs/adding-content/repository-links/
+.td-page-meta__view {
+  display: none !important;
+}
+.td-page-meta__edit {
+  display: none !important;
+}
+.td-page-meta__child {
+  display: none !important;
+}
+
+
 // For admonitions. Copied from MkDocs Material (by Michael Tsai 2023-8-6).
 :root > * {
   --md-shadow-z1: 0 0.2rem 0.5rem #0000000d,0 0 0.05rem #0000001a;
@@ -72,10 +84,6 @@ h2.feedback--title {
   margin-top: 20px;
 }
 
-.td-toc a {
-  font-weight: 400;
-}
-
 .td-max-width-on-larger-screens {
   @include media-breakpoint-up(lg) {
     max-width: 95%; /* Docsy 預設為 80% */
@@ -118,24 +126,31 @@ nav.foldable-nav .with-child, nav.foldable-nav .without-child {
 }
 
 // 右邊的 table of contents 的樣式
+.td-toc {
+  margin-top: 1rem;
+}
+.td-toc a {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-left: 0.2rem;
+}
 .td-toc #TableOfContents a {
+  color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+}
+.td-toc__title {
+    color: var(--bs-secondary-color);
+    border-bottom: 1px solid var(--bs-tertiary-color);
+    padding-bottom: .25rem;
+    margin-bottom: .75rem;
+}
+.td-toc__title__text {
+  font-weight: 700;
   color: var(--md-primary-fg-color);
-  font-size: 0.9rem;
 }
 
 // 右邊的 table of contents 區塊的子標題縮排
 .td-toc li li {
   margin-left: 0.9rem;
-}
-
-// 右邊的 table of contents 區塊的位置保持固定
-@supports (position: sticky) {
-.td-sidebar-toc {
-    position: sticky;
-    top: 6rem;
-    height: calc(100vh - 6rem);
-    overflow-y: auto;
-  }
 }
 
 // 頁面頂端標題列（導覽列），樣式取自 Material for MkDocs。
@@ -212,7 +227,7 @@ div.youtube  {
   width: 55%; /* 將影片框縮小 */
   margin: 0 auto; /* 可選：置中 */
   margin-top: 32px;
-  margin-bottom: 32px;  
+  margin-bottom: 32px;
 }
 .youtube iframe {
   position: absolute;
