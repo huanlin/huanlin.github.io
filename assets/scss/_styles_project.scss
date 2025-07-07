@@ -190,6 +190,12 @@ nav.foldable-nav .with-child, nav.foldable-nav .without-child {
     margin-top: 0.25rem;
 }
 
+// Footer 高度。
+.td-footer {
+  min-height: 80px;
+  padding-top: 1.5rem;
+}
+
 // 圖片置中
 img[src$="#center"] {
   display: block;
