@@ -11,12 +11,14 @@ Google 技術寫作課程包含四個部分，而這個繁體中文版僅提供 
 | 原文課程 | 繁體中文版 |
 | --------|-----------|
 | [Technical Writing One](https://developers.google.com/tech-writing/one) | [技術寫作（一）](one/) |
-| [Technical Writing Two](https://developers.google.com/tech-writing/two) | [技術寫作（二）](two/) |
+| [Technical Writing Two](https://developers.google.com/tech-writing/two) | [技術寫作（二）](two/)  (尚未完成!) |
 | [Tech Writing for Accessibility](https://developers.google.com/tech-writing/accessibility) | 「無障礙」寫作相關議題。此處未提供翻譯。 |
 | [Writing Helpful Error Messages](https://developers.google.com/tech-writing/error-messages) | 如何撰寫清楚有用的錯誤訊息。此處未提供翻譯。 |
 
 > [!NOTE] 授權條款
-> 根據官方頁面，其版權宣告係採用 [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/)。此繁體中文版也是採用相同的授權條款。
+> 以下為原課程的授權條款（此中文版亦同）：
+>
+> Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
 
 ## 關於翻譯
 
