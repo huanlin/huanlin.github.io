@@ -30,6 +30,8 @@ defaults:
 jobs:
   # Build job
   build:
+    # 避免無關的 repo 觸發此工作流程
+    if: contains(github.repository, 'github.io')
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.147.7
