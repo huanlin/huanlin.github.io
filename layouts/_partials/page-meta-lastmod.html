@@ -1,9 +1,9 @@
-{{ if .Lastmod }}  
-  <div class="text-muted pt-3 border-top">
+{{ if .Lastmod }}
+  <div class="td-page-meta__lastmod">
     {{ T "post_last_mod" }}: {{ .Lastmod.Format .Site.Params.time_format_default }}
   </div>
-{{ else if .PublishDate }} 
-  <div class="text-muted pt-3 border-top"> 
+{{ else if .PublishDate }}
+  <div class="td-page-meta__lastmod">
     {{ T "post_last_mod" }}: {{ .PublishDate.Format .Site.Params.time_format_default }}
-  </div>    
+  </div>
 {{ end }}

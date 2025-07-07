@@ -24,3 +24,37 @@ other = "閱讀全文"
 # Used in sentences such as "Posted in News"
 [ui_in]
 other = "於"
+
+# 以下字串用於 shortcode: admonition.html
+[note]
+other="Note"
+
+[important]
+other="Important"
+
+[warning]
+other="Warning"
+
+[tip]
+other="Tip"
+
+[quote]
+other="Quote"
+
+[danger]
+other="Danger"
+
+[info]
+other="Information"
+
+[question]
+other="Question"
+
+[bug]
+other="Bug"
+
+[success]
+other="Success"
+
+[failure]
+other="Failure"
