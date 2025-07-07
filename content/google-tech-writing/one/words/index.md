@@ -4,7 +4,7 @@ linkTitle: 單詞 (10 min)
 weight: 3
 ---
 
-**預計時間：** 10 分鐘
+> **預計閱讀時間：** 10 分鐘
 
 我們對文件進行了廣泛的研究，結果發現，世界上最好的句子主要由單詞組成。
 
@@ -82,13 +82,13 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 例如，在下面的句子中，**It** 是指 Python 還是 C++？
 
 > Python is interpreted, while C++ is compiled. **It** has an almost cult-like following.
-> 
+>
 > Python 是直譯式的，而 C++ 是編譯式的。**它**擁有一批近乎狂熱的追隨者。
 
 再舉一個例子，下面句子中的 **their** 是指什麼？
 
 > Be careful when using Frambus or Carambola with HoobyScooby or BoiseFram because a bug in **their** core may cause accidental mass unfriending.
-> 
+>
 > 當使用 Frambus 或 Carambola 搭配 HoobyScooby 或 BoiseFram 時要小心，因為**它們的**核心中的一個錯誤可能會導致意外的大規模解除好友關係。
 
 ### This 和 that
@@ -101,7 +101,7 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 例如，在下面這個模稜兩可的句子中，**This** 可能指使用者 ID、執行該過程，或所有這些：
 
 > Running the process configures permissions and generates a user ID. **This** lets users authenticate to the app.
-> 
+>
 > 執行該過程會設定權限並產生一個使用者 ID。**這**讓使用者可以向應用程式進行身份驗證。
 
 為了幫助讀者，請避免以不清楚其所指的方式使用 **this** 或 **that**。使用以下任一策略來闡明 **this** 和 **that** 的模糊用法：
@@ -148,9 +148,3 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 <br/><br/>
 
 **下一個單元：** [主動語態 vs. 被動語態]({{< relref "active-voice.md" >}})
-
-<br/>
-
----
-
-{{% readfile "../../_include/license.md" %}}

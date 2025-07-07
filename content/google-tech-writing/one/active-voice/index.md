@@ -4,7 +4,7 @@ linkTitle: 主動語態 vs. 被動語態 (15 min)
 weight: 4
 ---
 
-預計閱讀時間：15 分鐘
+> **預計閱讀時間：** 15 分鐘
 
 技術寫作中的絕大多數句子都應該使用主動語態。本單元將教您如何做到以下幾點：
 
@@ -117,7 +117,7 @@ weight: 4
 7. Click the Submit button.
 8. The orbit was calculated by Katherine Johnson.
 
-<br>
+<br />
 
 {{< bs/collapse heading="點我看答案" expand=false >}}
 1. **[主動]** MutableInput provides read-only access.
@@ -137,7 +137,7 @@ weight: 4
 許多句子包含多個動詞，其中一些是主動的，一些是被動的。例如，以下句子包含兩個動詞，兩者都處於被動語態：
 
 > Code **is interpreted** by Python, but code **is compiled** by C++.
-> 
+>
 > (程式碼由 Python 解譯，但程式碼由 C++ 編譯。)
 
 ![](images/passive-passive.svg#center)
@@ -145,7 +145,7 @@ weight: 4
 以下是相同句子，部分轉換為主動語態：
 
 > Python **interprets** code, but code **is compiled** by C++.
-> 
+>
 > (Python 解譯程式碼，但程式碼由 C++ 編譯。)
 
 ![](images/active-passive.svg#center)
@@ -153,7 +153,7 @@ weight: 4
 以下是相同句子，現在完全轉換為主動語態：
 
 > Python **interprets** code, but C++ **compiles** code.
-> 
+>
 > (Python 解譯程式碼，但 C++ 編譯程式碼。)
 
 ![](images/all-active.svg#center)
@@ -166,7 +166,7 @@ weight: 4
 2. Performance metrics are required by the team, though I prefer wild guesses. <br/>團隊需要績效指標，儘管我偏好隨意猜測。
 3. When software engineers attempt something new and innovative, a reward should be given. <br/>當軟體工程師嘗試新的創新時，應該給予獎勵。
 
-<br>
+<br />
 
 {{< bs/collapse heading="點我看答案" expand=false >}}
 1. **[主動, 主動]** The QA team loves ice cream, but the writers prefer sorbet.
@@ -220,12 +220,6 @@ weight: 4
 4. Asterisks identify quality metrics; ampersands identify bad metrics.
 {{< /bs/collapse >}}
 
-<br />
+<br /><br />
 
 **下一個單元：** [清晰的句子]({{< relref "../clear-sentences/index.md" >}})
-
-<br />
-
----
-
-{{% readfile "../../_include/license.md" %}}

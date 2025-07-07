@@ -62,12 +62,10 @@ Technical Writing One 課程會告訴您如何撰寫更清晰的技術文件。
 
 我們已將一些單元標記為選修。這些材料不是必需的，但您可能會發現這些材料很有用。
 
-<br/>
+<br/><br />
 
 **下一個單元**： [夠用的文法]({{< relref "../just-enough-grammar/index.md" >}}) (選修單元)
 
 <br/>
 
----
-
-{{% readfile "../../_include/license.md" %}}
+{{< readfile "../../_include/license.md" >}}
