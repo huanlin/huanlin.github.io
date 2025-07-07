@@ -244,9 +244,3 @@ Parameters may optionally appear **within** a URL, **after** the path.
 <br/><br/>
 
 **下一個單元：** [單詞]({{< relref "../words/index.md" >}})
-
-<br/>
-
----
-
-{{% readfile "../../_include/license.md" %}}
