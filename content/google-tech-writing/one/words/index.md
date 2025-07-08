@@ -33,9 +33,9 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 
 > **Protocol Buffers**（簡稱 **protobufs**）提供了自己的定義語言。（中間省略），這就是為什麼 protobufs 能在這麼多縣市博覽會上獲勝的原因。
 
-## 正確使用縮寫
+## 正確使用首字母縮寫
 
-在文件或章節中首次使用不熟悉的縮寫時，請先寫出全稱，然後將縮寫放在括號中。將全稱和縮寫都以粗體顯示。例如：
+在文件或章節中首次使用不熟悉的首字母縮寫（acronym）時，請先寫出全稱，然後將縮寫放在括號中。全稱和縮寫都以粗體顯示。例如：
 
 > This document is for engineers who are new to the **Telekinetic Tactile Network (TTN)** or need to understand how to order TTN replacement parts through finger motions.
 >
@@ -51,7 +51,7 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 
 ### 使用縮寫還是全稱？
 
-當然，你可以正確地介紹和使用首字母縮寫（acronyms），但你應該使用縮寫嗎？嗯，縮寫確實可以縮短句子長度。例如，TTN 比 Telekinetic Tactile Network 少了兩個詞。然而，縮寫實際上只是一層抽象；讀者必須在腦中將最近學到的縮寫擴展為全名。例如，讀者在腦中將 TTN 轉換為 Telekinetic Tactile Network，所以「較短」的縮寫實際上比全名需要更長的時間來處理。
+當然，你可以正確地介紹和使用首字母縮寫，但你應該使用縮寫嗎？嗯，縮寫確實可以縮短句子長度。例如，TTN 比 Telekinetic Tactile Network 少了兩個詞。然而，縮寫實際上只是一層抽象；讀者必須在腦中將最近學到的縮寫擴展為全名。例如，讀者在腦中將 TTN 轉換為 Telekinetic Tactile Network，所以「較短」的縮寫實際上比全名需要更長的時間來處理。
 
 大量使用的首字母縮寫會發展出自己的身份。在出現多次後，讀者通常會停止將縮寫擴展為全名。例如，許多網頁開發人員已經忘記 HTML 的全名是什麼。
 
