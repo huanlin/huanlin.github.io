@@ -15,7 +15,7 @@ weight: 2
 | 詞類 | 定義 | 範例 |
 | :--- | :--- | :--- |
 | **名詞** | 人、地、概念或事物 | **Sam** runs **races**. |
-| **代名詞** | 取代另一個名詞（或更大結構）的名詞 | Sam runs races.**He** likes to compete. |
+| **代名詞** | 取代另一個名詞（或更大結構）的名詞 | Sam runs races. **He** likes to compete. |
 | **形容詞** | 修飾名詞的單字或片語 | Sam wears **blue** shoes. |
 | **動詞** | 動作的單字或片語 | Sam **runs** races. |
 | **副詞** | 修飾動詞、形容詞或其他副詞的單字或片語 | Sam runs **slowly**. |
