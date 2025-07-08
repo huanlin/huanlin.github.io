@@ -1,4 +1,4 @@
 ---
 title: AI
-weight: 35
+weight: 30
 ---

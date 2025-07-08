@@ -12,7 +12,8 @@
 	{{ partial "feedback.html" . -}}
 	{{ partial "page-meta-lastmod.html" . }}
 	<!-- Customized by Michael: Use Giscus comment system. -->
-	{{- partial "giscus-comment.html" . -}}
-	{{- partial "my-other-sites.html"}}
+	{{ if (not .Params.hide_comment) -}}
+		{{- partial "giscus-comment.html" . -}}
+	{{ end -}}
 </div>
 {{/**/ -}}

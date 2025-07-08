@@ -1,4 +1,4 @@
 ---
 title: Technical Writing
-weight: 90
+weight: 20
 ---

@@ -1,4 +1,4 @@
 ---
 title: 小抄
-weight: 95
+weight: 50
 ---
