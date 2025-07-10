@@ -4,7 +4,7 @@ weight: 91
 type: no-list
 ---
 
-## 課程原文
+## 原文課程
 
 Google 技術寫作課程包含四個部分，而這個繁體中文版僅提供 Technical Writing One 和 Technical Writing Two 這兩個課程的翻譯。如下表所示：
 
@@ -19,6 +19,18 @@ Google 技術寫作課程包含四個部分，而這個繁體中文版僅提供 
 > 以下為原課程的授權條款（此中文版亦同）：
 >
 > Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
+
+## 為何要學習技術寫作？
+
+在這個 AI 大時代，學習技術寫作聽起來好像是一門過時、甚至古老的工匠技藝，對嗎？
+
+也許表面上看來如此，但以我自己在實務工作上的體會，如果在意文件的品質，便不可能對 AI 產生的內容照單全收，而需要人工判斷、揀選、比較、和修改。對我而言，AI 工具是大幅提升工作效率和品質、以及加速學習的好幫手。
+
+而且，就如這個 Google 技術寫作課程開頭的第一句話：
+
+> Every engineer is also a writer.
+
+每一位工程師和 IT 從業人員，包括 DevOps、程式設計、系統分析與設計、和專案管理等工作，都免不了需要撰寫技術文件。
 
 ## 關於翻譯
 
