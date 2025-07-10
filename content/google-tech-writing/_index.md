@@ -4,7 +4,7 @@ weight: 91
 type: no-list
 ---
 
-## 原文課程
+## 簡介
 
 Google 技術寫作課程包含四個部分，而這個繁體中文版僅提供 Technical Writing One 和 Technical Writing Two 這兩個課程的翻譯。如下表所示：
 
