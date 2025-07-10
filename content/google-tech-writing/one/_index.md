@@ -1,5 +1,5 @@
 ---
-title: 技術寫作（一）
+title: 技術寫作一
 weight: 1
 hide_comment: true
 ---

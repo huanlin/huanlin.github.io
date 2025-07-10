@@ -1,5 +1,5 @@
 ---
-title: 技術寫作（二）
+title: 技術寫作二
 weight: 2
 hide_comment: true
 ---
@@ -8,5 +8,3 @@ hide_comment: true
 
 請透過左方選單或下方連結清單進入您想要閱讀的章節。
 
-> [!WARNING] 施工中
-> 這個部分的翻譯進度約 50%。

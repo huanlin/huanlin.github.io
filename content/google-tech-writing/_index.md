@@ -10,8 +10,8 @@ Google 技術寫作課程包含四個部分，而這個繁體中文版僅提供 
 
 | 原文課程 | 繁體中文版 |
 | --------|-----------|
-| [Technical Writing One](https://developers.google.com/tech-writing/one) | [技術寫作（一）](one/) |
-| [Technical Writing Two](https://developers.google.com/tech-writing/two) | [技術寫作（二）](two/)  (尚未完成!) |
+| [Technical Writing One](https://developers.google.com/tech-writing/one) | [技術寫作一](one/) |
+| [Technical Writing Two](https://developers.google.com/tech-writing/two) | [技術寫作二](two/) |
 | [Tech Writing for Accessibility](https://developers.google.com/tech-writing/accessibility) | 「無障礙」寫作相關議題。此處未提供翻譯。 |
 | [Writing Helpful Error Messages](https://developers.google.com/tech-writing/error-messages) | 如何撰寫清楚有用的錯誤訊息。此處未提供翻譯。 |
 
@@ -59,7 +59,7 @@ Google 技術寫作課程包含四個部分，而這個繁體中文版僅提供 
 
 ## 開始課程
 
-接著，請從這裡開始學習這門課程：[技術寫作（一）](one/)
+接著，請從這裡開始學習這門課程：[技術寫作一](one/)
 
 <br />
 

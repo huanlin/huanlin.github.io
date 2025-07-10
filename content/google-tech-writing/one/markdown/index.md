@@ -30,8 +30,8 @@ Markdown 解析器會將 Markdown 檔案轉換成 HTML。瀏覽器接著可以�
 
 ### 下一步？
 
-恭喜：您已完成技術寫作（一）的課前作業（pre-class）。
+恭喜：您已完成《技術寫作一》的課前研讀（pre-class）。
 
-如果你的組織提供技術寫作（一）的課堂部分，請務必參加。如果你想要擔任技術寫作（一）課堂部分（in-class）的引導者，請參閱[引導者指南](https://developers.google.com/tech-writing/for-instructors/one/instructors-guide)。
+如果你的組織提供《技術寫作一》的課堂部分，請務必參加。如果你想要擔任《技術寫作一》課堂部分（in-class）的講師，請參閱[講師指南](https://developers.google.com/tech-writing/for-instructors/one/instructors-guide)。
 
-技術寫作（一）涵蓋的主題可在[重點回顧頁面]({{< relref "summary/" >}})查看。
+《技術寫作一》課程所有主題的重點都已彙整在[總結]({{< relref "summary/" >}})頁面。
