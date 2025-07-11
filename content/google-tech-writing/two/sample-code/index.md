@@ -164,4 +164,4 @@ s = "The rain in Maine."
 
 如果你的組織有開設《技術寫作二》的實體課程，請務必參加。如果你想協助帶領這門課，請參考[講師指南](https://developers.google.com/tech-writing/for-instructors/two/instructors-guide)。
 
-《技術寫作二》課程所有主題的重點都已彙整在[總結](../summary/)頁面。
+《技術寫作二》課程所有主題的重點都已彙整在[總結]({{< relref "../summary/index.md" >}})頁面。

@@ -215,4 +215,4 @@ weight: 4
 
 <br/><br/>
 
-**下個單元：** [建立範例程式碼](../sample-code/)
+**下個單元：** [建立範例程式碼]({{< relref "../sample-code/index.md" >}})

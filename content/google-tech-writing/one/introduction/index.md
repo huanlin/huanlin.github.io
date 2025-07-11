@@ -4,7 +4,7 @@ linkTitle: 簡介 (3 min)
 weight: 1
 ---
 
-Technical Writing One 課程會告訴您如何撰寫更清晰的技術文件。
+這是 [Google 技術寫作課程（中文版）]({{< relref "../../_index.md" >}}) 的第一部分。此入門課程會告訴您如何撰寫更清晰的技術文件。
 
 ## 目標受眾
 

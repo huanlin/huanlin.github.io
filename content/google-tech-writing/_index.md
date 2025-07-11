@@ -73,13 +73,13 @@ Google 技術寫作課程包含四個部分，而這個繁體中文版僅提供 
 
 ### 會持續更新嗎？
 
+是的，當我發現原始文件有發布新版本，便會更新中文版的內容。
+
 此中文版的製作時間為 2025 年 7 月，而且每個頁面的最底下都有顯示最近一次的更新日期。原文課程的每一個頁面下方也都有標註最近更新日期，故只要比對兩邊的更新日期，就能大致判斷中文版內容是否需要更新。
+
+> [!NOTE] Feedback
+> 如對此中文版有任何建議或指正，歡迎[至 GitHub Issues 提交問題單](https://github.com/huanlin/huanlin.github.io/issues/new?title=Google%20%e6%8a%80%e8%a1%93%e5%af%ab%e4%bd%9c%e8%aa%b2%e7%a8%8b%ef%bc%88%e4%b8%ad%e6%96%87%e7%89%88%ef%bc%89)。
 
 ## 開始課程
 
 接著，請從這裡開始學習這門課程：[技術寫作一](one/)
-
-<br />
-
-> [!NOTE] Feedback
-> 如對此中文版有任何建議或指正，歡迎[至 GitHub Issues 提交問題單](https://github.com/huanlin/huanlin.github.io/issues/new?title=Google%20%e6%8a%80%e8%a1%93%e5%af%ab%e4%bd%9c%e8%aa%b2%e7%a8%8b%ef%bc%88%e4%b8%ad%e6%96%87%e7%89%88%ef%bc%89)。
