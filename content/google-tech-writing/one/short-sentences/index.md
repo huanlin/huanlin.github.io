@@ -6,7 +6,7 @@ weight: 6
 
 > **預估時間：** 20 分鐘
 
-軟體工程師通常會基於以下原因，試圖最小化實作中的程式碼行數：
+軟體工程師通常會基於以下原因，試圖減少程式碼行數：
 
 * 較短的程式碼通常更容易讓他人閱讀。
 * 較短的程式碼通常比較長的程式碼更容易維護。
@@ -18,11 +18,11 @@ weight: 6
 * 較短的文件通常比較長的文件更容易維護。
 * 額外的文件行數會引入額外的故障點。
 
-找到最短的文件實作方式需要時間，但最終是值得的。短句比長句更有力地傳達訊息，而且短句通常比長句更容易理解。
+找出最簡潔的文件寫法需要花點時間，但最終是值得的。短句的表達力通常比長句更強，而且短句通常也比長句更容易理解。
 
 ## 讓每個句子專注於單一想法
 
-讓每個句子專注於一個想法、思緒或概念。就像程式中的陳述式執行單一任務一樣，句子也應該執行單一想法。例如，以下這個非常長的句子包含多個思緒：
+讓每個句子專注在一個想法、概念或觀念上。就像程式中的每一行陳述只執行一項任務一樣，句子也應該只傳達一個重點。例如，下面這句非常冗長的句子就包含了多個想法：
 
 > 1950 年代末期是程式語言的一個關鍵時代，因為 IBM 在 1957 年推出了 Fortran，而 John McCarthy 在隔年推出了 Lisp，這給予了程式設計師解決問題的迭代方法和遞迴方法。
 
@@ -32,10 +32,9 @@ weight: 6
 
 ### 練習 {#ex1}
 
-請將下列過長的句子轉換成一連串較短的句子。無須大幅改寫，只需從單一句轉換成數句。
+請將以下過長的句子改寫成幾個較短的句子。無需大幅改寫，只需將原本的一句話分成幾句即可。
 
 > In bash, use the if, then, and fi statements to implement a simple conditional branching block in which the if statement evaluates an expression, the then statement introduces a block of statements to run when the if expression is true, and the fi statement marks the end of the conditional branching block.
->
 >
 > 在 bash 中，可以使用 `if`、`then` 和 `fi` 指令來實作簡單的條件分支。`if` 負責判斷條件式是否成立。`then` 用來引入當條件為真時要執行的程式碼區塊。`fi` 則標示條件分支區塊的結尾。
 
@@ -47,13 +46,13 @@ In bash, use an if, then, and fi statement to implement a simple conditional bra
 在 bash 中，可以使用 `if`、`then` 和 `fi` 指令來實作一個簡單的條件分支區塊。`if` 會判斷一個條件式。`then` 則用來引入當條件成立時要執行的程式碼區塊。`fi` 表示這個條件分支區塊的結尾。（雖然整段文字仍不夠清楚，但相較於原本的長句，已經更容易閱讀了。）
 {{< /bs/collapse >}}
 
-## 將一些長句轉換為列表
+## 將冗長句子改寫成清單
 
-許多技術長句的內部，都藏著一個渴望掙脫的列表。例如，請看以下句子：
+冗長的技術句子中往往藏著一個渴望掙脫的清單。請看以下例句：
 
 > 要改變迴圈的常規流程，您可以使用 `break` 陳述式（它會讓您跳出目前的迴圈）或 `continue` 陳述式（它會跳過目前迴圈迭代的其餘部分）。
 
-當您在長句中看到連接詞「或」（**or**）時，可以考慮將該句重構為項目符號列表。當您在長句中看到嵌入的項目或任務列表時，可以考慮將該句重構為項目符號或編號列表。例如，前面的例子包含連接詞「或」（**or**），所以讓我們將該長句轉換為以下項目符號列表：
+當您在長句中看到連接詞「或」（**or**）時，可以考慮將該句重構為項目符號清單。當你看到長句中嵌入了一連串項目或步驟時，也可以考慮改寫為項目清ㄑ或編號清單。例如，前面的例子包含了連接詞「或」（**or**），因此我們可以將原句改寫為以下項目清單：
 
 > 要改變迴圈的常規流程，請呼叫以下陳述式之一：
 >
@@ -89,19 +88,20 @@ KornShell 是 Bourne Shell 的向下相容超集合，包含了許多對舊版 s
 
 ## 消除或減少無關的詞語
 
-許多句子都包含填充詞——這些是消耗空間卻無法為讀者提供養分的文字垃圾。例如，看看您是否能找出以下句子中不必要的詞語：
+許多句子都包含了贅詞──文字世界中的垃圾食物，只占空間又沒營養。例如，你是否能在下面這句話中找出不必要的字：
+
 
 > An input value greater than 100 causes the triggering of logging.
 > <br />
-> (大於100的輸入值會**導致觸發**日誌記錄。)
+> (輸入值若大於 100，會**導致觸發**日誌記錄。)
 
-將 **causes the triggering of** 替換為更短的動詞 **triggers**，可以得到一個更短的句子：
+將「**導致觸發**」（causes the triggering of）改為簡潔有力的動詞「**觸發**」（triggers），就能得到更簡短的句子：
 
 > An input value greater than 100 triggers logging.
 > <br />
-> (大於100的輸入值會**觸發**日誌記錄。)
+> (輸入值若大於 100，會**觸發**日誌記錄。)
 
-透過練習，您將能發現多餘的詞語，並在刪除或減少它們時感到無比的快樂。例如，請看以下句子：
+只要多加練習，你就能快速辨識出多餘的字詞，並在刪除或簡化它們時感到無比快樂。例如，請看下列句子：
 
 > This design document provides a detailed description of Project Frambus.
 > <br />
@@ -110,9 +110,10 @@ KornShell 是 Bourne Shell 的向下相容超集合，包含了許多對舊版 s
 片語 **provides a detailed description of** 可以簡化為動詞 **describes** (或動詞 **details**)，因此結果句子可以變成：
 
 > This design document describes Project Frambus.
+> <br />
 > (本設計文件**描述了** Frambus 專案。)
 
-下表建議了一些常見臃腫片語的替代方案：
+下表列出了一些常見冗贅片語的簡化建議：
 
 | 冗長 (Wordy) | 簡潔 (Concise) |
 | :--- | :--- |
@@ -144,10 +145,10 @@ KornShell 是 Bourne Shell 的向下相容超集合，包含了許多對舊版 s
 
 ## 減少從屬子句 (選修)
 
-子句是句子中一個獨立的邏輯片段，包含一個執行者和一個動作。每個句子都包含：
+**子句**是句子中一個獨立的邏輯片段，包含一個動作者和一個動作。每個句子都包含：
 
 * 一個主要子句
-* 零個或多個從屬子句
+* 零或多個從屬子句
 
 從屬子句（subordinate clause）修飾主要子句中的想法。顧名思義，從屬子句不如主要子句重要。例如，請看以下句子：
 
@@ -157,7 +158,7 @@ KornShell 是 Bourne Shell 的向下相容超集合，包含了許多對舊版 s
 > * 主要子句：Python is an interpreted programming language
 > * 從屬子句：which was invented in 1991
 
-您通常可以透過引導它們的詞語來識別從屬子句。以下列表（絕非完整）顯示了引導從屬子句的常見詞語：
+你通常可以透過引導詞來辨識從屬子句。以下列出一些常見的從屬子句引導詞（此清單並非完整）：
 
 * which
 * that
@@ -178,7 +179,7 @@ KornShell 是 Bourne Shell 的向下相容超集合，包含了許多對舊版 s
 判斷下列哪些句子中的從屬子句應該拆分成獨立的句子。（不要改寫句子，只要指出哪些句子應該重寫即可。）
 
 1. Python is an interpreted language, which means that the language can execute source code directly. <br />(Python 是一種直譯式語言，這表示它可以直接執行原始碼。)
-2. Bash is a modern shell scripting language that takes many of its features from KornShell 88, which was developed at Bell Labs. <br />(Bash 是一種現代的 shell 指令稿語言，它從 KornShell 88 繼承了許多功能，而 KornShell 88 是在貝爾實驗室開發的。)
+2. Bash is a modern shell scripting language that takes many of its features from KornShell 88, which was developed at Bell Labs. <br />(Bash 是一種現代的 shell 腳本語言，它從 KornShell 88 繼承了許多功能，而 KornShell 88 是在貝爾實驗室開發的。)
 3. Lisp is a programming language that relies on Polish prefix notation, which is one of the systems invented by the Polish logician Jan Łukasiewicz. <br />(Lisp 是一種程式語言，採用波蘭前置符號（Polish prefix notation），這種符號系統是由波蘭邏輯學家 Jan Łukasiewicz 發明的。)
 4. I don't want to say that Fortran is old, but only radiocarbon dating can determine its true age. <br />(我不是說 Fortran 很老，但它的真實年齡可能需要用放射性碳定年法來測定。)
 
@@ -195,24 +196,24 @@ KornShell 是 Bourne Shell 的向下相容超集合，包含了許多對舊版 s
 
 ## 區分 that 和 which
 
-**That** 和 **which** 都可以用來引導從屬子句。它們之間有什麼區別？在某些國家，這兩個字幾乎可以互換使用。不過，美國的細心讀者通常會嚴正指出，你又搞混這兩個字了。
+**That** 和 **which** 都可以用來引導從屬子句。它們之間有什麼區別？在某些國家，這兩個字幾乎可以互換使用。但在美國，細心的讀者通常會嚴正指出：你又搞混這兩個字了。
 
-在美國，**which** 用於非必要（非限制性）的從屬子句，也就是那種刪掉句子仍然通順的子句；**that** 則用於必要（限制性）的從屬子句，是句子無法省略的部分。舉例來說，下面這句的重點是「Python 是一種直譯語言」，句子即使刪掉「Guido van Rossum invented」仍然合理：
+在美國，**which** 用於非限定性從屬子句，也就是那種即使刪掉，句子依然通順的子句；**that** 則用於必要的（限制性）從屬子句，是句子不可或缺的部分。舉例來說，下面這句話的重點是「Python 是一種直譯語言」，而句子即使刪掉「Guido van Rossum invented」仍無損原意：
 
 > Python is an interpreted language, which Guido van Rossum invented.
 > <br />
 > Python 是一種直譯語言，這是 Guido van Rossum 發明的。
 
-相較之下，下面這句需要用到「don't involve linear algebra」這個限制性子句：
+相反地，下面這句話就必須保留「don't involve linear algebra」，否則意思不完整：
 
 > Fortran is perfect for mathematical calculations that don't involve linear algebra.
 > <br/>
 > Fortran 非常適合用來做不涉及線性代數的數學運算。
 
-如果你朗讀一句話時，在從屬子句前聽到停頓，就用 **which**；如果沒有停頓，就用 **that**。你可以回頭讀前面兩句例句，第一句在從屬子句前有停頓嗎？
+如果你朗讀一句話時，在從屬子句前聽到停頓，通常就要用 **which**；如果沒有停頓，則用 **that**。你可以回頭讀前面兩句例句，第一句在從屬子句前有停頓嗎？
 
-在 **which** 前面要加逗號，**that** 前面則不加逗號。
+「**which**」前面要加逗號，「**that**」前面則不加逗號。
 
 <br /><br />
 
-**下一個單元：** [清單與表格]({{< relref "../lists-and-tables/index.md" >}})
+**下一單元：** [清單與表格]({{< relref "../lists-and-tables/index.md" >}})

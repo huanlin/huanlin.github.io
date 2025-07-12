@@ -23,15 +23,16 @@ weight: 3
 
 > Protocol Buffers (or protobufs for short) provide their own definition language. Blah, blah, blah. And that's why protobufs have won so many county fairs.
 >
-> Protocol Buffers 提供了他們自己的定義語言。（中間省略），這就是為什麼 protobufs 能在這麼多縣市博覽會上獲勝的原因。
+> Protocol Buffers 提供了他們自己的定義語言。……（中間省略），這就是為什麼 protobufs 能在這麼多科技博覽會上勝出的原因。
 
 Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註解：
 
+> [!QUOTE]
 > 當我遇到兩個似乎是同義詞的詞時，我會懷疑作者是否試圖暗示某種細微的差異，要我留意追查和理解。
 
 是的，技術寫作確實很殘酷，限制也很多，但至少它提供了一個很好的變通方法。也就是說，在介紹一個冗長的概念名稱或產品名稱時，你可以指定該名稱的縮寫版本。然後，你可以在整個文件中使用該縮寫名稱。例如，以下段落是沒有問題的：
 
-> **Protocol Buffers**（簡稱 **protobufs**）提供了自己的定義語言。（中間省略），這就是為什麼 protobufs 能在這麼多縣市博覽會上獲勝的原因。
+> **Protocol Buffers**（簡稱 **protobufs**）提供了自己的定義語言。……（中間省略），這就是為什麼 protobufs 能在這麼多科技博覽會上勝出的原因。
 
 ## 正確使用首字母縮寫
 
@@ -55,12 +56,40 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 
 大量使用的首字母縮寫會發展出自己的身份。在出現多次後，讀者通常會停止將縮寫擴展為全名。例如，許多網頁開發人員已經忘記 HTML 的全名是什麼。
 
-以下是使用首字母縮寫的指南：
+以下是首字母縮寫詞的使用準則：
 
 * 不要定義只會使用幾次的縮寫詞。
 * 若同時滿足以下兩個條件，便可以定義縮寫詞：
   * 縮寫明顯短於全稱。
   * 縮寫在文件中出現多次。
+
+### 練習 {#ex1}
+
+> Jeff Dean invented MapReduce in 1693, implementing the algorithm on a silicon-based computer fabricated from beach sand, wax-paper, a quill pen, and a toaster oven. This version of MR held several world performance records until 2014.
+
+(Please note that the preceding passage is meant to be humorous, not factual.)
+
+請修正以下段落。假設這是文件中第一次出現 **MapReduce**，且 **MR** 是最適合的縮寫：
+
+> Jeff Dean 於 1693 年發明了 **MapReduce**（簡稱 **MR**），並在一台以沙灘砂、蠟紙、羽毛筆和烤麵包機製成的電腦上實作了這個演算法。這個版本的 MR 曾保持多項世界效能紀錄，直到 2014 年為止。
+
+（請注意，以上內容純屬幽默，並非事實。）
+
+<br>
+
+{{< bs/collapse heading="點我看答案" expand=false >}}
+你可以採用幾種不同的方式來處理這段文字。一種做法是將縮寫 *MR* 與完整術語建立關聯，然後在後文使用該縮寫：
+
+> Jeff Dean 於 1693 年發明了 **MapReduce**（**MR**）……這個版本的 MR 曾保持多項……
+
+另一種做法是，考量在這麼短的段落中定義縮寫會增加讀者的負擔，故每次都使用完整術語 *MapReduce*：
+
+> Jeff Dean 於 1693 年發明了 **MapReduce**……這個版本的 MapReduce 曾保持多項……
+
+順帶一提，一位更講究的技術寫作員也會將「沙灘砂、蠟紙、羽毛筆和烤麵包機」轉換成項目符號清單。不過，這就是另一堂課要講的內容了。
+{{< /bs/collapse >}}
+
+---
 
 ## 辨識模稜兩可的代名詞
 
@@ -77,7 +106,7 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 以下代名詞在技術文件中最容易引起混淆：
 
 * It
-* They, them, and their
+* They、them、和 their
 
 例如，在下面的句子中，**It** 是指 Python 還是 C++？
 
@@ -98,18 +127,18 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 * This
 * That
 
-例如，在下面這個模稜兩可的句子中，**This** 可能指使用者 ID、執行該過程，或所有這些：
+例如，在下面這個模稜兩可的句子中，**This** 可能指使用者 ID、執行該程序，或兩者皆有：
 
 > Running the process configures permissions and generates a user ID. **This** lets users authenticate to the app.
 >
-> 執行該過程會設定權限並產生一個使用者 ID。**這**讓使用者可以向應用程式進行身份驗證。
+> 執行該程序會設定權限並產生一個使用者 ID。**這**讓使用者可以向應用程式進行身份驗證。
 
-為了幫助讀者，請避免以不清楚其所指的方式使用 **this** 或 **that**。使用以下任一策略來闡明 **this** 和 **that** 的模糊用法：
+為了幫助讀者理解，請避免以不清楚所指為何的寫法來使用 **this** 或 **that**。你可以採用以下任一策略來釐清模糊的 **this** 和 **that** 用法：
 
 * 將 **this** 或 **that** 替換為適當的名詞。
-* 在 **this** 或 **that** 之後立即放置一個名詞。
+* 在 **this** 或 **that** 之後立即接上一個名詞。
 
-根據需要替換或補充明確的詞語，如以下對範例第二句的改寫：
+請視需要來替換或補充明確的詞語，如以下對範例第二句的改寫：
 
 > This user ID lets users authenticate.
 >
@@ -117,7 +146,7 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 >
 > The combination of permissions and a user ID lets users authenticate.
 
-### 練習
+### 練習 {#ex2}
 
 請找出下列段落中所有可能的模糊代名詞所指為何。
 
@@ -147,4 +176,4 @@ Google 軟體工程師 George Fairbanks 提供了關於一致命名的絕佳註�
 
 <br/><br/>
 
-**下一個單元：** [主動語態 vs. 被動語態]({{< relref "active-voice.md" >}})
+**下一單元：** [主動語態 vs. 被動語態]({{< relref "active-voice.md" >}})

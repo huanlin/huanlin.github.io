@@ -6,7 +6,7 @@ weight: 5
 
 > **預估時間：** 10 分鐘
 
-喜劇作家追求最有趣的結果，恐怖作家力求最嚇人的情節，而技術寫作人員則以最清晰為目標。在技術寫作中，清晰度優先於所有其他規則。本單元將建議幾種讓您的句子變得優美清晰的方法。
+喜劇作家追求最有趣的效果，恐怖小說作家力求最嚇人的情節，而技術寫作員則以最清晰為目標。在技術寫作中，清晰優先於其他所有規則。本單元將介紹幾種讓句子變得清晰優雅的方法。
 
 ## 選擇強而有力的動詞
 
@@ -22,15 +22,15 @@ weight: 5
 
 | 弱動詞 | 強動詞 |
 | :--- | :--- |
-| The exception **occurs** when dividing by zero. (除以零會**發生**例外。) | Dividing by zero **raises** the exception. (除以零會**引發**例外。) |
-| This error message **happens** when... (當...時，這個錯誤訊息會**發生**。) | The system **generates** this error message when... (當...時，系統會**產生**這個錯誤訊息。) |
-| We **are** very careful to ensure... (我們**是**很小心的，以確保...) | We carefully **ensure**... (我們小心地**確保**...) |
+| The exception **occurs** when dividing by zero. <br/>(除以零會**發生**例外。) | Dividing by zero **raises** the exception. <br/>(除以零會**引發**例外。) |
+| This error message **happens** when... <br/>(當...時，這個錯誤訊息會**發生**。) | The system **generates** this error message when... <br/>(當...時，系統會**產生**這個錯誤訊息。) |
+| We **are** very careful to ensure... <br/>(我們**是**很小心的來確保...) | We carefully **ensure**... <br/>(我們小心地**確保**...) |
 
 許多作者依賴 be 的各種形式，好像它們是調味架上唯一的香料。不妨在文章裡撒上一些不同的動詞，讓它更可口。話雖如此，be 的形式有時是動詞的最佳選擇，所以也不用覺得必須在寫作時完全避開 be 的每一種形式。
 
 請注意，通用動詞通常表示有其他問題，例如：
 
-* 句子不精確或少了行為者（譯註：發出動作的人）
+* 句子不精確或少了動作者
 * 被動語態的句子
 
 ### 練習 {#ex1}
@@ -113,25 +113,25 @@ weight: 5
 <br/>
 
 
-## (選修) 盡量減少使用某些形容詞和副詞
+## 盡量少用某些形容詞和副詞 (選修)
 
-形容詞和副詞在小說和詩歌中表現得非常出色。多虧了形容詞，普通的草地變得「碧草如茵」（prodigal and verdant），了無生氣的頭髮則變成了「閃閃動人、生氣勃勃」（lustrous and exuberant）。副詞推動馬兒「自由狂野地」（madly and freely）奔馳，狗兒「大聲而兇猛地」（loudly and ferociously）吠叫。不幸的是，形容詞和副詞有時也會讓技術讀者狂吠不止。這是因為形容詞和副詞對技術讀者而言往往過於模糊和主觀。更糟的是，形容詞和副詞會讓技術文件聽起來很像是行銷材料。例如，思考以下技術文件中的段落：
+形容詞和副詞在小說和詩歌中表現得非常出色。多虧了形容詞，普通的草地變得「碧草如茵」（prodigal and verdant），了無生氣的頭髮則變成了「閃閃動人、生氣勃勃」（lustrous and exuberant）。副詞讓馬兒「自由狂野地」（madly and freely）奔馳，讓小狗「大聲兇猛地」（loudly and ferociously）吠叫。不幸的是，形容詞和副詞有時也會讓技術讀者抓狂大叫。這是因為形容詞和副詞對技術讀者而言往往過於模糊和主觀。更糟的是，他們會讓技術文件聽起來很像是行銷宣傳。例如，請看以下技術文件中的段落：
 
 > Setting this flag makes the application run screamingly fast.
 > <br />
 > 設定此旗標可讓應用程式執行得**飛快**。
 
-誠然，「飛快」（screamingly fast）會引起讀者的注意，但不一定是好的方面。給您的技術讀者提供事實數據，而不是行銷術語。將無定形的副詞和形容詞重構為客觀的數字資訊。例如：
+誠然，「**飛快**」（screamingly fast）能吸引讀者注意，但不見得是好事。對技術讀者而言，應提供事實數據，而非行銷術語。請將模糊的副詞與形容詞重構為具體的數值資訊。例如：
 
 > Setting this flag makes the application run 225-250% faster.
 > <br />
 > 設定此旗標可讓應用程式執行速度**加快 225-250%**。
 
-前面的改變是否剝奪了句子的一些魅力？是的，有一點，但修改後的句子獲得了準確性和可信度。
+這樣的修改是否讓句子少了一些魅力？的確有一點，但改寫後的句子有了準確性與可信度。
 
 > [!IMPORTANT]
 > 不要把傳授知識（技術寫作）與宣傳或銷售產品（行銷寫作）混淆。當讀者期待的是學習，就應該提供知識性的內容；不要在教學內容中夾帶宣傳或銷售的資訊。
 
 <br /><br />
 
-下一個單元：[簡短的句子]({{< relref "../short-sentences/index.md" >}})
+下一單元：[簡短的句子]({{< relref "../short-sentences/index.md" >}})
