@@ -1,6 +1,6 @@
 ---
 title: 段落
-linkTitle: 段落 (10 min)
+linkTitle: 段落 (10 分鐘)
 weight: 8
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 建立範例程式碼
-linkTitle: 建立範例程式碼 (10 min)
+linkTitle: 建立範例程式碼 (10 分鐘)
 weight: 5
 ---
 

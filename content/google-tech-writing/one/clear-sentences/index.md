@@ -1,6 +1,6 @@
 ---
 title: 清晰的句子
-linkTitle: 清晰的句子 (10 min)
+linkTitle: 清晰的句子 (10 分鐘)
 weight: 5
 ---
 

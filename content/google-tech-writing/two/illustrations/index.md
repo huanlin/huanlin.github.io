@@ -1,6 +1,6 @@
 ---
 title: 製作插圖
-linkTitle: 製作插圖 (10 min)
+linkTitle: 製作插圖 (10 分鐘)
 weight: 4
 ---
 

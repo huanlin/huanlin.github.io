@@ -1,6 +1,6 @@
 ---
 title: 簡短的句子
-linkTitle: 簡短的句子 (20 min)
+linkTitle: 簡短的句子 (20 分鐘)
 weight: 6
 ---
 

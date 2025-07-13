@@ -1,6 +1,6 @@
 ---
 title: 字詞
-linkTitle: 字詞 (10 min)
+linkTitle: 字詞 (10 分鐘)
 weight: 3
 ---
 

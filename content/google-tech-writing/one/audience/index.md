@@ -1,6 +1,6 @@
 ---
 title: 目標讀者
-linkTitle: 目標讀者 (10 min)
+linkTitle: 目標讀者 (10 分鐘)
 weight: 9
 ---
 

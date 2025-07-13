@@ -1,6 +1,6 @@
 ---
 title: 主動語態 vs. 被動語態
-linkTitle: 主動語態 vs. 被動語態 (15 min)
+linkTitle: 主動語態 vs. 被動語態 (15 分鐘)
 weight: 4
 ---
 

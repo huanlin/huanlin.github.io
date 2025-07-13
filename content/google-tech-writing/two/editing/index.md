@@ -1,6 +1,6 @@
 ---
 title: 自我編輯
-linkTitle: 自我編輯 (10 min)
+linkTitle: 自我編輯 (10 分鐘)
 weight: 2
 ---
 

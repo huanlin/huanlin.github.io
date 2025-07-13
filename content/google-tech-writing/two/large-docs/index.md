@@ -1,6 +1,6 @@
 ---
 title: 組織大型文件
-linkTitle: 組織大型文件 (20 min)
+linkTitle: 組織大型文件 (20 分鐘)
 weight: 3
 ---
 

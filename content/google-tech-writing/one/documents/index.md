@@ -1,6 +1,6 @@
 ---
 title: 文件
-linkTitle: 文件 (10 min)
+linkTitle: 文件 (10 分鐘)
 weight: 11
 ---
 

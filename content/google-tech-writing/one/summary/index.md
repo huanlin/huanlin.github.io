@@ -1,6 +1,6 @@
 ---
 title: 總結
-linkTitle: 總結 (1 min)
+linkTitle: 總結 (1 分鐘)
 weight: 19
 ---
 

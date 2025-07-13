@@ -1,6 +1,6 @@
 ---
 title: 夠用的文法（選修）
-linkTitle: 夠用的文法（選修）(10 min)
+linkTitle: 夠用的文法（選修）(10 分鐘)
 weight: 2
 ---
 

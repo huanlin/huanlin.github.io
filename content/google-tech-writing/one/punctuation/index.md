@@ -1,6 +1,6 @@
 ---
 title: 標點符號（選修）
-linkTitle: 標點符號（選修）(5 min)
+linkTitle: 標點符號（選修）(5 分鐘)
 weight: 12
 ---
 

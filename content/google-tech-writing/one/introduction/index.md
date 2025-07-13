@@ -1,6 +1,6 @@
 ---
 title: 簡介
-linkTitle: 簡介 (3 min)
+linkTitle: 簡介 (3 分鐘)
 weight: 1
 ---
 

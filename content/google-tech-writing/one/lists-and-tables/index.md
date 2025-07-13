@@ -1,6 +1,6 @@
 ---
 title: 清單與表格
-linkTitle: 清單與表格 (15 min)
+linkTitle: 清單與表格 (15 分鐘)
 weight: 7
 ---
 
