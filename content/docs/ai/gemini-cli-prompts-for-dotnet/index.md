@@ -170,3 +170,7 @@ GEMINI.md 檔案中可以包含以下資訊：
 先這樣，有新的再補上。
 
 Keep coding with AI 😊
+
+## 參考資料
+
+- [Gemini CLI 官方文件](https://gemini-cli-docs.pages.dev/)
