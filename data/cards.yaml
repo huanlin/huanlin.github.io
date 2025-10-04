@@ -38,7 +38,7 @@ tech-writing:
   items:
     - title: "Google 技術寫作課程（中文版）"
       description: "Technical writing courses (Google)"
-      url: "/google-tech-writing/"
+      url: "https://tech-writing-lab.github.io/google-tech-writing/"
 books:
   title: "我的電子書"
   weight: 4
