@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="td-content about-page">
+  <div class="about-page__container">
+    <header class="about-page__header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.tagline }}<p>{{ . }}</p>{{ end }}
+    </header>
+    <div class="about-page__content">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end -}}

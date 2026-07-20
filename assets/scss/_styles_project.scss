@@ -158,6 +158,78 @@ h2.feedback--title {
   }
 }
 
+// About page: a focused author biography without documentation sidebars.
+.about-page {
+  padding: 0;
+}
+
+.about-page__container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding: 2rem clamp(1rem, 4vw, 2rem) 4rem;
+}
+
+.about-page__header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--bs-border-color);
+
+  h1 {
+    margin: 0;
+    color: var(--bs-body-color);
+    font-size: clamp(1.9rem, 3vw, 2.5rem);
+    font-weight: 650;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    margin: 0.75rem 0 0;
+    color: var(--bs-secondary-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+.about-page__content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  h2 {
+    margin: 2.5rem 0 1rem;
+    color: var(--bs-body-color);
+    font-size: 1.4rem;
+    font-weight: 650;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+  }
+
+  a {
+    text-underline-offset: 0.18em;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .about-page__container {
+    // The desktop navbar is fixed, so include its height in the top spacing.
+    padding-top: 6rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .about-page__header {
+    margin-bottom: 2rem;
+  }
+
+  .about-page__content {
+    font-size: 1rem;
+  }
+}
+
 .contributors {
   color: var(--md-primary-fg-color);
   font-size: 0.9rem;
