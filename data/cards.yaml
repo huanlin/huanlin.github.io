@@ -49,6 +49,8 @@ books:
     name: "book"
     color: "black"
   items:
+    - title: "查看全部著作"
+      url: "/about/#著作"
     - title: "Amazon"
       url: "https://www.amazon.com/stores/Michael-Tsai/author/B0GXN5SKTN"
     - title: "Google Play 圖書"
@@ -57,18 +59,3 @@ books:
       url: "https://readmoo.com/contributor/20072"
     - title: "樂天 Kobo"
       url: "https://www.kobo.com/tw/zh/search?query=michael+tsai&ac=1&ac.morein=true&fcsearchfield=author&ac.author=michael+tsai&fclanguages=zh"
-social-links:
-  title: "社群連結"
-  weight: 5
-  icon:
-    vendor: "fas"
-    name: "link"
-    color: "black"
-  items:
-    - title: "部落格"
-      description: "Huanlin 學習筆記（部落格）"
-      url: "https://www.huanlintalk.com/"
-    - title: "Facebook 專頁"
-      url: "https://www.facebook.com/huanlin.notes"
-    - title: "Youtube 頻道"
-      url: "https://www.youtube.com/@michael-tsai"

@@ -235,10 +235,10 @@ url = "https://github.com/huanlin"
 icon = "fab fa-github"
 desc = "My GitHub space"
 [[params.links.developer]]
-name = "我的 Leanpub 電子書"
-url = "https://leanpub.com/u/michaeltsai"
+name = "IppoBooks 出版社"
+url = "https://ippobooks.com/"
 icon = "fa-brands fa-leanpub"
-desc = "我的 Leanpub 電子書"
+desc = "IppoBooks 出版社"
 
 # hugo module configuration
 
