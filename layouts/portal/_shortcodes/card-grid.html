@@ -96,12 +96,19 @@
                         {{- end }}
                         {{- if $itemLink }}
                             <a
-                                class="text-decoration-none mb-0"
+                                class="portal-card__item-link text-decoration-none mb-0"
                                 href="{{ $itemLink }}"
                                 title="{{ $item.description }}"
                                 {{ with $itemAttrs }}{{ delimit . " " | safeHTMLAttr }}{{ end }}
                                 {{ if $itemUrl.Scheme }}target="_blank" rel="external"{{ end }}>
-                                {{ .title }}
+                                <span>{{ .title }}</span>
+                                {{- with .badges }}
+                                  <span class="portal-card__badges">
+                                    {{- range . }}
+                                      <span class="portal-card__badge">{{ . }}</span>
+                                    {{- end }}
+                                  </span>
+                                {{- end }}
                             </a>
                         {{ else }}
                             {{ $item.description | markdownify }}

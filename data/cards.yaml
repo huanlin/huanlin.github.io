@@ -8,7 +8,10 @@ dotnet:
     name: "code"
     color: "black"
   items:
-    - title: "The C# You Need to Know [EN | 中文]"
+    - title: "The C# You Need to Know"
+      badges:
+        - "EN"
+        - "中文"
       url: "https://csharp.huanlin.cc"
     - title: "C# 筆記（依版本演進）"
       url: "/dotnet/csharp/"

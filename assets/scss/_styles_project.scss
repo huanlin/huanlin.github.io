@@ -133,6 +133,36 @@ h2.feedback--title {
   }
 }
 
+.portal-card__item-link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.portal-card__badges {
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.portal-card__badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.15rem;
+  padding: 0.08rem 0.38rem;
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.28);
+  border-radius: 999px;
+  background: rgba(var(--bs-primary-rgb), 0.08);
+  color: var(--bs-link-color);
+  font-size: 0.68rem;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
 @include media-breakpoint-up(md) {
   .portal-home__container {
     // The desktop navbar is fixed, so include its height in the top spacing.
@@ -323,6 +353,46 @@ nav.foldable-nav .with-child, nav.foldable-nav .without-child {
     text-transform: none;
     font-weight: 500;
     font-size: 1.05rem;
+}
+
+// Keep the compact navbar on one row on narrow screens.
+@include media-breakpoint-down(md) {
+  .td-navbar .td-navbar-container {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    min-height: 4rem;
+    padding-inline: 1rem;
+  }
+
+  .td-navbar .navbar-brand {
+    min-width: 0;
+    margin-right: auto;
+    padding-block: 0.5rem;
+  }
+
+  .td-navbar .navbar-brand__logo svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .td-navbar .td-navbar__main {
+    flex: 0 0 auto;
+    width: auto;
+    overflow: visible;
+  }
+
+  .td-navbar .td-navbar__main .navbar-nav {
+    flex-direction: row;
+  }
+
+  .td-navbar .td-navbar__main .scroll-indicator {
+    display: none;
+  }
+
+  .td-navbar .nav-link {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.95rem;
+  }
 }
 
 // The outer page container for the default base template.
