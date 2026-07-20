@@ -62,6 +62,11 @@ h2.feedback--title {
   color: var(--md-primary-fg-color);
 }
 
+.td-home .td-content > h1,
+.td-home .td-content > .h1 {
+  color: #ffffff;
+}
+
 // Section 首頁的標題連結
 .section-index h5 a {
   font-weight: 700;
