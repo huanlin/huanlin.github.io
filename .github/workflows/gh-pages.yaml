@@ -34,7 +34,7 @@ jobs:
     if: contains(github.repository, 'github.io')
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.147.7
+      HUGO_VERSION: 0.163.3
     steps:
       - name: Install Hugo CLI
         run: |

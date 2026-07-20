@@ -13,6 +13,7 @@
 {{ $sidebarCacheLimit := .Site.Params.ui.sidebar_cache_limit | default 2000 -}}
 {{ $shouldCache := ge (len .Site.Pages) $sidebarCacheLimit -}}
 {{ $sidebarCacheTypeRoot := .Site.Params.ui.sidebar_cache_type_root | default false -}}
+{{ $sidebarArgs := dict "context" . "sidebarRoot" nil "sidebarRootID" nil "cacheSidebar" $shouldCache -}}
 {{ if $shouldCache -}}
   {{ $mid := printf "m-%s" (.RelPermalink | anchorize) }}
   <script>
@@ -29,9 +30,9 @@
       persistScrollPosition();
     });
   </script>
-  {{ partialCached "sidebar-tree.html" . .FirstSection.RelPermalink }}
+  {{ partialCached "sidebar-tree.html" $sidebarArgs .FirstSection.RelPermalink }}
 {{ else -}}
-  {{ partial "sidebar-tree.html" . }}
+  {{ partial "sidebar-tree.html" $sidebarArgs }}
   <script>
     persistScrollPosition();
   </script>
