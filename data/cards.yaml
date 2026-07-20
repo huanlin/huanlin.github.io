@@ -8,7 +8,9 @@ dotnet:
     name: "code"
     color: "black"
   items:
-    - title: "C# 筆記"
+    - title: "The C# You Need to Know [EN | 中文]"
+      url: "https://csharp.huanlin.cc"
+    - title: "C# 筆記（依版本演進）"
       url: "/dotnet/csharp/"
     - title: ".NET 非同步程式設計"
       url: "/dotnet/async/"
@@ -47,8 +49,8 @@ books:
     name: "book"
     color: "black"
   items:
-    - title: "Leanpub 書店"
-      url: "https://leanpub.com/u/michaeltsai"
+    - title: "Amazon"
+      url: "https://www.amazon.com/stores/Michael-Tsai/author/B0GXN5SKTN"
     - title: "Google Play 圖書"
       url: "https://play.google.com/store/books/author?id=%E8%94%A1%E7%85%A5%E9%BA%9F"
     - title: "Readmoo 讀墨"
