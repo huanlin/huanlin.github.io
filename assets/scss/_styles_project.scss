@@ -74,6 +74,90 @@ h2.feedback--title {
   font-weight: 400;
 }
 
+// Portal homepage: a compact introduction followed by a responsive card grid.
+.portal-home {
+  padding: 0;
+}
+
+.portal-home__container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem) 0;
+}
+
+.portal-home__intro {
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+
+  h1 {
+    margin: 0;
+    color: var(--bs-body-color);
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+    font-weight: 650;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    max-width: 48rem;
+    margin: 0.75rem 0 0;
+    color: var(--bs-secondary-color);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    overflow-wrap: break-word;
+  }
+}
+
+.portal-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  transition: color 0.15s ease;
+}
+
+.portal-card__title {
+  color: var(--bs-body-color);
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.portal-card .bs-icon-grid-item-icon {
+  color: currentColor !important;
+}
+
+.portal-card a {
+  text-underline-offset: 0.18em;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .portal-home__container {
+    // The desktop navbar is fixed, so include its height in the top spacing.
+    padding-top: 6rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .portal-home__container {
+    padding-top: 2rem;
+  }
+
+  .portal-home__intro {
+    margin-bottom: 1.5rem;
+  }
+
+  .portal-card-grid {
+    --bs-gutter-y: 1.5rem;
+  }
+
+  .portal-card__title {
+    font-size: 1.15rem;
+  }
+}
+
 .contributors {
   color: var(--md-primary-fg-color);
   font-size: 0.9rem;

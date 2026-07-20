@@ -28,7 +28,7 @@
 {{- end }}
 {{- $data := partialCached "base/functions/data" (dict "key" $key "page" .Page) .Page $key }}
 {{- with $data }}
-  <div class="bs-icon-grid row g-{{ $gap }} row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-{{ $maxColumns }} mb-5 justify-content-start">
+  <div class="bs-icon-grid portal-card-grid row g-{{ $gap }} row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-{{ $maxColumns }} mb-5 justify-content-start">
     {{- range sort . "weight" }}
       <div class="col">
         {{- $icon := "" }}
@@ -59,11 +59,11 @@
         {{- end }}
         {{- if and $link (eq $linkText "") }}
           <a
-            class="bs-icon-grid-item d-flex flex-column rounded h-100 w-100 p-4 text-decoration-none{{ cond $border ` border shadow` `` }} text-{{ $alignment }}"
+            class="bs-icon-grid-item portal-card d-flex flex-column rounded h-100 w-100 p-2 p-md-3 text-decoration-none{{ cond $border ` border shadow` `` }} text-{{ $alignment }}"
             href="{{ $link }}"
             {{ with $itemAttrs }}{{ delimit . " " | safeHTMLAttr }}{{ end }}
             {{ if $url.Scheme }}target="_blank" rel="external"{{ end }}>
-            <div class="bs-icon-grid-item-title fw-bold mb-3 fs-4 d-flex align-items-center justify-content-{{ $alignment }}">
+            <div class="bs-icon-grid-item-title portal-card__title fw-bold mb-3 d-flex align-items-center justify-content-{{ $alignment }}">
               {{- $icon -}}{{- .title -}}
             </div>
             <p class="bs-icon-grid-item-desc mb-0 text-body-secondary">
@@ -72,9 +72,9 @@
           </a>
         {{ else }}
           <div
-            class="bs-icon-grid-item d-flex flex-column rounded h-100 w-100 p-4 {{ cond $border ` border shadow` `` }} text-{{ $alignment }}"
+            class="bs-icon-grid-item portal-card d-flex flex-column rounded h-100 w-100 p-2 p-md-3 {{ cond $border ` border shadow` `` }} text-{{ $alignment }}"
             {{ with $itemAttrs }}{{ delimit . " " | safeHTMLAttr }}{{ end }}>
-            <div class="bs-icon-grid-item-title fw-bold mb-3 fs-4 d-flex align-items-center justify-content-{{ $alignment }}">
+            <div class="bs-icon-grid-item-title portal-card__title fw-bold mb-3 d-flex align-items-center justify-content-{{ $alignment }}">
               {{- $icon -}}{{- .title -}}
             </div>
             <div class="pt-0 mb-0 text-normal">
