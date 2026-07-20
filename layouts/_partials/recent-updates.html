@@ -1,0 +1,26 @@
+{{- $config := site.Params.features.recent_updates -}}
+{{- if $config.enabled -}}
+{{- $recentPages := where site.RegularPages "Draft" false -}}
+{{- $recentPages = where $recentPages "Params.hide_from_recent" "ne" true -}}
+{{- $recentPages = where $recentPages "Section" "in" $config.sections -}}
+{{- $recentPages = first $config.limit $recentPages.ByLastmod.Reverse -}}
+
+{{- with $recentPages }}
+  <section class="portal-recent" aria-labelledby="portal-recent-title">
+    <header class="portal-recent__header">
+      <h2 id="portal-recent-title">{{ $config.title }}</h2>
+    </header>
+    <div class="portal-recent__list">
+      {{- range . }}
+        <a class="portal-recent__item" href="{{ .RelPermalink }}">
+          <span class="portal-recent__section">
+            {{- index $config.section_labels .Section | default .Section -}}
+          </span>
+          <h3>{{ .Title }}</h3>
+          <time datetime="{{ .Lastmod.Format `2006-01-02` }}">{{ .Lastmod.Format $config.date_format }}</time>
+        </a>
+      {{- end }}
+    </div>
+  </section>
+{{- end }}
+{{- end }}

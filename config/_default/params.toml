@@ -1,0 +1,19 @@
+# Custom site features
+
+[features.recent_updates]
+enabled = false
+title = "最近更新"
+limit = 6
+date_format = "2006-01-02"
+sections = [
+  "dotnet",
+  "docs",
+  "go",
+  "google-tech-writing",
+]
+
+[features.recent_updates.section_labels]
+dotnet = ".NET"
+docs = "Documentation"
+go = "Go"
+google-tech-writing = "Tech Writing"

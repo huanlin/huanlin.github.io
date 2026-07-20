@@ -6,6 +6,7 @@
 			{{ with .Params.description }}<p>{{ . | markdownify }}</p>{{ end }}
 		</header>
 		{{ .Content }}
+		{{ partial "recent-updates.html" . }}
 	</div>
 </div>
 {{ end -}}
