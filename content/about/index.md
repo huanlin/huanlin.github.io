@@ -13,17 +13,18 @@ menu:
 
 ## 著作
 
-- 《深入淺出 .NET 10 併發程式設計》 [中文版](https://ippobooks.com/books/dotnet10-async/) | [English version](https://ippobooks.com/books/dotnet10-async-en/)
-- 《現代 C#：AI 時代的開發者修煉》 [中文版](https://ippobooks.com/books/modern-csharp/) | [English version](https://ippobooks.com/books/modern-csharp-en/)
+- 《深入淺出 .NET 10 併發程式設計》 [中文版](https://ippobooks.com/books/dotnet10-async/) · [English version](https://ippobooks.com/books/dotnet10-async-en/)
+- 《現代 C#：AI 時代的開發者修煉》 [中文版](https://ippobooks.com/books/modern-csharp/) · [English version](https://ippobooks.com/books/modern-csharp-en/)
 - [《.NET 相依性注入》](https://play.google.com/store/books/details?id=DaZCBAAAQBAJ)
 - [《Leanpub 自出版實戰》](https://leanpub.com/selfpub)
 
 ## 譯作
 
-- 《軟體構築美學》 （2010，已絕版）
-- 《物件導向分析設計與應用 第三版》 （2009，已絕版）
+- 《軟體構築美學》 （2010 年，已絕版）
+- 《物件導向分析設計與應用 第三版》 （2009 年，已絕版）
 
 ## 在網路上找到我
 
 - [Huanlin 學習筆記（部落格）](https://www.huanlintalk.com/)
+- [GitHub](https://github.com/huanlin)
 - [Facebook 專頁](https://www.facebook.com/huanlin.notes/)
