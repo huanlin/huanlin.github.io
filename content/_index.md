@@ -1,5 +1,5 @@
 ---
-title: HuanLin Docs
+title: Michael Tsai
 type: portal
 ---
 
@@ -8,7 +8,7 @@ type: portal
 {{% /blocks/section %}}
 
 {{% blocks/section color="white" type="row" %}}
-Software development & Technical writing
+Notes and practical learning from Michael Tsai
 {.h2 .text-center}
 <!--My notes about software development, .NET, Golang..., etc.-->
 {.text-center}

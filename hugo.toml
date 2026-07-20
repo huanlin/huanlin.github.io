@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Huanlin Docs"
+title = "Michael Tsai"
 
 # If you add a mounts section you should remove the old contentDir, staticDir, etc. settings.
 # See: https://gohugo.io/hugo-modules/configuration/#module-configuration-mounts
@@ -69,11 +69,11 @@ id = "G-S83RZSBDVH" # This ID is specific for https://huanlin.cc
   [languages.zh-TW]
     disabled = false
     languageName = "中文 (Chinese)"
-    Title = "Huanlin 技術文件"
+    Title = "Michael Tsai"
     weight = 1
   #contentDir = "content/zh"
   [languages.zh-TW.params]
-    subtitle = "我的技術文件、書籍、和筆記"
+    subtitle = "Software development, DevOps, and technical writing"
     time_format_default = "2006-01-02"
     time_format_blog = "2006-01-02"
 

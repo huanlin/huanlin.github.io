@@ -1,5 +1,5 @@
-# 歡迎來到 Huanlin 學習筆記
+# 歡迎來到 Michael Tsai 的學習筆記
 
-這是我的第二個筆記網站，可以說是新版本的「Huanlin 學習筆記」。我希望打造一個更好閱讀與方便學習的技術文章網站。
+這是我的個人筆記與技術文章網站，分享軟體開發、DevOps 與技術寫作的學習心得與實作經驗，也包含我出版的電子書試讀章節。
 
-如欲查看舊版的筆記網站，請至 [Blogger 平台的 Huanlin 學習筆記](https://huanlintalk.com)。
+如果想看更隨性的札記，可前往我的部落格：[Huanlin 學習筆記](https://huanlintalk.com)。
