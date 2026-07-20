@@ -68,7 +68,7 @@ id = "G-S83RZSBDVH" # This ID is specific for https://huanlin.cc
 [languages]
   [languages.zh-TW]
     disabled = false
-    languageName = "中文 (Chinese)"
+    label = "中文 (Chinese)"
     Title = "Michael Tsai"
     weight = 1
   #contentDir = "content/zh"
