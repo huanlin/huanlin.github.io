@@ -3,7 +3,6 @@ title: About Michael Tsai
 description: 關於作者蔡煥麟（Michael Tsai）、他的技術寫作經歷、著作與譯作。
 tagline: Author, blogger, and software developer.
 type: about
-date: 2026-07-21
 menu:
   main:
     name: About
