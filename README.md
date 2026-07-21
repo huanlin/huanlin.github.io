@@ -6,3 +6,7 @@ Links:
 
 - website: <https://huanlin.cc>
 - blog: <https://huanlintalk.com>
+
+Maintainer documentation:
+
+- [Multilingual content and file naming](docs/multilingual-content.md)
