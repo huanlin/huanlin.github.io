@@ -72,11 +72,22 @@ id = "G-S83RZSBDVH" # This ID is specific for https://huanlin.cc
 [languages]
   [languages.zh-TW]
     disabled = false
-    label = "中文 (Chinese)"
+    label = "繁體中文"
+    locale = "zh-TW"
     Title = "Michael Tsai"
     weight = 1
   #contentDir = "content/zh"
   [languages.zh-TW.params]
+    subtitle = "Software development, DevOps, and technical writing"
+    time_format_default = "2006-01-02"
+    time_format_blog = "2006-01-02"
+  [languages.en]
+    disabled = false
+    label = "English"
+    locale = "en-US"
+    title = "Michael Tsai"
+    weight = 2
+  [languages.en.params]
     subtitle = "Software development, DevOps, and technical writing"
     time_format_default = "2006-01-02"
     time_format_blog = "2006-01-02"

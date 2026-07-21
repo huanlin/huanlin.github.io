@@ -477,6 +477,12 @@ nav.foldable-nav .with-child, nav.foldable-nav .without-child {
     font-size: 1.05rem;
 }
 
+// Docsy reserves a navbar item for the language selector on multilingual sites.
+// Hide that item when the current page has no translated counterpart.
+.td-navbar__lang-menu:empty {
+  display: none;
+}
+
 // Keep the compact navbar on one row on narrow screens.
 @include media-breakpoint-down(md) {
   .td-navbar .td-navbar-container {

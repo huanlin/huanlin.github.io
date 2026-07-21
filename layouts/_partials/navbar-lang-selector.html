@@ -1,0 +1,24 @@
+{{- if gt (len .Translations) 0 -}}
+  <div class="td-lang-menu dropdown">
+    <a class="nav-link dropdown-toggle td-lang-menu__title" href="#" role="button"
+      data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="td-lang-menu__title-text">{{ .Language.Label }}</span>
+      <span class="td-lang-menu__title-code">{{ .Language.Lang | upper }}</span>
+    </a>
+
+    {{- $allPages := slice . -}}
+    {{- $allPages = $allPages | append .Translations -}}
+    <ul class="dropdown-menu">
+      {{- range sort $allPages "Language.Weight" -}}
+        {{- $isActive := eq $.Language.Lang .Language.Lang -}}
+        <li>
+          {{- if $isActive -}}
+            <span class="dropdown-item active">{{ .Language.Label }}</span>
+          {{- else -}}
+            <a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Language.Label }}</a>
+          {{- end -}}
+        </li>
+      {{- end -}}
+    </ul>
+  </div>
+{{- end -}}
