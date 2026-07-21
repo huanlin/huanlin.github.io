@@ -1,5 +1,8 @@
-# 歡迎來到 Michael Tsai 的學習筆記
+# Michael Tsai's Personal Website
 
-這是我的個人筆記與技術文章網站，分享軟體開發、DevOps 與技術寫作的學習心得與實作經驗，也包含我出版的電子書試讀章節。
+This repository contains the Hugo source code for my personal website. The site is built with Hugo and the Docsy theme, and it covers software development, DevOps, technical writing, and sample chapters from my published e-books.
 
-如果想看更隨性的札記，可前往我的部落格：[Huanlin 學習筆記](https://huanlintalk.com)。
+Links:
+
+- website: <https://huanlin.cc>
+- blog: <https://huanlintalk.com>
