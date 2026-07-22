@@ -13,6 +13,11 @@ dotnet:
         - "EN"
         - "中文"
       url: "https://csharp.huanlin.cc"
+    - title: "深入淺出 .NET 併發程式設計"
+      badges:
+        - "EN"
+        - "中文"
+      url: "https://dotnetconcurrency.huanlin.cc"
     - title: "C# 筆記（依版本演進）"
       url: "/dotnet/csharp/"
     - title: ".NET 非同步程式設計"
