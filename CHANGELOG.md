@@ -6,6 +6,12 @@
 - Docsy 升級至 v0.15.0。
 - 環境整潔。
 
+## 2026-07-21
+
+- 增加雙語切換能力，僅局部檔案有雙語版本。目前保有彈性可在日後增加更多英文版本的檔案。
+- Landing page 增加 "The C# You Need to Know" 連結。
+- Landing page 增加 "T深入淺出 .NET 併發程式設計" 連結。
+
 ## 2025-06-03
 
 - Docsy 從 v0.11.0 升級至 v0.12.0。詳見 [Docsy changelog 0.12.0](https://www.docsy.dev/project/changelog/#0120)。
