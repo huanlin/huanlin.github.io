@@ -20,8 +20,6 @@ dotnet:
       url: "https://dotnetconcurrency.huanlin.cc"
     - title: "C# 筆記（依版本演進）"
       url: "/dotnet/csharp/"
-    - title: ".NET 非同步程式設計"
-      url: "/dotnet/async/"
 golang:
   title: "Golang"
   weight: 2
