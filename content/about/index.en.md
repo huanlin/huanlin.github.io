@@ -13,8 +13,9 @@ I'm <strong>Michael (Huan-Lin) Tsai</strong>, a software developer and technical
 
 ## Books
 
-- *Concurrency in .NET 10* — [Chinese edition](https://ippobooks.com/books/dotnet10-async/) · [English edition](https://ippobooks.com/books/dotnet10-async-en/)
-- *Modern C#: Developer's Craft in the AI Era* — [Chinese edition](https://ippobooks.com/books/modern-csharp/) · [English edition](https://ippobooks.com/books/modern-csharp-en/)
+- [Modern C#: What You Need to Know](https://csharp.huanlin.cc/) (Second Edition)
+- [Concurrency in .NET 10](https://dotnetconcurrency.huanlin.cc/)
+- [Modern C#: Developer's Craft in the AI Era](https://ippobooks.com/books/modern-csharp-en/)
 - [.NET Dependency Injection](https://play.google.com/store/books/details?id=DaZCBAAAQBAJ) (Chinese)
 - [Self-Publishing with Leanpub](https://leanpub.com/selfpub) (Chinese)
 

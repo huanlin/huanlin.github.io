@@ -13,8 +13,8 @@ menu:
 
 ## 著作
 
-- 《現代 C#》第二版 - [Google Play 圖書](https://play.google.com/store/books/details?id=Eb0JEgAAQBAJ)
-- 《深入淺出 .NET 10 併發程式設計》 [中文版](https://ippobooks.com/books/dotnet10-async/) · [English version](https://ippobooks.com/books/dotnet10-async-en/)
+- [《現代 C#》第二版](https://csharp.huanlin.cc/)
+- [《深入淺出 .NET 10 併發程式設計》](https://dotnetconcurrency.huanlin.cc/)
 - 《現代 C#：AI 時代的開發者修煉》 [中文版](https://ippobooks.com/books/modern-csharp/) · [English version](https://ippobooks.com/books/modern-csharp-en/)
 - [《.NET 相依性注入》](https://play.google.com/store/books/details?id=DaZCBAAAQBAJ)
 - [《Leanpub 自出版實戰》](https://leanpub.com/selfpub)
